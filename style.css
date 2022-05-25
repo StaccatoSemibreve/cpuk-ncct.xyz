@@ -98,10 +98,25 @@ h3 {
 .liter {
     margin-bottom: 0em;
 }
-.prism {
+.prism, .pr1sm {
     font-style: italic;
     color: #fff;
     font-size: 13pt;
+}
+.prismer {
+    font-style: italic;
+    color: #fff;
+    font-size: 14pt;
+    display: inline-block;
+    transform: skew(-5deg);
+}
+.prismest {
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16pt;
+    display: inline-block;
+    transform: skew(-10deg);
 }
 .white {
     color: #fff;
@@ -110,49 +125,6 @@ h3 {
 /*     color: #47f; */
 /*     color: #7289da; */
     color: rgb(0, 175, 244);
-}
-.nagit {
-/*     color: rgba(255,255,255,0.5); */
-    background: linear-gradient(to right, transparent, 30%, black);
-    display: inline-block;
-    transform: skew(-7deg);
-    padding-right: 0.5em;
-}
-.nagit1 {
-    color: rgba(220,221,222,1);
-}
-.nagit2 {
-    color: rgba(220,221,222,0.4);
-}
-.nagit3 {
-    color: rgba(220,221,222,0.2);
-}
-.nagit4 {
-    color: rgba(220,221,222,0.1);
-}
-.nagit5 {
-    color: rgba(220,221,222,0.05);
-}
-.nagit6 {
-    color: rgba(220,221,222,0);
-}
-/*.nagit2 {
-    background-clip: text;
-    -webkit-background-text: text;
-    color: transparent;
-    background: linear-gradient(to right, white, 40%, black);
-    display: inline-block;
-    transform: skew(7deg);
-}*/
-.nagito {
-    color: rgba(0,0,0,0);
-    background-color: black;
-    display: inline-block;
-    transform: skew(-7deg);
-}
-.unskew {
-    transform: skew(7deg);
-    display: inline-block;
 }
 .scene {
     font-weight: bold;
@@ -205,11 +177,11 @@ h3 {
     border-radius: 10px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    padding-left: 3em;
+    padding-left: 2.5em;
     padding-right: 1em;
 
     display: grid;
-    grid-template-columns: 80pt auto;
+    grid-template-columns: 90pt auto;
     margin-bottom: 1.5em;
 }
 
@@ -230,4 +202,59 @@ h3 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.nagit {
+/*     color: rgba(255,255,255,0.5); */
+    background: linear-gradient(to right, transparent, 30%, black);
+    display: inline-block;
+    transform: skew(-7deg);
+    padding-right: 0.5em;
+}
+.nagit1 {
+    color: rgba(220,221,222,1);
+}
+.nagit2 {
+    color: rgba(220,221,222,0.4);
+}
+.nagit3 {
+    color: rgba(220,221,222,0.2);
+}
+.nagit4 {
+    color: rgba(220,221,222,0.1);
+}
+.nagit5 {
+    color: rgba(220,221,222,0.05);
+}
+.nagit6 {
+    color: rgba(220,221,222,0);
+}
+/*.nagit2 {
+    background-clip: text;
+    -webkit-background-text: text;
+    color: transparent;
+    background: linear-gradient(to right, white, 40%, black);
+    display: inline-block;
+    transform: skew(7deg);
+}*/
+.nagito {
+    color: rgba(0,0,0,0);
+    background-color: black;
+    display: inline-block;
+    transform: skew(-7deg);
+}
+.unskew {
+    transform: skew(7deg);
+    display: inline-block;
+}
+
+.danirage {
+    font-size: 15pt;
+}
+.twistgod {
+/*     color: #B755FF; */
+    color: #AA8ED6;
+    font-size: 14pt;
+    font-weight: bold;
 }
