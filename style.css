@@ -122,9 +122,7 @@ h3 {
     color: #fff;
 }
 .ryan {
-/*     color: #47f; */
-/*     color: #7289da; */
-    color: rgb(0, 175, 244);
+    color: #00aff4
 }
 .scene {
     font-weight: bold;
@@ -206,7 +204,6 @@ h3 {
 
 
 .nagit {
-/*     color: rgba(255,255,255,0.5); */
     background: linear-gradient(to right, transparent, 30%, black);
     display: inline-block;
     transform: skew(-7deg);
@@ -230,14 +227,6 @@ h3 {
 .nagit6 {
     color: rgba(220,221,222,0);
 }
-/*.nagit2 {
-    background-clip: text;
-    -webkit-background-text: text;
-    color: transparent;
-    background: linear-gradient(to right, white, 40%, black);
-    display: inline-block;
-    transform: skew(7deg);
-}*/
 .nagito {
     color: rgba(0,0,0,0);
     background-color: black;
@@ -253,8 +242,16 @@ h3 {
     font-size: 15pt;
 }
 .twistgod {
-/*     color: #B755FF; */
     color: #AA8ED6;
     font-size: 14pt;
     font-weight: bold;
+}
+.chartreuse {
+/*     color: #78B159; */
+    color: #80ff00;
+    font-size: 15pt;
+}
+.peppermint {
+    color: #00ff80;
+    font-size: 15pt;
 }
