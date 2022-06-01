@@ -1,7 +1,21 @@
 @media only screen and (min-width: 800pt) {
-    body {
+    .discord-background {
+        margin-left: 80pt;
+        max-width: 680pt;
+    }
+    .discord {
         max-width: 550pt;
+        margin-left: -80pt;
         padding: 50pt 50pt 50% 150pt;
+    }
+    .cutscene-background, .cutscene-background-start, .cutscene-background-stop {
+        margin-left: -70pt;
+        margin-right: -60pt;
+    }
+    .cutscene {
+        max-width: 550pt;
+        margin-left: -80pt;
+        padding: 0 50pt 0 150pt;
     }
     .announcement {
         padding-left: 36pt;
@@ -9,8 +23,21 @@
     }
 }
 @media only screen and (max-width: 800pt) and (min-width: 650pt) {
-    body {
+    .discord-background {
+        margin-left: 50pt;
+        max-width: 550pt;
+    }
+    .discord {
         max-width: 500pt;
+        margin-left: -50pt;
+        padding: 25pt 25pt 100% 75pt;
+    }
+    .cutscene-background {
+        margin: -25pt -25pt -100% -75pt;
+    }
+    .cutscene {
+        max-width: 500pt;
+        margin-left: -50pt;
         padding: 25pt 25pt 100% 75pt;
     }
     .announcement {
@@ -19,8 +46,13 @@
     }
 }
 @media only screen and (max-width: 650pt) and (min-width: 500pt) {
-    body {
+    .discord-background {
+        margin-left: 10pt;
+        max-width: 450pt;
+    }
+    .discord {
         max-width: 400pt;
+        margin-left: -10pt;
         padding: 25pt 25pt 100% 25pt;
     }
     .announcement {
@@ -29,7 +61,7 @@
     }
 }
 @media only screen and (max-width: 500pt) {
-    body {
+    .discord {
         max-width: 90%;
         padding: 5% 0% 100% 5%;
     }
@@ -40,6 +72,9 @@
 }
 
 body {
+    background-color: #202225;
+}
+.discord-background {
     background-color: #424549;
 }
 
@@ -254,4 +289,30 @@ h3 {
 .peppermint {
     color: #00ff80;
     font-size: 15pt;
+}
+
+
+.cutscene-background {
+/*     background-color: #dedeff; */
+    background-color: #eee;
+}
+.cutscene-background-start {
+    background: linear-gradient(to bottom, #424549, 3em, #eee, 100%, #eee);
+    height: 5em;
+    margin-bottom: -3em;
+}
+.cutscene-background-stop {
+    background: linear-gradient(to top, #424549, 3em, #eee, 100%, #eee);
+    height: 5em;
+    margin-top: -2em;
+}
+.cutscene p {
+    color: #0a0027;
+}
+.cutscene .prism {
+    background-image: url('./2ex/images/rainbow.svg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
 }
