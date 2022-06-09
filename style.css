@@ -1,69 +1,81 @@
-@media only screen and (min-width: 800pt) {
-    .discord-background {
-        margin-left: 80pt;
-        max-width: 680pt;
+@media only screen and (min-width: 800pt) and (orientation: landscape) {
+    .discord, .cutscene, .pocket {
+        width: 500pt;
+        padding-left: 125pt;
+        padding-right: 125pt;
     }
-    .discord {
-        max-width: 550pt;
-        margin-left: -80pt;
-        padding: 50pt 50pt 50% 150pt;
-    }
-    .cutscene-background, .cutscene-background-start, .cutscene-background-stop {
-        margin-left: -70pt;
-        margin-right: -60pt;
-    }
-    .cutscene {
-        max-width: 550pt;
-        margin-left: -80pt;
-        padding: 0 50pt 0 150pt;
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop {
+        width: 750pt;
     }
     .announcement {
         padding-left: 36pt;
         padding-right: 30pt;
     }
 }
-@media only screen and (max-width: 800pt) and (min-width: 650pt) {
-    .discord-background {
-        margin-left: 50pt;
-        max-width: 550pt;
+@media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
+    .discord, .cutscene, .pocket {
+        width: 425pt;
+        padding-left: 100pt;
+        padding-right: 100pt;
     }
-    .discord {
-        max-width: 500pt;
-        margin-left: -50pt;
-        padding: 25pt 25pt 100% 75pt;
-    }
-    .cutscene-background {
-        margin: -25pt -25pt -100% -75pt;
-    }
-    .cutscene {
-        max-width: 500pt;
-        margin-left: -50pt;
-        padding: 25pt 25pt 100% 75pt;
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
+        width: 625pt;
     }
     .announcement {
         padding-left: 24pt;
         padding-right: 18pt;
     }
 }
-@media only screen and (max-width: 650pt) and (min-width: 500pt) {
-    .discord-background {
-        margin-left: 10pt;
-        max-width: 450pt;
+@media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
+    .discord, .cutscene, .pocket {
+        width: 300pt;
+        padding-left: 75pt;
+        padding-right: 75pt;
     }
-    .discord {
-        max-width: 400pt;
-        margin-left: -10pt;
-        padding: 25pt 25pt 100% 25pt;
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
+        width: 450pt;
     }
     .announcement {
         padding-left: 21pt;
         padding-right: 15pt;
     }
 }
-@media only screen and (max-width: 500pt) {
-    .discord {
-        max-width: 90%;
-        padding: 5% 0% 100% 5%;
+@media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
+    .discord, .cutscene, .pocket {
+        width: calc(100% - 100pt);
+        padding-left: 50pt;
+        padding-right: 50pt;
+    }
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
+        width: 100%;
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+}
+@media only screen and (max-width: 400pt) and (orientation: landscape) {
+    .discord, .cutscene, .pocket {
+        width: calc(100% - 20pt);
+        padding-left: 10pt;
+        padding-right: 10pt;
+    }
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
+        width: 100%;
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+}
+@media only screen and (orientation: portrait) {
+    .discord, .cutscene, .pocket {
+        width: calc(100% - 100pt);
+        padding-left: 50pt;
+        padding-right: 50pt;
+    }
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
+        width: 100%;
     }
     .announcement {
         padding-left: 18pt;
@@ -73,9 +85,49 @@
 
 body {
     background-color: #202225;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.discord-background {
+.discord {
     background-color: #424549;
+    overflow: hidden;
+    padding-top: 30pt;
+    padding-bottom: 10pt;
+}
+.cutscene {
+/*     background-color: #dedeff; */
+    background-color: #eee;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.pocket {
+    background-color: #202225;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.cutscene-background-start, .cutscene-start {
+    background: linear-gradient(to bottom, #424549, #eee);
+    height: 5em;
+}
+.cutscene-background-stop, .cutscene-stop {
+    background: linear-gradient(to top, #424549, #eee);
+    height: 5em;
+}
+.pocket-start {
+    background: linear-gradient(to bottom, #424549, #202225);
+    height: 5em;
+}
+.pocket-stop {
+    background: linear-gradient(to top, #424549, #202225);
+    height: 5em;
+}
+
+div .announcement.break {
+    overflow: hidden;
 }
 
 p, li {
@@ -100,6 +152,7 @@ h1 {
     color: #dcddde;
     font-size: 20pt;
     margin-bottom: 18pt;
+    padding-top: 50pt;
 }
 h2 {
     font-family: "Arial";
@@ -114,7 +167,7 @@ h3 {
     font-size: 14pt;
     text-align: center;
     margin-top: 6em;
-    margin-bottom: 4pt;
+    margin-bottom: 0pt;
 }
 
 
@@ -140,18 +193,26 @@ h3 {
 }
 .prismer {
     font-style: italic;
-    color: #fff;
+    color: white;
     font-size: 14pt;
     display: inline-block;
     transform: skew(-5deg);
+    background-image: url('./2ex/images/rainbow.svg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 .prismest {
     font-style: italic;
     font-weight: bold;
-    color: #fff;
+    color: rgba(255,255,255,0.75);
     font-size: 16pt;
     display: inline-block;
     transform: skew(-10deg);
+    background-image: url('./2ex/images/rainbow.svg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 .white {
     color: #fff;
@@ -163,7 +224,6 @@ h3 {
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    margin-top: 2em;
     margin-bottom: 2em;
 }
 .note {
@@ -180,7 +240,6 @@ h3 {
     padding-left: 4em;
 }
 .break {
-    overflow: hidden;
     white-space: nowrap;
     text-overflow: clip;
 }
@@ -275,6 +334,7 @@ h3 {
 
 .danirage {
     font-size: 15pt;
+    color: #eccccd;
 }
 .twistgod {
     color: #AA8ED6;
@@ -292,27 +352,25 @@ h3 {
 }
 
 
-.cutscene-background {
-/*     background-color: #dedeff; */
-    background-color: #eee;
-}
-.cutscene-background-start {
-    background: linear-gradient(to bottom, #424549, 3em, #eee, 100%, #eee);
-    height: 5em;
-    margin-bottom: -3em;
-}
-.cutscene-background-stop {
-    background: linear-gradient(to top, #424549, 3em, #eee, 100%, #eee);
-    height: 5em;
-    margin-top: -2em;
-}
-.cutscene p {
+.cutscene p, .cutscene a {
     color: #0a0027;
 }
-.cutscene .prism {
-    background-image: url('./2ex/images/rainbow.svg');
+.cutscene .prism, .cutscene .prismer, .cutscene .prismest, .cutscene .white {
+    background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
+}
+.cutscene .note {
+    color: #666666
+}
+.cutscene .nelson {
+    background-color: #424549;
+}
+.cutscene .nelson p {
+    color: #dcddde;
+}
+.cutscene .ryan {
+    color: #1155cc;
 }
