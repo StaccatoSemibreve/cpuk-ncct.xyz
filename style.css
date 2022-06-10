@@ -70,12 +70,12 @@
 }
 @media only screen and (orientation: portrait) {
     .discord, .cutscene, .pocket {
-        width: calc(80%);
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 80vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
     .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
-        width: 100%;
+        width: 100vw;
     }
     .announcement {
         padding-left: 18pt;
