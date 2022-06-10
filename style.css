@@ -11,6 +11,10 @@
         padding-left: 36pt;
         padding-right: 30pt;
     }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
 }
 @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
     .discord, .cutscene, .pocket {
@@ -24,6 +28,10 @@
     .announcement {
         padding-left: 24pt;
         padding-right: 18pt;
+    }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
     }
 }
 @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
@@ -39,6 +47,10 @@
         padding-left: 21pt;
         padding-right: 15pt;
     }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
 }
 @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
     .discord, .cutscene, .pocket {
@@ -46,12 +58,20 @@
         padding-left: 50pt;
         padding-right: 50pt;
     }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
     .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop {
         width: 100%;
     }
     .announcement {
         padding-left: 18pt;
         padding-right: 12pt;
+    }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
     }
 }
 @media only screen and (max-width: 400pt) and (orientation: landscape) {
@@ -67,6 +87,10 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
+    .nelson {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
 }
 @media only screen and (orientation: portrait) {
     .discord, .cutscene, .pocket {
@@ -80,6 +104,10 @@
     .announcement {
         padding-left: 18pt;
         padding-right: 12pt;
+    }
+    .nelson {
+        padding-left: 1em;
+        padding-right: 1em;
     }
 }
 
@@ -269,8 +297,8 @@ h3 {
     border-radius: 10px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    padding-left: 2.5em;
-    padding-right: 1em;
+    margin-left: -5%;
+    margin-right: -5%;
 
     display: grid;
     grid-template-columns: 90pt auto;
