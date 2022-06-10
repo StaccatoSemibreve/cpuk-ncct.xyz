@@ -90,7 +90,7 @@
     .nelson {
         padding-left: 1em;
         padding-right: 1em;
-        word-break: break-word;
+        word-break: break-all;
     }
 }
 @media only screen and (orientation: portrait) {
@@ -109,7 +109,7 @@
     .nelson {
         padding-left: 1em;
         padding-right: 1em;
-        word-break: break-word;
+        word-break: break-all;
     }
 }
 
