@@ -90,7 +90,6 @@
     .nelson {
         padding-left: 1em;
         padding-right: 1em;
-        word-break: break-all;
     }
 }
 @media only screen and (orientation: portrait) {
@@ -109,7 +108,6 @@
     .nelson {
         padding-left: 1em;
         padding-right: 1em;
-        word-break: break-all;
     }
 }
 
@@ -305,6 +303,8 @@ h3 {
     display: grid;
     grid-template-columns: 90pt auto;
     margin-bottom: 1.5em;
+
+    overflow-wrap: break-word;
 }
 
 .parts {
