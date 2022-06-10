@@ -299,12 +299,14 @@ h3 {
     padding-bottom: 0.5em;
     margin-left: -7%;
     margin-right: -7%;
+    max-width: 95%;
 
     display: grid;
     grid-template-columns: 90pt auto;
     margin-bottom: 1.5em;
 }
 .nelson p {
+    word-break: break-word;
     overflow-wrap: break-word;
 }
 
