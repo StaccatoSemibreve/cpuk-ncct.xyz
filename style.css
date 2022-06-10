@@ -11,7 +11,7 @@
         padding-left: 36pt;
         padding-right: 30pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -29,7 +29,7 @@
         padding-left: 24pt;
         padding-right: 18pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -47,7 +47,7 @@
         padding-left: 21pt;
         padding-right: 15pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -69,7 +69,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -87,7 +87,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -105,7 +105,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson {
+    .nelson, .chat {
         padding-left: 0.75em;
         padding-right: 0.75em;
     }
@@ -291,7 +291,7 @@ h3 {
 .nelsonimg {
     max-width: 73px;
 }
-.nelson {
+.nelson, .chat {
     background-color: #36393e;
     border: 3px solid #282b30;
     border-radius: 10px;
@@ -301,12 +301,17 @@ h3 {
     margin-right: -7%;
 
     display: grid;
-    grid-template-columns: 90pt auto;
     margin-bottom: 1.5em;
 }
-.nelson p {
+.nelson p, .chat p {
     word-break: break-word;
     overflow-wrap: break-word;
+}
+.nelson {
+    grid-template-columns: 90pt auto;
+}
+.chat {
+    grid-template-columns: 36pt auto;
 }
 
 .parts {
