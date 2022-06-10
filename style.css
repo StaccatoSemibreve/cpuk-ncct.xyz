@@ -106,8 +106,8 @@
         padding-right: 12pt;
     }
     .nelson {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
     }
 }
 
@@ -297,13 +297,14 @@ h3 {
     border-radius: 10px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    margin-left: -5%;
-    margin-right: -5%;
+    margin-left: -7%;
+    margin-right: -7%;
 
     display: grid;
     grid-template-columns: 90pt auto;
     margin-bottom: 1.5em;
-
+}
+.nelson p {
     overflow-wrap: break-word;
 }
 
