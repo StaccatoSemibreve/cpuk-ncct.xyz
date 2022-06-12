@@ -392,6 +392,12 @@ h3 {
 .cutscene p, .cutscene a {
     color: #0a0027;
 }
+.cutscene .announce {
+    color: #dcddde;
+}
+.cutscene .announcement .prism, .cutscene .announcement .white {
+    color: white;
+}
 .cutscene .prism, .cutscene .prismer, .cutscene .prismest, .cutscene .white {
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
