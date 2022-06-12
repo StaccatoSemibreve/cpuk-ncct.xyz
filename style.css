@@ -235,6 +235,16 @@ h3 {
     color: #fff;
     font-size: 13pt;
 }
+.danism {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: #f66;
+    background-image: url('./2ex/images/rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
 .prismer {
     font-style: italic;
     color: white;
@@ -272,6 +282,13 @@ h3 {
 }
 .white {
     color: #fff;
+}
+.announcement .white {
+    color: #fff;
+    background-image: url('./2ex/images/rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 .ryan {
     color: #00aff4
