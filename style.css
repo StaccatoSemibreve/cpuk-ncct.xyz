@@ -375,7 +375,7 @@ h3 {
     color: rgba(220,221,222,0);
 }
 .nagito {
-    color: rgba(0,0,0,0);
+    color: black;
     background-color: black;
     display: inline-block;
     transform: skew(-7deg);
