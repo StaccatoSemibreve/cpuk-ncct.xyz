@@ -227,6 +227,9 @@ h3 {
 .liter {
     margin-bottom: 0em;
 }
+.unlite {
+    margin-top: -1.2em;
+}
 .prism, .pr1sm {
     font-style: italic;
     color: #fff;
@@ -248,6 +251,18 @@ h3 {
     font-weight: bold;
     color: rgba(255,255,255,0.66);
     font-size: 16pt;
+    display: inline-block;
+    transform: skew(-10deg);
+    background-image: url('./2ex/images/rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.prismatic {
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(255,255,255,0.4);
+    font-size: 20pt;
     display: inline-block;
     transform: skew(-10deg);
     background-image: url('./2ex/images/rainbow.png');
