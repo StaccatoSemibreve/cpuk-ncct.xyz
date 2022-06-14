@@ -4,7 +4,7 @@
         padding-left: 125pt;
         padding-right: 125pt;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 750pt;
     }
     .announcement {
@@ -22,7 +22,7 @@
         padding-left: 100pt;
         padding-right: 100pt;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 625pt;
     }
     .announcement {
@@ -40,7 +40,7 @@
         padding-left: 75pt;
         padding-right: 75pt;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 450pt;
     }
     .announcement {
@@ -62,7 +62,7 @@
         padding-left: 2.5em;
         padding-right: 1em;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 100%;
     }
     .announcement {
@@ -80,7 +80,7 @@
         padding-left: 10pt;
         padding-right: 10pt;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 100%;
     }
     .announcement {
@@ -98,7 +98,7 @@
         padding-left: 10vw;
         padding-right: 10vw;
     }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow {
+    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
         width: 100vw;
     }
     .announcement {
@@ -148,6 +148,10 @@ body {
 .cutscene-background-start, .cutscene-start {
     background: linear-gradient(to bottom, #424549, #eee);
     height: 5em;
+}
+.cutscene-start-slow {
+    background: linear-gradient(to bottom, #424549, #eee);
+    height: 60em;
 }
 .cutscene-background-stop, .cutscene-stop {
     background: linear-gradient(to top, #424549, #eee);
@@ -235,16 +239,6 @@ h3 {
     color: #fff;
     font-size: 13pt;
 }
-.danism {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 13pt;
-    color: #f66;
-    background-image: url('./2ex/images/rainbow.png');
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-}
 .prismer {
     font-style: italic;
     color: white;
@@ -290,8 +284,31 @@ h3 {
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
+.danism {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: #f66;
+    background-image: url('./2ex/images/rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.danismer {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: #d33;
+}
+.danismest {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15pt;
+    color: #d11;
+}
 .ryan {
-    color: #00aff4
+    color: #00aff4;
+    list-style-type: "-";
 }
 .scene {
     font-weight: bold;
@@ -410,13 +427,13 @@ h3 {
     color: black;
     background-color: black;
     display: inline-block;
-    transform: skew(-7deg);
+    transform: skew(-15deg);
 }
-.prism .nagito {
+.prism .nagito, .white .nagito {
     color: white;
 }
 .unskew {
-    transform: skew(7deg);
+    transform: skew(15deg);
     display: inline-block;
 }
 
@@ -440,7 +457,7 @@ h3 {
 }
 
 
-.cutscene p, .cutscene a {
+.cutscene p, .cutscene a, .cutscene hr {
     color: #0a0027;
 }
 .cutscene .announce {
@@ -449,12 +466,15 @@ h3 {
 .cutscene .announcement .prism, .cutscene .announcement .white {
     color: white;
 }
-.cutscene .prism, .cutscene .prismer, .cutscene .prismest, .cutscene .white {
+.cutscene .prism, .cutscene .prismer, .cutscene .prismest, .cutscene .white, .cutscene .prism .unskew, .cutscene .white .unskew {
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
+}
+.cutscene .prism .unskew, .cutscene .white .unskew {
+    color: rgba(255, 255, 255, 0.7)
 }
 .cutscene .note {
     color: #666666
