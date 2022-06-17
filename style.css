@@ -1,3 +1,95 @@
+:root {
+    --white: white;
+    --blank: #eee;
+    --light: #dcddde;
+    --shade: #babbbc;
+    --shadow: #666666;
+    --lighter-null: #4a4d53;
+    --discord: #424549;
+    --dark-discord: #36393e;
+    --darker-discord: #2f3136;
+    --darkest-discord: #282b30;
+    --light-null: #25262b;
+    --null: #202225;
+    --script: #0a0027;
+}
+
+.discord {
+    --background: var(--discord);
+    --text: var(--light);
+
+    --ryan: #00aff4;
+    --note: var(--shade);
+
+    --light-prism: var(--light);
+    --prism: var(--white);
+    --prismer: var(--white);
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --twistgod: #aa8ed6;
+    --danirage: #fcc;
+    --danism: #f66;
+    --danismer: #d33;
+    --danismest: #d11;
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --announcement-text: var(--light);
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+
+.pocket, .pocket-start, .pocket-stop {
+    --background: var(--null);
+    --text: var(--light);
+
+    --note: var(--shade);
+
+    --prism: white;
+
+    --void: black;
+    --unvoid: #181818;
+    --cosmic: black;
+
+    --mint: #00ff80;
+    --chartreuse: #80ff00;
+}
+
+.cutscene {
+    --background: var(--blank);
+    --text: var(--script);
+
+    --ryan: #1155cc;
+    --note: var(--shadow);
+
+    --light-prism: rgba(255,255,255,0.66);
+    --prism: transparent;
+    --prismer: transparent;
+    --prismest: transparent;
+    --prismatic: transparent;
+
+    --void: var(--null);
+    --cosmic: var(--script);
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --nelson-background: var(--discord);
+    --nelson-border: var(--darkest-discord);
+}
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow {
+    --text: var(--light);
+
+    --prism: white;
+    --prismer: white;
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+}
+
 @media only screen and (min-width: 800pt) and (orientation: landscape) {
     .discord, .cutscene, .pocket, .rainbow {
         width: 500pt;
@@ -112,27 +204,26 @@
 }
 
 body {
-    background-color: #202225;
+    background-color: var(--null);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .discord {
-    background-color: #424549;
+    background-color: var(--discord);
     overflow: hidden;
     padding-top: 30pt;
     padding-bottom: 10pt;
 }
 .cutscene {
-/*     background-color: #dedeff; */
-    background-color: #eee;
+    background-color: var(--blank);
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
 }
 .pocket {
-    background-color: #202225;
+    background-color: var(--null);
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
@@ -146,27 +237,27 @@ body {
     height: 100em;
 }
 .cutscene-background-start, .cutscene-start {
-    background: linear-gradient(to bottom, #424549, #eee);
+    background: linear-gradient(to bottom, var(--discord), var(--blank));
     height: 5em;
 }
 .cutscene-start-slow {
-    background: linear-gradient(to bottom, #424549, #eee);
+    background: linear-gradient(to bottom, var(--discord), var(--blank));
     height: 60em;
 }
 .cutscene-background-stop, .cutscene-stop {
-    background: linear-gradient(to top, #424549, #eee);
+    background: linear-gradient(to top, var(--discord), var(--blank));
     height: 5em;
 }
 .pocket-start {
-    background: linear-gradient(to bottom, #424549, #202225);
+    background: linear-gradient(to bottom, var(--discord), var(--null));
     height: 5em;
 }
 .pocket-stop {
-    background: linear-gradient(to top, #424549, #202225);
+    background: linear-gradient(to top, var(--discord), var(--null));
     height: 5em;
 }
 .cutscene-rainbow {
-    background: linear-gradient(to bottom, #eee, 90em, transparent), url('./2ex/images/rainbow.png');
+    background: linear-gradient(to bottom, var(--blank), 90em, transparent), url('./2ex/images/rainbow.png');
     background-size: 100% 100%;
     height: 300em;
 }
@@ -175,17 +266,15 @@ div .announcement.break {
     overflow: hidden;
 }
 
-p, li {
+p, li, a, h1, h2, h3, hr {
     font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #dcddde;
+    color: var(--text);
+}
+
+p, li {
     list-style-type: circle;
     font-size: 12pt;
     margin: 0;
-}
-
-a {
-    font-family: "Arial";
-    color: #dcddde;
 }
 
 img {
@@ -193,22 +282,16 @@ img {
 }
 
 h1 {
-    font-family: "Arial";
-    color: #dcddde;
     font-size: 20pt;
     margin-bottom: 18pt;
     padding-top: 50pt;
 }
 h2 {
-    font-family: "Arial";
-    color: #dcddde;
     font-size: 16pt;
     margin-top: 18pt;
     margin-bottom: 6pt;
 }
 h3 {
-    font-family: "Arial";
-    color: #dcddde;
     font-size: 14pt;
     text-align: center;
     margin-top: 6em;
@@ -234,14 +317,17 @@ h3 {
 .unlite {
     margin-top: -1.2em;
 }
+.white {
+    color: var(--prism);
+}
 .prism, .pr1sm {
     font-style: italic;
-    color: #fff;
+    color: var(--prism);
     font-size: 13pt;
 }
 .prismer {
     font-style: italic;
-    color: white;
+    color: var(--prismer);
     font-size: 14pt;
     display: inline-block;
     transform: skew(-5deg);
@@ -253,7 +339,7 @@ h3 {
 .prismest {
     font-style: italic;
     font-weight: bold;
-    color: rgba(255,255,255,0.66);
+    color: var(--prismest);
     font-size: 16pt;
     display: inline-block;
     transform: skew(-10deg);
@@ -265,7 +351,7 @@ h3 {
 .prismatic {
     font-style: italic;
     font-weight: bold;
-    color: rgba(255,255,255,0.4);
+    color: var(--prismatic);
     font-size: 20pt;
     display: inline-block;
     transform: skew(-10deg);
@@ -274,11 +360,47 @@ h3 {
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
-.white {
-    color: #fff;
+.void {
+    display: inline-block;
+    color: var(--void);
+    background-color: var(--void);
+    transform: skew(-15deg);
+    white-space: pre-wrap;
+}
+.void:active, .void:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.invoid {
+    display: inline-block;
+    transform: skew(15deg);
+}
+.winvoid {
+    display: inline-block;
+    color: var(--void);
+    transform: skew(-15deg);
+    white-space: pre-wrap;
+}
+.win:active .winvoid, .win:hover .winvoid {
+    color: inherit;
+}
+.white .void, .prism .void {
+    color: var(--light-prism);
+}
+.mint .void {
+    color: var(--mint);
+}
+.spoiler {
+    color: var(--void);
+    background-color: var(--void);
+    white-space: pre-wrap;
+    border-radius: 3px;
+}
+.spoiler:active, .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
 }
 .announcement .white {
-    color: #fff;
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -288,7 +410,7 @@ h3 {
     font-style: italic;
     font-weight: bold;
     font-size: 13pt;
-    color: #f66;
+    color: var(--danism);
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -298,16 +420,16 @@ h3 {
     font-style: italic;
     font-weight: bold;
     font-size: 13pt;
-    color: #d33;
+    color: var(--danismer);
 }
 .danismest {
     font-style: italic;
     font-weight: bold;
     font-size: 15pt;
-    color: #d11;
+    color: var(--danismest);
 }
 .ryan {
-    color: #00aff4;
+    color: var(--ryan);
     list-style-type: "-";
 }
 .scene {
@@ -320,32 +442,48 @@ h3 {
     float: left;
 }
 .note {
-    color: #babbbc;
+    color: var(--note);
+}
+.pastebin, .pastebin p {
+    font-family: monospace;
 }
 
 .quote {
-    color: #dcddde;
+    color: var(--text);
     margin-top: 1em;
-    border-left: 2px solid #dcddde;
+    border-left: 2px solid var(--text);
     padding-left: 5px;
 }
+.win {
+    background-color: var(--void);
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.win:active, .win:hover {
+    background-color: var(--unvoid);
+}
 .vs {
+    color: var(--note);
     padding-left: 4em;
+    margin-bottom: 3em;
 }
 .break {
     white-space: nowrap;
     text-overflow: clip;
 }
 .announce {
-    color: #dcddde;
     font-family: monospace;
     font-size: 10pt;
     line-height: 1.15;
     text-align: left;
 }
 .announcement {
-    background: #2f3136;
-    border: 3px solid #282b30;
+    background: var(--announcement-background);
+    border: 3px solid var(--announcement-border);
     border-radius: 10px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -357,8 +495,8 @@ h3 {
     max-width: 73px;
 }
 .nelson, .chat {
-    background-color: #36393e;
-    border: 3px solid #282b30;
+    background-color: var(--nelson-background);
+    border: 3px solid var(--nelson-border);
     border-radius: 10px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -367,10 +505,6 @@ h3 {
 
     display: grid;
     margin-bottom: 1.5em;
-}
-.nelson p, .chat p {
-    word-break: break-word;
-    overflow-wrap: break-word;
 }
 .nelson {
     grid-template-columns: 90pt auto;
@@ -400,91 +534,49 @@ h3 {
 
 
 .nagit {
-    background: linear-gradient(to right, transparent, 30%, black);
+    background: linear-gradient(to right, transparent, 30%, var(--void));
     display: inline-block;
-    transform: skew(-7deg);
+    transform: skew(-15deg);
     padding-right: 0.5em;
 }
 .nagit1 {
-    color: rgba(220,221,222,1);
+    color: var(--shade);
 }
 .nagit2 {
-    color: rgba(220,221,222,0.4);
+    color: var(--shadow);
 }
 .nagit3 {
-    color: rgba(220,221,222,0.2);
+    color: var(--discord);
 }
 .nagit4 {
-    color: rgba(220,221,222,0.1);
+    color: var(--dark-discord);
 }
 .nagit5 {
-    color: rgba(220,221,222,0.05);
-}
-.nagit6 {
-    color: rgba(220,221,222,0);
-}
-.nagito {
-    color: black;
-    background-color: black;
-    display: inline-block;
-    transform: skew(-15deg);
-}
-.prism .nagito, .white .nagito {
-    color: white;
-}
-.unskew {
-    transform: skew(15deg);
-    display: inline-block;
+    color: var(--darker-discord);
 }
 
 .danirage {
     font-size: 15pt;
-    color: #eccccd;
+    color: var(--danirage);
 }
 .twistgod {
-    color: #AA8ED6;
-    font-size: 14pt;
+    color: var(--twistgod);
+    font-size: 15pt;
     font-weight: bold;
 }
 .chartreuse {
-/*     color: #78B159; */
-    color: #80ff00;
+    color: var(--chartreuse);
     font-size: 15pt;
 }
 .peppermint {
-    color: #00ff80;
+    color: var(--mint);
     font-size: 15pt;
 }
 
 
-.cutscene p, .cutscene a, .cutscene hr {
-    color: #0a0027;
-}
-.cutscene .announce {
-    color: #dcddde;
-}
-.cutscene .announcement .prism, .cutscene .announcement .white {
-    color: white;
-}
-.cutscene .prism, .cutscene .prismer, .cutscene .prismest, .cutscene .white, .cutscene .prism .unskew, .cutscene .white .unskew {
+.cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid {
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    color: transparent;
-}
-.cutscene .prism .unskew, .cutscene .white .unskew {
-    color: rgba(255, 255, 255, 0.7)
-}
-.cutscene .note {
-    color: #666666
-}
-.cutscene .nelson {
-    background-color: #424549;
-}
-.cutscene .nelson p {
-    color: #dcddde;
-}
-.cutscene .ryan {
-    color: #1155cc;
 }
