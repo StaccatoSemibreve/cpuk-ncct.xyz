@@ -1,4 +1,8 @@
 :root {
+    --superwidth: 100vw;
+    --width: 100vw;
+    --subwidth: 80vw;
+
     --white: white;
     --blank: #eee;
     --light: #dcddde;
@@ -44,6 +48,19 @@
     --nelson-text: var(--light);
 }
 
+.bracket {
+    --text: var(--light);
+    --bracket-background: #272a33;
+/*     --bracket-background: var(--darker-discord); */
+    --bracket-border: var(--darkest-discord);
+    --bracket-text: var(--light);
+    --matchup-background: #58595e;
+/*     --matchup-background: var(--discord); */
+/*     --matchup-border: var(--darkest-discord); */
+    --matchup-border: #4e4f53;
+    --matchup-text: var(--light);
+}
+
 .pocket, .pocket-start, .pocket-stop {
     --background: var(--null);
     --text: var(--light);
@@ -51,6 +68,7 @@
     --note: var(--shade);
 
     --prism: white;
+    --ryan: #00aff4;
 
     --void: black;
     --unvoid: #181818;
@@ -91,13 +109,9 @@
 }
 
 @media only screen and (min-width: 800pt) and (orientation: landscape) {
-    .discord, .cutscene, .pocket, .rainbow {
-        width: 500pt;
-        padding-left: 125pt;
-        padding-right: 125pt;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 750pt;
+    :root {
+        --width: 750pt;
+        --subwidth: 500pt;
     }
     .announcement {
         padding-left: 36pt;
@@ -109,13 +123,9 @@
     }
 }
 @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
-    .discord, .cutscene, .pocket {
-        width: 425pt;
-        padding-left: 100pt;
-        padding-right: 100pt;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 625pt;
+    :root {
+        --width: 625pt;
+        --subwidth: 425pt;
     }
     .announcement {
         padding-left: 24pt;
@@ -127,13 +137,9 @@
     }
 }
 @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
-    .discord, .cutscene, .pocket {
-        width: 300pt;
-        padding-left: 75pt;
-        padding-right: 75pt;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 450pt;
+    :root {
+        --width: 450pt;
+        --subwidth: 300pt;
     }
     .announcement {
         padding-left: 21pt;
@@ -145,17 +151,9 @@
     }
 }
 @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
-    .discord, .cutscene, .pocket {
-        width: calc(100% - 100pt);
-        padding-left: 50pt;
-        padding-right: 50pt;
-    }
-    .nelson {
-        padding-left: 2.5em;
-        padding-right: 1em;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 100%;
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw-100pt);
     }
     .announcement {
         padding-left: 18pt;
@@ -167,13 +165,9 @@
     }
 }
 @media only screen and (max-width: 400pt) and (orientation: landscape) {
-    .discord, .cutscene, .pocket {
-        width: calc(100vw - 20pt);
-        padding-left: 10pt;
-        padding-right: 10pt;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 100%;
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw - 20pt);
     }
     .announcement {
         padding-left: 18pt;
@@ -185,13 +179,9 @@
     }
 }
 @media only screen and (orientation: portrait) {
-    .discord, .cutscene, .pocket {
-        width: 80vw;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
-    .cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
-        width: 100vw;
+    :root {
+        --width: 100vw;
+        --subwidth: 80vw;
     }
     .announcement {
         padding-left: 18pt;
@@ -201,6 +191,18 @@
         padding-left: 0.75em;
         padding-right: 0.75em;
     }
+}
+
+.discord, .cutscene, .pocket, .rainbow {
+    width: var(--subwidth);
+    padding-left: calc((var(--width) - var(--subwidth)) / 2);
+    padding-right: calc((var(--width) - var(--subwidth)) / 2);
+}
+.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow, .bracket {
+    width: var(--width);
+}
+.matchupnum {
+    width: calc(var(--width) / 7);
 }
 
 body {
@@ -227,6 +229,14 @@ body {
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
+}
+.black {
+    background-color: black;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+    height: 30em;
+    width: var(--width);
 }
 .rainbow {
     background-image: url('./2ex/images/rainbow.png');
@@ -260,6 +270,16 @@ body {
     background: linear-gradient(to bottom, var(--blank), 90em, transparent), url('./2ex/images/rainbow.png');
     background-size: 100% 100%;
     height: 300em;
+}
+.black-pocket, .pocket-black {
+    height: 30em;
+    width: var(--width);
+}
+.black-pocket {
+    background: linear-gradient(to bottom, black, var(--null));
+}
+.pocket-black {
+    background: linear-gradient(to top, black, var(--null));
 }
 
 div .announcement.break {
@@ -579,4 +599,46 @@ h3 {
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
+}
+
+.bracket {
+    background-color: var(--bracket-background);
+    border: 3px solid var(--bracket-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.matchupnum {
+    display: grid;
+    grid-template-columns: 0.75em 1fr;
+    column-gap: 0.5em;
+}
+.matchup {
+    display: grid;
+    grid-template-rows: 1.5em 1.5em;
+    row-gap: 0.1em;
+    align-items: center;
+    width: 100%;
+}
+.matchup p {
+    white-space: nowrap;
+    text-overflow: clip;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    width: 100%;
+}
+.matchup .matchupborder {
+    border-bottom: 2px solid var(--matchup-border);
+}
+.matchupnum .num {
+    padding-top: calc(1em);
+    font-size: 11pt;
+}
+.matchupnum .matchup {
+    background-color: var(--matchup-background);
+    border-radius: 8px;
+    border: 3px solid var(--matchup-border);
+}
+.matchup, .matchup p {
+    width: calc(625pt / 7 - 0.75em);
 }
