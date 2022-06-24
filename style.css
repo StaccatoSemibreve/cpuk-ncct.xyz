@@ -61,7 +61,7 @@
     --matchup-text: var(--light);
 }
 
-.pocket, .pocket-start, .pocket-stop {
+.pocket, .pocket-start, .pocket-stop, .black {
     --background: var(--null);
     --text: var(--light);
 
@@ -235,8 +235,7 @@ body {
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
-    height: 30em;
-    width: var(--width);
+    width: var(--subwidth);
 }
 .rainbow {
     background-image: url('./2ex/images/rainbow.png');
@@ -280,6 +279,11 @@ body {
 }
 .pocket-black {
     background: linear-gradient(to top, black, var(--null));
+}
+
+.bigimg {
+    margin-left: calc((var(--subwidth) - var(--width)) / 2);
+    width: var(--width);
 }
 
 div .announcement.break {
