@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CPUK NCCT Editor</title>
+        <link href="../style.css" rel="stylesheet">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .intLink {
+                width: inherit;
+            }
+        </style>
+        <script type="text/javascript">
+            var oDoc, sDefTxt;
+
+            function initDoc() {
+            oDoc = document.getElementById("textBox");
+            sDefTxt = oDoc.innerHTML;
+            if (document.compForm.switchMode.checked) { setDocMode(true); }
+            }
+
+            function validateMode() {
+            if (!document.compForm.switchMode.checked) { return true ; }
+            alert("Uncheck \"Show HTML\".");
+            oDoc.focus();
+            return false;
+            }
+
+            function setDocMode(bToSource) {
+            var oContent;
+            if (bToSource) {
+                oContent = document.createTextNode(oDoc.innerHTML);
+                oDoc.innerHTML = "";
+                var oPre = document.createElement("pre");
+                oDoc.contentEditable = false;
+                oPre.id = "sourceText";
+                oPre.contentEditable = true;
+                oPre.appendChild(oContent);
+                oDoc.appendChild(oPre);
+                document.execCommand("defaultParagraphSeparator", false, "div");
+            } else {
+                if (document.all) {
+                oDoc.innerHTML = oDoc.innerText;
+                } else {
+                oContent = document.createRange();
+                oContent.selectNodeContents(oDoc.firstChild);
+                oDoc.innerHTML = oContent.toString();
+                }
+                oDoc.contentEditable = true;
+            }
+            oDoc.focus();
+            }
+
+            function printDoc() {
+            if (!validateMode()) { return; }
+            var oPrintWin = window.open("","_blank","width=450,height=470,left=400,top=100,menubar=yes,toolbar=no,location=no,scrollbars=yes");
+            oPrintWin.document.open();
+            oPrintWin.document.write("<!doctype html><html><head><title>Print<\/title><\/head><body onload=\"print();\">" + oDoc.innerHTML + "<\/body><\/html>");
+            oPrintWin.document.close();
+            }
+
+            function paragraph(className) {
+                window.getSelection().anchorNode.parentNode.classList = className;
+            }
+            function wrapSpan(className) {
+                document.execCommand("insertHTML", false, "<span class=\"className\">"+document.getSelection()+"</span>");
+                window.getSelection().anchorNode.parentNode.classList = className;
+            }
+            function addTemplate(templateName) {
+                var template = "";
+                if (templateName=="nelson") {
+                    template="<div class=\"nelson\"><p>Name:</p><p>Text</p></div><p>Next line</p>";
+                } else if (templateName=="nelsonimg") {
+                    template="<img class=\"nelsonimg\" src=\"images/nelson.png\" alt=\"the Nelson image\" title=\":nelson:\" /><p>Text</p>";
+                } else if (templateName=="round") {
+                    template="<h3><a id=\"r\" href=\"#r\">THE NEXT ROUND IS ABOUT TO BEGIN!!!!! (future note: fix link!)</a></h3>\n<div class=\"quote\">\n<p class=\"lite\">Quote 1</p>\n<p>Quote 2</p>\n</div><p class=\"note vs\">[:]</p><p>Text</p>";
+                } else if (templateName=="win") {
+                    template="<p class=\"text\">report or whatever</p>\n<div class=\"win quote\"><p>win quote</p></div>\n<div class=\"announcement\"><p class=\"lite\">light pit won!!!</p></div><p>Text</p>";
+                } else if (templateName=="scene") {
+                    template="<p class=\"scene\">END EVENT</p><p>Text</p>";
+                }
+
+                document.execCommand("insertHTML", false, template);
+            }
+            function addSection(sectionName) {
+                var template = "";
+                if (document.getSelection() == "") {
+                    if (sectionName=="discord") {
+                        template="<div class=\"discord\"><p>Text</p></div>";
+                    }
+                } else {
+                    if (sectionName=="nelson") {
+                    template="<div class=\"nelson\"><p>Name:</p><p>" + document.getSelection() + "</p></div><p>Next line</p>";
+                    } else if (sectionName=="discord") {
+                        template="<div class=\"discord\">"+document.getSelection()+"</div>";
+                    } else if (sectionName=="cutscene-start") {
+                        template="<div class=\"cutscene-start\"></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="cutscene") {
+                        template="<div class=\"cutscene\"><p>Text</p></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="cutscene-stop") {
+                        template="<div class=\"cutscene-stop\"></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="pocket-start") {
+                        template="<div class=\"pocket-start\"></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="pocket") {
+                        template="<div class=\"pocket\"><p>Text</p></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="pocket-stop") {
+                        template="<div class=\"pocket-stop\"></div>\n\n<p>SECTION</p>";
+                    } else if (sectionName=="rainbow") {
+                        template="<div class=\"cutscene-rainbow\"><p>TEXT</p></div>\n\n<p>SECTION</p>";
+                    }
+                }
+
+                document.execCommand("insertHTML", false, template);
+            }
+            function addStyle(styleName) {
+                if (styleName=="italics") {
+                    document.execCommand('insertHTML', false, "<em>"+document.getSelection()+"</em>"); this.selectedIndex=0;
+                } else if (styleName=="bold") {
+                    document.execCommand('insertHTML', false, "<strong>"+document.getSelection()+"</strong>"); this.selectedIndex=0;
+                } else if (styleName=="spoiler") {
+                    document.execCommand('insertHTML', false, "<span class=\"spoiler\">"+document.getSelection()+"</span>"); this.selectedIndex=0;
+                }
+            }
+        </script>
+        <style type="text/css">
+            .intLink { cursor: pointer; }
+            img.intLink { border: 0; }
+            #toolBar1 select { font-size:10px; }
+            #textBox {
+            min-width: var(--width);
+            min-height: 200px;
+            border: 1px #000000 solid;
+            padding: 12px;
+            overflow: scroll;
+            }
+            #textBox #sourceText {
+            padding: 0;
+            margin: 0;
+            min-width: 498px;
+            min-height: 200px;
+            }
+            #editMode label { cursor: pointer; }
+        </style>
+    </head>
+    <body onload="initDoc();">
+        <form name="compForm" method="post" action="sample.php" onsubmit="if(validateMode()){this.myDoc.value=oDoc.innerHTML;return true;}return false;">
+            <input type="hidden" name="myDoc">
+            <div id="toolBar1">
+            <select onchange="paragraph(this[this.selectedIndex].value); this.selectedIndex=0;">
+                <option class="heading" value="" selected>- paragraph spacing -</option>
+                <option value="">None</option>
+                <option value="lite">Small</option>
+                <option value="text">Standard</option>
+                <option value="very">Big</option>
+                <option value="much">Huge</option>
+            </select>
+            <select onchange="addStyle(this[this.selectedIndex].value); this.selectedIndex=0;">
+                <option class="heading" value="" selected>- style -</option>
+                <option value="italics">Italics</option>
+                <option value="bold">Bold</option>
+                <option value="spoiler">Spoiler</option>
+            </select>
+            <select onchange="wrapSpan(this[this.selectedIndex].value); this.selectedIndex=0;">
+                <option class="heading" value="" selected>- voice -</option>
+                <option value="">None</option>
+                <option value="ryan">Ryan</option>
+                <option value="void">Void</option>
+                <option value="note">Note</option>
+                <option value="white">White</option>
+                <option value="prism">Prism</option>
+                <option value="pr1sm">Pr1sm</option>
+                <option value="prismer">Prismer</option>
+                <option value="prismest">Prismest</option>
+                <option value="prismatic">Prismatic!</option>
+                <option value="chartreuse">Chartreuse</option>
+                <option value="peppermint">Peppermint</option>
+                <option value="danism">Danism</option>
+                <option value="danismer">Danismer</option>
+                <option value="danismest">Danismest</option>
+                <option value="twistgod">Twist</option>
+            </select>
+            <select onchange="addTemplate(this[this.selectedIndex].value); this.selectedIndex=0;">
+                <option class="heading" value="" selected>- template -</option>
+                <option value="nelson">Nelson</option>
+                <option value="nelsonimg">Nelson Image</option>
+                <option value="round">Round</option>
+                <option value="win">Win</option>
+                <option value="scene">Scene</option>
+            </select>
+            <select onchange="addSection(this[this.selectedIndex].value); this.selectedIndex=0;">
+                <option class="heading" value="" selected>- section -</option>
+                <option value="discord">Discord</option>
+                <option value="cutscene-start">Begin Cutscene</option>
+                <option value="cutscene">Cutscene</option>
+                <option value="cutscene-stop">End Cutscene</option>
+                <option value="pocket-start">Begin Pocket</option>
+                <option value="pocket">Pocket</option>
+                <option value="pocket-stop">End Pocket</option>
+                <option value="rainbow-start">Begin Rainbow</option>
+            </select>
+            </div>
+            <div id="textBox" contenteditable="true">
+                <div class="discord">
+                    <p>Lorem ipsum</p>
+                </div>
+                <p>SECTION</p>
+            </div>
+            <p id="editMode"><input type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" /> <label for="switchBox">Show HTML</label></p>
+            <p><input type="submit" value="Send" /></p>
+        </form>
+    </body>
+</html>
