@@ -92,6 +92,7 @@
     --prismatic: transparent;
 
     --void: var(--null);
+    --unvoid: var(--light-null);
     --cosmic: var(--script);
 
     --announcement-background: var(--darker-discord);
@@ -198,11 +199,8 @@
     padding-left: calc((var(--width) - var(--subwidth)) / 2);
     padding-right: calc((var(--width) - var(--subwidth)) / 2);
 }
-.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow, .bracket {
+.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
     width: var(--width);
-}
-.matchupnum {
-    width: calc(var(--width) / 7);
 }
 
 body {
@@ -385,27 +383,32 @@ h3 {
     -moz-background-clip: text;
 }
 .void {
-    display: inline-block;
+    font-style: italic;
     color: var(--void);
     background-color: var(--void);
     transform: skew(-15deg);
-    white-space: pre-wrap;
+    white-space: break-spaces;
 }
 .void:active, .void:hover {
     background-color: var(--unvoid);
     color: var(--light);
 }
-.invoid {
-    display: inline-block;
-    transform: skew(15deg);
+.ryan .void:active, .ryan .void:hover {
+    background-color: var(--unvoid);
+    color: var(--ryan);
 }
-.winvoid {
-    display: inline-block;
+.invoid {
+    transform: skew(15deg);
+    font-style: normal;
+}
+.winvoid, .win .void {
+    font-style: italic;
     color: var(--void);
     transform: skew(-15deg);
     white-space: pre-wrap;
 }
-.win:active .winvoid, .win:hover .winvoid {
+.win:active .winvoid, .win:hover .winvoid, .win:active .void, .win:hover .void {
+    background-color: inherit;
     color: inherit;
 }
 .white .void, .prism .void {
@@ -499,7 +502,7 @@ h3 {
     white-space: nowrap;
     text-overflow: clip;
 }
-.announce {
+.announce, .announcement p {
     font-family: monospace;
     font-size: 10pt;
     line-height: 1.15;
@@ -609,40 +612,71 @@ h3 {
     background-color: var(--bracket-background);
     border: 3px solid var(--bracket-border);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-.matchupnum {
-    display: grid;
-    grid-template-columns: 0.75em 1fr;
-    column-gap: 0.5em;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.6em;
+    width: var(--width);
 }
 .matchup {
     display: grid;
     grid-template-rows: 1.5em 1.5em;
     row-gap: 0.1em;
     align-items: center;
-    width: 100%;
+
+    background-color: var(--matchup-background);
+    border-radius: 8px;
+    border: 3px solid var(--matchup-border);
+    width: 1fr;
+    max-width: calc(var(--width) / 4);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.matchup p {
+.matchup p, .matchup .matchupborder {
     white-space: nowrap;
     text-overflow: clip;
     padding-left: 0.2em;
-    padding-right: 0.2em;
-    width: 100%;
+    font-size: 10pt;
+    max-width: calc(var(--width) / 4 - 2.4em);
 }
 .matchup .matchupborder {
     border-bottom: 2px solid var(--matchup-border);
 }
-.matchupnum .num {
-    padding-top: calc(1em);
-    font-size: 11pt;
+.bracket a {
+    text-decoration: none;
+    max-width: calc(var(--width) / 4);
 }
-.matchupnum .matchup {
-    background-color: var(--matchup-background);
-    border-radius: 8px;
-    border: 3px solid var(--matchup-border);
+
+
+#c2-smileanim:before {
+    content: ":)";
+    white-space: pre-wrap;
+    animation-name: c2-smileanim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
-.matchup, .matchup p {
-    width: calc(625pt / 7 - 0.75em);
+#c2-editanim:before {
+    font-size: 9pt;
+    content: "";
+    animation-name: c2-editanim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+@keyframes c2-smileanim {
+    0%   {content: ":    )\"                 "}
+    14%  {content: ":    )\"                 "}
+    15%  {content: ": )\"                    "}
+    25%  {content: ": (\"                    "}
+    30%  {content: ": )\"                    "}
+    35%  {content: ": (\"                    "}
+    45%  {content: ": )\"                    "}
+    50%  {content: ": ( help me jack please"}
+    80%  {content: ":)\"                     ";}
+    100% {content: ":)\"                     ";}
+}
+@keyframes c2-editanim {
+    0%   {content: "_"; color: transparent;}
+    14.99%   {content: "_"; color: transparent;}
+    15%  {content: "(edited)"; color: inherit;}
+    100%  {content: "(edited)"}
 }
