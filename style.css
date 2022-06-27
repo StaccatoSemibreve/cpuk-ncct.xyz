@@ -109,7 +109,7 @@
     --nelson-background: var(--discord);
     --nelson-border: var(--darkest-discord);
 }
-.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow {
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote {
     --text: var(--light);
 
     --prism: white;
