@@ -39,6 +39,7 @@
     --danism: #f66;
     --danismer: #d33;
     --danismest: #d11;
+    --bing: #b6c608;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -59,6 +60,9 @@
 /*     --matchup-border: var(--darkest-discord); */
     --matchup-border: #4e4f53;
     --matchup-text: var(--light);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
 }
 
 .pocket, .pocket-start, .pocket-stop, .black {
@@ -76,6 +80,11 @@
 
     --mint: #00ff80;
     --chartreuse: #80ff00;
+    --bing: #b6c608;
+
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
 }
 
 .cutscene {
@@ -154,7 +163,7 @@
 @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
     :root {
         --width: 100vw;
-        --subwidth: calc(100vw-100pt);
+        --subwidth: calc(100vw - 100pt);
     }
     .announcement {
         padding-left: 18pt;
@@ -599,9 +608,13 @@ h3 {
     color: var(--mint);
     font-size: 15pt;
 }
+.bing {
+    color: var(--bing);
+    font-size: 15pt;
+}
 
 
-.cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid {
+.cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid, h3 > a > .white {
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -615,12 +628,15 @@ h3 {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 0.6em;
-    width: var(--width);
+    width: calc(var(--width) - 6px - 0.6em);
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 }
 .matchup {
     display: grid;
     grid-template-rows: 1.5em 1.5em;
-    row-gap: 0.1em;
     align-items: center;
 
     background-color: var(--matchup-background);
@@ -628,6 +644,7 @@ h3 {
     border: 3px solid var(--matchup-border);
     width: 1fr;
     max-width: calc(var(--width) / 4);
+    height: 3em;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -637,14 +654,19 @@ h3 {
     text-overflow: clip;
     padding-left: 0.2em;
     font-size: 10pt;
-    max-width: calc(var(--width) / 4 - 2.4em);
+    max-width: calc(var(--width) / 4);
+    height: 1.5em;
+    border-bottom: 2px solid transparent;
+}
+.matchup span {
+    white-space: nowrap;
 }
 .matchup .matchupborder {
     border-bottom: 2px solid var(--matchup-border);
 }
 .bracket a {
     text-decoration: none;
-    max-width: calc(var(--width) / 4);
+    width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
 }
 
 
