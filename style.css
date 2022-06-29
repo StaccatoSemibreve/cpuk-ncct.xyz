@@ -103,13 +103,14 @@
     --void: var(--null);
     --unvoid: var(--light-null);
     --cosmic: var(--script);
+    --chartreuse: #4cff00;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
     --nelson-background: var(--discord);
     --nelson-border: var(--darkest-discord);
 }
-.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote {
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote, .cutscene .win {
     --text: var(--light);
 
     --prism: white;
