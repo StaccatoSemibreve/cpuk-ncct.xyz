@@ -396,7 +396,6 @@ h3 {
     font-style: italic;
     color: var(--void);
     background-color: var(--void);
-    transform: skew(-15deg);
     white-space: break-spaces;
 }
 .void:active, .void:hover {
@@ -408,7 +407,6 @@ h3 {
     color: var(--ryan);
 }
 .invoid {
-    transform: skew(15deg);
     font-style: normal;
 }
 .winvoid, .win .void {
