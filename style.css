@@ -40,6 +40,7 @@
     --danismer: #d33;
     --danismest: #d11;
     --bing: #b6c608;
+    --mint: #00ff80;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -132,6 +133,12 @@
         padding-left: 2.5em;
         padding-right: 1em;
     }
+    .justicer {
+        font-size: 36pt;
+    }
+    .justicest {
+        font-size: 108pt;
+    }
 }
 @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
     :root {
@@ -145,6 +152,12 @@
     .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
+    }
+    .justicer {
+        font-size: 36pt;
+    }
+    .justicest {
+        font-size: 108pt;
     }
 }
 @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
@@ -160,6 +173,12 @@
         padding-left: 2.5em;
         padding-right: 1em;
     }
+    .justicer {
+        font-size: 24pt;
+    }
+    .justicest {
+        font-size: 72pt;
+    }
 }
 @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
     :root {
@@ -173,6 +192,12 @@
     .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
+    }
+    .justicer {
+        font-size: 24pt;
+    }
+    .justicest {
+        font-size: 72pt;
     }
 }
 @media only screen and (max-width: 400pt) and (orientation: landscape) {
@@ -188,6 +213,12 @@
         padding-left: 1em;
         padding-right: 1em;
     }
+    .justicer {
+        font-size: 24pt;
+    }
+    .justicest {
+        font-size: 72pt;
+    }
 }
 @media only screen and (orientation: portrait) {
     :root {
@@ -201,6 +232,12 @@
     .nelson, .chat {
         padding-left: 0.75em;
         padding-right: 0.75em;
+    }
+    .justicer {
+        font-size: 24pt;
+    }
+    .justicest {
+        font-size: 72pt;
     }
 }
 
@@ -301,6 +338,8 @@ div .announcement.break {
 p, li, a, h1, h2, h3, hr {
     font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: var(--text);
+
+    overflow-wrap: break-word;
 }
 
 p, li {
@@ -311,6 +350,9 @@ p, li {
 
 img {
     width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
 }
 
 h1 {
@@ -356,6 +398,7 @@ h3 {
     font-style: italic;
     color: var(--prism);
     font-size: 13pt;
+    line-height: 12pt;
 }
 .prismer {
     font-style: italic;
@@ -467,6 +510,14 @@ h3 {
     color: var(--ryan);
     list-style-type: "-";
 }
+.justice {
+    font-weight: bold;
+    font-size: 13pt;
+    line-height: 12pt;
+}
+.justicer, .justicest {
+    font-weight: bold;
+}
 .scene {
     font-weight: bold;
     font-style: italic;
@@ -505,6 +556,7 @@ h3 {
     color: var(--note);
     padding-left: 4em;
     margin-bottom: 3em;
+    margin-top: 0.5em;
 }
 .break {
     white-space: nowrap;
@@ -540,12 +592,14 @@ h3 {
 
     display: grid;
     margin-bottom: 1.5em;
+
+    overflow-wrap: break-word;
 }
 .nelson {
-    grid-template-columns: 90pt auto;
+    grid-template-columns: 90pt calc(100% - 90pt);
 }
 .chat {
-    grid-template-columns: 36pt auto;
+    grid-template-columns: 36pt calc(100% - 36pt);
 }
 
 .parts {
@@ -606,6 +660,16 @@ h3 {
 .peppermint {
     color: var(--mint);
     font-size: 15pt;
+}
+.mintest {
+    color: var(--mint);
+    font-size: 18pt;
+}
+.mintmatic {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--mint);
+    font-size: 20pt;
 }
 .bing {
     color: var(--bing);
