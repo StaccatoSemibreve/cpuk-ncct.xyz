@@ -64,6 +64,7 @@
 
     --void: var(--null);
     --unvoid: var(--light-null);
+    --prism: rgba(255,255,255,0.9);
 }
 
 .pocket, .pocket-start, .pocket-stop, .black {
@@ -105,6 +106,7 @@
     --unvoid: var(--light-null);
     --cosmic: var(--script);
     --chartreuse: #4cff00;
+    --mint: #00ff80;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -478,7 +480,7 @@ h3 {
     background-color: var(--unvoid);
     color: var(--light);
 }
-.announcement .white {
+.announcement .white, .bracket .white {
     background-image: url('./2ex/images/rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -548,6 +550,7 @@ h3 {
     padding-top: 7px;
     padding-bottom: 10px;
     padding-left: 15px;
+    padding-right: 5px;
 }
 .win:active, .win:hover {
     background-color: var(--unvoid);
@@ -688,14 +691,16 @@ h3 {
     background-color: var(--bracket-background);
     border: 3px solid var(--bracket-border);
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 0.6em;
-    width: calc(var(--width) - 6px - 0.6em);
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: calc(var(--width) - 6px - 0.6em);
+}
+.bracket {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .matchup {
     display: grid;
