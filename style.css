@@ -737,6 +737,11 @@ h3 {
     width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
 }
 
+img.emoji {
+    width:1.5em;
+    pointer-events: none;
+}
+
 
 #c2-smileanim:before {
     content: ":)";
