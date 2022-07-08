@@ -107,6 +107,7 @@
     --cosmic: var(--script);
     --chartreuse: #4cff00;
     --mint: #00ff80;
+    --cobalt: #0047ab;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -676,6 +677,10 @@ h3 {
 }
 .bing {
     color: var(--bing);
+    font-size: 15pt;
+}
+.cobalt {
+    color: var(--cobalt);
     font-size: 15pt;
 }
 
