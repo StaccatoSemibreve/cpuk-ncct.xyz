@@ -16,6 +16,8 @@
     --light-null: #25262b;
     --null: #202225;
     --script: #0a0027;
+
+    --purple: #aa8ed6;
 }
 
 .discord {
@@ -34,7 +36,7 @@
     --void: var(--null);
     --unvoid: var(--light-null);
 
-    --twistgod: #aa8ed6;
+    --twist: #aa8ed6;
     --danirage: #fcc;
     --danism: #f66;
     --danismer: #d33;
@@ -108,6 +110,7 @@
     --chartreuse: #4cff00;
     --mint: #00ff80;
     --cobalt: #0047ab;
+    --twist: #aa8ed6;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -132,7 +135,7 @@
         padding-left: 36pt;
         padding-right: 30pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -152,7 +155,7 @@
         padding-left: 24pt;
         padding-right: 18pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -172,7 +175,7 @@
         padding-left: 21pt;
         padding-right: 15pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -192,7 +195,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -212,7 +215,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -232,7 +235,7 @@
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat {
+    .nelson, .chat, .prismchat {
         padding-left: 0.75em;
         padding-right: 0.75em;
     }
@@ -249,7 +252,7 @@
     padding-left: calc((var(--width) - var(--subwidth)) / 2);
     padding-right: calc((var(--width) - var(--subwidth)) / 2);
 }
-.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow {
+.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord {
     width: var(--width);
 }
 
@@ -269,7 +272,7 @@ body {
 .cutscene {
     background-color: var(--blank);
     overflow: hidden;
-    padding-top: 10pt;
+    padding-top: 20pt;
     padding-bottom: 30pt;
 }
 .pocket {
@@ -327,6 +330,14 @@ body {
 }
 .pocket-black {
     background: linear-gradient(to top, black, var(--null));
+}
+.cutscene-twist {
+    background: linear-gradient(to bottom, var(--blank), 5em, var(--purple), 20em, var(--purple), 30em, var(--purple));
+    height: 30em;
+}
+.twist-discord {
+    background: linear-gradient(to bottom, var(--purple), var(--discord));
+    height: 10em;
 }
 
 .bigimg {
@@ -584,8 +595,9 @@ h3 {
 
 .nelsonimg {
     max-width: 73px;
+    margin-bottom: 1em;
 }
-.nelson, .chat {
+.nelson, .chat, .prismchat {
     background-color: var(--nelson-background);
     border: 3px solid var(--nelson-border);
     border-radius: 10px;
@@ -604,6 +616,17 @@ h3 {
 }
 .chat {
     grid-template-columns: 36pt calc(100% - 36pt);
+}
+.prismchat {
+    grid-template-columns: 48pt calc(100% - 48pt);
+}
+.prismchat > p {
+    font-size: 14pt;
+    color: rgba(255, 255, 255, 0.6);
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
 
 .parts {
@@ -652,8 +675,8 @@ h3 {
     font-size: 15pt;
     color: var(--danirage);
 }
-.twistgod {
-    color: var(--twistgod);
+.twistgod, .twist {
+    color: var(--twist);
     font-size: 15pt;
     font-weight: bold;
 }
