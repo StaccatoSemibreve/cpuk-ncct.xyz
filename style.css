@@ -108,6 +108,7 @@
     --unvoid: var(--light-null);
     --cosmic: var(--script);
     --chartreuse: #4cff00;
+    --crimson: #dc143c;
     --mint: #00ff80;
     --cobalt: #0047ab;
     --twist: #aa8ed6;
@@ -683,6 +684,10 @@ h3 {
 .chartreuse {
     color: var(--chartreuse);
     font-size: 15pt;
+}
+.crimson {
+    color: var(--crimson);
+    font-size: 14pt;
 }
 .peppermint {
     color: var(--mint);
