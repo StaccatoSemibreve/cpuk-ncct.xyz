@@ -621,8 +621,7 @@ h3 {
 .prismchat {
     grid-template-columns: 48pt calc(100% - 48pt);
 }
-.prismchat > p {
-    font-size: 14pt;
+.prismchat > .white {
     color: rgba(255, 255, 255, 0.6);
     background-image: url('./rainbow.png');
     background-clip: text;
