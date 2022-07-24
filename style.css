@@ -413,7 +413,6 @@ h3 {
     font-style: italic;
     color: var(--prism);
     font-size: 13pt;
-    line-height: 12pt;
 }
 .prismer {
     font-style: italic;
@@ -455,6 +454,7 @@ h3 {
     color: var(--void);
     background-color: var(--void);
     white-space: break-spaces;
+    padding-bottom: 1pt;
 }
 .void:active, .void:hover {
     background-color: var(--unvoid);
@@ -528,7 +528,6 @@ h3 {
 .justice {
     font-weight: bold;
     font-size: 13pt;
-    line-height: 12pt;
 }
 .justicer, .justicest {
     font-weight: bold;
