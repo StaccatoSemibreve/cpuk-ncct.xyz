@@ -53,11 +53,11 @@
     --nelson-text: var(--light);
 }
 
-.bracket {
+.bracket, .bracketish {
     --text: var(--light);
     --bracket-background: #272a33;
 /*     --bracket-background: var(--darker-discord); */
-    --bracket-border: var(--darkest-discord);
+    --bracket-border: var(#272a33);
     --bracket-text: var(--light);
     --matchup-background: #58595e;
 /*     --matchup-background: var(--discord); */
@@ -374,8 +374,8 @@ img {
 
 h1 {
     font-size: 20pt;
-    margin-bottom: 18pt;
-    padding-top: 50pt;
+    margin-bottom: 3em;
+    margin-top: 5em;
 }
 h2 {
     font-size: 16pt;
@@ -422,7 +422,7 @@ h3 {
     font-size: 14pt;
     display: inline-block;
     transform: skew(-5deg);
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -435,7 +435,7 @@ h3 {
     font-size: 16pt;
     display: inline-block;
     transform: skew(-10deg);
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -448,7 +448,7 @@ h3 {
     font-size: 20pt;
     display: inline-block;
     transform: skew(-10deg);
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -499,7 +499,7 @@ h3 {
     color: var(--light);
 }
 .announcement .white, .bracket .white {
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -510,7 +510,7 @@ h3 {
     font-weight: bold;
     font-size: 13pt;
     color: var(--danism);
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -629,7 +629,7 @@ h3 {
 }
 .prismchat > .white {
     color: rgba(255, 255, 255, 0.6);
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -720,7 +720,7 @@ h3 {
 
 
 .cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid, h3 > a > .white {
-    background-color: purple;
+/*     background-color: purple; */
     background-image: url('./rainbow.png');
     background-clip: text;
     -webkit-background-clip: text;
@@ -729,15 +729,14 @@ h3 {
 
 .bracket {
     background-color: var(--bracket-background);
-    border: 3px solid var(--bracket-border);
     display: grid;
     gap: 0.6em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: calc(var(--width) - 6px - 0.6em);
+    width: calc(var(--width) - 1em);
 }
 .bracket {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -772,7 +771,7 @@ h3 {
 .matchup .matchupborder {
     border-bottom: 2px solid var(--matchup-border);
 }
-.bracket a {
+.bracket a, .bracketish a {
     text-decoration: none;
     width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
 }
