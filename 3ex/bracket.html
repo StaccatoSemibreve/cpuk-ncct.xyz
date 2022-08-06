@@ -7,51 +7,174 @@
         <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
         <link rel="icon" sizes="32x32" type="image/png" href="../nelsontomb_32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            .superbracketish {
+                background-color: var(--bracket-background);
+                display: grid;
+                width: var(--width);
+                grid-template-columns: calc(var(--width) / 4) calc(var(--width) / 4);
+                column-gap: calc(var(--width) / 2);
+            }
+            .bracketish {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6em;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                width: calc(var(--width) / 4);
+            }
+            .line {
+                position: absolute;
+                border: solid #4e4f53;
+                border-width: 2px;
+                border-left-width: 0px;
+                width: 1em;
+            }
+            .lineflip {
+                position: absolute;
+                border: solid #4e4f53;
+                border-width: 2px;
+                border-right-width: 0px;
+                width: 1em;
+            }
+            .one {
+                margin-left: calc(var(--width) / 4 + 0.5em - 8px);
+                height: calc(3.6em + 4px);
+            }
+            .oneflip {
+                margin-left: calc(6px - 1.5em);
+                height: calc(3.6em + 4px);
+            }
+            .two {
+                margin-left: calc(var(--width) / 4 + 1.5em - 6px);
+                height: calc(2*(3.6em + 6px));
+                width: 2em;
+            }
+            .twoflip {
+                margin-left: calc(4px - 3.5em);
+                height: calc(2*(3.6em + 6px));
+                width: 2em;
+            }
+            .three {
+                margin-left: calc(var(--width) / 4 + 3.5em - 4px);
+                height: calc(4*(3.6em + 6px));
+                width: 3em;
+            }
+            .threeflip {
+                margin-left: calc(2px - 6.5em);
+                height: calc(4*(3.6em + 6px));
+                width: 3em;
+            }
+            .four {
+                margin-left: calc(var(--width) / 4 + 6.5em - 2px);
+                height: calc(8*(3.6em + 6px));
+                width: 3.5em;
+            }
+            .fourflip {
+                margin-left: calc(0px - 10em);
+                height: calc(8*(3.6em + 6px));
+                width: 3.5em;
+            }
+            .five {
+                position: absolute;
+                background: #4e4f53;
+                height: 2px;
+                width: calc(var(--width) / 2 - 21em + 17px);
+                margin-left: calc(var(--width) / 4 + 11em - 9px);
+            }
+        </style>
     </head>
     <body style="background-color: #272a33;">
         <div class="discord" style="background-color: #272a33;">
             <a href="./"><h1 style="text-align: center;">Dream Kerfuffle 3</h1></a>
         </div>
-        <div class="bracket" style="grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;">
-            <div class="matchup"><p class="matchupborder">Spriteman</p><p>Miles Edgeworth</p></div>
-            <div class="matchup"><p class="matchupborder">Electric Blue Raspberry</p><p>Duck Duck Go</p></div>
-            <div class="matchup"><p class="matchupborder">Susan</p><p>Squid Jenny</p></div>
-            <div class="matchup"><p class="matchupborder">In-Cena-Roar</p><p>True Celadon</p></div>
 
-            <div class="matchup"><p class="matchupborder">Mac and Cheese</p><p>Danthony</p></div>
-            <div class="matchup"><p class="matchupborder">Subzero Amalgam</p><p>High Crowler</p></div>
-            <div class="matchup"><p class="matchupborder">TRAINER OF JUSTICE</p><p>BEES!!!!!</p></div>
-            <div class="matchup"><p class="matchupborder">Genfour</p><p>Barry</p></div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <div class="matchup"><p class="matchupborder">Spriteman</p><p>Miles Edgeworth</p></div>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <div class="matchup"><p class="matchupborder">Electric Blue Raspberry</p><p>Duck Duck Go</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Susan</p><p>Squid Jenny</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">In-Cena-Roar</p><p>True Celadon</p></div>
 
-            <div class="matchup"><p class="matchupborder">Twist</p><p>Google</p></div>
-            <div class="matchup"><p class="matchupborder">A Florida Man</p><p>Geico Gecko</p></div>
-            <div class="matchup"><p class="matchupborder">Corn on the Cob</p><p>Captain Valentine</p></div>
-            <div class="matchup"><p class="matchupborder">Painguin</p><p>Alabaster Uppercut</p></div>
+                            <div class="line three" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
 
-            <div class="matchup"><p class="matchupborder">Kanye West</p><p>Hackerman J0hn</p></div>
-            <div class="matchup"><p class="matchupborder"><span class="white">Prism</span></p><p>Light Pit</p></div>
-            <div class="matchup"><p class="matchupborder">Wayward Compass</p><p>The Guy</p></div>
-            <div class="matchup"><p class="matchupborder">Bing</p><p><span class="void invoid">Nagito Komaeda</span></p></div>
+                <div class="matchup"><p class="matchupborder">Mac and Cheese</p><p>Danthony</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Subzero Amalgam</p><p>High Crowler</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">TRAINER OF JUSTICE</p><p>BEES!!!!!</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Genfour</p><p>Barry</p></div>
 
-            <div class="matchup"><p class="matchupborder">Palutena</p><p>Pinball Wizard</p></div>
-            <div class="matchup"><p class="matchupborder">Larry</p><p>Piss Yoshi</p></div>
-            <div class="matchup"><p class="matchupborder">Sans Undertale</p><p>Sting</p></div>
-            <div class="matchup"><p class="matchupborder">Winston Overwatch</p><p>Dougie</p></div>
+                                <div class="line four" style="margin-top: calc(1.5em + 3.5*(3.6em + 6px));"></div>
 
-            <div class="matchup"><p class="matchupborder">Swing</p><p>Home MD</p></div>
-            <div class="matchup"><p class="matchupborder">Jerry</p><p>Chartreuse</p></div>
-            <div class="matchup"><p class="matchupborder">Angus McDonald</p><p>Captain Quadratic</p></div>
-            <div class="matchup"><p class="matchupborder">Dr Order</p><p>Machiavelli</p></div>
+                <div class="matchup"><p class="matchupborder">Twist</p><p>Google</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 8*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">A Florida Man</p><p>Geico Gecko</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 8.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Corn on the Cob</p><p>Captain Valentine</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 10*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Painguin</p><p>Alabaster Uppercut</p></div>
 
-            <div class="matchup"><p class="matchupborder">Mozilla</p><p>Cha Cha</p></div>
-            <div class="matchup"><p class="matchupborder">Iggy Koopa</p><p>Therapuppy</p></div>
-            <div class="matchup"><p class="matchupborder">Dimensional Bus</p><p>Insta-Jennifer</p></div>
-            <div class="matchup"><p class="matchupborder"><span class="white">The Prismatic Shadow</span></p><p>Golden Spiral</p></div>
+                            <div class="line three" style="margin-top: calc(1.5em + 9.5*(3.6em + 6px));"></div>
 
-            <div class="matchup"><p class="matchupborder">Dan</p><p>Peppermint</p></div>
-            <div class="matchup"><p class="matchupborder">Engineer TF2</p><p>Discord Jack</p></div>
-            <div class="matchup"><p class="matchupborder">My Gunk</p><p>Dantoinette</p></div>
-            <div class="matchup"><p class="matchupborder">Folk</p><p>Yung Papaya</p></div>
+                <div class="matchup"><p class="matchupborder">Kanye West</p><p>Hackerman J0hn</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 12*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder"><span class="white">Prism</span></p><p>Light Pit</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 12.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Wayward Compass</p><p>The Guy</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 14*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Bing</p><p><span class="void invoid">Nagito Komaeda</span></p></div>
+            </div>
+                <div class="five" style="margin-top: calc(2em + 7.5*(3.6em + 6px));"></div>
+            <div class="bracketish">
+                <div class="matchup"><p class="matchupborder">Palutena</p><p>Pinball Wizard</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <div class="matchup"><p class="matchupborder">Larry</p><p>Piss Yoshi</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Sans Undertale</p><p>Sting</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Winston Overwatch</p><p>Dougie</p></div>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">Swing</p><p>Home MD</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Jerry</p><p>Chartreuse</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Angus McDonald</p><p>Captain Quadratic</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Dr Order</p><p>Machiavelli</p></div>
+
+                                <div class="lineflip fourflip" style="margin-top: calc(1.5em + 3.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">Mozilla</p><p>Cha Cha</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 8*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Iggy Koopa</p><p>Therapuppy</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 8.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Dimensional Bus</p><p>Insta-Jennifer</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 10*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder"><span class="white">The Prismatic Shadow</span></p><p>Golden Spiral</p></div>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 9.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">Dan</p><p>Peppermint</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 12*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Engineer TF2</p><p>Discord Jack</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 12.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">My Grunk</p><p>Dantoinette</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 14*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">Folk</p><p>Yung Papaya</p></div>
+            </div>
         </div>
+
+        <div class="discord" style="background-color: #272a33; height: 10em;"></div>
     </body>
 </html>
