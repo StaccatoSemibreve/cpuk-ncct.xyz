@@ -24,7 +24,7 @@
                 padding-right: 0.5em;
                 padding-top: 0.5em;
                 padding-bottom: 0.5em;
-                width: var(--width);
+                width: calc(var(--width) / 4);
             }
             .line {
                 position: absolute;
@@ -41,7 +41,7 @@
                 width: 1em;
             }
             .one {
-                margin-left: calc(var(--width) / 4 + 0.5em - 2px);
+                margin-left: calc(var(--width) / 4 + 0.5em - 8px);
                 height: calc(3.6em + 4px);
             }
             .oneflip {
@@ -49,35 +49,41 @@
                 height: calc(3.6em + 4px);
             }
             .two {
-                margin-left: calc(var(--width) / 4 + 1.5em);
+                margin-left: calc(var(--width) / 4 + 1.5em - 6px);
                 height: calc(2*(3.6em + 6px));
+                width: 2em;
             }
             .twoflip {
-                margin-left: calc(4px - 2.5em);
+                margin-left: calc(4px - 3.5em);
                 height: calc(2*(3.6em + 6px));
+                width: 2em;
             }
             .three {
-                margin-left: calc(var(--width) / 4 + 2.5em + 2px);
+                margin-left: calc(var(--width) / 4 + 3.5em - 4px);
                 height: calc(4*(3.6em + 6px));
+                width: 3em;
             }
             .threeflip {
-                margin-left: calc(2px - 3.5em);
+                margin-left: calc(2px - 6.5em);
                 height: calc(4*(3.6em + 6px));
+                width: 3em;
             }
             .four {
-                margin-left: calc(var(--width) / 4 + 3.5em + 4px);
+                margin-left: calc(var(--width) / 4 + 6.5em - 2px);
                 height: calc(8*(3.6em + 6px));
+                width: 3.5em;
             }
             .fourflip {
-                margin-left: calc(0px - 4.5em);
+                margin-left: calc(0px - 10em);
                 height: calc(8*(3.6em + 6px));
+                width: 3.5em;
             }
             .five {
                 position: absolute;
                 background: #4e4f53;
-                height: 1.8px;
-                width: calc(var(--width) / 2 - 10em + 11px);
-                margin-left: calc(var(--width) / 4 + 5.5em - 3px);
+                height: 2px;
+                width: calc(var(--width) / 2 - 21em + 17px);
+                margin-left: calc(var(--width) / 4 + 11em - 9px);
             }
         </style>
     </head>
