@@ -53,7 +53,7 @@
     --nelson-text: var(--light);
 }
 
-.bracket, .bracketish {
+.bracket, .bracketish, .superbracketish {
     --text: var(--light);
     --bracket-background: #272a33;
 /*     --bracket-background: var(--darker-discord); */
@@ -465,7 +465,7 @@ h3 {
     background-color: var(--unvoid);
     color: var(--light);
 }
-.ryan .void:active, .ryan .void:hover {
+.ryan .void:active, .ryan .void:hover, .ryan .spoiler:active, .ryan .spoiler:hover {
     background-color: var(--unvoid);
     color: var(--ryan);
 }
@@ -487,6 +487,9 @@ h3 {
 }
 .mint .void {
     color: var(--mint);
+}
+.matchup .void {
+    padding-top: 0;
 }
 .spoiler {
     color: var(--void);
@@ -771,9 +774,89 @@ h3 {
 .matchup .matchupborder {
     border-bottom: 2px solid var(--matchup-border);
 }
-.bracket a, .bracketish a {
+.bracket a {
     text-decoration: none;
     width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
+}
+.bracketish a {
+    text-decoration: none;
+}
+
+.superbracketish {
+    background-color: var(--bracket-background);
+    display: grid;
+    width: var(--width);
+    grid-template-columns: calc(var(--width) / 4 + 1em) calc(var(--width) / 4 + 1em);
+    column-gap: calc(var(--width) / 2 - 2em);
+}
+.bracketish {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: calc(var(--width) / 4);
+}
+.superbracketish .line {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-left-width: 0px;
+    width: 1em;
+}
+.superbracketish .lineflip {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-right-width: 0px;
+    width: 1em;
+}
+.superbracketish .one {
+    margin-left: calc(var(--width) / 4 + 0.5em - 8px);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .oneflip {
+    margin-left: calc(6px - 1.5em);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .two {
+    margin-left: calc(var(--width) / 4 + 1.5em - 6px);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .twoflip {
+    margin-left: calc(4px - 3.5em);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .three {
+    margin-left: calc(var(--width) / 4 + 3.5em - 4px);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish .threeflip {
+    margin-left: calc(2px - 6.5em);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish  .four {
+    margin-left: calc(var(--width) / 4 + 6.5em - 2px);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .fourflip {
+    margin-left: calc(0px - 10em);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .five {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    width: calc(var(--width) / 2 - 22em + 17px);
+    margin-left: calc(var(--width) / 4 + 11em - 9px);
 }
 
 img.emoji {
