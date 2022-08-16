@@ -879,6 +879,20 @@ img.emoji {
     animation-duration: 15s;
     animation-iteration-count: infinite;
 }
+#f4-convoanim:before {
+    content: "CONVERSATION";
+    white-space: pre-wrap;
+    animation-name: f4-convoanim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+#f4-editanim:before {
+    font-size: 9pt;
+    content: "";
+    animation-name: f4-editanim;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
 @keyframes c2-smileanim {
     0%   {content: ":    )\"                 "}
     14%  {content: ":    )\"                 "}
@@ -895,5 +909,17 @@ img.emoji {
     0%   {content: "_"; color: transparent;}
     14.99%   {content: "_"; color: transparent;}
     15%  {content: "(edited)"; color: inherit;}
+    100%  {content: "(edited)"}
+}
+@keyframes f4-convoanim {
+    0%   {content: "CONVERSATION";}
+    29.99%   {content: "CONVERSATION";}
+    30%  {content: "CUTSCENE";}
+    100% {content: "CUTSCENE";}
+}
+@keyframes f4-editanim {
+    0%   {content: "_"; color: transparent;}
+    29.99%   {content: "_"; color: transparent;}
+    30%  {content: "(edited)"; color: inherit;}
     100%  {content: "(edited)"}
 }
