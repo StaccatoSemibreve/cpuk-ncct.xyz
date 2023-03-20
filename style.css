@@ -501,6 +501,20 @@ h3 {
     background-color: var(--unvoid);
     color: var(--light);
 }
+.win .spoiler {
+    color: black;
+    background-color: black;
+}
+.win .spoiler:active, .win .spoiler:hover {
+    color: inherit;
+    background-color: inherit;
+}
+img.spoiler {
+    filter: opacity(0%);
+}
+img.spoiler:active, img.spoiler:hover {
+    filter: inherit;
+}
 .announcement .white, .bracket .white {
 /*     background-color: purple; */
     background-image: url('./rainbow.png');
@@ -893,6 +907,20 @@ img.emoji {
     animation-duration: 15s;
     animation-iteration-count: infinite;
 }
+
+#ncct3p6-wiggle {
+    display: inline-block;
+    animation: ncct3p6-wiggle 4s infinite;
+}
+@keyframes ncct3p6-wiggle {
+    0%   { transform: rotate(0deg); }
+    40%  { transform: rotate(0deg); }
+    45%  { transform: rotate(5deg); }
+    55%  { transform: rotate(-2deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
 @keyframes c2-smileanim {
     0%   {content: ":    )\"                 "}
     14%  {content: ":    )\"                 "}
