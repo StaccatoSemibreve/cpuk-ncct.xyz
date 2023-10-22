@@ -18,6 +18,10 @@
     --script: #0a0027;
 
     --purple: #aa8ed6;
+    
+    --ludwig-light: #24ffff;
+    --ludwig-dark: #0025ff;
+    --ludwig-purple: #d044fc;
 }
 
 .discord {
@@ -44,6 +48,7 @@
     --bing: #b6c608;
     --mint: #00ff80;
     --chartreuse: #80ff00;
+    --thend: #FFF0F5;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -70,7 +75,7 @@
     --prism: rgba(255,255,255,0.9);
 }
 
-.pocket, .pocket-start, .pocket-stop, .black {
+.pocket, .pocket-start, .pocket-stop, .black, .pocketfall {
     --background: var(--null);
     --text: var(--light);
 
@@ -249,12 +254,12 @@
     }
 }
 
-.discord, .cutscene, .pocket, .rainbow {
+.discord, .cutscene, .pocket, .pocketfall, .rainbow {
     width: var(--subwidth);
     padding-left: calc((var(--width) - var(--subwidth)) / 2);
     padding-right: calc((var(--width) - var(--subwidth)) / 2);
 }
-.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord {
+.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .pocketfall-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord {
     width: var(--width);
 }
 
@@ -279,6 +284,12 @@ body {
 }
 .pocket {
     background-color: var(--null);
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.pocketfall {
+	background: repeating-linear-gradient(to bottom, var(--null) 0em, var(--null) 22em, var(--blank) 25em, var(--null) 28em, var(--null) 40em);
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
@@ -319,6 +330,11 @@ body {
     background: linear-gradient(to top, var(--discord), var(--null));
     height: 5em;
 }
+.pocketfall-stop {
+/*    background: linear-gradient(to bottom, var(--null) 0em, var(--blank) 10em, var(--blank) 20em, var(--ludwig-light) 30em, var(--ludwig-light) 35em, var(--ludwig-dark) 43em, var(--ludwig-dark) 50em, var(--discord) 60em, var(--discord) 70em);
+*/  background: linear-gradient(to bottom, var(--null) 0em, var(--null) 5em, var(--blank) 10em, var(--blank) 25em, var(--discord) 30em);
+    height: 30em;
+}
 .cutscene-rainbow {
     background: linear-gradient(to bottom, var(--blank), 90em, transparent, 300em, transparent), url('./rainbow.png');
     background-size: 100% 100%;
@@ -358,6 +374,11 @@ p, li, a, h1, h2, h3, hr {
 
     overflow-wrap: break-word;
 }
+code {
+	background-color: var(--dark-discord);
+	padding: 0 3px;
+	border-radius: 3px;
+}
 
 p, li {
     list-style-type: circle;
@@ -390,6 +411,14 @@ h3 {
 }
 
 
+.dragging {
+	margin-top: 10em;
+	margin-bottom: 10em;
+}
+.nelson.dragging > p {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
 .much {
     margin-bottom: 10em;
 }
@@ -410,6 +439,10 @@ h3 {
 }
 .white {
     color: var(--prism);
+}
+.thend {
+	color: var(--thend);
+	font-size: 13pt;
 }
 .prism, .pr1sm {
     font-style: italic;
@@ -636,7 +669,7 @@ img.spoiler:active, img.spoiler:hover {
     overflow-wrap: break-word;
 }
 .nelson {
-    grid-template-columns: 90pt calc(100% - 90pt);
+    grid-template-columns: 100pt calc(100% - 100pt);
 }
 .chat {
     grid-template-columns: 36pt calc(100% - 36pt);
@@ -743,6 +776,7 @@ img.spoiler:active, img.spoiler:hover {
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
+
 
 .bracket {
     background-color: var(--bracket-background);
@@ -872,10 +906,25 @@ img.spoiler:active, img.spoiler:hover {
     width: calc(var(--width) / 2 - 22em + 17px);
     margin-left: calc(var(--width) / 4 + 11em - 9px);
 }
+.superbracketish .five2 {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    border-width: 2px;
+    width: calc(var(--width) / 2 - 15em + 21px);
+    margin-left: calc(var(--width) / 4 + 7em - 2px);
+}
 
 img.emoji {
     width:1.5em;
     pointer-events: none;
+}
+.reaction {
+	margin-left: 0.5em;
+	padding: 2px;
+	background: var(--nelson-background);
+	border: 2px solid var(--nelson-border);
+	border-radius: 3px;
 }
 
 
