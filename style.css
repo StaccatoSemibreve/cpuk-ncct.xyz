@@ -27,6 +27,7 @@
 .discord {
     --background: var(--discord);
     --text: var(--light);
+    --code: var(--dark-discord);
 
     --ryan: #00aff4;
     --note: var(--shade);
@@ -73,11 +74,13 @@
     --void: var(--null);
     --unvoid: var(--light-null);
     --prism: rgba(255,255,255,0.9);
+    --thend: ivory;
 }
 
 .pocket, .pocket-start, .pocket-stop, .black, .pocketfall {
     --background: var(--null);
     --text: var(--light);
+    --code: var(--light-null);
 
     --note: var(--shade);
 
@@ -91,6 +94,7 @@
     --mint: #00ff80;
     --chartreuse: #80ff00;
     --bing: #b6c608;
+    --thend: #FFF0F5;
 
     --nelson-background: var(--dark-discord);
     --nelson-border: var(--darkest-discord);
@@ -100,6 +104,7 @@
 .cutscene {
     --background: var(--blank);
     --text: var(--script);
+    --code: var(--shade);
 
     --ryan: #1155cc;
     --note: var(--shadow);
@@ -118,6 +123,8 @@
     --mint: #00ff80;
     --cobalt: #0047ab;
     --twist: #aa8ed6;
+    --thend: black;
+    --danism: #a0262f;
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -375,7 +382,7 @@ p, li, a, h1, h2, h3, hr {
     overflow-wrap: break-word;
 }
 code {
-	background-color: var(--dark-discord);
+	background-color: var(--code);
 	padding: 0 3px;
 	border-radius: 3px;
 }
@@ -443,6 +450,9 @@ h3 {
 .thend {
 	color: var(--thend);
 	font-size: 13pt;
+}
+.announcement .thend, .matchup .thend {
+	font-size: inherit;
 }
 .prism, .pr1sm {
     font-style: italic;
@@ -676,6 +686,9 @@ img.spoiler:active, img.spoiler:hover {
 }
 .prismchat {
     grid-template-columns: 48pt calc(100% - 48pt);
+}
+.nelson > h1 {
+    margin: 0px;
 }
 .prismchat > .white {
     color: rgba(255, 255, 255, 0.6);
