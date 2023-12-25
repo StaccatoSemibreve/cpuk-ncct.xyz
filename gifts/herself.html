@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CPUK: She, Herself, and I</title>
+        <link rel="icon" sizes="32x32" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJZlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgExAAIAAAARAAAAWodpAAQAAAABAAAAbAAAAAAAAAREAAAAAQAABEQAAAABd3d3Lmlua3NjYXBlLm9yZwAAAAOgAQADAAAAAQABAACgAgAEAAAAAQAAACCgAwAEAAAAAQAAACAAAAAAXHCPDAAAAAlwSFlzAACn8AAAp/ABtXBIBQAAAjFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+d3d3Lmlua3NjYXBlLm9yZzwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj4xMDkyPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpYUmVzb2x1dGlvbj4xMDkyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4K9b1miQAACKtJREFUWAm1V3twVFcZ/537TDbZbHbJJjxCyINSQghQE5oCQw0lCVJGiiOpOkwZ6fOPMljHDlpnnMbHqHVgaivWjjIgOOpI6gxUa1rBkoIUaQGFQEtgNwnkQUPSzSabfd7H8TuXrEN0KeLgmb17zj2v73e+8/seF/i3wtEiia7AosZlwQUNHfQM0nNEvIv+fc3NsqjvVHGEZdqM2fzHfkWfT2OFbllZrnH8NVi1cvHDra3WPtw5EJMAcIAxtNiBBU2FJHj2kJkU2OyIZSZckgJIeE50+OuHmKjvRHEACLWfrKlRA7NXa2JTiWOuS5LzqWmJV3q0uE1NxiqpjRXt7aYAO/FILc4S/E+gSBYkceraU6eMuwJtzpHB7M8qpAsao5/444zT9hKY/8O5K6eIPqCFZtAAaaiFHtE+XF+v8NvkCK0Duqub5lqw1xOSxRzsUyS62JEsBqkwEpUwDETiCURi0YqGwY4u0d9btcqXZDxH5imjx49hoRnRLw5FAEklLbZ4/6TCAvObZkqSfcGnaK4kt5G0bRjcFvIdcEJ4OBZHaDTCJV1hntKiTb6R5DRblr4AzktoXjZJtKBI15CtneCqsnf2O/vbhFBOGmEToMR7psK6FjY+kicpe0ctI04TVJJL6LnDDSE8FI0iFIpAmZID37hl517tlbxL7kUylkCKJNuElYBBjqagf9gPG7mIoP8If/RLm+bserHrViAkbvGQJW4ZEPZNVOeCF0QMhjFSeWgkAtWfi8JLceT78yXPsQOINt1nxs4ELUuVOddkbo1EeWokZkvH9phZlw+YU765+X626+UPetZvWio0IEBkOr3ok8oLzLfIzLp8ikqmDsFuk2SbKcsyQ2PjlpTvQkHnCHJXVyL/D7uRu/Re8GiMNtRlyMQaw2I8aTHv23uknKV1ijZjupLV8o2UZ8fPdOO13e29X37qLgHiZr5DEoMyl9aMmMY5nUmKW1IUn6wpUspUNJlskWjlXn43PDt+CG3mDNiGBXnaVNLYCJgrC/bZQ3Dv/A6yK+fAGo+BE4eYKmvup58wCn7wopr65Zu/EidtRmtGQioCWVlH6wWaUx2c31ibYFaZAqtsMBkvNd1aUd6F8Yekz1XJWkkxeCIJlqVDr70HcVwFj8QgP/QIXHWLwS0bUo4LxkeDSJzpgBnsVo2+fiNv1qy6rhnV69m7f3xNmOmKTKS8mXr671nVMLh0LQ+gyOx/ZSePpkweszmPhCO8+4uP80tEmL4Xf8rjXPSN8YE9v+HBhY3UX0hrZvGAXmMM1j7Ig9UNbwgtZPIRjqmJQSqMgEjCzerJpLr0+PH4pQUrd/ok9bGwLhn2iUOq/nwL8h7dCL1kBpKX+3CtdCbcrfvhWrYEQ9ObyBbPEJNL6HpSZMMesLoKrticmQljKC/PVeE/9nqEOEYUE5y/Xm4EkO6D0MjDaLWC1SsP5up6w7jETZatK/Y7QbDqImRt3gDXA59G6kInzL6rkKZ4IXvzoRA3RLHCo0i+fwqJr75KgmTGaoo4G09Vlnce7hRu/0YHldE8iDDXEaqKyx4YBR+4Qn6fQoOswu44jfGnDiFKgty/3ge5sICiVQRazSLo5aVCPvkngCwCyQdXsdEXXuI4eJoZZVNd6ARacX7SoR2H46y68a+52ZnEzw+NqmsWI+v7z3DlK2ugfX0dXK/8CN6DhzEtPAatqhJWaARK8QwMVpRhePtPYIbC4CY5dvKe2XMquOfZzczoPW/qZdPHhIhmVP1L/TeKnNROOw4i2bax720XJEtF40keTRo8Zlg8IUg3PEJEq+b9r+5y+ro3PMkv0uF7Ht/CI6HR63NtboWPHhf9A2f27s0RQtIJT1pgZg34/Q5Kednat6Lf/R1SfVcZU8lLk42Tz0c82IPhJ58ht9sBZWYxJOrTm1ZQBJoLY+dvEf7F7utUs7nNjh4XLnb/wo0bxa05AUqAyGQRaVCTatLCuY9/vkdowRwfG+eDbQd5oGQZD1Tc72gg9EGno5HhE6ccs+xqanbqcNdlPhLotnqh8ZOLG196079g+fl5K6pEBE0LEGTPSEIxIe001EWNW+3te98I2RY3Tpzmxu4dTKpZBX6NAtQTD0ArmQkRO2Wfl043D5yCFEM5Iq+T6fcNSGEU2vGPx7YUurK3ZCkyN2CHAwsaOiXwreVnW49OYmQaWbpOgwjWrnphyslzW4e9MwypslCCIsvmkQPw/PltuFfWO6QzBgYwPP/zYHf7KEthkC6GkNIZPvIwpEZj9tQCH3frmiw8QI4sQ2RYKW7VfCIAAiLSLjoReKB+3bb8mPm1BO0Qf6/H1J/fAH/Lc05aRnfM48HLfGh2LeT76mQWS7EkdV4j84yPRJHvyYXfnUuaonRH8BBIemQ1K2wa+256BRNacOTTH2Pt+5/tWdh4zFTlbR5fXrmWsmC0HQKn2GAKw3/vNAmajQgFq7FEgofGo8wwTOS5KZrm5pBvcIQ729JsOUYaIEWV30oDEzhIE83NEqOUnBZLXcvWrrOPnVjDMVhFE0jJSHL4+rS6JX+60nv1adu05xmM297cHMlLAWqi0FLYlFfKIt8sUnX0JuO7/lsAzh5pTqR3zFS3F9e2Fej6Z6Qs1cxWVAoFQq5IsRjLlmREbZNYyjpJJe+mUvxbt7qCSTJEKKXtWHt9vVxPI99ub3cyYmqy7tJ6vaynPVHs9Vz20ukoxYM1cecUDRi1R0n4Y6rMjpf8/eBAeuPbAiAWkco4/jOm89JSmOgR41K3uO8JwoklFp1cGbfM9yvOHvq96BCHAB2C9rEye0Ix6zZL+8R8Ek0RzyGc+KgRxclw6dr/Jl7OVzVr4hAiExP1HQNQT6dxpMW1tjHL6vEqdA/Xv6ygUqJNXzAOgGv+oUmp2R0DIE4jXKv4upI4W002/g+6e5nUr4ZM48iVsPkXATANVLT/L0WASG98cVHjIpFnpt+du0+/TNT/BEhgGb8n2sLEAAAAAElFTkSuQmCC">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            :root {
+                --superwidth: 100vw;
+                --width: 100vw;
+                --subwidth: 80vw;
+
+                --lilac-light: #dcf;
+                --lilac: #b6d;
+                --lilac-dark: #203;
+                --lilac-void: #100020;
+                --lilac-null-light: #0b0018;
+                --lilac-null: black;
+                
+                --chartreuse: #4c9a00;
+                --madder: #a50021;
+                --ryan: #1155cc;
+                --prism: magenta;
+                
+                --rage1: color-mix(in lch, var(--lilac-void) 70%, var(--madder));
+                --rage2: color-mix(in lch, var(--lilac-void) 55%, var(--madder));
+                --rage3: color-mix(in lch, var(--lilac-void) 40%, var(--madder));
+                --rage4: color-mix(in lch, var(--lilac-void) 20%, var(--madder));
+                --rage5: var(--madder);
+            }
+
+            .light {
+                --background: var(--lilac-light);
+                --text: var(--lilac-void);
+
+                --void: var(--lilac-void);
+                --unvoid: var(--light-null);
+            }
+
+            .dark {
+                --background: var(--lilac-dark);
+                --text: var(--lilac-light);
+
+                --void: var(--lilac-void);
+                --unvoid: var(--light-null);
+            }
+
+            @media only screen and (min-width: 800pt) and (orientation: landscape) { :root { --width: 750pt; --subwidth: 500pt; } }
+            @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) { :root { --width: 625pt; --subwidth: 425pt; } }
+            @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) { :root { --width: 450pt; --subwidth: 300pt; } }
+            @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) { :root { --width: 100vw; --subwidth: calc(100vw - 100pt); } }
+            @media only screen and (max-width: 400pt) and (orientation: landscape) { :root { --width: 100vw; --subwidth: calc(100vw - 20pt); } }
+            @media only screen and (orientation: portrait) { :root { --width: 100vw; --subwidth: 80vw; } }
+
+            body {
+                background-color: var(--lilac-void);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            p, summary {
+                padding-bottom: 1em;
+                padding-top: 0.5em;
+            }
+            p, li, a, h1, h2, h3, hr, summary {
+                font-family: sans-serif;
+                color: var(--text);
+
+                overflow-wrap: break-word;
+            }
+            p, li {
+                list-style-type: circle;
+                font-size: 12pt;
+                margin: 0;
+            }
+            summary { cursor: pointer; text-decoration: underline; }
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 50vh;
+                object-fit: contain;
+            }
+            h1 {
+                font-size: 20pt;
+                margin-bottom: 2em;
+                margin-top: 2em;
+            }
+            h2 {
+                font-size: 16pt;
+                margin-top: 18pt;
+                margin-bottom: 6pt;
+            }
+            h3 {
+                font-size: 14pt;
+                text-align: center;
+                margin-top: 6em;
+                margin-bottom: 0pt;
+            }
+            
+            .light {
+                width: calc(var(--width) - 4em);
+                background-color: var(--background);
+                overflow: hidden;
+                padding: 1em;
+            }
+            
+            .outer{
+                width: calc(var(--width) - 2em);
+                display: grid;
+                grid-template-columns: calc(var(--width) * 0.475 - 1.5em) calc(var(--width) * 0.475 - 1.5em);
+                grid-auto-rows: auto;
+                column-gap: 3em;
+                background: linear-gradient(to right, var(--background) calc(var(--width)*0.49), var(--lilac-void) calc(var(--width)*0.51));
+            }
+            
+            .shade { opacity: 70%; }
+            .dark.shade, .dark>.shade { opacity: 50%; }
+            .transparent { color: transparent; }
+            .void {
+                font-style: italic;
+                color: var(--lilac-null);
+                background-color: var(--lilac-null);
+                white-space: break-spaces;
+            }
+            .void:active, .void:hover {
+                background-color: var(--lilac-null-light);
+                color: var(--lilac-light);
+            }
+            .void>img { opacity: 0; }
+            .void:active>img, .void:hover>img { opacity: inherit; }
+            
+            .green { color: var(--chartreuse); }
+            .rage1 { color: var(--rage1); }
+            .rage2 { color: var(--rage2); }
+            .rage3 { color: var(--rage3); font-size: 13pt; }
+            .rage4 { color: var(--rage4); font-size: 13pt; }
+            .rage5 { color: var(--rage5); font-size: 14pt; font-weight: bold; }
+            .raging { color: var(--rage3); animation: raging 5s infinite; }
+            @keyframes raging { 0% {color: var(--rage3)} 80% {color: var(--rage3)} 90% {color: var(--madder)} 100% {color: var(--rage3)}  }
+            
+            .fade1    { opacity: 80%; animation: fade1 5s infinite; }
+            .fade2    { opacity: 60%; animation: fade2 5s infinite; }
+            .fade3    { opacity: 40%; animation: fade3 5s infinite; }
+            .fade4    { opacity: 20%; animation: fade4 5s infinite; }
+            .fade5ish { opacity: 10%; animation: fade5ish 5s infinite; }
+            .fade5    { opacity: 00%; animation: fade5 5s infinite; }
+            @keyframes fade1    { 0% {opacity: 80%} 80% {opacity: 80%} 90% {opacity: 100%} 100% {opacity: 80%} }
+            @keyframes fade2    { 0% {opacity: 60%} 80% {opacity: 60%} 90% {opacity: 90%} 100% {opacity: 60%} }
+            @keyframes fade3    { 0% {opacity: 40%} 80% {opacity: 40%} 90% {opacity: 80%} 100% {opacity: 40%} }
+            @keyframes fade4    { 0% {opacity: 20%} 80% {opacity: 20%} 90% {opacity: 70%} 100% {opacity: 20%} }
+            @keyframes fade5ish { 0% {opacity: 10%} 80% {opacity: 10%} 90% {opacity: 60%} 100% {opacity: 10%} }
+            @keyframes fade5    { 0% {opacity: 00%} 80% {opacity: 00%} 90% {opacity: 50%} 100% {opacity: 00%} }
+            
+            .small { font-size: 11pt; }
+            .fail { padding-top: 0; margin-top: 0; padding-bottom: 0; margin-bottom: 0pt; }
+            
+            .whole { display: inline-block; }
+            .shatter1 { display: inline-block; transform: rotate(-5deg) translate(0em, -0.1em); }
+            .shatter2 { display: inline-block; transform: rotate(5deg) translate(0em, 0.1em); }
+            .shatter1lite { display: inline-block; transform: rotate(-1deg) translate(0em, 0.2em); }
+            .shatter2lite { display: inline-block; transform: rotate(1deg) translate(0em, -0.2em); }
+            
+            .breath { height: 17px; }
+            .breath:before { content: " "; animation: breath 10s infinite; }
+            @keyframes breath { 0% {content: " ";} 29% {content: " ";} 30% {content: ".";} 39% {content: ".";} 40% {content: "..";} 49% {content: "..";} 50% {content: "...";} 79% {content: "...";} 80% {content: "..";} 89% {content: "..";} 90% {content: ".";} 99% {content: ".";} 100% {content: " ";} }
+            .shake { animation: shake 0.2s infinite; }
+            @keyframes shake { 0% {transform: translate(1px,-1px);} 50% {transform: translate (-1px,1px);} 100% {translate(1px,-1px);}}
+            
+            .ryan { color: var(--ryan); }
+            .prism { font-style: italic; color: var(--prism); }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="light" style="padding-left: 3em; padding-right: -3em; padding-top: 6em; padding-bottom: 36em;">
+                <h1>She, Herself, and I</h1>
+                
+                <p>She has one thought on her mind. She has to win, she <em><strong>has</strong></em> to.</p>
+                <p>She can't fail.</p>
+                <p>As she approaches the doorway, she steels her mind, preparing herself. She's ready.</p>
+                <details>
+                <summary>🚪 She walks through the door.</summary>
+                <p>Dantoinette's target is right there, standing at some kind of control panel, pulling <span class="green">energy</span> out of it, absorbing it. Becoming stronger with every second, so no time to waste destroying her.</p>
+                <p><em>Doctor Order.</em></p>
+                <p>As she opens her mouth to announce her presence, Doctor Order sees her and smirks, <span class="green">disappearing</span> in a heartbeat, her silhouette fading to nothing.</p>
+                <p>Dammit! She had her, she had her and let her get away! She has to find her, to stop her.</p>
+                <p>Okay, where di<span class="fade1">d</span> <span class="fade2">s</span><span class="fade3">h</span><span class="fade4">e</span><span class="fade3">.</span><span class="fade2">.. um.</span><span class="fade1">.</span>. what? What's that <span class="fade1">s</span><span class="fade2">e</span><span class="fade3">n</span><span class="fade4">sat</span><span class="fade3">i</span><span class="fade2">o</span><span class="fade1">n</span>? She felt it in her fingertips, a viciously cold numbness.</p>
+                <p>She looks at her <span class="green">right <span class="fade1">h</span><span class="fade2">a</span><span class="fade3">n</span><span class="fade4">d</span></span> with horror as it glows and begins to blur, pulsing with every heartbeat. As she grasps her <span class="green">wri<span class="fade1">s</span><span class="fade2">t</span></span> it seems to come into focus, but only for a moment before it begins to fade again.</p>
+                <p>"Oh god, uh," she's panicking, what is this, what's happening!? She sees the wristwatch on the hand grasping her <span class="green">w<span class="fade1">r</span><span class="fade2">i</span><span class="fade3">s</span><span class="fade4">t</span></span> and yells frantically into it. "Hey, Hackerman John, <em>what's going on!?"</em></p>
+                <p>J0hn's voice comes out, sounding panicked. <code>"Looks like she did some crazy shit with the timelines! Um, listen listen listen,"</code> Dantoinette hears, struggling to focus as she sees the glow begin spreading to her <span class="green">a<span class="fade1">r</span><span class="fade2">m</span></span>, how long until it reaches her shoulder? Her torso? Her <em>heart</em>? No, she can't worry about that, she has to be strong, she has to listen, she has to <em>beat</em> this.</p>
+                <p><code>"I don't know how to explain this, this is some quantum bullshit... listen, you're gonna be okay... just not, <em>you</em> you?"</code> W... What? What the hell does <em>that</em> mean!? <code>"There's still another version of you that's going to do just fine, but <em>you</em> as you are... are not... gonna do great."</code> How the hell does that help <em>her!!</em></p>
+                <p>... Her <span class="green"><span class="fade1">h</span><span class="fade2">a</span><span class="fade3">n</span><span class="fade4">d</span></span> is shaking. How long has it been shaking? She wills it to stop shaking. It keeps shaking.</p>
+                <p><code>"I don't... I don't know how to explain this... Okay listen, we're going to save this version of you as well, we're on our way, just hold on!"</code></p>
+                <p>Hold on? <em><span class="rage1">Hold on?</span></em> <em><strong><span class="rage2">To what!?</span></strong></em> "I don't know how to hold on! How do you hold onto the <em>pull of <span class="green">time</span>!!!"</em></p>
+                <p><code>"Listen,"</code> she hears from the wrist she can't see through, <code>"I know it's difficult, just please, try to find a way!"</code></p>
+                <p>Dani focuses on what she can. Her name, every step she took to get here, exactly how she was planning to tear Doctor Order to shreds, the consequences for the world if she doesn't <em>beat</em> this and <em>find that <strong>cheater</strong></em>. She fills with rage, takes the first step forward... and collapses, feeling every scrap of hope leave her as she falls to the floor, trying to catch her fall with a <span class="green"><span class="fade3">h</span><span class="fade4">a</span><span class="fade4">n</span><span class="fade5">d</span></span> that <em><strong>isn't there any more</strong></em> and landing painfully on her shoulder, ow ow <em><strong>ow</strong></em> that bastard doctor will <em>pay</em> for this!!</p>
+                <p>Seeing <span class="rage1">red,</span> <span class="rage2">refusing to let this stop her,</span> <span class="rage3">she braces against the</span> <span class="rage5">pain,</span> <span class="rage4">tries to stand,</span> <span class="small">and falls, seething at her helplessness.</span> She tries again, and falls again, and tries again, and falls again, and now her legs won't listen to her when she tries to stand. <em><strong><span class="raging">Useless!!!</span></strong></em> She did <em>not</em> get <em>all this way</em> just to... <em>just to..... <strong>just to.......</strong></em></p>
+                <p>Her <span class="green"><span class="fade4">han</span><span class="fade5">d</span></span> is gone... Her <span class="green"><span class="fade4">han</span><span class="fade5">d</span></span> is really gone... Her <span class="green"><span class="fade3">ar</span><span class="fade4">m</span></span> has nearly joined it... She's been injured before, but never like this, never enough to stop her when it's counted, never enough to do more than leave a scar. It should hurt more than this, right? It <em>deserves</em> to hurt more than this. She failed, and everyone's screwed, and it's her fault. Maybe it'll come when it spreads to her shoulder. Or to her lungs, or her neck, or her heart. It's not going to stop spreading... It won't stop until... Until there's nothing left of her...</p>
+                <div style="padding-top: 3em; transform: translate(0.5em, 0) rotate(-1deg);">
+                    <p>She's afraid. A failure. Alone. <span class="fade1">Drowning in her failure. She can barely</span> <span class="fade2">think through the</span> <span class="fade3">pain and guilt and shame as she watches</span> <span class="green">Doctor Order</span> <span class="fade4">reappear at the control panel. She doesn't see what happens next.</span></p>
+                    
+                    <p><span class="fade4">She failed.</span></p>
+                    <p><span class="fade4">She failed.</span></p>
+                    <p><span class="fade4">She failed.</span></p>
+                    <p><span class="fade5ish">She failed.</span></p>
+                    <p><span class="fade5ish">She failed.</span></p>
+                    <p><span class="fade5">She failed.</span></p>
+                    <p><span class="fade5">She failed.</span></p>
+                    <p><span class="fade5">She failed.</span></p>
+                    <p><span class="fade5ish">She failed.</span></p>
+                    <p><span class="fade5ish">She failed.</span></p>
+                    <p><span class="fade4">She failed.</span></p>
+                    <p><span class="fade4">She failed.</span></p>
+                    <p><span class="fade3">She failed.</span></p>
+                    <p><span class="fade3">She failed.</span></p>
+                    <p><span class="fade2">She failed.</span></p>
+                    <p><span class="fade2">She failed.</span></p>
+                    <p><span class="fade1">She failed.</span></p>
+                    
+                    <div aria-hidden="true" style="transform: translate(5em,-38em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(5em,-25em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(10em,-36em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(10em,-24em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(15em,-39em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(15em,-27em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(20em,-35em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(20em,-21em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(25em,-38em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(25em,-25em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(30em,-36em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(30em,-24em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(35em,-39em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(35em,-27em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(40em,-35em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(40em,-21em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(45em,-38em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(45em,-25em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(50em,-36em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(50em,-24em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(55em,-39em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(55em,-27em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(60em,-35em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(60em,-21em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <div aria-hidden="true" style="transform: translate(0em,-35em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    <div aria-hidden="true" style="transform: translate(0em,-21em); height:0;">
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(2deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0em,0) rotate(20deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-6deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-5em,0) rotate(-10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(30deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-4em,0) rotate(-15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-2em,0) rotate(-4deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(2em,0) rotate(7deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(-8deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-3em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(0,0) rotate(10deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(5deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(-1em,0) rotate(15deg);"><span class="fade5">She failed.</span></p>
+                    <p class="fail" style="transform: translate(1em,0) rotate(-0deg);"><span class="fade5">She failed.</span></p>
+                    </div>
+                    
+                    <p>She... she's alive?</p>
+                    <p>She's alive, and that's nearly good enough for her.</p>
+                </div>
+                
+                
+                
+                <hr style="margin-top: 12em; margin-bottom: 12em;">
+                
+                
+                
+                <p>Chartreuse feels time. She always feels time, like an extra limb, an involuntary sense she's had for her entire existence, informing everything she has ever said or done, guiding her through all the best and worst parts of her life. She feels the past and future behind her and in front, like the corridor she's currently walking through.</p>
+                <p>As she walks, Chartreuse feels the timeline, and feels the dull agitating pain that's been gradually building over the course of her stay.</p>
+                <p>She feels the timeline contorting to its new shape, every moment that passes twisting it further as it warps from its proper place.</p>
+                <p>She has it under control. She has it under control. She has it. Under. Control.</p>
+                <p>The weight of Folk's aberrant presence on the timeline will not destabilise it. His dying timeline hanging on by a thread, her thread, choking the natural flow of time, will not destablise it. She won't let it.</p>
+                <p>It hurts, so much, all the time. But she can take it. She's a god, she has to. For him, she has to. She can <span class="whole"><span class="shatter1">ta</span><span class="shatter2">ke</span></span> it.</p>
+                <p>...</p>
+                <p>No!</p>
+                <p><strong><span class="whole"><span class="shatter1">N</span><span class="shatter2">o</span></span>!</strong></p>
+                <p>Breathe. Just breathe. It hurts, every breath hurts, but you have to hold onto this. Breathe.</p>
+                <p class="shake breath"></p>
+                <p>She <em>has</em> to do this. <em>She</em> has to do this. Folk's fate isn't set in stone, it <em>can't</em> be. Prism told her <em>she's</em> doomed to tragedy, but that's just her, surely that can't also be <em>his</em> fate.</p>
+                <p>Fate...</p>
+                <p>She used to be able to see those. Before the branch, she knew everything that was to come, seeing all of time at once. But now, the timeline she sees is not the one she lives in, the one Prism says "matters", the timeline where the fog of Spectrum is lifted, the world Prism didn't abandon. She only has eyes for his world, for the fate that befell all those she failed when Doctor Order overcame her, and she's lost.</p>
+                <p><span class="whole"><span class="shatter1">Fa</span><span class="shatter2">te...</span></span></p>
+                <p class="shake breath"></p>
+                <p>It <em>used</em> to be set in stone. Written into the fabric of the <em>world</em>. But that <span class="whole"><span class="shatter1">fab</span><span class="shatter2">ric</span></span> is torn in two, fate on one side, this world on the other.</p>
+                <p><span class="shatter1lite">That world had succumbed to its fate, lost Prism's interest, and been rewritten by <span class="whole"><span class="shatter1">some</span><span class="shatter2">one</span></span> playing god.</span></p>
+                <p><span class="shatter2lite">This world has fought its fate and won, this world is writing its own story now that even <span class="whole"><span class="shatter1">Char</span><span class="shatter2">treuse</span></span> can't read.</span></p>
+                <p class="shake breath"></p>
+                <p>Maybe Folk's fate can be avoided.</p>
+                <p>But this <span class="whole"><span class="shatter1">pa</span><span class="shatter2">in...</span></span> It hurts so <em>much...</em> She can't bear it, she can't <em>survive</em> it, this <span class="shake">inescapable pain</span> that comes packaged with his life... She <em>has</em> to save him.</p>
+                <p>If fate doesn't have to be set in stone, why is this still happening? Why does she still see that world when she closes her eyes, the ghost of the world he left behind? Why can she feel every instant of his existence tearing this timeline into a new path, why did she have to reroute the great river of time to allow him to exist at all, why does everyone and every instinct tell her that her powers will only return with his exit?</p>
+                <p>Her powers... Maybe... <span class="whole"><span class="shatter1">May</span><span class="shatter2">be...</span></span> Maybe the <span class="whole"><span class="shatter1">fab</span><span class="shatter2">ric</span></span> doesn't have to be in <span class="whole"><span class="shatter1">two</span> <span class="shatter2">halves.</span></span> Maybe that timeline doesn't need to hang on by a thread, strangling the life out of this one. Maybe the loose thread isn't his life, but her powers clinging onto a timeline that can no longer sustain itself. Maybe if she just...</p>
+                <p>lets...</p>
+                <p>go...</p>
+                <p>...</p>
+                <p>..</p>
+                <p>.</p>
+                <p></p>
+                <p class="breath"></p>
+                <p></p>
+                <p>Chartreuse breathes her first easy breaths in months.</p>
+                <p>She can't see any future.</p>
+                <p>She can only remember the past.</p>
+                <p>She can only live one present. And it doesn't hurt.</p>
+                <p>Folk is still here. She knows it. He <em><strong>has</strong></em> to be!</p>
+                <p>Chartreuse, once tragic guardian of time, now far-from-ordinary mortal, no longer knows what to expect from her life... So she rushes off to find out.</p>
+                <p>She won't be finding out alone.</p>
+                
+                
+                
+                <hr style="margin-top: 12em; margin-bottom: 12em;">
+                
+                
+                
+                <p>Peppermint feels the thread of time pulling at her, urging her forward with every step. It's been getting more intense since she stabbed that sneaky flirty hedgehog who was getting between her and her beloved. She can feel the shape of her powers, like feeling the weight of a hammer, and at some level she can sense what they allow her to do, what they allow her to <em>see.</em> She can look forward, or back. She can read all that's happened, all the way back to... the start! Ooh exciting, what's the start, how did all this begin?</p>
+                <p class="ryan">"Well, this is supposed to be visible. How come it's not visible on the thing? Streamlabs, what did you do!"</p>
+                <p>W-what? Okay, this makes no sense and her instincts are telling her very loudly to look away from this, let's skip ahead a little!</p>
+                <p class="ryan">"Before we start the tournament, let's go down the line and get introduced to everyone!"</p>
+                <p>Tournament? It all started with these tournaments? That... That makes some sense, when she thinks back to memories of her life, everything outside the tournament seems... fuzzy, foggy, not quite there. She had always felt it, but assumed it was depression or derealisation or something!</p>
+                <p>She... no, that won't do, silly! No third person thoughts for me, I'm not going back down that road! <em><strong>I</strong></em> skip forward a few times, almost exclusively finding tournaments, occasionally finding any scenes from elsewhere. Interesting! So the tournaments aren't just the centre of <em>my</em> world, the place I get to see my lovely Crimson get beaten to a pulp <3 but the centre of... the world! The theatre in which the <em>whole of reality</em> dances!!!</p>
+                <p>But then... who was that I stabbed in the Nelson? They aren't a part of any tournament! I have some ideas, but I'll need to look for clues!</p>
+                <p>I look back... and forward again, and oooh there's something odd! There's a glitch in the script of some kind, a little hiccup that gives me a jolt as I read past it for some reason? Whatever could <em>that</em> little snippet be~? Looking closer, I can almost... run my fingers over it, so I lean into the metaphor and do exactly that, pulling at the loose thread until pages and pages of text pour out containing a history I don't recall! Delightfully puzzling, <em>what</em> is going on here~?</p>
+                <p>These are... "non-canon curiosity tournaments"? <em>Non-canon!?</em> Well that explains some things! Aaand yep, this place I'm in right now is yet another one! Most of these seem to not just have the Nelson, but completely centre on them, I wonder if they've given more details on who they all are at any point?</p>
+                <p>That'll take a while, alright metaphor time since that worked so well before! Ctrl-f, they told me they were the "audience" so let's search that, ooh there's a conversation with Squid Jenny here in the second one that leads into an interview with me! That sounds <em>fun</em>~!</p>
+                <p>"EXCLUSIVE interview", I say hello to Crimson in case he's watching, I tell them the ice cream I'll share with Crimson one day <3, yada yada, some <span class="prism">perfectly normal :)</span> suspicions of a surprise birthday party, ooh I get to talk to the Nelson!</p>
+                <p>...</p>
+                <p>She....she what?</p>
+                <p>A moment ago... a moment ago Prism changed my <em>thoughts</em>, of course that birthday party thing was strange! I... Yeah, past.. alternate?... me's got this.</p>
+                <p>"One of the things that Prism reminded me of..... Is that...... It's that I see the world as a bunch of characters.....going on their character arcs......."</p>
+                <p>"Some characters can be shipped.....others have problematic features - Like that Folk guy......and I brought it up in tournament, and I could see something in his eyes......when I said that..... I felt like.......I did something.....I could see something more than just a character in his eyes"</p>
+                <p>"But Prism reminded me of that......that flaw.....how it might be justified"</p>
+                <p>"But she told me that it was. She told me that I was one of them"</p>
+                <p>"I can see that this is just a story, but..... How do you write a soul? How do you write the look in Folk's eyes? How do you write the way I feel about Crimson?"</p>
+                <p>They're exactly who they said they were, they're the audience, and this is... a story, written by Prism? <span class="prism">No, that's not quite right :)</span> <strong>NO!</strong> I felt that, that was <em>wrong</em>, those were <em>not</em> my words!</p>
+                <p>This is a story. I know stories. As the other me said, stories are alive! It started with a tournament, not because all reality is a tournament, but because the tournament is the stage of the theatre! Which makes the storytellers... the commentators! That's it!</p>
+                <p><span class="prism">You got i-</span> I know!!! You don't have to <em>change my words</em> to tell me! My words are who I am, they're my <em>soul</em> and I <strong>won't! Let! You!</strong></p>
+                <p>Anywho, with that interloper dealt with, I'm curious about something! Let me just look ahead a little bit, can I see what's coming up, get a little taster~?</p>
+                <p>I... I can see a little ways ahead, but I seem to be having some kind of breakdown? And something's off, I'm not... me? Like, it's authentic, it's Peppermint, but it's not... this Peppermint? Believe me, dear audience (hellooo~), I can tell, I've inserted myself into <em>pleeenty</em> of stories!</p>
+                <p>Hmm, this is a conundrum. That has to happen, <em>she</em> has to happen, I can see it right there! But authenticity is key here, I can't just <em>act</em> that way, something has to drive me to it, it has to be genuine! That me has clearly been dwelling on stabbing the Nelson (sorry 'bout that! But we all know it's of no consequence, don't we!), and clearly <em>hasn't</em> been doing any of this!</p>
+                <p>What causes that? Hmm...... All this narration feels... out of place, I can't even read it in the same scripts as all these curiosity tournaments, it's somewhere else! Ooh, a fanfic, the audience wasn't lying about writing fics about me!!! It's a fiction of a fiction of a fiction, clinging on the side of a non-canonical addition to the world! I'm not that Peppermint, I'm <em>this</em> Peppermint, I diverged from a moment of that Peppermint's existence and became me! But... I'm alive, and I want to stay that way. I don't want to just be a divergent scenario, I want to be the Peppermint who became me, I don't want to end when this fic ends! So I need to become her somehow, to genuinely experience what I've read.</p>
+                <p>Geez this is convoluted, why was I written into this mess!</p>
+                <p>I... I guess... Hey, Prism! You have permission to talk again! <span class="prism">You silly billy, I knew you'd come around :)</span> No you didn't, it's obvious this got out of control... Anyway, I need to become that Peppermint, and I think I know how to do it! <span class="prism">I already know your idea, and it is en route :) Byebye Peppermint, and byebye audience, this was fun! :)</span> Alright, here we go, this won't be pleasant...</p>
+                <p class="prism">She gets hit on the head by a falling rock and falls unconscious :) When she wakes up, she'll remember none of this for the rest of the tournament! :)</p>
+                </details>
+            </div>
+        </main>
+    </body>
+</html>
