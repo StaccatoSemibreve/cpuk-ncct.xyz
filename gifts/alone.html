@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CPUK: Alone</title>
+        <link rel="icon" sizes="32x32" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAACCgAwAEAAAAAQAAACAAAAAAX7wP8AAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDYuMC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KGV7hBwAAA19JREFUWAm9lztvE0EUhc86dsTDdEGhRFSAYn4ANCRFmpSg9E6E6HkovyGC0CKEwD0iZZoUiRv4ASQKVIiSCHcxDxEHc77ZncXIQqCwu1eZnZm7d+65986MczbRH2QoJV1pYlYaYPJcOmvdvNucW8uq6USaws7jT277Huy4bbltLqU6bUv169KRdTYdF+vH5YWBF72INx3pogcrHt44JZ1Bx4vYmE+MNOafpb4dv7R+tS29Qzfqk3mUsQCIeNZZO9zkmfTQBncMrK9uBg3VsI51ofGwrf80zHoCqp+04kv67tGydM92wydS47Z0aHUurM8lGnSk8wbbcLqXD1LnANfdfrPPF44PCGhg43rTa+xjz0EttKUPESMuyR1uZ5k/la5Y+eqE1Pwmffe4YW+5XVz4L70XUZVD+5q0r77H125Jb0aDCI7j/jx25g0fJLem60SpPCxEDu2oYYd9V6LVdiUiZp3sHMURvfd8I8u8SHAyAJxKUNUNY81EzFo3PcTiwLHnlJ0FrCpYGvgGAyx8d40dtqDjq/ZDemudgwuPoGdcpNhp8G+fSU261PYVdR+u1wpXzW/D9UNXhth/AgZYvmX8tijhF86T9z4cTVeBCEvJHrBMhs46MSYH8kLNiPOnDW4Fd71scGIAfAAm2AQwl0VWeQc2AbQcEalXkX1IEiwwLTMcwulsUlkAxgwBOPlzNaNOVR1ArADY4RpSiyrTd+a5cAZ6vg7cv1F9blDSYJhh9qjAPhNL5QG46h85AztVV4BqZ0nvEsBWWoDqn2ATwKap04EjgvFUsQ1kXwcT7NpSyl7X4XCWwPnSYWnPQYa1Dna4ho5oFQJpqTuq0qqQ+SZ7iOsqgLVtg7ZT6rwGgTQ6bKgUwbcJiePQGphgAwglgzxCyXZNm2BFRVMyEoKSwYr2llNKFjA5hEMIIr1RF2zQh0CygFUFSSCl+AZjFNPjVCjHrA9hJ/3v+DojkIXScu/71bZ/dyIWyOEQMgAcvo6Bo2xRKu/XpLcGoRrZMMz/9sA2VBAf+MInvsEAKzpI4iD2MTp7gK49sP4uHO64n2Zeuubrdt9Aw+g7YtGPBYCSM7EYeOOvj1MHdBMaxXv+fcfG3KXNG/P/+jjFAUIFuvYbywV5tW7s8zyz7bk/1uf5T/otN3VHqa6iAAAAAElFTkSuQmCC">
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            :root {
+                --superwidth: 100vw; --width: 100vw; --subwidth: 80vw;
+                --lilac-light: #dcf; --lilac: #b6d; --lilac-dark: #203; --lilac-void: #100020; --lilac-null-light: #0b0018; --lilac-null: black;
+                --background: var(--lilac-light); --text: var(--lilac-void);
+            }
+
+            @media only screen and                        (min-width: 800pt) and (orientation: landscape) { :root { --width: 750pt; --subwidth: 500pt; } }
+            @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) { :root { --width: 625pt; --subwidth: 425pt; } }
+            @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) { :root { --width: 450pt; --subwidth: 300pt; } }
+            @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) { :root { --width: 100vw; --subwidth: calc(100vw - 100pt); } }
+            @media only screen and (max-width: 400pt) and                        (orientation: landscape) { :root { --width: 100vw; --subwidth: calc(100vw - 20pt); } }
+            @media only screen and (orientation: portrait) { :root { --width: 100vw; --subwidth: 80vw; } }
+
+            body {
+                background-color: var(--lilac-void);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            p, h1, hr {
+                font-family: sans-serif;
+                color: var(--text);
+                overflow-wrap: break-word;
+            }
+            p {
+                padding-bottom: 1em;
+                padding-top: 0.5em;
+                font-size: 12pt;
+                margin: 0;
+            }
+            h1 {
+                font-size: 20pt;
+                margin-bottom: 2em;
+                margin-top: 2em;
+            }
+            hr {
+                margin-bottom: 2em;
+                margin-top: 5em;
+            }
+
+            .light {
+                width: calc(var(--width) - 4em);
+                background-color: var(--background);
+                overflow: hidden;
+                padding: 1em;
+            }
+            .small { font-size: 10pt; }
+            .big {font-size: 14pt; }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="light" style="padding-left: 3em; padding-right: -3em; padding-top: 6em; padding-bottom: 36em;">
+                <h1>Alone</h1>
+
+                <p class="big"><em>"So, how'd it feel!?"</em></p>
+                <p>"Aaa!!! Could you not sneak up on me while I'm birdwatching!?"</p>
+                <p>"Oh, sorry!" Peppermint said unapologetically, smiling widely and speaking in a singsong tone. <span class="small">"How'd it feel?"</span> she whispered.</p>
+                <p>"How... how'd what feel?" asked Crimsonaut, fearing he may already know the answer.</p>
+                <p>"Having him inside you!" she exclaimed, gesturing wildly. "Your <em>helpless body</em> filled with his very <em>essence</em> as he <em>uses</em> you as he pleases-"</p>
+                <p>"Okay, please stop, that's enough, I get the picture!"</p>
+                <p>"I could <em>go on</em> if you'd like~!"</p>
+                <p>"I can assure you I would not. At all. Anyway, it... it's a painful memory, but I can talk about it. Besides, it's been on my mind lately, and I haven't had anyone to talk about it with in a long time.</p>
+                <p>It was... weird, but the weirdest thing was that it wasn't <em>that</em> weird??? Like, before the Crimson showed up, I couldn't have imagined the experience for a second. But after he was a part of me, and I was a part of us, it was completely natural?</p>
+                <p>It wasn't my body any more, it was <em>our</em> body. Sometimes I'd be in control, sometimes I'd be in the passenger's seat, sometimes I'd be asleep, but even when he... even when we fought, it felt like this was where he belonged, right here with me.</p>
+                <p>Having him look from my eyes, listen through my ears, walk on my legs, fight with my hands, talk out of my mouth, never felt <em>wrong</em>, it just felt like I wasn't currently the one in control of our body. I've talked to the others about it, and everyone else felt... violated, but I never did... I just felt like Crimson was where he belonged."</p>
+                <p>"With <em>meee!!!</em>"</p>
+                <p>"Sure. But since he's been gone, I've been... not alone, of course, I have the Crimsonlets and they're just wonderful, but in <em>here,</em>" he poked at his head. "In here I've been alone.</p>
+                <p>I want to <em>hate him</em> for what he did as me, <em>to</em> me, for resenting me, for betraying me. I want to move on, like I can live my life alone again, I <em><strong>don't want</strong></em> to miss him, but it's so empty in here all by myself! I want him-"</p>
+                <p>"Me too!!!"</p>
+                <p>"I <em>want</em> him to co- to return to me, to apologise, but most of all just to <em>stay</em> this time. I know he hated this body, <span class="small">which honestly i can't blame him for,</span> but I don't think this body is built for one. I don't... I don't want to be alone in here any more..."</p>
+                <p>"<em>Fascinating~!</em> I was hoping it was a sex thing, but your answer's good too! Bye nowww~~~!"</p>
+                <p>"Goodbye Peppermint......"</p>
+                <p>As she walked away, he retrieved his binoculars. He could almost imagine Crimson's voice snarking about how bird watching was a waste of time, time that could be spent making plans or failing to build a tolerance to cheese. He could... <em>almost</em>, hear him. But he couldn't really hear him, and hadn't been able to for a long time now.</p>
+                <p>He sighed, and returned to watching the- oooh, is that a cardinal!?</p>
+                <p>"Oooh, is that a cardinal!?" Pepperming shouted in the distance, scaring the bird away. Yes, Peppermint, yes it was.</p>
+
+                <hr>
+
+                <p>And now for a gentler thing (because that was a bit much) c:</p>
+                <p></p>
+                <p>While she was setting up the training room to practice, dani felt a tugging at her trouser leg.</p>
+                <p>"Hello Miss Toinette!!" came an excited voice from around hip height.</p>
+                <p>"Hey Juni, here to train?"</p>
+                <p>"Nope!! I wanted to give you this because you looked lonely!"</p>
+                <p><em><strong>LONELY!?</strong></em> No, no, don't do this, don't escalate, breathe... just, breathe...... what's that the kid's pet robot is holding out? Is... is that a card???</p>
+                <p>"... thanks, Junior," she said as she took it, keeping her voice level, and most certainly not picking a fight over what a small child said. She opened the card.</p>
+                <p>'Yuo are <code>expressly</code> invited to a Fansy Dinner at the Uppercut's place! There will be cake!!! So much CAKE!!!!!!'</p>
+                <p>She looked away from the card to see Juni looking expectantly up at her.</p>
+                <p>"So? You gonna be there!?" Juni asked eagerly, trying and failing to keep her excitement inside.</p>
+                <p>"You know what? Sure, sounds like a good time, thanks kiddo. Anyway, while we're here, wanna fight?"</p>
+                <p>"Yeah!!! Let's go!!!"</p>
+                <p>And they fought happily ever after. Well, until the match was over, but that did take a while!</p>
+            </div>
+        </main>
+    </body>
+</html>
