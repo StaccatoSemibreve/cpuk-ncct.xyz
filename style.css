@@ -18,12 +18,52 @@
     --script: #0a0027;
 
     --purple: #aa8ed6;
-    
+
     --ludwig-light: #24ffff;
     --ludwig-dark: #0025ff;
     --ludwig-purple: #d044fc;
-    
+
     --jake: #1f9400;
+
+    --disc-dark-1: #040405;
+    --disc-dark-2: #18191C;
+    --disc-dark-3: #202225;
+    --disc-dark-4: #34373C;
+    --disc-dark-5: #4F545C;
+    --disc-dark-6: #72767D;
+    --disc-dark-7: #B9BBBE;
+    --disc-dark-8: #DCDDDE;
+    --disc-dark-9: #F6F6F7;
+
+    --disc-light-1: #060607;
+    --disc-light-2: #23262A;
+    --disc-light-3: #2E3338;
+    --disc-light-4: #4F5660;
+    --disc-light-5: #747F8D;
+    --disc-light-6: #9099A4;
+    --disc-light-7: #C7CCD1;
+    --disc-light-8: #E3E5E8;
+    --disc-light-9: #F8F9F9;
+
+    --disc-light-side: #F2F3F5;
+    --disc-light-chatbox: #EBEDEF;
+    --disc-light-background: #FEFEFE;
+
+    --disc-l-text: var(--disc-light-2);
+    --disc-l-page: var(--disc-light-background);
+    --disc-l-announce: var(--disc-light-side);
+    --disc-l-announce-border: var(--disc-light-7);
+}
+
+.menu {
+    --text: var(--light);
+    --background: var(--dark-discord);
+    --border: var(--darkest-discord);
+}
+body:has(#menu-lightmode:checked)>.menu {
+    --text: var(--disc-l-text);
+    --background: var(--disc-l-announce);
+    --border: var(--disc-l-announce-border);
 }
 
 .discord {
@@ -59,6 +99,13 @@
     --nelson-background: var(--dark-discord);
     --nelson-border: var(--darkest-discord);
     --nelson-text: var(--light);
+}
+body:has(#menu-lightmode:checked)>.discord {
+    --background: var(--disc-l-page);
+    --text: var(--disc-l-text);
+    --announcement-background: var(--disc-l-announce);
+    --announcement-border: var(--disc-l-announce-border);
+    --prism: black;
 }
 
 .bracket, .bracketish, .superbracketish {
@@ -263,6 +310,25 @@
     }
 }
 
+div.menu {
+  z-index: 1;
+  position: fixed;
+  top: 1em;
+  right: calc((100vw - var(--width)) / 2 + 0.5em);
+  padding: 0.5em;
+  padding-top: 0.3em;
+  background: var(--background);
+  color: var(--text);
+  border: solid 2px var(--border);
+  border-radius: 3px;
+  overflow: hide;
+}
+div.menu>label { float: right; height: 1em; }
+div.menu:has(#menu-hide:checked)>label>span.menu-label { display: none; }
+div.menu:has(#menu-hide:checked)>label.menu-label-minor { display: none; }
+div.menu:has(#menu-hide:checked)>br { display: none; }
+div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
+
 .discord, .cutscene, .pocket, .pocketfall, .rainbow {
     width: var(--subwidth);
     padding-left: calc((var(--width) - var(--subwidth)) / 2);
@@ -280,7 +346,7 @@ body {
     justify-content: center;
 }
 .discord {
-    background-color: var(--discord);
+    background-color: var(--background);
     overflow: hidden;
     padding-top: 30pt;
     padding-bottom: 10pt;
@@ -319,25 +385,21 @@ body {
     padding-bottom: 30pt;
     height: 100em;
 }
-.cutscene-background-start, .cutscene-start {
-    background: linear-gradient(to bottom, var(--discord), var(--blank));
-    height: 5em;
-}
+.cutscene-background-start, .cutscene-start, .cutscene-background-stop, .cutscene-stop, .pocket-start, .pocket-stop { height: 5em; }
+.cutscene-background-start, .cutscene-start { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
+body:has(#menu-lightmode:checked)>.cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--blank)); }
 .cutscene-start-slow {
     background: linear-gradient(to bottom, var(--discord), var(--blank));
     height: 60em;
 }
 .cutscene-background-stop, .cutscene-stop {
     background: linear-gradient(to top, var(--discord), var(--blank));
-    height: 5em;
 }
 .pocket-start {
     background: linear-gradient(to bottom, var(--discord), var(--null));
-    height: 5em;
 }
 .pocket-stop {
     background: linear-gradient(to top, var(--discord), var(--null));
-    height: 5em;
 }
 .pocketfall-stop {
 /*    background: linear-gradient(to bottom, var(--null) 0em, var(--blank) 10em, var(--blank) 20em, var(--ludwig-light) 30em, var(--ludwig-light) 35em, var(--ludwig-dark) 43em, var(--ludwig-dark) 50em, var(--discord) 60em, var(--discord) 70em);
@@ -377,7 +439,7 @@ div .announcement.break {
     overflow: hidden;
 }
 
-p, li, a, h1, h2, h3, hr {
+p, li, a, h1, h2, h3, hr, label {
     font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: var(--text);
 
