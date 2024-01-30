@@ -2,66 +2,1217 @@
     <head>
         <meta charset="utf-8">
         <title>CPUK NCCT1</title>
-        <link href="../style.css" rel="stylesheet">
         <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
         <link rel="icon" sizes="32x32" type="image/png" href="../nelsontomb_32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body:has(#lightmode:checked)>div>img.ncct1prismbow { filter: brightness(0.7); }
+            body:not(:has(#menu-results:checked)) { & .resultspoiler { display: none; } }
+            body:has(#menu-results:checked) { & .resultspoiler { display: inline; } }
+
+            :root {
+    --superwidth: 100vw;
+    --width: 100vw;
+    --subwidth: 80vw;
+
+    --white: white;
+    --blank: #eee;
+    --light: #dcddde;
+    --shade: #babbbc;
+    --shadow: #666666;
+    --lighter-null: #4a4d53;
+    --discord: #424549;
+    --dark-discord: #36393e;
+    --darker-discord: #2f3136;
+    --darkest-discord: #282b30;
+    --light-null: #25262b;
+    --null: #202225;
+    --script: #0a0027;
+
+    --ryan-blue: #00aff4;
+    --ryan-l-blue: #1155cc;
+
+    --purple: #aa8ed6;
+
+    --ludwig-light: #24ffff;
+    --ludwig-dark: #0025ff;
+    --ludwig-purple: #d044fc;
+
+    --jake: #1f9400;
+
+    --disc-dark-1: #040405;
+    --disc-dark-2: #18191C;
+    --disc-dark-3: #202225;
+    --disc-dark-4: #34373C;
+    --disc-dark-5: #4F545C;
+    --disc-dark-6: #72767D;
+    --disc-dark-7: #B9BBBE;
+    --disc-dark-8: #DCDDDE;
+    --disc-dark-9: #F6F6F7;
+
+    --disc-light-1: #060607;
+    --disc-light-2: #23262A;
+    --disc-light-3: #2E3338;
+    --disc-light-4: #4F5660;
+    --disc-light-5: #747F8D;
+    --disc-light-6: #9099A4;
+    --disc-light-7: #C7CCD1;
+    --disc-light-8: #E3E5E8;
+    --disc-light-9: #F8F9F9;
+
+    --disc-light-side: #F2F3F5;
+    --disc-light-chatbox: #EBEDEF;
+    --disc-light-background: #FEFEFE;
+
+    --disc-l-text: var(--disc-light-3);
+    --disc-l-page: var(--disc-light-background);
+    --disc-l-announce: var(--disc-light-side);
+    --disc-l-announce-border: var(--disc-light-7);
+
+    --l-blank: #ece;
+}
+
+body:has(#lightmode:checked) {
+& .menu {
+    --text: var(--disc-l-text);
+    --background: var(--disc-l-announce);
+    --border: var(--disc-l-announce-border);
+    --prism: black;
+}
+& .discord {
+    --background: var(--disc-l-page);
+    --text: var(--disc-l-text);
+
+    --announcement-background: var(--disc-light-8);
+    --announcement-border: var(--disc-l-announce-border);
+
+    --nelson-background: var(--disc-light-8);
+    --nelson-border: var(--disc-l-announce-border);
+    --nelson-text: var(--text);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --ryan: var(--ryan-l-blue);
+    --note: var(--disc-light-4);
+    --prism: black;
+    --prismer: black;
+    --prismest: rgba(0,0,0,0.5);
+    --prismatic: rgba(0,0,0,0.4);
+}
+& .cutscene {
+    --background: var(--l-blank);
+    --text: var(--script);
+}
+
+& .cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--l-blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+
+& .win { --text: var(--light); --prism: white; }
+& .quote { border-left: 2px solid var(--disc-light-6); }
+}
+
+body:not(:has(#lightmode:checked)) {
+& .menu {
+    --text: var(--light);
+    --background: var(--dark-discord);
+    --border: var(--darkest-discord);
+    --prism: var(--white);
+}
+& .discord {
+    --background: var(--discord);
+    --text: var(--light);
+    --code: var(--dark-discord);
+
+    --ryan: var(--ryan-blue);
+    --note: var(--shade);
+
+    --light-prism: var(--light);
+    --prism: var(--white);
+    --prismer: var(--white);
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --twist: #aa8ed6;
+    --danirage: #fcc;
+    --danism: #f66;
+    --danismer: #d33;
+    --danismest: #d11;
+    --bing: #b6c608;
+    --mint: #00ff80;
+    --chartreuse: #80ff00;
+    --thend: #FFF0F5;
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --announcement-text: var(--light);
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+& .cutscene {
+    --background: var(--blank);
+    --text: var(--script);
+}
+
+& .cutscene-start { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--discord), var(--blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+
+& .quote { border-left: 2px solid var(--light); }
+}
+
+
+.bracket, .bracketish, .superbracketish {
+    --text: var(--light);
+    --bracket-background: #272a33;
+/*     --bracket-background: var(--darker-discord); */
+    --bracket-border: var(#272a33);
+    --bracket-text: var(--light);
+    --matchup-background: #58595e;
+/*     --matchup-background: var(--discord); */
+/*     --matchup-border: var(--darkest-discord); */
+    --matchup-border: #4e4f53;
+    --matchup-text: var(--light);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+    --prism: rgba(255,255,255,0.9);
+    --thend: ivory;
+}
+
+.pocket, .pocket-start, .pocket-stop, .black, .pocketfall {
+    --background: var(--null);
+    --text: var(--light);
+    --code: var(--light-null);
+
+    --note: var(--shade);
+
+    --prism: white;
+    --ryan: #00aff4;
+
+    --void: black;
+    --unvoid: #181818;
+    --cosmic: black;
+
+    --mint: #00ff80;
+    --chartreuse: #80ff00;
+    --bing: #b6c608;
+    --thend: #FFF0F5;
+
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+
+.cutscene {
+    --background: var(--blank);
+    --text: var(--script);
+    --code: var(--shade);
+
+    --ryan: #1155cc;
+    --note: var(--shadow);
+
+    --light-prism: rgba(255,255,255,0.66);
+    --prism: transparent;
+    --prismer: transparent;
+    --prismest: transparent;
+    --prismatic: transparent;
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+    --cosmic: var(--script);
+    --chartreuse: #4cff00;
+    --crimson: #dc143c;
+    --mint: #00ff80;
+    --cobalt: #0047ab;
+    --twist: #aa8ed6;
+    --thend: black;
+    --danism: #a0262f;
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --nelson-background: var(--discord);
+    --nelson-border: var(--darkest-discord);
+}
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote, .cutscene .win {
+    --text: var(--light);
+
+    --prism: white;
+    --prismer: white;
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+}
+
+@media only screen and (min-width: 800pt) and (orientation: landscape) {
+    :root {
+        --width: 750pt;
+        --subwidth: 500pt;
+    }
+    .announcement {
+        padding-left: 36pt;
+        padding-right: 30pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
+    :root {
+        --width: 625pt;
+        --subwidth: 425pt;
+    }
+    .announcement {
+        padding-left: 24pt;
+        padding-right: 18pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
+    :root {
+        --width: 450pt;
+        --subwidth: 300pt;
+    }
+    .announcement {
+        padding-left: 21pt;
+        padding-right: 15pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw - 100pt);
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 400pt) and (orientation: landscape) {
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw - 20pt);
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (orientation: portrait) {
+    :root {
+        --width: 100vw;
+        --subwidth: 80vw;
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
+}
+
+div.menu {
+    z-index: 1;
+    position: fixed;
+    top: 1em;
+    right: calc((100vw - var(--width)) / 2 + 0.5em);
+    padding: 0.5em;
+    padding-top: 0.3em;
+    background: var(--background);
+    color: var(--text);
+    border: solid 2px var(--border);
+    border-radius: 3px;
+    overflow: hide;
+    justify-content: right;
+    text-align: right;
+}
+div.menu>label, div.menu>.menu-label, div.menu>.menu-label-minor { height: 1em; }
+div.menu:has(#menu-hide:checked)>label>span.menu-label { display: none; }
+div.menu:has(#menu-hide:checked)>.menu-label-minor { display: none; }
+div.menu:has(#menu-hide:checked)>br { display: none; }
+div.menu:has(#menu-hide:checked)>hr { display: none; }
+div.menu:has(#menu-hide:checked)>details { display: none; }
+div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
+#toc { justify-content: right; text-align: right; font-size: 10pt; }
+#toc>summary { font-size: 12pt; }
+
+.discord, .cutscene, .pocket, .pocketfall, .rainbow {
+    width: var(--subwidth);
+    padding-left: calc((var(--width) - var(--subwidth)) / 2);
+    padding-right: calc((var(--width) - var(--subwidth)) / 2);
+}
+.cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .pocketfall-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord { width: var(--width); }
+
+body {
+    background-color: var(--null);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.discord, .cutscene {
+    background-color: var(--background);
+    overflow: hidden;
+}
+.discord {
+    padding-top: 30pt;
+    padding-bottom: 10pt;
+}
+.cutscene {
+    padding-top: 20pt;
+    padding-bottom: 30pt;
+}
+.pocket {
+    background-color: var(--null);
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.pocketfall {
+    background: repeating-linear-gradient(to bottom, var(--null) 0em, var(--null) 22em, var(--blank) 25em, var(--null) 28em, var(--null) 40em);
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.black {
+    background-color: black;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+    width: var(--subwidth);
+}
+.rainbow {
+    background-color: magenta;
+    background-image: url('./rainbow.png');
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+    height: 100em;
+}
+.cutscene-start, .cutscene-background-stop, .cutscene-stop, .pocket-start, .pocket-stop {
+    height: 5em;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cutscene-start-slow {
+    background: linear-gradient(to bottom, var(--discord), var(--blank));
+    height: 60em;
+}
+.pocket-start { background: linear-gradient(to bottom, var(--discord), var(--null)); }
+.pocket-stop { background: linear-gradient(to top, var(--discord), var(--null)); }
+.pocketfall-stop {
+/*    background: linear-gradient(to bottom, var(--null) 0em, var(--blank) 10em, var(--blank) 20em, var(--ludwig-light) 30em, var(--ludwig-light) 35em, var(--ludwig-dark) 43em, var(--ludwig-dark) 50em, var(--discord) 60em, var(--discord) 70em);
+*/  background: linear-gradient(to bottom, var(--null) 0em, var(--null) 5em, var(--blank) 10em, var(--blank) 25em, var(--discord) 30em);
+    height: 30em;
+}
+.cutscene-rainbow { height: 300em; }
+.black-pocket, .pocket-black {
+    height: 30em;
+    width: var(--width);
+}
+.black-pocket { background: linear-gradient(to bottom, black, var(--null)); }
+.pocket-black { background: linear-gradient(to top, black, var(--null)); }
+.cutscene-twist {
+    background: linear-gradient(to bottom, var(--blank), 5em, var(--purple), 20em, var(--purple), 30em, var(--purple));
+    height: 30em;
+}
+.twist-discord {
+    background: linear-gradient(to bottom, var(--purple), var(--discord));
+    height: 10em;
+}
+
+.bigimg {
+    margin-left: calc((var(--subwidth) - var(--width)) / 2);
+    width: var(--width);
+}
+
+div .announcement.break { overflow: hidden; }
+
+p, li, a, h1, h2, h3, hr, label, summary {
+    font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: var(--text);
+
+    overflow-wrap: break-word;
+}
+code {
+    background-color: var(--code);
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+p, li {
+    list-style-type: circle;
+    font-size: 12pt;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 20pt;
+    margin-bottom: 3em;
+    margin-top: 5em;
+}
+h2 {
+    font-size: 16pt;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+}
+h3 {
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 6em;
+    margin-bottom: 0pt;
+}
+
+
+.dragging {
+	margin-top: 10em;
+	margin-bottom: 10em;
+}
+.nelson.dragging > p {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.much { margin-bottom: 10em; }
+.very { margin-bottom: 3em; }
+.text { margin-bottom: 1.5em; }
+.lite { margin-bottom: 0.5em; }
+.liter { margin-bottom: 0em; }
+.unlite { margin-top: -1.2em; }
+.white { color: var(--prism); }
+.thend { color: var(--thend); font-size: 13pt; }
+.announcement .thend, .matchup .thend, h3 .thend { font-size: inherit; }
+.prism, .pr1sm {
+    font-style: italic;
+    color: var(--prism);
+    font-size: 13pt;
+}
+.prismer {
+    font-style: italic;
+    color: var(--prismer);
+    font-size: 14pt;
+    display: inline-block;
+    transform: skew(-5deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.prismest {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--prismest);
+    font-size: 16pt;
+    display: inline-block;
+    transform: skew(-10deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.prismatic {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--prismatic);
+    font-size: 20pt;
+    display: inline-block;
+    transform: skew(-10deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.void {
+    font-style: italic;
+    color: var(--void);
+    background-color: var(--void);
+    white-space: break-spaces;
+    padding-top: 1pt;
+}
+.void:active, .void:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.ryan .void:active, .ryan .void:hover, .ryan .spoiler:active, .ryan .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--ryan);
+}
+.invoid { font-style: normal; }
+.winvoid, .win .void {
+    font-style: italic;
+    color: var(--void);
+    transform: skew(-15deg);
+    white-space: pre-wrap;
+}
+.win:active .winvoid, .win:hover .winvoid, .win:active .void, .win:hover .void {
+    background-color: inherit;
+    color: inherit;
+}
+.white .void, .prism .void { color: var(--light-prism); }
+.mint .void { color: var(--mint); }
+.matchup .void { padding-top: 0; }
+.spoiler {
+    color: var(--void);
+    background-color: var(--void);
+    white-space: pre-wrap;
+    border-radius: 3px;
+}
+.spoiler:active, .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.win .spoiler {
+    color: black;
+    background-color: black;
+}
+.win .spoiler:active, .win .spoiler:hover {
+    color: inherit;
+    background-color: inherit;
+}
+img.spoiler {
+    filter: opacity(0%);
+}
+img.spoiler:active, img.spoiler:hover {
+    filter: inherit;
+}
+.announcement .white, .bracket .white {
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.danism {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: var(--danism);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.danismer {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: var(--danismer);
+}
+.danismest {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15pt;
+    color: var(--danismest);
+}
+.ryan {
+    color: var(--ryan);
+    list-style-type: "-";
+}
+.justice {
+    font-weight: bold;
+    font-size: 13pt;
+}
+.scene {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.unscene {
+    float: left;
+}
+.note {
+    color: var(--note);
+}
+.timestamp {
+	color: var(--note);
+	font-size: 9pt;
+}
+.pastebin, .pastebin p {
+    font-family: monospace;
+}
+
+.quote {
+    color: var(--text);
+    margin-top: 1em;
+    padding-left: 5px;
+}
+.win {
+    background-color: var(--void);
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.win:active, .win:hover {
+    background-color: var(--unvoid);
+}
+.vs {
+    color: var(--note);
+    padding-left: 4em;
+    margin-bottom: 3em;
+    margin-top: 0.5em;
+}
+.break {
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.announce, .announcement p {
+    font-family: monospace;
+    font-size: 10pt;
+    line-height: 1.15;
+    text-align: left;
+}
+.announcement {
+    background: var(--announcement-background);
+    border: 3px solid var(--announcement-border);
+    border-radius: 10px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.nelsonimg {
+    max-width: 73px;
+    margin-bottom: 1em;
+}
+.nelson, .chat, .prismchat {
+    --text: var(--nelson-text);
+    background-color: var(--nelson-background);
+    border: 3px solid var(--nelson-border);
+    border-radius: 10px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: -7%;
+    margin-right: -7%;
+
+    display: grid;
+    margin-bottom: 1.5em;
+
+    overflow-wrap: break-word;
+}
+.nelson {
+    grid-template-columns: 100pt calc(100% - 100pt);
+}
+.chat {
+    grid-template-columns: 36pt calc(100% - 36pt);
+}
+.prismchat {
+    grid-template-columns: 48pt calc(100% - 48pt);
+}
+.nelson > h1 {
+    margin: 0px;
+}
+.prismchat > .white {
+    color: rgba(255, 255, 255, 0.6);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.parts {
+    margin-top: 6em;
+    text-align: center;
+}
+.parts-word {
+    font-weight: bold;
+    font-size: 14pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.parts-nums {
+    font-weight: bold;
+    font-size: 14pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.danirage {
+    font-size: 15pt;
+    color: var(--danirage);
+}
+.twistgod, .twist {
+    color: var(--twist);
+    font-size: 15pt;
+    font-weight: bold;
+}
+.chartreuse {
+    color: var(--chartreuse);
+    font-size: 15pt;
+}
+.crimson {
+    color: var(--crimson);
+    font-size: 14pt;
+}
+.peppermint {
+    color: var(--mint);
+    font-size: 15pt;
+}
+.mintest {
+    color: var(--mint);
+    font-size: 18pt;
+}
+.mintmatic {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--mint);
+    font-size: 20pt;
+}
+.bing {
+    color: var(--bing);
+    font-size: 15pt;
+}
+.cobalt {
+    color: var(--cobalt);
+    font-size: 15pt;
+}
+.jake {
+	color: var(--jake);
+}
+
+
+.cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid, h3 > a > .white {
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+
+.bracket {
+    background-color: var(--bracket-background);
+    display: grid;
+    gap: 0.6em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: calc(var(--width) - 1em);
+}
+.bracket {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.matchup {
+    display: grid;
+    grid-template-rows: 1.5em 1.5em;
+    align-items: center;
+
+    background-color: var(--matchup-background);
+    border-radius: 8px;
+    border: 3px solid var(--matchup-border);
+    width: 1fr;
+    max-width: calc(var(--width) / 4);
+    height: 3em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.matchup p, .matchup .matchupborder {
+    white-space: nowrap;
+    text-overflow: clip;
+    padding-left: 0.2em;
+    font-size: 10pt;
+    max-width: calc(var(--width) / 4);
+    height: 1.5em;
+    border-bottom: 2px solid transparent;
+}
+.matchup span {
+    white-space: nowrap;
+}
+.matchup .matchupborder {
+    border-bottom: 2px solid var(--matchup-border);
+}
+.bracket a {
+    text-decoration: none;
+    width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
+}
+.bracketish a {
+    text-decoration: none;
+}
+
+.superbracketish {
+    background-color: var(--bracket-background);
+    display: grid;
+    width: var(--width);
+    grid-template-columns: calc(var(--width) / 4 + 1em) calc(var(--width) / 4 + 1em);
+    column-gap: calc(var(--width) / 2 - 2em);
+}
+.bracketish {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: calc(var(--width) / 4);
+}
+.superbracketish .line {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-left-width: 0px;
+    width: 1em;
+}
+.superbracketish .lineflip {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-right-width: 0px;
+    width: 1em;
+}
+.superbracketish .one {
+    margin-left: calc(var(--width) / 4 + 0.5em - 8px);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .oneflip {
+    margin-left: calc(6px - 1.5em);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .two {
+    margin-left: calc(var(--width) / 4 + 1.5em - 6px);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .twoflip {
+    margin-left: calc(4px - 3.5em);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .three {
+    margin-left: calc(var(--width) / 4 + 3.5em - 4px);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish .threeflip {
+    margin-left: calc(2px - 6.5em);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish  .four {
+    margin-left: calc(var(--width) / 4 + 6.5em - 2px);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .fourflip {
+    margin-left: calc(0px - 10em);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .five {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    width: calc(var(--width) / 2 - 22em + 17px);
+    margin-left: calc(var(--width) / 4 + 11em - 9px);
+}
+.superbracketish .five2 {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    border-width: 2px;
+    width: calc(var(--width) / 2 - 15em + 21px);
+    margin-left: calc(var(--width) / 4 + 7em - 2px);
+}
+
+img.emoji { width:1.5em; }
+.reaction {
+    margin-left: 0.5em;
+    padding: 2px;
+    background: var(--nelson-background);
+    border: 2px solid var(--nelson-border);
+    border-radius: 3px;
+}
+
+        </style>
     </head>
     <body class="body">
         <div class="menu">
-          <label><span class="menu-label">Hide Menu</span> <input type="checkbox" id="menu-hide" name="menu-hide"></label><br>
-          <label class="menu-label-minor"><span class="menu-label">Light Theme</span> <input type="checkbox" id="menu-lightmode" name="menu-lightmode"></label><br>
-<!--           <label class="menu-label-minor"><span class="menu-label">Reveal Spoiler Tags</span> <input type="checkbox" id="menu-spoilertags" name="menu-spoilertags"></label> -->
+            <label><span class="menu-label">Hide Menu</span> <input type="checkbox" id="menu-hide" name="menu-hide"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Light Theme</span> <input type="checkbox" id="lightmode" name="lightmode"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Bracket Spoilers</span> <input type="checkbox" id="menu-results" name="menu-results"></label><br>
+            <div style="height: 0.8em;"></div>
+            <a href="../" class="menu-label-minor white">Home :)</a>
+            <hr style="margin-top: 1.5em; margin-bottom: 1em;">
+            <details id="toc">
+                <summary class="menu-label-minor" style="margin-bottom: 0.3em;"><strong>Contents:</strong></summary>
+                <a href="#" class="menu-label-minor">Opening</a><br>
+                <a href="#wr1" class="menu-label-minor">Winner's Round 1</a><br>
+                <a href="#lr1" class="menu-label-minor">Loser's Round 1</a><br>
+                <a href="#wr2" class="menu-label-minor">Winner's Round 2</a><br>
+                <a href="#lr2" class="menu-label-minor">Loser's Round 2</a><br>
+                <a href="#wr3" class="menu-label-minor">Winner's Round 3</a><br>
+                <a href="#lr3" class="menu-label-minor">Loser's Round 3</a><br>
+                <a href="#wr4" class="menu-label-minor">Winner's Round 4</a><br>
+                <a href="#lr4" class="menu-label-minor">Loser's Round 4</a><br>
+                <a href="#lr5" class="menu-label-minor">Loser's Round 5</a><br>
+                <a href="#lr6" class="menu-label-minor">Loser's Round 6</a><br>
+                <a href="#top8" class="menu-label-minor">Top 8</a><br>
+                <a href="#gf" class="menu-label-minor">Grand Finals</a>
+            </details>
         </div>
         <div class="discord">
         <h1><a href="">The CPU Kerfuffle Non-Canon Curiosity Tournament</a></h1>
 
-        <p class="text">
-            The following is a stripped down version of the first Non-Canon CPUK Tournament organized by Ryan in the official Chongoshow Discord. This tournament was broadcast over text, with only select matches streamed through voice chat. Extraneous comments and audience chatter have been left out. Additionally, each match result was preceded by a message along the lines of &quot;we have a report from the field&quot;&mdash; these have also been excluded due to redundancy, with a few exceptions where relevant.
-        </p>
-        <p class="text">
-            Comments in parentheses () are not part of the original tournament text. They have been added to explain context that couldn&#39;t be expressed just through copy-pasted messages.
-        </p>
-        <p class="text">
-            <em>Tournament arranged by Ryan Chongoshow.
-            <br>This document was transcribed/formatted by Brush Apocalypse.
-            <br>Experimental Discord-style CSS by Janet, using Brush's prior work. (Mostly an excuse to clean up the html)</em></p>
+        <p class="text">The following is a stripped down version of the first Non-Canon CPUK Tournament organized by Ryan in the official Chongoshow Discord. This tournament was broadcast over text, with select matches streamed through voice chat. Extraneous comments and audience chatter have been left out. Additionally, each match result was preceded by a message along the lines of &quot;we have a report from the field&quot;&mdash; these have mostly been excluded due to redundancy.</p>
+        <p class="text">Comments <span class="note">[in coloured brackets]</span> are not part of the original tournament text. They have been added to explain context that couldn&#39;t be expressed just through copy-pasted messages.</p>
+        <p class="text">Brackets and the results of winner's round 1 have been reconstructed for the archive from screenshots.</p>
+        <p><em>Tournament arranged by Ryan Chongoshow.</p>
+        <p>This document was transcribed/formatted by Brush Apocalypse.</p>
+        <p class="much">Discord-style CSS by Janet, using Brush's prior work.</em></p>
 
 
         <h2><a name="wr1" href="#wr1">WINNERS ROUND ONE</a></h2>
-        <p class="text">(Data is absent, as Ryan hadn&#39;t yet decided to start reporting on match-by-match results.)</p>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <div class="matchup"><p class="matchupborder">✅ Therapuppy</p><p>❌ Venus</p></div>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <div class="matchup"><p class="matchupborder">❌ Mac and Cheese</p><p>✅ Joe Drift</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Blonde Sora</p><p>❌ Yung Papaya</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Folk</p><p>❌ Chili's</p></div>
 
+                            <div class="line three" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">✅ Twist</p><p>❌ Captain Valentine</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Vampire Catgirl Tifa</p><p>❌ Cosmic Love</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Cha Cha Slide</p><p>✅ Hackerman J0hn</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Johannsen</p><p>✅ Peppermint</p></div>
+
+                                <div class="line four" style="margin-top: calc(1.5em + 3.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">✅ Heartbreak</p><p>❌ Crimsonaut</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 8*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Mozilla</p><p>✅ Juniper Uppercut</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 8.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Golden Spiral</p><p>✅ Monday Mark</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 10*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Workers Rights Dan</p><p>❌ <span class="white">Prismatic Shadow</span></p></div>
+
+                            <div class="line three" style="margin-top: calc(1.5em + 9.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">❌ Bing</p><p>✅ Google</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 12*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Subzero Amalgam</p><p>❌ Alabaster Uppercut</p></div>
+                        <div class="line two" style="margin-top: calc(1.5em + 12.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Duck Duck Go</p><p>✅ Dantoinette</p></div>
+                    <div class="line one" style="margin-top: calc(1.5em + 14*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Dr Order</p><p>✅ Hoedown</p></div>
+            </div>
+                <div class="five" style="margin-top: calc(2em + 7.5*(3.6em + 6px));"></div>
+            <div class="bracketish">
+                <div class="matchup"><p class="matchupborder">❌ Zapmouse</p><p>✅ Discord Jack</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <div class="matchup"><p class="matchupborder">❌ Miles Edgeworth</p><p>✅ ICEE</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Squid Jenny</p><p>✅ Spriteman</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Machiavelli</p><p>✅ Corn on the Cob</p></div>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">✅ Taako (from TV)</p><p>❌ TRAINER OF JUSTICE</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Hamburger Helper</p><p>❌ Rights Sentience</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ THE Grunk</p><p>❌ Pink DK Sr</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Chessmaster 2000</p><p>✅ Chartreuse</p></div>
+
+                                <div class="lineflip fourflip" style="margin-top: calc(1.5em + 3.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">✅ Jon Arbuckle</p><p>❌ Patch Man</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 8*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Fly Bi</p><p>❌ Plum K Rool</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 8.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Electric Blue Raspberry</p><p>✅ Cupid Shuffle</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 10*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ NaClMore</p><p>❌ Captain Quadratic</p></div>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 9.5*(3.6em + 6px));"></div>
+
+                <div class="matchup"><p class="matchupborder">✅ MY Grunk</p><p>❌ Iggy Koopa</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 12*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">❌ Pinball Wizard</p><p>✅ Larry</p></div>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 12.5*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Dadandorf</p><p>❌ Square Dance</p></div>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 14*(3.6em + 6px));"></div>
+                <div class="matchup"><p class="matchupborder">✅ Sans Undertale</p><p>❌ Danthony</p></div>
+            </div>
+        </div>
+        <div class="discord">
+        <p class="much"></p>
 
         <h2><a name="lr1" href="#lr1">LOSERS ROUND ONE</a></h2>
-        <p class="text">(The first few matches don&#39;t have victory quotes, as Ryan hadn&#39;t yet decided to do those.)</p>
+        <p class="note text">[The first few matches don&#39;t have victory quotes, as Ryan hadn&#39;t yet decided to do those.]</p>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r33"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Venus</p><p><span class="resultspoiler">❌ </span>Mac and Cheese</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r34"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Yung Papaya</p><p><span class="resultspoiler">✅ </span>Chili's</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r35"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Captain Valentine</p><p><span class="resultspoiler">❌ </span>Cosmic Love</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r36"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Cha Cha Slide</p><p><span class="resultspoiler">❌ </span>Johannsen</p></div></a>
 
+                            <div class="line three" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r37"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Crimsonaut</p><p><span class="resultspoiler">✅ </span>Mozilla</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r38"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Golden Spiral</p><p class="white"><span class="resultspoiler">❌ </span>Prismatic Shadow</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r39"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Bing</p><p><span class="resultspoiler">❌ </span>Alabaster Uppercut</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r40"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Duck Duck Go</p><p><span class="resultspoiler">❌ </span>Dr Order</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 3.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 15em + 21px); margin-left: calc(var(--width) / 4 + 7.5em - 10px);"></div>
+            <div class="bracketish">
+                <a href="#r41"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Zapmouse</p><p><span class="resultspoiler">✅ </span>Miles Edgeworth</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r42"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Squid Jenny</p><p><span class="resultspoiler">✅ </span>Machiavelli</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r43"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>TRAINER OF JUSTICE</p><p><span class="resultspoiler">❌ </span>Rights Sentience</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r44"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Pink DK Sr</p><p><span class="resultspoiler">❌ </span>Chessmaster 2000</p></div></a>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r45"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Patch Man</p><p><span class="resultspoiler">✅ </span>Plum K Rool</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r46"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Electric Blue Raspberry</p><p><span class="resultspoiler">✅ </span>Captain Quadratic</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r47"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Iggy Koopa</p><p><span class="resultspoiler">❌ </span>Pinball Wizard</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r48"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Square Dance</p><p><span class="resultspoiler">✅ </span>Danthony</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
+
+        <a name="r33" id="r33"></a>
         <div class="announcement">
             <p class="announce">MAC AND CHEESE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by Joe Drift and Venus</p>
         </div>
+        <p class="text"></p>
+        <a name="r34" id="r34"></a>
         <div class="announcement">
             <p class="announce">YUNG PAPAYA has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by Blonde Sora and Chili&#39;s</p>
         </div>
+        <p class="text"></p>
+        <a name="r35" id="r35"></a>
         <div class="announcement">
             <p class="announce"><span class="text">COSMIC LOVE has been eliminated from the non-canon curiosity bracket</span></p>
             <p class="announce"><span class="text">Eliminated by VCT and Captain Valentine</span></p>
         </div>
+        <p class="text"></p>
 
+        <a name="r36" id="r36"></a>
         <p>The Rat Lost.</p>
         <div class="announcement">
             <p class="announce"><span class="text">JOHANNSEN has been eliminated from the non-canon curiosity bracket</span></p>
             <p class="announce"><span class="text">Eliminated by Peppermint and Cha Cha Slide</span></p>
         </div>
+        <p class="text"></p>
+        <a name="r37" id="r37"></a>
         <div class="announcement">
             <p class="announce">CRIMSONAUT has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by Heartbreak and Mozilla</p>
         </div>
+        <p class="text"></p>
+        <a name="r38" id="r38"></a>
         <div class="announcement">
-            <p class="announce">THE PRISMATIC SHADOW has been eliminated from the non-canon curiosity bracket</p>
+            <p class="announce"><span class="white">THE PRISMATIC SHADOW</span> has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DAN and GOLDEN SPIRAL</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r39" id="r39"></a>
         <div class="quote"><p>
             &quot;Take a look around, Bing....&quot;
         </p></div>
@@ -69,7 +1220,9 @@
             <p class="announce">ALABASTER UPPERCUT has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by SUBZERO AMALGAM and BING</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r40" id="r40"></a>
         <div class="quote"><p>
             &quot;<em>groan</em>&nbsp;why is it always the web browsers.....at the VERY least, I do not plan to make the same mistake as last time....mostly due to my previous experience.....and also that you are a Dog.&quot;
         </p></div>
@@ -77,7 +1230,9 @@
             <p class="announce">DR ORDER has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by HOEDOWN and DUCK DUCK GO</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r41" id="r41"></a>
         <div class="quote"><p>
             &quot;I understand that you consider yourself to be quite &#39;mad&#39;, but with all of the damages you have inflicted upon people, I highly doubt any court of law would accept it as an insanity plea&quot;
         </p></div>
@@ -85,7 +1240,9 @@
             <p class="announce">ZAPMOUSE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DISCORD JACK and MILES EDGEWORTH</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r42" id="r42"></a>
         <div class="quote">
             <p class="lite">Report from the field from Squid Jenny</p>
             <p>&quot;Doesn&#39;t that seem kinda redundant? Since I&#39;m giving you the repo- whatever. Anyway, I&#39;m more than happy to say that I gave one heck of a fight, but in the end, it was clear that the name &#39;Ultimate Fighter&#39; wasn&#39;t just a title! It was.....oh? Oh, the gummies are in the green room! ...Apologies! You know how our fighters can be sometimes!&quot;</p>
@@ -94,7 +1251,9 @@
             <p class="announce">SQUID JENNY has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by SPRITEMAN and MACHIAVELLI</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r43" id="r43"></a>
         <div class="quote"><p>
             &quot;IT WAS QUITE THE SHAME THAT WE HAD TO ENCOUNTER ONE ANOTHER WITHIN SUCH A BRACKET HOWEVER IT IS WITHOUT A SHADOW OF DOUBT THAT YOU FIGHT FOR THE BEAUTY OF A SOCIAL, ROMANTIC, AND INCREDIBLY PERSONAL JUSTICE!!!!!!!&quot;
         </p></div>
@@ -102,7 +1261,9 @@
             <p class="announce">RIGHTS SENTIENCE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by Hamburger Helper and TRAINER OF JUSTICE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r44" id="r44"></a>
         <div class="quote"><p>
             &quot;Fascinating! I&#39;m curious...since you apparently seem to excel in chess strategies, how well those algoritms could translate to a purely mathematical perspective....&quot;
         </p></div>
@@ -110,7 +1271,9 @@
             <p class="announce">CHESSMASTER 2000 has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by CHARTREUSE and PINK DONKEY KONG SR</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r45" id="r45"></a>
         <div class="quote"><p>
             &quot;Listen here, call it a lack of experience, since I&#39;m used to harvestin&#39; vegetables, but I suppose you could say that I&#39;m plum tuckered out after this fight! Heh!&quot;
         </p></div>
@@ -118,7 +1281,9 @@
             <p class="announce">PATCH MAN has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by JON ARBUCKLE and PLUM K ROOL</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r46" id="r46"></a>
         <div class="quote"><p class="lite">
             &quot;I HAVE ALL OF HER PREVIOUS RESEARCH LOADED WITHIN MY MEMORY BANKS. HOWEVER BEFORE YOU GO, I AM INCREDIBLY CURIOUS.....WHAT......ARE YOU?&quot;
         </p></div>
@@ -126,7 +1291,9 @@
             <p class="announce">ELECTRIC BLUE RASPBERRY has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by CUPID SHUFFLE and CAPTAIN QUADRATIC</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r47" id="r47"></a>
         <div class="quote"><p class="lite">
             &quot;Lord you&#39;d better be glad that the Babysitters&#39; Club Representative isn&#39;t breathing down my neck to make any of this canon, otherwise with the three stock I just dealt you, you&#39;d be back to your old divorce deal&quot;
         </p></div>
@@ -134,7 +1301,9 @@
             <p class="announce">PINBALL WIZARD has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by LARRY and IGGY KOOPA</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r48" id="r48"></a>
         <div class="quote">
             <p class="lite">&quot;Heh...I gotta say....I&#39;ve made my whole brand around cheap knockoffs......guess I thought I wouldn&#39;t have any issues with a cheap knockoff of Dantoinette&quot;</p>
             <p class="lite"><em>deep breath</em>...mind if I recommend a new brand? Maybe one that includes both a Kaboom spell and My Foot up your ass????&quot;</p>
@@ -143,6 +1312,7 @@
             <p class="announce">SQUARE DANCE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DADANDORF and DANTHONY</p>
         </div>
+        <p class="text"></p>
 
         <p class="very" />
         <p>So here are the 16 fighters who went 0-2</p>
@@ -164,24 +1334,73 @@
             <li>Pinball Wizard</li>
             <li>Square Dance</li>
         </ul>
+        <p class="much"></p>
 
 
         <h2><a name="wr2" href="#wr2">WINNERS ROUND 2</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r49"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Therapuppy</p><p><span class="resultspoiler">❌ </span>Joe Drift</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r50"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Blonde Sora</p><p><span class="resultspoiler">❌ </span>Folk</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r51"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Twist</p><p><span class="resultspoiler">✅ </span>Vampire Catgirl Tifa</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r52"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Hackerman J0hn</p><p><span class="resultspoiler">❌ </span>Peppermint</p></div></a>
 
+                            <div class="line three" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r53"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Heartbreak</p><p><span class="resultspoiler">✅ </span>Juniper Uppercut</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r54"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Monday Mark</p><p><span class="resultspoiler">❌ </span>Workers Rights Dan</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r55"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Google</p><p><span class="resultspoiler">✅ </span>Subzero Amalgam</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r56"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Dantoinette</p><p><span class="resultspoiler">❌ </span>Hoedown</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 3.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 15em + 21px); margin-left: calc(var(--width) / 4 + 7.5em - 10px);"></div>
+            <div class="bracketish">
+                <a href="#r57"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Discord Jack</p><p><span class="resultspoiler">✅ </span>ICEE</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r58"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Spriteman</p><p><span class="resultspoiler">✅ </span>Corn on the Cob</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r59"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Taako (from TV)</p><p><span class="resultspoiler">✅ </span>Hamburger Helper</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r60"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>THE Grunk</p><p><span class="resultspoiler">❌ </span>Chartreuse</p></div></a>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r61"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Jon Arbuckle</p><p><span class="resultspoiler">❌ </span>Fly Bi</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r62"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Cupid Shuffle</p><p><span class="resultspoiler">✅ </span>NaClMore</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r63"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>MY Grunk</p><p><span class="resultspoiler">✅ </span>Larry</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r64"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Dadandorf</p><p><span class="resultspoiler">❌ </span>Sans Undertale</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
+
+        <a name="r49" id="r49"></a>
         <div class="quote">
             <p class="lite">&quot;Okay, so first off....you&#39;ve been telling me a lot about yourself and what you seem to think are your own personal faults. It just really seems like, judging by what you told me, that drifting is almost sort of a coping mechanism of sorts?&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">JOE DRIFT has been knocked into the loser&#39;s bracket by THERAPUPPY</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r50" id="r50"></a>
         <div class="quote">
             <p class="lite">&quot;So wait, let me get this straight, you&#39;re from THIS dimension, but a different timeline, but not in a way that works for whatever the hell a Chartreuse is, but that- dude! Just please tell me I don&#39;t have to fill out any more paperwork over this one, alright? I&#39;ve got a tournament to win&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">FOLK has been knocked into the loser&#39;s bracket by BLONDE SORA</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r51" id="r51"></a>
         <div class="quote">
             <p class="lite">&quot;Hah! That&#39;ll show ya! You think you&#39;re tough because you&#39;re part of some big anti-authority group? Ha! Well, you gotta have a woman with a feline flair such as myse- what??? you have one of those???
                 Well....I bet the leader of your group doesn&#39;t have a huge gun for an arm! So how abou- ARE YOU KIDDING ME????&quot;</p>
@@ -189,7 +1408,9 @@
         <div class="announcement">
             <p class="announce">TWIST has been knocked into the loser&#39;s bracket by VAMPIRE CATGIRL TIFA</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r52" id="r52"></a>
         <p class="text" />
         <p class="lite">Pre-match:</p>
         <div class="quote">
@@ -204,21 +1425,27 @@
         <div class="announcement">
             <p class="announce">PEPPERMINT has been knocked into the loser&#39;s bracket by HACKERMAN J0HN</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r53" id="r53"></a>
         <div class="quote">
             <p class="lite">&quot;I don&#39;t know why you&#39;re being all sad about it anyway!! You don&#39;t have any cooties! So you win!!!!! No cooties, no problem!!!!!!&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">HEARTBREAK has been knocked into the loser&#39;s bracket by JUNIPER UPPERCUT</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r54" id="r54"></a>
         <div class="quote">
             <p class="lite">&quot;Listen....I give you the highest level of respect......you see....where I come from.....I remember nothing but war. Endless conflict......but nothing.....can compare to the horror that is customer service.....&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">DAN has been knocked into the loser&#39;s bracket by MONDAY MARK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r55" id="r55"></a>
         <div class="quote">
             <p class="lite">&quot;BEEP!&quot; [I remember seeing the day that you were created......she did not know the source of warmth that she was creating.....The heated drive that could come from someone who felt so slighted.....someone so happy to win a single set....How could someone so pathetic generate this level of repugnant heat.......an unbearable passion....not for victory....but for sport.....Had I been able to warn her.....but alas.....I was simply too
                 cold to move.....]</p>
@@ -226,73 +1453,136 @@
         <div class="announcement">
             <p class="announce">GOOGLE has been knocked into the loser&#39;s bracket by SUBZERO AMALGAM</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r56" id="r56"></a>
         <div class="quote">
             <p class="lite">&quot;Well! Good to see that you&#39;re still packing a punch! Even when you&#39;re spreading yourself so thin between farming, fighting AND piracy! Sorry if I was brutal! But if Corn ever brings Johannsen around, keep him away from the potatoes if ya can! We&#39;re both tryin&#39; to cut back on carbs!&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">HOEDOWN has been knocked into the loser&#39;s bracket by DANTOINETTE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r57" id="r57"></a>
         <div class="quote">
             <p class="lite">&quot;So you were all alone in the tundra for THAT long, huh? .........are you SURE that none of the polar bears wore sunglasses? Like......did the ice even taste good?????????&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">DISCORD JACK has been knocked into the loser&#39;s bracket by ICEE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r58" id="r58"></a>
         <div class="quote">
             <p class="lite">&quot;Well! I gotta say it&#39;s nice meetin&#39; someone like me! For the longest time, I thought I was the only one &#39;round here who was just some human version of somethin&#39; you have for lunch, but good to see there&#39;s someone else......I don&#39;t know why you keep muttering about bein&#39; perfect, but maybe that&#39;s just a drink thing?&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">SPRITEMAN has been knocked into the loser&#39;s bracket by CORN ON THE COB</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r59" id="r59"></a>
         <div class="quote">
             <p class="lite">&quot;Jimbo tells me that apparently you&#39;re dating death incarnate, so I guess I can give you respect for that...wait....you were also champion at some point? Okay, sure buddy. I feel like I&#39;d remember someone sharing that title with me.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">TAAKO (FROM TV) has been knocked into the loser&#39;s bracket by HAMBURGER HELPER</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r60" id="r60"></a>
         <div class="quote">
             <p class="lite">&quot;Listen, I&#39;ve got some serious beef with your two brothers, but y&#39;know what? You don&#39;t seem to be too bad. For now...don&#39;t get on my bad side.....&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">CHARTREUSE has been knocked into the loser&#39;s bracket by THE GRUNK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r61" id="r61"></a>
         <div class="quote">
             <p class="lite">&quot;Honestly, good on you for trying to beat up kids less often. I knew someone who was always annoyed by this one little guy and bullied him a bunch. But at least it isn&#39;t at the point you&#39;re trying to ship anyone to Abu Dhabi&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">FLY BI has been knocked into the loser&#39;s bracket by JON ARBUCKLE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r62" id="r62"></a>
         <div class="quote">
             <p class="lite">&quot;All this matchmaking you&#39;re trying to do here is nothing like any of the dating sims I&#39;ve played.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">CUPID SHUFFLE has been knocked into the loser&#39;s bracket by NACLMORE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r63" id="r63"></a>
         <div class="quote">
             <p class="lite">&quot;I did it better.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">MY GRUNK has been knocked into the loser&#39;s bracket by LARRY</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r64" id="r64"></a>
         <div class="quote">
             <p class="lite">&quot;Ha ha! I like this guy! He&#39;s definitely got my kind of humor!&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">SANS UNDERTALE has been knocked into the loser&#39;s bracket by DADANDORF</p>
         </div>
+        <p class="much"></p>
 
 
         <h2><a name="lr2" href="#lr2">LOSERS ROUND 2</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r65"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Sans Undertale</p><p><span class="resultspoiler">❌ </span>Venus</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r66"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>MY Grunk</p><p><span class="resultspoiler">✅ </span>Chili's</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r67"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Cupid Shuffle</p><p><span class="resultspoiler">✅ </span>Captain Valentine</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r68"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Fly Bi</p><p><span class="resultspoiler">✅ </span>Cha Cha Slide</p></div></a>
 
+                            <div class="line three" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r69"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Chartreuse</p><p><span class="resultspoiler">❌ </span>Mozilla</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r70"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Taako (from TV)</p><p><span class="resultspoiler">✅ </span>Golden Spiral</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r71"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Spriteman</p><p><span class="resultspoiler">✅ </span>Bing</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r72"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Discord Jack</p><p><span class="resultspoiler">❌ </span>Duck Duck Go</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 3.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 15em + 21px); margin-left: calc(var(--width) / 4 + 7.5em - 10px);"></div>
+            <div class="bracketish">
+                <a href="#r73"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Hoedown</p><p><span class="resultspoiler">✅ </span>Miles Edgeworth</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r74"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Google</p><p><span class="resultspoiler">✅ </span>Machiavelli</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r75"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Workers Rights Dan</p><p><span class="resultspoiler">✅ </span>TRAINER OF JUSTICE</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r76"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Heartbreak</p><p><span class="resultspoiler">❌ </span>Pink DK Sr</p></div></a>
+
+                            <div class="lineflip threeflip" style="margin-top: calc(1.5em + 1.5*(3.6em + 6px));"></div>
+
+                <a href="#r77"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Peppermint</p><p><span class="resultspoiler">✅ </span>Plum K Rool</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 4*(3.6em + 6px));"></div>
+                <a href="#r78"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Twist</p><p><span class="resultspoiler">❌ </span>Captain Quadratic</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
+                <a href="#r79"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Folk</p><p><span class="resultspoiler">✅ </span>Iggy Koopa</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
+                <a href="#r80"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Joe Drift</p><p><span class="resultspoiler">✅ </span>Danthony</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
+
+        <a name="r69" id="r69"></a>
         <div class="quote">
             <p class="lite">&quot;Judging by what I know about your feelings towards gay people, something tells me you&#39;d probably feel the same for my boyfriend...so feeling the catharsis of this beatdown in linear time was INCREDIBLY cathartic&quot;</p>
         </div>
@@ -300,7 +1590,9 @@
             <p class="announce">MOZILLA has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by JUNIPER UPPERCUT and CHARTREUSE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r73" id="r73"></a>
         <div class="quote">
             <p class="lite">&quot;Yes, I cannot deny your hospitality, miss Sprout...but between the methods of your farming violating hundreds of codes and the ever-present crime of piracy, I cannot imagine it would be difficult beyond a shadow of a doubt that you are far from innocent&quot;</p>
         </div>
@@ -308,7 +1600,9 @@
             <p class="announce">HOEDOWN has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and MILES EDGEWORTH</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r77" id="r77"></a>
         <div class="quote">
             <p class="lite">&quot;Fan Club? Why would I wanna be part of someone&#39;s fan club when I&#39;m already part of my own fan club? And I&#39;m the biggest fan there! ....with a close second place.&quot;</p>
         </div>
@@ -316,7 +1610,9 @@
             <p class="announce">PEPPERMINT has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by HACKERMAN J0HN and PLUM K ROOL</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r71" id="r71"></a>
         <div class="quote">
             <p class="lite">&quot;Ginger Ale is better! ....w....wait why are you- what&#39;s- hey! HEY!!!! HELP!!!!&quot;</p>
         </div>
@@ -324,7 +1620,9 @@
             <p class="announce">SPRITEMAN has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by CORN ON THE COB and BING</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r78" id="r78"></a>
         <div class="quote">
             <p class="lite">&quot;I know you used to say that the doctor was &#39;magical&#39;....alongside a few hundred other adjectives...but hopefully now you have a good idea of what that word REALLY means!&quot;</p>
         </div>
@@ -332,7 +1630,9 @@
             <p class="announce">CAPTAIN QUADRATIC has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by NACLMORE and TWIST</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r66" id="r66"></a>
         <div class="quote">
             <p class="lite">&quot;Listen, I know how you&#39;re feelin&#39;! Needless to say we all feel kinda dead after a long week! Let me hit you up with a marg! (Um....I should probably make it a virgin....just in case)&quot;</p>
         </div>
@@ -340,7 +1640,9 @@
             <p class="announce">MY GRUNK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by LARRY and CHILIS</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r74" id="r74"></a>
         <div class="quote">
             <p class="lite">&quot;Wow!!! So you were made to be the ultimate fighter too!!!!!!!! Ooh!!!! And you&#39;ve got all kinds of colors!!!! Just like my gummies!!!!&quot;</p>
         </div>
@@ -348,7 +1650,9 @@
             <p class="announce">GOOGLE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by SUBZERO AMALGAM and MACHIAVELLI</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r65" id="r65"></a>
         <div class="quote"><p class="lite"><img
             src="images/sans.png"
             alt="Sans Undertale saying 'i guess i never miss, huh?' in an Undertale text box"
@@ -358,7 +1662,9 @@
             <p class="announce">VENUS has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THERAPUPPY and SANS UNDERTALE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r67" id="r67"></a>
         <div class="quote">
             <p class="lite">&quot;Listen, take it from me, kid! Your heart seems to be in the right place, but you gotta make sure people send out valentines when they&#39;re ready to do it!&quot;</p>
         </div>
@@ -366,7 +1672,9 @@
             <p class="announce">CUPID SHUFFLE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by NACLMORE and CAPTAIN VALENTINE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r70" id="r70"></a>
         <div class="quote">
             <p class="lite">&quot;I don&#39;t think I&#39;ve seen you around these- A <em>CHAMPION?</em>&nbsp;How did the tier get named after <em>ME?</em>&quot;</p>
         </div>
@@ -374,7 +1682,9 @@
             <p class="announce">TAAKO (FROM TV) has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by HAMBURGER HELPER and GOLDEN SPIRAL</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r80" id="r80"></a>
         <div class="quote">
             <p class="lite">&quot;<em>panting</em>&nbsp;Okay! Wasn&#39;t expecting that much of a fight from you! Now do me a favor and STAY AWAY FROM MY MOM! The last thing I need is another sibling to try and one-up me&quot;</p>
         </div>
@@ -382,7 +1692,9 @@
             <p class="announce">JOE DRIFT has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THERAPUPPY and DANTHONY</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r72" id="r72"></a>
         <div class="quote">
             <p class="lite">&quot;They don&#39;t talk much about you. But everything I have heard of you is glowing praise. Because of your loyalty. And for being a companion to someone who truly needs it.....you might not be popular, but that doesn&#39;t matter to you. Your one love is making him happy.......I think that&#39;s beautiful.&quot;</p>
         </div>
@@ -390,7 +1702,9 @@
             <p class="announce">DUCK DUCK GO has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and DISCORD JACK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r75" id="r75"></a>
         <div class="quote">
             <p class="lite">&quot;OUR BATTLE WAS QUITE LEGENDARY!!!! SIMILAR TO OUR PREVIOUS ALTERCATION IN WHICH I DEFENDED MY ELEGANT FORTRESS WHILST YOU ACCOSTED WITH THE BATTLE CRY OF <em>&#39;SIR THE HDTV BOXES ARE SUPPOSED TO BE THROWN AWAY CAN YOU BE CHILL ABOUT THIS PLEASE I DO NOT WANT TO BE FIRED OVER SOMETHING LIKE THIS!&#39;</em>!!!!!!!!!!&quot;</p>
         </div>
@@ -398,7 +1712,9 @@
             <p class="announce">WORKERS RIGHTS DAN has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by MONDAY MARK and TRAINER OF JUSTICE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r79" id="r79"></a>
         <div class="quote">
             <p class="lite">&quot;Hey, listen. Something I&#39;ve been meaning to tell ya. Thanks for everything ya did. You probably knew what you were losin&#39;. And when Home told me you were gonna be a part of this plan...well...I knew it couldn&#39;t go wrong.&quot;</p>
         </div>
@@ -406,11 +1722,14 @@
             <p class="announce">FOLK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by BLONDE SORA and IGGY KOOPA</p>
         </div>
+        <p class="text"></p>
         <p class="lite">BONUS: If Folk had won, this is what he&#39;d have said!</p>
         <div class="quote">
             <p class="lite">&quot;Hey, listen. Something I&#39;ve been meaning to tell ya. This couldn&#39;t have happened without you. Her armies were massive. Insurmountable. You had to use everything you had to clear me a path and encounter her while she was at her weakest. But in the end, you got everything you wanted. In the end, you got your tournament back from her.&quot;</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r68" id="r68"></a>
         <div class="quote">
             <p class="lite">&quot;So wait is it like a drive-by, but with planes? .......wait, but that&#39;s not how you spe-......OHHHHHH GOT IT&quot;</p>
         </div>
@@ -418,7 +1737,9 @@
             <p class="announce">FLY BI has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by JON ARBUCKLE and CHA CHA REAL SMOOTH</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r76" id="r76"></a>
         <div class="quote">
             <p class="lite">&quot;I appreciate the help, but you know how the saying goes. One is the loneliest number.&quot;</p>
         </div>
@@ -426,67 +1747,132 @@
             <p class="announce">PINK DONKEY KONG SR has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THE GRUNK and HEARTBREAK</p>
         </div>
+        <p class="much"></p>
 
 
         <h2><a name="wr3" href="#wr3">WINNERS ROUND 3</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r81"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Therapuppy</p><p><span class="resultspoiler">❌ </span>Blonde Sora</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r82"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Vampire Catgirl Tifa</p><p><span class="resultspoiler">❌ </span>Hackerman J0hn</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r83"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Juniper Uppercut</p><p><span class="resultspoiler">✅ </span>Monday Mark</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r84"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Subzero Amalgam</p><p><span class="resultspoiler">✅ </span>Dantoinette</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 1.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 9em + 26px); margin-left: calc(var(--width) / 4 + 4.5em - 14px);"></div>
+            <div class="bracketish">
+                <a href="#r85"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>ICEE</p><p><span class="resultspoiler">❌ </span>Corn on the Cob</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r86"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Hamburger Helper</p><p><span class="resultspoiler">✅ </span>THE Grunk</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r87"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Jon Arbuckle</p><p><span class="resultspoiler">✅ </span>NaClMore</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r88"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Larry</p><p><span class="resultspoiler">✅ </span>Dadandorf</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
 
+        <a name="r81" id="r81"></a>
         <div class="quote">
             <p class="lite">&quot;So, it seems like you&#39;ve been very very stressed lately, and it&#39;s good to acknowledge those feelings! But....maybe cut back on the caffeine for a while?&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">BLONDE SORA has been knocked into the loser&#39;s bracket by THERAPUPPY</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r82" id="r82"></a>
         <div class="quote">
             <p class="lite">&quot;Listen, normally I&#39;d call ya stupid for thinking you could take me on, but I know you&#39;re not stupid! Now if you did something REALLY stupid, like, I dunno, random example, brought my team&#39;s biggest threat back from the dead for shits and giggles, THEN I&#39;d call you stupid! But you&#39;d never do that. <em><strong>RIIIIIIIIGHT?</strong></em>&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">HACKERMAN J0HN has been knocked into the loser&#39;s bracket by VAMPIRE CATGIRL TIFA</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r83" id="r83"></a>
         <div class="quote">
             <p>&quot;Mark.....you killed a child.....</span><span class="c9 c5">AMAZING. MISSION COMPLETE. THAT RIGHT THERE IS WHY YOU&#39;RE THE BE-&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">JUNIPER UPPERCUT has been knocked into the loser&#39;s bracket by MONDAY MARK</p>
         </div>
+        <p class="text"></p>
         <p>BONUS: If Juniper had won:</p>
         <div class="quote">
             <p><em>takes a long drag of pixie stick</em> &quot;War is H-E-double hockey stick&quot;</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r84" id="r84"></a>
         <div class="quote">
             <p>&quot;Geez, you can tell that Doc never got the chance to fight me. How else could she think she could make the coldest motherfucker in the universe?&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">SUBZERO AMALGAM has been knocked into the loser&#39;s bracket by DANTOINETTE</p>
         </div>
+        <p class="text"></p>
 
+        <p class="note text">[ICEE vs Corn on the Cob was not reported, but ICEE won.]</p>
+
+        <a name="r86" id="r86"></a>
         <div class="quote">
             <p class="lite">&quot;And THATS for bringing....whatever the hell killed me here!!!! Whew! Sorry bout that! Had some pent-up rage there.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">HAMBURGER HELPER has been knocked into the loser&#39;s bracket by THE GRUNK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r87" id="r87"></a>
         <div class="quote">
             <p class="lite">&quot;It&#39;s great to fight against some of gaming&#39;s greatest characters in this, but wow it&#39;s something else to meet my Garfield Kart main!&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">JON ARBUCKLE has been knocked into the loser&#39;s bracket by NACLMORE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r88" id="r88"></a>
         <div class="quote">
             <p class="lite">&quot;Hey bud. Just wanted to say, sorry &#39;bout the medical degree. Glad you got it back.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">LARRY has been knocked into the loser&#39;s bracket by DADANDORF</p>
         </div>
+        <p class="much"></p>
 
 
 
         <h2><a name="lr3" href="#lr3">LOSERS ROUND 3</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r89"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Sans Undertale</p><p><span class="resultspoiler">✅ </span>Chili's</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r90"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Captain Valentine</p><p><span class="resultspoiler">❌ </span>Cha Cha Slide</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r91"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Chartreuse</p><p><span class="resultspoiler">❌ </span>Golden Spiral</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r92"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Bing</p><p><span class="resultspoiler">✅ </span>Discord Jack</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 1.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 9em + 26px); margin-left: calc(var(--width) / 4 + 4.5em - 14px);"></div>
+            <div class="bracketish">
+                <a href="#r93"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Miles Edgeworth</p><p><span class="resultspoiler">✅ </span>Machiavelli</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r94"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>TRAINER OF JUSTICE</p><p><span class="resultspoiler">❌ </span>Heartbreak</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r95"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Plum K Rool</p><p><span class="resultspoiler">✅ </span>Twist</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r96"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Iggy Koopa</p><p><span class="resultspoiler">✅ </span>Danthony</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
 
+        <a name="r89" id="r89"></a>
         <div class="quote">
             <p class="lite">&quot;Oh no no no no! Not this time! Last time you came around you stole every ketchup pack in the restaurant. If you want, I can make you a to-go order, though.&quot;</p>
         </div>
@@ -494,7 +1880,9 @@
             <p class="announce">SANS UNDERTALE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DADANDORF and CHILIS</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r90" id="r90"></a>
         <div class="quote">
             <p class="lite">&quot;You fight just like how you speak to the crowd....only with a lot less me having to cut off the mic due to promoting illegal activities....nothing personal, we just don&#39;t wanna get cancelled&quot;</p>
         </div>
@@ -502,7 +1890,9 @@
             <p class="announce">CHA CHA SLIDE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by HACKERMAN J0HN and CAPTAIN VALENTINE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r91" id="r91"></a>
         <div class="quote">
             <p class="lite">&quot;You know what, I&#39;m not going to lie. I suppose mortality has given me fascination for what I once considered banal. Perhaps there is something to the composition of these shots.....&quot;</p>
         </div>
@@ -510,7 +1900,9 @@
             <p class="announce">GOLDEN SPIRAL has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by MONDAY MARK and CHARTREUSE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r92" id="r92"></a>
         <div class="quote">
             <p class="lite">&quot;I must say, thanks to you, my experience from the Blue Sub-Tourney was......very loud.....very......very loud. Pleasure to fight you.&quot;</p>
         </div>
@@ -518,7 +1910,9 @@
             <p class="announce">BING has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by GOOGLE and DISCORD JACK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r93" id="r93"></a>
         <div class="quote">
             <p class="lite">&quot;Hey!!! Hey scary guy who keeps being boring!!! Look!!!! I drew a picture of us!!!!! I was sure to give you extra angry eyes and I made your words in the speech cloud a bunch of scribbles because you said a lot of stuff about &quot;petty theft&quot; and &quot;vinyl record&quot; and &quot;Toto&quot; which I didn&#39;t really pay attention to!&quot;</p>
         </div>
@@ -526,7 +1920,9 @@
             <p class="announce">MILES EDGEWORTH has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by ICEE and MACHIAVELLI</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r94" id="r94"></a>
         <div class="quote">
             <p class="lite" style="overflow: hidden;">&quot;NO NEED TO FEEL SO GLUM, MY FRIEND! YOU SEE, BEFORE I MET MY LOVELY HUSBAND, THERE WAS ONE TRUE LOVE OF MY LIFE! THEY ARE QUITE THE LOYAL LOVER, BUT ONE THAT SHAN&#39;T BE SCORNED! THAT LOVER BY THE NAME OF MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-&quot;</p>
         </div>
@@ -534,7 +1930,9 @@
             <p class="announce">HEARTBREAK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by JUNIPER UPPERCUT and TRAINER OF JUSTICE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r95" id="r95"></a>
         <div class="quote">
             <p class="lite">&quot;Oh hey! I change colors when I lose control, too! Although mine is more god magic while you....well....you&#39;re just mad, aren&#39;t ya?&quot;</p>
         </div>
@@ -542,7 +1940,9 @@
             <p class="announce">PLUM K ROOL has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by FLY BI and TWIST</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r96" id="r96"></a>
         <div class="quote">
             <p class="lite">&quot;Well that&#39;s one over my sister&#39;s track record&quot;</p>
         </div>
@@ -550,41 +1950,89 @@
             <p class="announce">IGGY KOOPA has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by MY GRUNK and DANTHONY</p>
         </div>
+        <p class="much"></p>
 
 
         <h2><a name="wr4" href="#wr4">WINNERS ROUND 4</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r97"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Therapuppy</p><p><span class="resultspoiler">❌ </span>Vampire Catgirl Tifa</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r98"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Monday Mark</p><p><span class="resultspoiler">✅ </span>Dantoinette</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 0.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 5em + 30px); margin-left: calc(var(--width) / 4 + 2.5em - 16px);"></div>
+            <div class="bracketish">
+                <a href="#r99"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>ICEE</p><p><span class="resultspoiler">❌ </span>THE Grunk</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r100"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>NaClMore</p><p><span class="resultspoiler">❌ </span>Dadandorf</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
 
+        <a name="r97" href="r97"></a>
         <div class="quote">
             <p class="lite">&quot;Okay, so......listen, if you feel comfortable, then you deserve to own it! I&#39;m only expressing my concerns that trying to be so many different things at once might be a little overwhelming....&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">VAMPIRE CATGIRL TIFA has been knocked into the loser&#39;s bracket by THERAPUPPY</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r98" href="r98"></a>
         <div class="quote">
             <p class="lite">&quot;I get that you got your life kinda throw outta whack by gods. Some of them saved ya. Some messed up the world you call your own. But I think it&#39;s better to see gods, not so much as something directing your life, but as targets.&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">MONDAY MARK has been knocked into the loser&#39;s bracket by DANTOINETTE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r99" href="r99"></a>
         <div class="quote">
-            <p class="lite">&quot;<em>dabs</em>&quot; (ryan couldn&#39;t think of a proper quote)</p>
+            <p class="lite">&quot;<em>dabs</em>&quot; <span class="note">[ryan couldn&#39;t think of a proper quote]</span></p>
         </div>
         <div class="announcement">
             <p class="announce">THE GRUNK has been knocked into the loser&#39;s bracket by ICEE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r100" href="r100"></a>
         <div class="quote">
             <p class="lite">&quot;Wh- What do you mean you&#39;re taking away my Xbox???? You&#39;re not even my dad?????? Thats not how this works??????&quot;</p>
         </div>
         <div class="announcement">
             <p class="announce">DADANDORF has been knocked into the loser&#39;s bracket by NACLMORE</p>
         </div>
+        <p class="much"></p>
 
 
         <h2><a name="lr4" href="#lr4">LOSERS ROUND 4</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r101"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Subzero Amalgam</p><p><span class="resultspoiler">✅ </span>Chili's</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r102"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Juniper Uppercut</p><p><span class="resultspoiler">❌ </span>Captain Valentine</p></div></a>
+                        <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r103"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Hackerman J0hn</p><p><span class="resultspoiler">❌ </span>Chartreuse</p></div></a>
+                    <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r104"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Blonde Sora</p><p><span class="resultspoiler">✅ </span>Discord Jack</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 1.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 9em + 26px); margin-left: calc(var(--width) / 4 + 4.5em - 14px);"></div>
+            <div class="bracketish">
+                <a href="#r105"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Larry</p><p><span class="resultspoiler">✅ </span>Machiavelli</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r106"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Jon Arbuckle</p><p><span class="resultspoiler">❌ </span>TRAINER OF JUSTICE</p></div></a>
+                        <div class="lineflip twoflip" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
+                <a href="#r107"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Hamburger Helper</p><p><span class="resultspoiler">❌ </span>Twist</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
+                <a href="#r108"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Corn on the Cob</p><p><span class="resultspoiler">✅ </span>Danthony</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
 
+        <a name="r101" href="r101"></a>
         <div class="quote">
             <p class="lite">&quot;Hey, I know this is a weird question, but like....can you, like, hold these margaritas? Just cuz I gotta be right back, and you seem to be good at holding these things.&quot;</p>
         </div>
@@ -592,7 +2040,9 @@
             <p class="announce">SUBZERO AMALGAM has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and CHILIS</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r102" href="r102"></a>
         <div class="quote">
             <p class="lite">&quot;Whoa! You&#39;ve got some crazy heart stickers on your- oh! Thats part of the suit? ......do you want a heart sticker?&quot;</p>
         </div>
@@ -600,8 +2050,10 @@
             <p class="announce">CAPTAIN VALENTINE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by TWIST and JUNIPER UPPERCUT</p>
         </div>
-        <p class="lite">(Side note: Ryan streamed a chunk of sets in VC, this one included. Juniper 3-stocked Valentine, covering him in gold star stickers for the remainder of the set.)</p>
+        <p class="lite"></p>
+        <p class="note text">[Side note: Ryan streamed a chunk of sets in VC, this one included. Juniper 3-stocked Valentine, covering him in gold star stickers for the remainder of the set.]</p>
 
+        <a name="r103" href="r103"></a>
         <div class="quote">
             <p class="lite">&quot;Hope I didn&#39;t hit ya too hard there! I owe you one that you didn&#39;t nag the hell outta Larry&quot;</p>
         </div>
@@ -609,7 +2061,9 @@
             <p class="announce">CHARTREUSE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THE GRUNK and HACKERMAN J0HN</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r104" href="r104"></a>
         <div class="quote">
             <p class="lite">&quot;!givebloraacoffee&quot;</p>
         </div>
@@ -617,7 +2071,9 @@
             <p class="announce">BLONDE SORA has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THERAPUPPY and DISCORD JACK</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r105" href="r105"></a>
         <div class="quote">
             <p class="lite">&quot;Oooooooo!!!!! That was really fun!!!! You go all shifty all the time!!! I dunno why the doc thought I&#39;d be the ultimate when you&#39;re here!!! Lets go again!!!!!!!!!!!&quot;</p>
         </div>
@@ -625,8 +2081,10 @@
             <p class="announce">LARRY has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DADANDORF and MACHIAVELLI</p>
         </div>
-        <p class="lite">(Note: This one was among the ones streamed. Machi took it to Best Of 5 just for fun.)</p>
+        <p class="lite"></p>
+        <p class="note text">[Note: This one was among the ones streamed. Machi took it to Best Of 5 just for fun.]</p>
 
+        <a name="r106" href="r106"></a>
         <div class="quote">
             <p class="lite">&quot;I don&#39;t know why people seem to freak out about the way you talk. Where I come from, everyone&#39;s in caps lock&quot;</p>
         </div>
@@ -634,7 +2092,9 @@
             <p class="announce">TRAINER OF JUSTICE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by TAAKO (FROM TV) and JON ARBUCKLE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r107" href="r107"></a>
         <div class="quote">
             <p class="lite">&quot;I said that we&#39;re passing on our legacy, but you know what? It&#39;s good to flex every so often, too, huh?&quot;</p>
         </div>
@@ -642,7 +2102,9 @@
             <p class="announce">TWIST has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by VAMPIRE CATGIRL TIFA and HAMBURGER HELPER</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r108" href="r108"></a>
         <div class="quote">
             <p class="lite">&quot;Hey, uh, s-sorry about that! It was, uh, it was a good fight! You did good! Um.....yeah! Sorry! Yeah! Uh....Sorry! Bye!&quot;</p>
         </div>
@@ -650,7 +2112,26 @@
             <p class="announce">CORN ON THE COB has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by ICEE and DANTHONY</p>
         </div>
+        <p class="much"></p>
 
+        <h2><a name="lr5" href="#lr5">LOSERS ROUND 5</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r109"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Chili's</p><p><span class="resultspoiler">✅ </span>Juniper Uppercut</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r110"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Hackerman J0hn</p><p><span class="resultspoiler">✅ </span>Discord Jack</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 0.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 5em + 30px); margin-left: calc(var(--width) / 4 + 2.5em - 16px);"></div>
+            <div class="bracketish">
+                <a href="#r111"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>Machiavelli</p><p><span class="resultspoiler">✅ </span>Jon Arbuckle</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r112"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Hamburger Helper</p><p><span class="resultspoiler">❌ </span>Danthony</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
+
+        <a name="r109" href="r109"></a>
         <div class="quote">
             <p class="lite">&quot;....um....excuse me? Can I please have some crayons for the menu? <em>see Al I told you I&#39;d say the P Word</em>&quot;</p>
         </div>
@@ -658,7 +2139,9 @@
             <p class="announce">CHILIS has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by FOLK and JUNIPER UPPERCUT</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r110" href="r110"></a>
         <div class="quote">
             <p class="lite">&quot;I&#39;m sorry, but no one in the server is interested in any Raybans&quot;</p>
         </div>
@@ -666,8 +2149,10 @@
             <p class="announce">HACKERMAN J0HN has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by VAMPIRE CATGIRL TIFA and DISCORD JACK</p>
         </div>
-        <p class="lite">(Side note: Last stock of the set, Jack had 175 damage and J0hn had 15. &quot;he went RIGHT INTO the aethercide.&quot;)</p>
+        <p class="lite"></p>
+        <p class="note text">[Side note: Last stock of the set, Jack had 175 damage and J0hn had 15. &quot;he went RIGHT INTO the aethercide.&quot;]</p>
 
+        <a name="r111" href="r111"></a>
         <div class="quote">
             <p class="lite">&quot;Wow, you know, if I&#39;m just some normal guy who&#39;s always bullied by my cat and you&#39;re considered The Ultimate.......maybe you all should reconsider what&#39;s good and what&#39;s bad&quot;</p>
         </div>
@@ -675,7 +2160,9 @@
             <p class="announce">MACHIAVELLI has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by CORN ON THE COB and JON ARBUCKLE</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r112" href="r112"></a>
         <div class="quote">
             <p class="lite">&quot;Come on back with your sister so that she has an idea of what a real champion looks like&quot;</p>
         </div>
@@ -683,7 +2170,27 @@
             <p class="announce">DANTHONY has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by SANS UNDERTALE and HAMBURGER HELPER</p>
         </div>
+        <p class="much"></p>
 
+
+        <h2><a name="lr6" href="#lr6">LOSERS ROUND 6</a></h2>
+        </div>
+        <div class="superbracketish">
+            <div class="bracketish">
+                <a href="#r113"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">❌ </span>THE Grunk</p><p><span class="resultspoiler">✅ </span>Juniper Uppercut</p></div></a>
+                    <div class="line one" style="margin-top: 1.5em;"></div>
+                <a href="#r114"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Dadandorf</p><p><span class="resultspoiler">❌ </span>Discord Jack</p></div></a>
+            </div>
+                <div class="five" style="margin-top: calc(2.5em + 0.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 5em + 30px); margin-left: calc(var(--width) / 4 + 2.5em - 16px);"></div>
+            <div class="bracketish">
+                <a href="#r115"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Vampire Catgirl Tifa</p><p><span class="resultspoiler">❌ </span>Jon Arbuckle</p></div></a>
+                    <div class="lineflip oneflip" style="margin-top: calc(1.5em);"></div>
+                <a href="#r116"><div class="matchup"><p class="matchupborder"><span class="resultspoiler">✅ </span>Monday Mark</p><p><span class="resultspoiler">❌ </span>Hamburger Helper</p></div></a>
+            </div>
+        </div>
+        <div class="discord">
+
+        <a name="r113" href="r113"></a>
         <div class="quote">
             <p class="lite">&quot;Hey!! Hey! Hey! Hey! Why did you ground Jr! I wanted to play Pokemon with him!!!!&quot;</p>
         </div>
@@ -691,7 +2198,9 @@
             <p class="announce">THE GRUNK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by ICEE and JUNIPER UPPERCUT</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r114" href="r114"></a>
         <div class="quote">
             <p class="lite">&quot;Hey, so you&#39;re internet savvy, right? Because apparently one of Jimbo&#39;s friends called me something and I don&#39;t know what it means. I&#39;m kinda worried because right after it happened Jimbo got really mad? Anyway, what&#39;s a di-&quot;</p>
         </div>
@@ -699,7 +2208,9 @@
             <p class="announce">DISCORD JACK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by NACLMORE and DADANDORF</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r115" href="r115"></a>
         <div class="quote">
             <p class="lite">&quot;Listen, take it from personal experience. I don&#39;t know EXACTLY what happened to ya, but I can say this much. Feeding your catboy nothing but lasagna? NOT the best choice&quot;</p>
         </div>
@@ -707,7 +2218,9 @@
             <p class="announce">JON ARBUCKLE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by NACLMORE and VAMPIRE CATGIRL TIFA</p>
         </div>
+        <p class="text"></p>
 
+        <a name="r116" href="r116"></a>
         <div class="quote">
             <p class="lite">&quot;I-I mean, I guess that you and I have stuff in common, right? We both like jokes.....we both have made pacts with dimensional gods...i-it&#39;s all good right?&quot;</p>
         </div>
@@ -715,7 +2228,7 @@
             <p class="announce">HAMBURGER HELPER has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THE GRUNK and MONDAY MARK</p>
         </div>
-        <p class="very" />
+        <p class="much"></p>
 
 
         <h2><a name="top8" href="#top8">NON-CANON CURIOSITY BRACKET TOP 8</a></h2>
@@ -727,7 +2240,7 @@
         <li>ICEE</li>
         <li>NaClMore</li>
         </ul>
-        <p class="very" />
+        <p class="text" />
         <p>LOSERS SIDE</p>
         <ul>
         <li>Juniper Uppercut</li>
@@ -736,7 +2249,7 @@
         <li>Monday Mark</li>
         </ul>
         <p class="very" />
-        <p class="text">(From here, all fights are Best Of 5.)</p>
+        <p class="note text">[From here, all fights are Best Of 5.]</p>
 
         <div class="quote">
             <p class="lite">&quot;What&#39;re a bunch of kids doin in this tournament? I get you&#39;ve got your brother around, but this is ridiculous!&quot;</p>
@@ -745,6 +2258,7 @@
             <p class="announce">JUNIPER UPPERCUT has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by MONDAY MARK and DADANDORF</p>
         </div>
+        <p class="text"></p>
 
         <div class="quote">
             <p class="lite">&quot;Hey, you&#39;re pretty funny! Tell you what...Ninth Heaven has an Open Mic Night this Thursday. I think you&#39;d do great&quot;</p>
@@ -753,6 +2267,7 @@
             <p class="announce">MONDAY MARK has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
         </div>
+        <p class="text"></p>
 
         <div class="quote">
             <p class="lite">&quot;I&#39;m glad that you care and all that stuff, but listen. I&#39;m fine, okay! I&#39;m telling you, I&#39;m FINE! Stop WORRYING about me!!!!&quot;</p>
@@ -760,7 +2275,8 @@
         <div class="announcement">
             <p class="announce">THERAPUPPY has been knocked into the loser&#39;s bracket by DANTOINETTE</p>
         </div>
-        <p class="lite">(Note: THERAPUPPY ALMOST WON ToT)</p>
+        <p class="lite"></p>
+        <p class="note text">[Note: THERAPUPPY ALMOST WON ToT]</p>
 
         <div class="quote">
             <p class="lite">&quot;Yeah, I guess this is pretty good....but, uh.....Taco Bell&#39;s got a Baja Blast flavor........do you know if, uhhhhhhhhhhhh....&quot;</p>
@@ -768,6 +2284,7 @@
         <div class="announcement">
             <p class="announce">ICEE has been knocked into the loser&#39;s bracket by NACLMORE</p>
         </div>
+        <p class="text"></p>
 
         <div class="quote">
             <p class="lite">&quot;Whoo! That was a close one! Hey, uh, quick question....I know that my son&#39;s goin&#39; through the ol&#39; teenage rebellion phase. But like...he&#39;s doing alright...right?&quot;</p>
@@ -776,13 +2293,15 @@
             <p class="announce">THERAPUPPY has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and DADANDORF</p>
         </div>
+        <p class="text"></p>
 
         <div class="announcement">
             <p class="announce">VAMPIRE CATGIRL TIFA has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by THERAPUPPY and ICEE</p>
         </div>
-        <p>(Ryan says: SHIT I FORGOT THE QUOTE</p>
-        <p class="lite">Imagine a quote&#39;s there)</p>
+        <p class="lite"></p>
+        <p class="note">[Ryan says: <span class="ryan">SHIT I FORGOT THE QUOTE</span></p>
+        <p class="note text"><span class="ryan">Imagine a quote&#39;s there</span>]</p>
 
         <div class="quote">
             <p class="lite">&quot;MLG? Like Major League Gaming? That&#39;s real funny kid! You know...assuming that anyone who feels like they need to be in a league to feel important would get a game off me&quot;</p>
@@ -790,6 +2309,7 @@
         <div class="announcement">
             <p class="announce">NACLMORE has been knocked into the loser&#39;s bracket by DANTOINETTE</p>
         </div>
+        <p class="text"></p>
 
         <div class="quote">
             <p class="lite">&quot;Hm? Alright, I guess since you got all A&#39;s on your report card, I can get you one for the movie.....hey bear! Can I get a large cherry flavor?&quot;</p>
@@ -798,6 +2318,7 @@
             <p class="announce">ICEE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by NACLMORE and DADANDORF</p>
         </div>
+        <p class="text"></p>
 
         <div class="quote">
             <p class="lite">&quot;I GROUNDED HIM BECAUSE HE WAS PLAYING HIS MUSIC TOO DAMN <em><strong>LOUD</strong></em></p>
@@ -806,6 +2327,7 @@
             <p class="announce">NACLMORE has been eliminated from the non-canon curiosity bracket</p>
             <p class="announce">Eliminated by DANTOINETTE and DADANDORF</p>
         </div>
+        <p class="much"></p>
 
 
         <h2><a name="gf" href="#gf">GRAND FINALS: <em><strong>DANTOINETTE (W) VS. DADANDORF (L)</strong></em></a></h2>
@@ -813,11 +2335,11 @@
         <div class="quote">
             <p class="lite">&quot;You think you&#39;re hot stuff, huh? Well, check out THIS dance move from back in the day. I call it....the Bracket Reset&quot;</p>
         </div>
-        <p class="lite">(Note: Dadondorf brought it all the way to Round 10.)</p>
+        <p class="note lite">[Note: Dadondorf brought it all the way to Round 10.]</p>
 
         <p class="very" />
 
-        <p class="text">(These messages showed up in the main channel after Ryan announced that the set was decided.)</p>
+        <p class="note text">[These messages showed up in the main channel after Ryan announced that the set was decided.]</p>
 
         <p class="lite">&quot;What the- no&quot;</p>
         <p class="lite">&quot;NO!!!!!!!&quot;</p>
@@ -827,7 +2349,7 @@
 
         <p class="very" />
 
-        <p class="text">(Back in the thread.)</p>
+        <p class="note text">[Back in the thread.]</p>
         <p class="text">We have a report from the field</p>
         <div class="quote break"><p class="lite">
             &quot;WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW&quot;
@@ -845,12 +2367,14 @@
         <p class="text"><span class="prism">&quot;Did you think that being outside the story would mean I&#39;d just be clueless?&quot;</span></p>
         <img
             src="images/prism-assume.png"
+            class="ncct1prismbow"
             alt="in rainbow text: Well I guess maybe you shouldn&#39;t assume things, ya silly dinguses :)"
             title="in rainbow text: Well I guess maybe you shouldn&#39;t assume things, ya silly dinguses :)"
             style="margin-top: 3em; margin-bottom: 9em; width: 90%;"
         />
         <img
             src="images/prism-report.png"
+            class="ncct1prismbow"
             alt="in rainbow text: We have a report from the field :)"
             title="in rainbow text: We have a report from the field :)"
             style="margin-bottom: 18em; width: 100%;"
@@ -893,11 +2417,13 @@
             </div>
             <p class="very" style="height: 50em;"></p>
         </div>
-        <div class="cutscene-rainbow">
+        <!--
+<div class="cutscene-rainbow">
             <div style="height: 240em;"></div>
             <p class="much">
             <h3><a href="../">Home :)</a></h3>
             <p class="much">
         </div>
+ -->
     </body>
 </html>
