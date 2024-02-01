@@ -1,0 +1,1007 @@
+:root {
+    --superwidth: 100vw;
+    --width: 100vw;
+    --subwidth: 80vw;
+
+    --white: white;
+    --blank: #eee;
+    --light: #dcddde;
+    --shade: #babbbc;
+    --shadow: #666666;
+    --lighter-null: #4a4d53;
+    --discord: #424549;
+    --dark-discord: #36393e;
+    --darker-discord: #2f3136;
+    --darkest-discord: #282b30;
+    --light-null: #25262b;
+    --null: #202225;
+    --script: #0a0027;
+
+    --ryan-blue: #00aff4;
+    --ryan-l-blue: #1155cc;
+
+    --purple: #aa8ed6;
+
+    --ludwig-light: #24ffff;
+    --ludwig-dark: #0025ff;
+    --ludwig-purple: #d044fc;
+
+    --jake: #1f9400;
+
+    --disc-dark-1: #040405;
+    --disc-dark-2: #18191C;
+    --disc-dark-3: #202225;
+    --disc-dark-4: #34373C;
+    --disc-dark-5: #4F545C;
+    --disc-dark-6: #72767D;
+    --disc-dark-7: #B9BBBE;
+    --disc-dark-8: #DCDDDE;
+    --disc-dark-9: #F6F6F7;
+
+    --disc-light-1: #060607;
+    --disc-light-2: #23262A;
+    --disc-light-3: #2E3338;
+    --disc-light-4: #4F5660;
+    --disc-light-5: #747F8D;
+    --disc-light-6: #9099A4;
+    --disc-light-7: #C7CCD1;
+    --disc-light-8: #E3E5E8;
+    --disc-light-9: #F8F9F9;
+
+    --disc-light-side: #F2F3F5;
+    --disc-light-chatbox: #EBEDEF;
+    --disc-light-background: #FEFEFE;
+
+    --disc-l-text: var(--disc-light-3);
+    --disc-l-page: var(--disc-light-background);
+    --disc-l-announce: var(--disc-light-side);
+    --disc-l-announce-border: var(--disc-light-7);
+
+    --l-blank: #ece;
+}
+
+body:has(#lightmode:checked) {
+& .menu {
+    --text: var(--disc-l-text);
+    --background: var(--disc-l-announce);
+    --border: var(--disc-l-announce-border);
+    --prism: black;
+}
+& .discord {
+    --background: var(--disc-l-page);
+    --text: var(--disc-l-text);
+
+    --announcement-background: var(--disc-light-8);
+    --announcement-border: var(--disc-l-announce-border);
+
+    --nelson-background: var(--disc-light-8);
+    --nelson-border: var(--disc-l-announce-border);
+    --nelson-text: var(--text);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --ryan: var(--ryan-l-blue);
+    --note: var(--disc-light-4);
+    --prism: black;
+    --prismer: black;
+    --prismest: rgba(0,0,0,0.5);
+    --prismatic: rgba(0,0,0,0.4);
+
+    --mint: #00aa60;
+    --chartreuse: #60aa00;
+    --twist: purple;
+    --danirage: #300;
+}
+& .cutscene {
+    --background: var(--l-blank);
+    --text: var(--script);
+}
+& .quote {
+    --prism: white;
+    --prismer: white;
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+}
+
+& .cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--l-blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+& .pocket-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--null)); }
+& .pocket-stop { background: linear-gradient(to top, var(--disc-l-page), var(--null)); }
+
+& .win { --text: var(--light); --prism: white; }
+& .quote { border-left: 2px solid var(--disc-light-6); }
+}
+
+body:not(:has(#lightmode:checked)) {
+& .menu {
+    --text: var(--light);
+    --background: var(--dark-discord);
+    --border: var(--darkest-discord);
+    --prism: var(--white);
+}
+& .discord {
+    --background: var(--discord);
+    --text: var(--light);
+    --code: var(--dark-discord);
+
+    --ryan: var(--ryan-blue);
+    --note: var(--shade);
+
+    --light-prism: var(--light);
+    --prism: var(--white);
+    --prismer: var(--white);
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --twist: #aa8ed6;
+    --danirage: #fcc;
+    --danism: #f66;
+    --danismer: #d33;
+    --danismest: #d11;
+    --bing: #b6c608;
+    --mint: #00ff80;
+    --chartreuse: #80ff00;
+    --thend: #FFF0F5;
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --announcement-text: var(--light);
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+& .cutscene {
+    --background: var(--blank);
+    --text: var(--script);
+}
+
+& .cutscene-start { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--discord), var(--blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+& .pocket-start { background: linear-gradient(to bottom, var(--discord), var(--null)); }
+& .pocket-stop { background: linear-gradient(to top, var(--discord), var(--null)); }
+
+& .quote { border-left: 2px solid var(--light); }
+}
+
+
+.bracket, .bracketish, .superbracketish {
+    --text: var(--light);
+    --bracket-background: #272a33;
+/*     --bracket-background: var(--darker-discord); */
+    --bracket-border: var(#272a33);
+    --bracket-text: var(--light);
+    --matchup-background: #58595e;
+/*     --matchup-background: var(--discord); */
+/*     --matchup-border: var(--darkest-discord); */
+    --matchup-border: #4e4f53;
+    --matchup-text: var(--light);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+    --prism: rgba(255,255,255,0.9);
+    --thend: ivory;
+}
+
+.pocket, .pocket-start, .pocket-stop, .black, .pocketfall {
+    --background: var(--null);
+    --text: var(--light);
+    --code: var(--light-null);
+
+    --note: var(--shade);
+
+    --prism: white;
+    --ryan: #00aff4;
+
+    --void: black;
+    --unvoid: #181818;
+    --cosmic: black;
+
+    --mint: #00ff80;
+    --chartreuse: #80ff00;
+    --bing: #b6c608;
+    --thend: #FFF0F5;
+
+    --nelson-background: var(--dark-discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+
+.cutscene {
+    --background: var(--blank);
+    --text: var(--script);
+    --code: var(--shade);
+
+    --ryan: #1155cc;
+    --note: var(--shadow);
+
+    --light-prism: rgba(255,255,255,0.66);
+    --prism: transparent;
+    --prismer: transparent;
+    --prismest: transparent;
+    --prismatic: transparent;
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+    --cosmic: var(--script);
+    --chartreuse: #60aa00;
+    --crimson: #dc143c;
+    --mint: #00ff60;
+    --cobalt: #0047ab;
+    --twist: #aa8ed6;
+    --thend: black;
+    --danism: #a0262f;
+
+    --announcement-background: var(--darker-discord);
+    --announcement-border: var(--darkest-discord);
+    --nelson-background: var(--discord);
+    --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
+}
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote, .cutscene .win {
+    --text: var(--light);
+
+    --prism: white;
+    --prismer: white;
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
+}
+
+@media only screen and (min-width: 800pt) and (orientation: landscape) {
+    :root {
+        --width: 750pt;
+        --subwidth: 500pt;
+    }
+    .announcement {
+        padding-left: 36pt;
+        padding-right: 30pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
+    :root {
+        --width: 625pt;
+        --subwidth: 425pt;
+    }
+    .announcement {
+        padding-left: 24pt;
+        padding-right: 18pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
+    :root {
+        --width: 450pt;
+        --subwidth: 300pt;
+    }
+    .announcement {
+        padding-left: 21pt;
+        padding-right: 15pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw - 100pt);
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 2.5em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (max-width: 400pt) and (orientation: landscape) {
+    :root {
+        --width: 100vw;
+        --subwidth: calc(100vw - 20pt);
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+@media only screen and (orientation: portrait) {
+    :root {
+        --width: 100vw;
+        --subwidth: 80vw;
+    }
+    .announcement {
+        padding-left: 18pt;
+        padding-right: 12pt;
+    }
+    .nelson, .chat, .prismchat {
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
+}
+
+div.menu {
+    z-index: 1;
+    position: fixed;
+    top: 1em;
+    right: calc((100vw - var(--width)) / 2 + 0.5em);
+    padding: 0.5em;
+    padding-top: 0.3em;
+    background: var(--background);
+    color: var(--text);
+    border: solid 2px var(--border);
+    border-radius: 3px;
+    overflow: hide;
+    justify-content: right;
+    text-align: right;
+}
+div.menu>label, div.menu>.menu-label, div.menu>.menu-label-minor { height: 1em; }
+div.menu:has(#menu-hide:checked)>label>span.menu-label { display: none; }
+div.menu:has(#menu-hide:checked)>.menu-label-minor { display: none; }
+div.menu:has(#menu-hide:checked)>br { display: none; }
+div.menu:has(#menu-hide:checked)>hr { display: none; }
+div.menu:has(#menu-hide:checked)>details { display: none; }
+div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
+#toc { justify-content: right; text-align: right; font-size: 10pt; }
+#toc>summary { font-size: 12pt; }
+
+.discord, .cutscene, .pocket, .pocketfall, .rainbow {
+    width: var(--subwidth);
+    padding-left: calc((var(--width) - var(--subwidth)) / 2);
+    padding-right: calc((var(--width) - var(--subwidth)) / 2);
+}
+.cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .pocketfall-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord { width: var(--width); }
+
+body {
+    background-color: var(--null);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.discord, .cutscene {
+    background-color: var(--background);
+    overflow: hidden;
+}
+.discord {
+    padding-top: 30pt;
+    padding-bottom: 10pt;
+}
+.cutscene {
+    padding-top: 20pt;
+    padding-bottom: 30pt;
+}
+.pocket {
+    background-color: var(--null);
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.pocketfall {
+    background: repeating-linear-gradient(to bottom, var(--null) 0em, var(--null) 22em, var(--blank) 25em, var(--null) 28em, var(--null) 40em);
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+}
+.black {
+    background-color: black;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+    width: var(--subwidth);
+}
+.rainbow {
+    background-color: magenta;
+    background-image: url('./rainbow.png');
+    background-size: cover;
+    overflow: hidden;
+    padding-top: 10pt;
+    padding-bottom: 30pt;
+    height: 100em;
+}
+.cutscene-start, .cutscene-background-stop, .cutscene-stop, .pocket-start, .pocket-stop {
+    height: 5em;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cutscene-start-slow {
+    background: linear-gradient(to bottom, var(--discord), var(--blank));
+    height: 60em;
+}
+.pocketfall-stop {
+/*    background: linear-gradient(to bottom, var(--null) 0em, var(--blank) 10em, var(--blank) 20em, var(--ludwig-light) 30em, var(--ludwig-light) 35em, var(--ludwig-dark) 43em, var(--ludwig-dark) 50em, var(--discord) 60em, var(--discord) 70em);
+*/  background: linear-gradient(to bottom, var(--null) 0em, var(--null) 5em, var(--blank) 10em, var(--blank) 25em, var(--discord) 30em);
+    height: 30em;
+}
+.cutscene-rainbow { height: 300em; }
+.black-pocket, .pocket-black {
+    height: 30em;
+    width: var(--width);
+}
+.black-pocket { background: linear-gradient(to bottom, black, var(--null)); }
+.pocket-black { background: linear-gradient(to top, black, var(--null)); }
+.cutscene-twist {
+    background: linear-gradient(to bottom, var(--blank), 5em, var(--purple), 20em, var(--purple), 30em, var(--purple));
+    height: 30em;
+}
+.twist-discord {
+    background: linear-gradient(to bottom, var(--purple), var(--discord));
+    height: 10em;
+}
+
+.bigimg {
+    margin-left: calc((var(--subwidth) - var(--width)) / 2);
+    width: var(--width);
+}
+
+div .announcement.break { overflow: hidden; }
+
+p, li, a, h1, h2, h3, hr, label, summary {
+    font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: var(--text);
+
+    overflow-wrap: break-word;
+}
+code {
+    background-color: var(--code);
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+p, li {
+    list-style-type: circle;
+    font-size: 12pt;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 20pt;
+    margin-bottom: 3em;
+    margin-top: 5em;
+}
+h2 {
+    font-size: 16pt;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+}
+h3 {
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 6em;
+    margin-bottom: 0pt;
+}
+
+
+.dragging {
+	margin-top: 10em;
+	margin-bottom: 10em;
+}
+.nelson.dragging > p {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.much { margin-bottom: 10em; }
+.very { margin-bottom: 3em; }
+.text { margin-bottom: 1.5em; }
+.lite { margin-bottom: 0.5em; }
+.liter { margin-bottom: 0em; }
+.unlite { margin-top: -1.2em; }
+.white { color: var(--prism); }
+.thend { color: var(--thend); font-size: 13pt; }
+.announcement .thend, .matchup .thend, h3 .thend { font-size: inherit; }
+.prism, .pr1sm {
+    font-style: italic;
+    color: var(--prism);
+    font-size: 13pt;
+}
+.prismer {
+    font-style: italic;
+    color: var(--prismer);
+    font-size: 14pt;
+    display: inline-block;
+    transform: skew(-5deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.prismest {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--prismest);
+    font-size: 16pt;
+    display: inline-block;
+    transform: skew(-10deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.prismatic {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--prismatic);
+    font-size: 20pt;
+    display: inline-block;
+    transform: skew(-10deg);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.void {
+    font-style: italic;
+    color: var(--void);
+    background-color: var(--void);
+    white-space: break-spaces;
+    padding-top: 1pt;
+}
+.void:active, .void:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.ryan .void:active, .ryan .void:hover, .ryan .spoiler:active, .ryan .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--ryan);
+}
+.invoid { font-style: normal; }
+.winvoid, .win .void {
+    font-style: italic;
+    color: var(--void);
+    transform: skew(-15deg);
+    white-space: pre-wrap;
+}
+.win:active .winvoid, .win:hover .winvoid, .win:active .void, .win:hover .void {
+    background-color: inherit;
+    color: inherit;
+}
+.white .void, .prism .void { color: var(--light-prism); }
+.mint .void { color: var(--mint); }
+.matchup .void { padding-top: 0; }
+.spoiler {
+    color: var(--void);
+    background-color: var(--void);
+    white-space: pre-wrap;
+    border-radius: 3px;
+}
+.spoiler:active, .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.win .spoiler {
+    color: black;
+    background-color: black;
+}
+.win .spoiler:active, .win .spoiler:hover {
+    color: inherit;
+    background-color: inherit;
+}
+img.spoiler {
+    filter: opacity(0%);
+}
+img.spoiler:active, img.spoiler:hover {
+    filter: inherit;
+}
+.announcement .white, .bracket .white {
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.danism {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: var(--danism);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.danismer {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13pt;
+    color: var(--danismer);
+}
+.danismest {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15pt;
+    color: var(--danismest);
+}
+.ryan {
+    color: var(--ryan);
+    list-style-type: "-";
+}
+.justice {
+    font-weight: bold;
+    font-size: 13pt;
+}
+.scene {
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.unscene {
+    float: left;
+}
+.note {
+    color: var(--note);
+}
+.timestamp {
+	color: var(--note);
+	font-size: 9pt;
+}
+.pastebin, .pastebin p {
+    font-family: monospace;
+}
+
+.quote {
+    color: var(--text);
+    margin-top: 1em;
+    padding-left: 5px;
+}
+.win {
+    background-color: var(--void);
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.win:active, .win:hover {
+    background-color: var(--unvoid);
+}
+.vs {
+    color: var(--note);
+    padding-left: 4em;
+    margin-bottom: 3em;
+    margin-top: 0.5em;
+}
+.break {
+    white-space: nowrap;
+    text-overflow: clip;
+}
+.announce, .announcement p {
+    font-family: monospace;
+    font-size: 10pt;
+    line-height: 1.15;
+    text-align: left;
+}
+.announcement {
+    background: var(--announcement-background);
+    border: 3px solid var(--announcement-border);
+    border-radius: 10px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.nelsonimg {
+    max-width: 73px;
+    margin-bottom: 1em;
+}
+.nelson, .chat, .prismchat {
+    --text: var(--nelson-text);
+    background-color: var(--nelson-background);
+    border: 3px solid var(--nelson-border);
+    border-radius: 10px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: -7%;
+    margin-right: -7%;
+
+    display: grid;
+    margin-bottom: 1.5em;
+
+    overflow-wrap: break-word;
+}
+.nelson {
+    grid-template-columns: 100pt calc(100% - 100pt);
+}
+.chat {
+    grid-template-columns: 36pt calc(100% - 36pt);
+}
+.prismchat {
+    grid-template-columns: 48pt calc(100% - 48pt);
+}
+.nelson > h1 {
+    margin: 0px;
+}
+.prismchat > .white {
+    color: rgba(255, 255, 255, 0.6);
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.parts {
+    margin-top: 6em;
+    text-align: center;
+}
+.parts-word {
+    font-weight: bold;
+    font-size: 14pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.parts-nums {
+    font-weight: bold;
+    font-size: 14pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.danirage {
+    font-size: 15pt;
+    color: var(--danirage);
+}
+.twistgod, .twist {
+    color: var(--twist);
+    font-size: 15pt;
+    font-weight: bold;
+}
+.chartreuse {
+    color: var(--chartreuse);
+    font-size: 15pt;
+}
+.crimson {
+    color: var(--crimson);
+    font-size: 14pt;
+}
+.peppermint {
+    color: var(--mint);
+    font-size: 15pt;
+}
+.mintest {
+    color: var(--mint);
+    font-size: 18pt;
+}
+.mintmatic {
+    font-style: italic;
+    font-weight: bold;
+    color: var(--mint);
+    font-size: 20pt;
+}
+.bing {
+    color: var(--bing);
+    font-size: 15pt;
+}
+.cobalt {
+    color: var(--cobalt);
+    font-size: 15pt;
+}
+.jake {
+	color: var(--jake);
+}
+
+
+.cutscene .white, .cutscene .prism, .cutscene .prism .invoid, .cutscene .white .invoid, h3 > a > .white {
+/*     background-color: purple; */
+    background-image: url('./rainbow.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+
+.bracket {
+    background-color: var(--bracket-background);
+    display: grid;
+    gap: 0.6em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: calc(var(--width) - 1em);
+}
+.bracket {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.matchup {
+    display: grid;
+    grid-template-rows: 1.5em 1.5em;
+    align-items: center;
+
+    background-color: var(--matchup-background);
+    border-radius: 8px;
+    border: 3px solid var(--matchup-border);
+    width: 1fr;
+    max-width: calc(var(--width) / 4);
+    height: 3em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.matchup p, .matchup .matchupborder {
+    white-space: nowrap;
+    text-overflow: clip;
+    padding-left: 0.2em;
+    font-size: 10pt;
+    max-width: calc(var(--width) / 4);
+    height: 1.5em;
+    border-bottom: 2px solid transparent;
+}
+.matchup span {
+    white-space: nowrap;
+}
+.matchup .matchupborder {
+    border-bottom: 2px solid var(--matchup-border);
+}
+.bracket a {
+    text-decoration: none;
+    width: calc((var(--width) - 6px - 0.6em - 3 * 0.6em) / 4);
+}
+.bracketish a {
+    text-decoration: none;
+}
+
+.superbracketish {
+    background-color: var(--bracket-background);
+    display: grid;
+    width: var(--width);
+    grid-template-columns: calc(var(--width) / 4 + 1em) calc(var(--width) / 4 + 1em);
+    column-gap: calc(var(--width) / 2 - 2em);
+}
+.bracketish {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: calc(var(--width) / 4);
+}
+.superbracketish .line {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-left-width: 0px;
+    width: 1em;
+}
+.superbracketish .lineflip {
+    position: absolute;
+    border: solid #4e4f53;
+    border-width: 2px;
+    border-right-width: 0px;
+    width: 1em;
+}
+.superbracketish .one {
+    margin-left: calc(var(--width) / 4 + 0.5em - 8px);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .oneflip {
+    margin-left: calc(6px - 1.5em);
+    height: calc(3.6em + 4px);
+}
+.superbracketish .two {
+    margin-left: calc(var(--width) / 4 + 1.5em - 6px);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .twoflip {
+    margin-left: calc(4px - 3.5em);
+    height: calc(2*(3.6em + 6px));
+    width: 2em;
+}
+.superbracketish .three {
+    margin-left: calc(var(--width) / 4 + 3.5em - 4px);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish .threeflip {
+    margin-left: calc(2px - 6.5em);
+    height: calc(4*(3.6em + 6px));
+    width: 3em;
+}
+.superbracketish  .four {
+    margin-left: calc(var(--width) / 4 + 6.5em - 2px);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .fourflip {
+    margin-left: calc(0px - 10em);
+    height: calc(8*(3.6em + 6px));
+    width: 3.5em;
+}
+.superbracketish .five {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    width: calc(var(--width) / 2 - 22em + 17px);
+    margin-left: calc(var(--width) / 4 + 11em - 9px);
+}
+.superbracketish .five2 {
+    position: absolute;
+    background: #4e4f53;
+    height: 2px;
+    border-width: 2px;
+    width: calc(var(--width) / 2 - 15em + 21px);
+    margin-left: calc(var(--width) / 4 + 7em - 2px);
+}
+
+img.emoji { width:1.5em; }
+.reaction {
+    margin-left: 0.5em;
+    padding: 2px;
+    color: var(--nelson-text);
+    background: var(--nelson-background);
+    border: 2px solid var(--nelson-border);
+    border-radius: 3px;
+}
