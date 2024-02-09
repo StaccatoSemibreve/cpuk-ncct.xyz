@@ -66,10 +66,13 @@ body:has(#lightmode:checked) {
     --background: var(--disc-l-announce);
     --border: var(--disc-l-announce-border);
     --prism: black;
+    --thend: #0E0E10;
 }
 & .discord {
     --background: var(--disc-l-page);
     --text: var(--disc-l-text);
+
+    --code: var(--disc-light-chatbox);
 
     --announcement-background: var(--disc-light-8);
     --announcement-border: var(--disc-l-announce-border);
@@ -97,6 +100,8 @@ body:has(#lightmode:checked) {
     --danismest: #911;
     --cobalt: hsl(215.1 100% 33.5%);
     --bing: #495903;
+    --ludwig: var(--ludwig-dark);
+    --thend: #0E0E10;
 }
 & .cutscene {
     --background: var(--l-blank);
@@ -107,6 +112,7 @@ body:has(#lightmode:checked) {
     --prismer: white;
     --prismest: rgba(255,255,255,0.66);
     --prismatic: rgba(255,255,255,0.4);
+    --thend: #FFF0F5;
 }
 
 & .cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--l-blank)); }
@@ -130,6 +136,7 @@ body:not(:has(#lightmode:checked)) {
     --background: var(--dark-discord);
     --border: var(--darkest-discord);
     --prism: var(--white);
+    --thend: #FFF0F5;
 }
 & .discord {
     --background: var(--discord);
@@ -158,6 +165,7 @@ body:not(:has(#lightmode:checked)) {
     --chartreuse: #80ff00;
     --thend: #FFF0F5;
     --cobalt: hsl(215.1 100% 66.5%);
+    --ludwig: var(--ludwig-light);
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
