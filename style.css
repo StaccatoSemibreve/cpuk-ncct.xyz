@@ -17,6 +17,9 @@
     --null: #202225;
     --script: #0a0027;
 
+    --ryan-blue: #00aff4;
+    --ryan-l-blue: #1155cc;
+
     --purple: #aa8ed6;
 
     --ludwig-light: #24ffff;
@@ -49,29 +52,91 @@
     --disc-light-chatbox: #EBEDEF;
     --disc-light-background: #FEFEFE;
 
-    --disc-l-text: var(--disc-light-2);
+    --disc-l-text: var(--disc-light-3);
     --disc-l-page: var(--disc-light-background);
     --disc-l-announce: var(--disc-light-side);
     --disc-l-announce-border: var(--disc-light-7);
+
+    --l-blank: #ece;
 }
 
-.menu {
-    --text: var(--light);
-    --background: var(--dark-discord);
-    --border: var(--darkest-discord);
-}
-body:has(#menu-lightmode:checked)>.menu {
+body:has(#lightmode:checked) {
+& .menu {
     --text: var(--disc-l-text);
     --background: var(--disc-l-announce);
     --border: var(--disc-l-announce-border);
+    --prism: black;
+}
+& .discord {
+    --background: var(--disc-l-page);
+    --text: var(--disc-l-text);
+
+    --announcement-background: var(--disc-light-8);
+    --announcement-border: var(--disc-l-announce-border);
+
+    --nelson-background: var(--disc-light-8);
+    --nelson-border: var(--disc-l-announce-border);
+    --nelson-text: var(--text);
+
+    --void: var(--null);
+    --unvoid: var(--light-null);
+
+    --ryan: var(--ryan-l-blue);
+    --note: var(--disc-light-4);
+    --prism: black;
+    --prismer: black;
+    --prismest: rgba(0,0,0,0.5);
+    --prismatic: rgba(0,0,0,0.4);
+
+    --mint: #00aa60;
+    --chartreuse: #60aa00;
+    --twist: purple;
+    --danirage: #300;
+    --danism: #933;
+    --danismer: #922;
+    --danismest: #911;
+    --cobalt: hsl(215.1 100% 33.5%);
+    --bing: #495903;
+}
+& .cutscene {
+    --background: var(--l-blank);
+    --text: var(--script);
+}
+& .win {
+    --prism: white;
+    --prismer: white;
+    --prismest: rgba(255,255,255,0.66);
+    --prismatic: rgba(255,255,255,0.4);
 }
 
-.discord {
+& .cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--l-blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+& .cutscene-rainbow-discord { background: linear-gradient(to bottom, var(--l-blank), 30em, transparent, 60em, transparent, 90em, var(--disc-l-page)), url('./rainbow.png'); background-size: 100% 100%; }
+& .pocket-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--null)); }
+& .pocket-stop { background: linear-gradient(to top, var(--disc-l-page), var(--null)); }
+& .cutscene-start-slow { background: linear-gradient(to bottom, var(--disc-l-page), var(--l-blank)); }
+& .cutscene-twist { background: linear-gradient(to bottom, var(--l-blank), 5em, purple, 20em, purple, 30em, purple); }
+& .twist-discord { background: linear-gradient(to bottom, purple, var(--disc-l-page)); }
+
+
+& .win { --text: var(--light); --prism: white; }
+& .quote { border-left: 2px solid var(--disc-light-6); }
+}
+
+body:not(:has(#lightmode:checked)) {
+& .menu {
+    --text: var(--light);
+    --background: var(--dark-discord);
+    --border: var(--darkest-discord);
+    --prism: var(--white);
+}
+& .discord {
     --background: var(--discord);
     --text: var(--light);
     --code: var(--dark-discord);
 
-    --ryan: #00aff4;
+    --ryan: var(--ryan-blue);
     --note: var(--shade);
 
     --light-prism: var(--light);
@@ -92,6 +157,7 @@ body:has(#menu-lightmode:checked)>.menu {
     --mint: #00ff80;
     --chartreuse: #80ff00;
     --thend: #FFF0F5;
+    --cobalt: hsl(215.1 100% 66.5%);
 
     --announcement-background: var(--darker-discord);
     --announcement-border: var(--darkest-discord);
@@ -100,13 +166,24 @@ body:has(#menu-lightmode:checked)>.menu {
     --nelson-border: var(--darkest-discord);
     --nelson-text: var(--light);
 }
-body:has(#menu-lightmode:checked)>.discord {
-    --background: var(--disc-l-page);
-    --text: var(--disc-l-text);
-    --announcement-background: var(--disc-l-announce);
-    --announcement-border: var(--disc-l-announce-border);
-    --prism: black;
+& .cutscene {
+    --background: var(--blank);
+    --text: var(--script);
 }
+
+& .cutscene-start { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
+& .cutscene-stop { background: linear-gradient(to top, var(--discord), var(--blank)); }
+& .cutscene-rainbow { background: linear-gradient(to bottom, var(--blank), 90em, transparent, 300em, transparent), url('./rainbow.png'); background-size: 100% 100%; }
+& .cutscene-rainbow-discord { background: linear-gradient(to bottom, var(--blank), 30em, transparent, 60em, transparent, 90em, var(--discord)), url('./rainbow.png'); background-size: 100% 100%; }
+& .pocket-start { background: linear-gradient(to bottom, var(--discord), var(--null)); }
+& .pocket-stop { background: linear-gradient(to top, var(--discord), var(--null)); }
+& .cutscene-start-slow { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
+& .cutscene-twist { background: linear-gradient(to bottom, var(--blank), 5em, purple, 20em, purple, 30em, purple); }
+& .twist-discord { background: linear-gradient(to bottom, purple, var(--discord)); }
+
+& .quote { border-left: 2px solid var(--light); }
+}
+
 
 .bracket, .bracketish, .superbracketish {
     --text: var(--light);
@@ -167,11 +244,11 @@ body:has(#menu-lightmode:checked)>.discord {
     --void: var(--null);
     --unvoid: var(--light-null);
     --cosmic: var(--script);
-    --chartreuse: #4cff00;
+    --chartreuse: #60aa00;
     --crimson: #dc143c;
-    --mint: #00ff80;
-    --cobalt: #0047ab;
-    --twist: #aa8ed6;
+    --mint: #00ff60;
+    --cobalt: hsl(215.1 100% 33.5%);
+    --twist: purple;
     --thend: black;
     --danism: #a0262f;
 
@@ -179,8 +256,9 @@ body:has(#menu-lightmode:checked)>.discord {
     --announcement-border: var(--darkest-discord);
     --nelson-background: var(--discord);
     --nelson-border: var(--darkest-discord);
+    --nelson-text: var(--light);
 }
-.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene .quote, .cutscene .win {
+.cutscene .announcement, .cutscene .nelson, .cutscene .chat, .rainbow, .cutscene-rainbow, .cutscene-rainbow-discord, .cutscene .quote, .cutscene .win {
     --text: var(--light);
 
     --prism: white;
@@ -202,12 +280,6 @@ body:has(#menu-lightmode:checked)>.discord {
         padding-left: 2.5em;
         padding-right: 1em;
     }
-    .justicer {
-        font-size: 36pt;
-    }
-    .justicest {
-        font-size: 108pt;
-    }
 }
 @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) {
     :root {
@@ -221,12 +293,6 @@ body:has(#menu-lightmode:checked)>.discord {
     .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
-    }
-    .justicer {
-        font-size: 36pt;
-    }
-    .justicest {
-        font-size: 108pt;
     }
 }
 @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) {
@@ -242,12 +308,6 @@ body:has(#menu-lightmode:checked)>.discord {
         padding-left: 2.5em;
         padding-right: 1em;
     }
-    .justicer {
-        font-size: 24pt;
-    }
-    .justicest {
-        font-size: 72pt;
-    }
 }
 @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) {
     :root {
@@ -261,12 +321,6 @@ body:has(#menu-lightmode:checked)>.discord {
     .nelson, .chat, .prismchat {
         padding-left: 2.5em;
         padding-right: 1em;
-    }
-    .justicer {
-        font-size: 24pt;
-    }
-    .justicest {
-        font-size: 72pt;
     }
 }
 @media only screen and (max-width: 400pt) and (orientation: landscape) {
@@ -282,12 +336,6 @@ body:has(#menu-lightmode:checked)>.discord {
         padding-left: 1em;
         padding-right: 1em;
     }
-    .justicer {
-        font-size: 24pt;
-    }
-    .justicest {
-        font-size: 72pt;
-    }
 }
 @media only screen and (orientation: portrait) {
     :root {
@@ -302,41 +350,104 @@ body:has(#menu-lightmode:checked)>.discord {
         padding-left: 0.75em;
         padding-right: 0.75em;
     }
-    .justicer {
-        font-size: 24pt;
-    }
-    .justicest {
-        font-size: 72pt;
-    }
 }
 
 div.menu {
-  z-index: 1;
-  position: fixed;
-  top: 1em;
-  right: calc((100vw - var(--width)) / 2 + 0.5em);
-  padding: 0.5em;
-  padding-top: 0.3em;
-  background: var(--background);
-  color: var(--text);
-  border: solid 2px var(--border);
-  border-radius: 3px;
-  overflow: hide;
+    z-index: 1;
+    position: fixed;
+    top: 1em;
+    right: calc((100vw - var(--width)) / 2 + 0.5em);
+    padding: 0.5em;
+    padding-top: 0.3em;
+    background: var(--background);
+    color: var(--text);
+    border: solid 2px var(--border);
+    border-radius: 3px;
+    overflow: hide;
+    justify-content: right;
+    text-align: right;
 }
-div.menu>label { float: right; height: 1em; }
+div.menu>label, div.menu>.menu-label, div.menu>.menu-label-minor { height: 1em; }
 div.menu:has(#menu-hide:checked)>label>span.menu-label { display: none; }
-div.menu:has(#menu-hide:checked)>label.menu-label-minor { display: none; }
+div.menu:has(#menu-hide:checked)>.menu-label-minor { display: none; }
 div.menu:has(#menu-hide:checked)>br { display: none; }
+div.menu:has(#menu-hide:checked)>hr { display: none; }
+div.menu:has(#menu-hide:checked)>details { display: none; }
 div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
+#toc { justify-content: right; text-align: right; font-size: 10pt; }
+#toc>summary { font-size: 12pt; }
+
+body:has(#menu-spoilertags:checked) {
+    & .hide, & .void, & .winvoid {
+        --prism: white;
+        --text: var(--light);
+        --ryan: var(--ryan-blue);
+        --note: var(--shade);
+
+        background-color: var(--unvoid);
+        color: var(--text);
+    }
+    .win { background-color: var(--unvoid); }
+}
+body:not(:has(#menu-spoilertags:checked)) {
+    & .hide:not(:hover):not(:active), & .void:not(:hover):not(:active), & .win:not(:hover):not(:active)>p>.winvoid {
+        --prism: var(--void);
+        --text: var(--void);
+        --ryan: var(--void);
+        --mint: var(--void);
+        --note: var(--void);
+
+        background-color: var(--void);
+        color: var(--void) !important;
+    }
+    & .hide:hover, & .void:hover, & .hide:active, & .void:active, & .win:active>p>.winvoid {
+        --prism: white;
+        --text: var(--light);
+        --ryan: var(--ryan-blue);
+        --note: var(--shade);
+
+        background-color: var(--unvoid);
+        color: var(--text);
+    }
+    .win { background-color: var(--void); }
+    .win:active, .win:hover {
+        background-color: var(--unvoid);
+    }
+}
+.void {
+    font-style: italic;
+    white-space: break-spaces;
+    padding-top: 1pt;
+}
+.invoid { font-style: normal; }
+.winvoid, .win .void {
+    font-style: italic;
+    transform: skew(-15deg);
+    white-space: pre-wrap;
+}
+.white .void, .prism .void { color: var(--light-prism); }
+.mint .void { color: var(--mint); }
+.matchup .void { padding-top: 0; }
+.win {
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+body:has(#menu-strikethroughs:checked) { & .ryan>s { text-decoration: none; } }
+body:not(:has(#menu-results:checked)) { & .resultspoiler { display: none; } }
+body:has(#menu-results:checked) { & .resultspoiler { display: inline; } }
 
 .discord, .cutscene, .pocket, .pocketfall, .rainbow {
     width: var(--subwidth);
     padding-left: calc((var(--width) - var(--subwidth)) / 2);
     padding-right: calc((var(--width) - var(--subwidth)) / 2);
 }
-.cutscene-background-start, .cutscene-background-stop, .cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .pocketfall-stop, .cutscene-rainbow, .cutscene-start-slow, .cutscene-twist, .twist-discord {
-    width: var(--width);
-}
+.cutscene-start, .cutscene-stop, .pocket-start, .pocket-stop, .pocketfall-stop, .cutscene-rainbow, .cutscene-rainbow-discord, .cutscene-start-slow, .cutscene-twist, .twist-discord, .black-pocket, .pocket-black { width: var(--width); }
 
 body {
     background-color: var(--null);
@@ -345,15 +456,15 @@ body {
     align-items: center;
     justify-content: center;
 }
-.discord {
+.discord, .cutscene {
     background-color: var(--background);
     overflow: hidden;
+}
+.discord {
     padding-top: 30pt;
     padding-bottom: 10pt;
 }
 .cutscene {
-    background-color: var(--blank);
-    overflow: hidden;
     padding-top: 20pt;
     padding-bottom: 30pt;
 }
@@ -364,7 +475,7 @@ body {
     padding-bottom: 30pt;
 }
 .pocketfall {
-	background: repeating-linear-gradient(to bottom, var(--null) 0em, var(--null) 22em, var(--blank) 25em, var(--null) 28em, var(--null) 40em);
+    background: repeating-linear-gradient(to bottom, var(--null) 0em, var(--null) 22em, var(--blank) 25em, var(--null) 28em, var(--null) 40em);
     overflow: hidden;
     padding-top: 10pt;
     padding-bottom: 30pt;
@@ -385,70 +496,81 @@ body {
     padding-bottom: 30pt;
     height: 100em;
 }
-.cutscene-background-start, .cutscene-start, .cutscene-background-stop, .cutscene-stop, .pocket-start, .pocket-stop { height: 5em; }
-.cutscene-background-start, .cutscene-start { background: linear-gradient(to bottom, var(--discord), var(--blank)); }
-body:has(#menu-lightmode:checked)>.cutscene-start { background: linear-gradient(to bottom, var(--disc-l-page), var(--blank)); }
-.cutscene-start-slow {
-    background: linear-gradient(to bottom, var(--discord), var(--blank));
-    height: 60em;
+.cutscene-start, .cutscene-background-stop, .cutscene-stop, .pocket-start, .pocket-stop {
+    height: 5em;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
-.cutscene-background-stop, .cutscene-stop {
-    background: linear-gradient(to top, var(--discord), var(--blank));
-}
-.pocket-start {
-    background: linear-gradient(to bottom, var(--discord), var(--null));
-}
-.pocket-stop {
-    background: linear-gradient(to top, var(--discord), var(--null));
-}
-.pocketfall-stop {
-/*    background: linear-gradient(to bottom, var(--null) 0em, var(--blank) 10em, var(--blank) 20em, var(--ludwig-light) 30em, var(--ludwig-light) 35em, var(--ludwig-dark) 43em, var(--ludwig-dark) 50em, var(--discord) 60em, var(--discord) 70em);
-*/  background: linear-gradient(to bottom, var(--null) 0em, var(--null) 5em, var(--blank) 10em, var(--blank) 25em, var(--discord) 30em);
-    height: 30em;
-}
-.cutscene-rainbow {
-    background: linear-gradient(to bottom, var(--blank), 90em, transparent, 300em, transparent), url('./rainbow.png');
-    background-size: 100% 100%;
-    height: 300em;
-}
-.black-pocket, .pocket-black {
-    height: 30em;
-    width: var(--width);
-}
-.black-pocket {
-    background: linear-gradient(to bottom, black, var(--null));
-}
-.pocket-black {
-    background: linear-gradient(to top, black, var(--null));
-}
-.cutscene-twist {
-    background: linear-gradient(to bottom, var(--blank), 5em, var(--purple), 20em, var(--purple), 30em, var(--purple));
-    height: 30em;
-}
-.twist-discord {
-    background: linear-gradient(to bottom, var(--purple), var(--discord));
-    height: 10em;
-}
+.cutscene-start-slow { height: 60em; }
+.pocketfall-stop { background: linear-gradient(to bottom, var(--null) 0em, var(--null) 5em, var(--blank) 10em, var(--blank) 25em, var(--discord) 30em); height: 30em; }
+.cutscene-rainbow { height: 300em; }
+.cutscene-rainbow-discord { height: 120em; }
+.black-pocket, .pocket-black { height: 30em; }
+.black-pocket { background: linear-gradient(to bottom, black, var(--null)); }
+.pocket-black { background: linear-gradient(to top, black, var(--null)); }
+.cutscene-twist { height: 30em; }
+.twist-discord { height: 10em; }
+
+
+
+
+
+
+
+
+.hide { padding-top: 1pt; border-radius: 3px; }
+.hide>* { background: none !important; }
+.ryan { --text: var(--ryan); }
+.mint { --text: var(--mint); }
+
+
+
+
+
+
+
+.chat { background-color: magenta !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bigimg {
     margin-left: calc((var(--subwidth) - var(--width)) / 2);
     width: var(--width);
 }
 
-div .announcement.break {
-    overflow: hidden;
-}
+div .announcement.break { overflow: hidden; }
 
-p, li, a, h1, h2, h3, hr, label {
+p, li, a, h1, h2, h3, hr, label, summary {
     font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: var(--text);
 
     overflow-wrap: break-word;
 }
 code {
-	background-color: var(--code);
-	padding: 0 3px;
-	border-radius: 3px;
+    background-color: var(--code);
+    padding: 0 3px;
+    border-radius: 3px;
 }
 
 p, li {
@@ -490,34 +612,15 @@ h3 {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 }
-.much {
-    margin-bottom: 10em;
-}
-.very {
-    margin-bottom: 3em;
-}
-.text {
-    margin-bottom: 1.5em;
-}
-.lite {
-    margin-bottom: 0.5em;
-}
-.liter {
-    margin-bottom: 0em;
-}
-.unlite {
-    margin-top: -1.2em;
-}
-.white {
-    color: var(--prism);
-}
-.thend {
-	color: var(--thend);
-	font-size: 13pt;
-}
-.announcement .thend, .matchup .thend, h3 .thend {
-	font-size: inherit;
-}
+.much { margin-bottom: 10em; }
+.very { margin-bottom: 3em; }
+.text { margin-bottom: 1.5em; }
+.lite { margin-bottom: 0.5em; }
+.liter { margin-bottom: 0em; }
+.unlite { margin-top: -1.2em; }
+.white { color: var(--prism); }
+.thend { color: var(--thend); font-size: 13pt; }
+.announcement .thend, .matchup .thend, h3 .thend { font-size: inherit; }
 .prism, .pr1sm {
     font-style: italic;
     color: var(--prism);
@@ -561,43 +664,7 @@ h3 {
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
-.void {
-    font-style: italic;
-    color: var(--void);
-    background-color: var(--void);
-    white-space: break-spaces;
-    padding-top: 1pt;
-}
-.void:active, .void:hover {
-    background-color: var(--unvoid);
-    color: var(--light);
-}
-.ryan .void:active, .ryan .void:hover, .ryan .spoiler:active, .ryan .spoiler:hover {
-    background-color: var(--unvoid);
-    color: var(--ryan);
-}
-.invoid {
-    font-style: normal;
-}
-.winvoid, .win .void {
-    font-style: italic;
-    color: var(--void);
-    transform: skew(-15deg);
-    white-space: pre-wrap;
-}
-.win:active .winvoid, .win:hover .winvoid, .win:active .void, .win:hover .void {
-    background-color: inherit;
-    color: inherit;
-}
-.white .void, .prism .void {
-    color: var(--light-prism);
-}
-.mint .void {
-    color: var(--mint);
-}
-.matchup .void {
-    padding-top: 0;
-}
+
 .spoiler {
     color: var(--void);
     background-color: var(--void);
@@ -660,9 +727,6 @@ img.spoiler:active, img.spoiler:hover {
     font-weight: bold;
     font-size: 13pt;
 }
-.justicer, .justicest {
-    font-weight: bold;
-}
 .scene {
     font-weight: bold;
     font-style: italic;
@@ -686,21 +750,7 @@ img.spoiler:active, img.spoiler:hover {
 .quote {
     color: var(--text);
     margin-top: 1em;
-    border-left: 2px solid var(--text);
     padding-left: 5px;
-}
-.win {
-    background-color: var(--void);
-    border-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding-top: 7px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 5px;
-}
-.win:active, .win:hover {
-    background-color: var(--unvoid);
 }
 .vs {
     color: var(--note);
@@ -733,6 +783,7 @@ img.spoiler:active, img.spoiler:hover {
     margin-bottom: 1em;
 }
 .nelson, .chat, .prismchat {
+    --text: var(--nelson-text);
     background-color: var(--nelson-background);
     border: 3px solid var(--nelson-border);
     border-radius: 10px;
@@ -784,29 +835,6 @@ img.spoiler:active, img.spoiler:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-.nagit {
-    background: linear-gradient(to right, transparent, 30%, var(--void));
-    display: inline-block;
-    transform: skew(-15deg);
-    padding-right: 0.5em;
-}
-.nagit1 {
-    color: var(--shade);
-}
-.nagit2 {
-    color: var(--shadow);
-}
-.nagit3 {
-    color: var(--discord);
-}
-.nagit4 {
-    color: var(--dark-discord);
-}
-.nagit5 {
-    color: var(--darker-discord);
 }
 
 .danirage {
@@ -999,87 +1027,12 @@ img.spoiler:active, img.spoiler:hover {
     margin-left: calc(var(--width) / 4 + 7em - 2px);
 }
 
-img.emoji {
-    width:1.5em;
-}
+img.emoji { width:1.5em; }
 .reaction {
-	margin-left: 0.5em;
-	padding: 2px;
-	background: var(--nelson-background);
-	border: 2px solid var(--nelson-border);
-	border-radius: 3px;
-}
-
-
-#c2-smileanim:before {
-    content: ":)";
-    white-space: pre-wrap;
-    animation-name: c2-smileanim;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-#c2-editanim:before {
-    font-size: 9pt;
-    content: "";
-    animation-name: c2-editanim;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-#f4-convoanim:before {
-    content: "CONVERSATION";
-    white-space: pre-wrap;
-    animation-name: f4-convoanim;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-#f4-editanim:before {
-    font-size: 9pt;
-    content: "";
-    animation-name: f4-editanim;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-
-#ncct3p6-wiggle {
-    display: inline-block;
-    animation: ncct3p6-wiggle 4s infinite;
-}
-@keyframes ncct3p6-wiggle {
-    0%   { transform: rotate(0deg); }
-    40%  { transform: rotate(0deg); }
-    45%  { transform: rotate(5deg); }
-    55%  { transform: rotate(-2deg); }
-    60%  { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-}
-
-@keyframes c2-smileanim {
-    0%   {content: ":    )\"                 "}
-    14%  {content: ":    )\"                 "}
-    15%  {content: ": )\"                    "}
-    25%  {content: ": (\"                    "}
-    30%  {content: ": )\"                    "}
-    35%  {content: ": (\"                    "}
-    45%  {content: ": )\"                    "}
-    50%  {content: ": ( help me jack please"}
-    80%  {content: ":)\"                     ";}
-    100% {content: ":)\"                     ";}
-}
-@keyframes c2-editanim {
-    0%   {content: "_"; color: transparent;}
-    14.99%   {content: "_"; color: transparent;}
-    15%  {content: "(edited)"; color: inherit;}
-    100%  {content: "(edited)"}
-}
-@keyframes f4-convoanim {
-    0%   {content: "CONVERSATION";}
-    29.99%   {content: "CONVERSATION";}
-    30%  {content: "CUTSCENE";}
-    100% {content: "CUTSCENE";}
-}
-@keyframes f4-editanim {
-    0%   {content: "_"; color: transparent;}
-    29.99%   {content: "_"; color: transparent;}
-    30%  {content: "(edited)"; color: inherit;}
-    100%  {content: "(edited)"}
+    margin-left: 0.5em;
+    padding: 2px;
+    color: var(--nelson-text);
+    background: var(--nelson-background);
+    border: 2px solid var(--nelson-border);
+    border-radius: 3px;
 }

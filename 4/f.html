@@ -8,8 +8,35 @@
         <link rel="icon" sizes="32x32" type="image/png" href="../nelsontomb_32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-        <script>window.onload = function() { twemoji.parse(document.body, {folder: 'svg', ext: '.svg'}); }</script>
+        <style>
+            #f4-convoanim:before {
+                content: "CONVERSATION";
+                white-space: pre-wrap;
+                animation-name: f4-convoanim;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+            }
+            #f4-editanim:before {
+                font-size: 9pt;
+                content: "";
+                animation-name: f4-editanim;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes f4-convoanim {
+                0%   {content: "CONVERSATION";}
+                29.99%   {content: "CONVERSATION";}
+                30%  {content: "CUTSCENE";}
+                100% {content: "CUTSCENE";}
+            }
+            @keyframes f4-editanim {
+                0%   {content: "_"; color: transparent;}
+                29.99%   {content: "_"; color: transparent;}
+                30%  {content: "(edited)"; color: inherit;}
+                100%  {content: "(edited)"}
+            }
+        </style>
     </head>
     <body>
         <div class="discord">

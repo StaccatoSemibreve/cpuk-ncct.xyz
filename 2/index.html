@@ -3,45 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>CPUK NCCT2</title>
-        <link href="./style.css" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet">
         <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
         <link rel="icon" sizes="32x32" type="image/png" href="../nelsontomb_32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            body:has(#menu-spoilertags:checked) {
-                & .hide {
-                    --prism: white;
-                    --text: var(--light);
-                    --ryan: var(--ryan-blue);
-
-                    background-color: var(--unvoid);
-                    color: var(--text);
-                }
-            }
-            body:not(:has(#menu-spoilertags:checked)) {
-                & .hide:not(:hover) {
-                    --prism: var(--void);
-                    --text: var(--void);
-                    --ryan: var(--void);
-                    --mint: var(--void);
-
-                    background-color: var(--void);
-                    color: var(--void) !important;
-                }
-                & .hide:hover {
-                    --prism: white;
-                    --text: var(--light);
-                    --ryan: var(--ryan-blue);
-
-                    background-color: var(--unvoid);
-                    color: var(--text);
-                }
-            }
-
-            body:has(#menu-strikethroughs:checked) { & .ryan>s { text-decoration: none; } }
-            body:not(:has(#menu-results:checked)) { & .resultspoiler { display: none; } }
-            body:has(#menu-results:checked) { & .resultspoiler { display: inline; } }
-
             body:has(#lightmode:checked) {
                 .nagit1 { color: var(--disc-light-2); }
                 .nagit2 { color: var(--disc-light-2); }
@@ -57,11 +23,6 @@
                 .nagit4 { color: var(--dark-discord); }
                 .nagit5 { color: var(--darker-discord); }
             }
-
-            .hide { padding-top: 1pt; border-radius: 3px; }
-            .hide>* { background: none !important; }
-            .ryan { --text: var(--ryan); }
-            .mint { --text: var(--mint); }
 
             .nagit {
                 background: linear-gradient(to right, transparent, 20%, var(--null));
@@ -390,11 +351,11 @@
             <p class="text">"Wait are we just doing Inception?"</p>
             <p class="text">"...."</p>
             <p class="text">"...."</p>
-            <p>Captain Quadratic's mouth opens and this sound comes out <span class="note">[Inception Bwaaaah]</span></p>
+            <p>Captain Quadratic's mouth opens and this sound comes out</p>
             <a class="text" href="https://www.youtube.com/watch?v=4cXQqWawnl0">https://www.youtube.com/watch?v=4cXQqWawnl0</a>
             <br>
             <audio controls preload="none" src="audio/bwaaah.ogg"></audio>
-            <p class="text" />
+            <p class="note text">[Inception Bwaaaah]</p>
             <p>Nap Time</p>
             <img
                 src="images/1.1 naptime.jpg"
@@ -429,7 +390,7 @@
 
 
 
-            <h2><a href="#p1" id="p1">Part 1</a></h2>
+            <h3><a href="#p1" id="p1">Part 1</a></h3>
             <p class="very"></p>
 
 
@@ -1396,7 +1357,7 @@
                 <p class="lite">"Hey....I feel like I know you......ain't I killed you before?"</p>
                 <p>"Ha.........ha...................oh...................."</p>
             </div>
-            <p class="vs">[11: <span class="hide">Nagito Komaeda</span> vs Plum K Rool]</p>
+            <p class="vs">[11: <span class="hide"><span class="note">Nagito Komaeda</span></span> vs Plum K Rool]</p>
 
             <p class="ryan"><span class="hide"><span class="ryan">Nagito</span></span>: "I exist again!!!!! Who do I face fir- oh......"</p>
             <p class="ryan">P Rool ends round 1 with a footstool at 0%</p>
@@ -4348,7 +4309,7 @@
                 <p class="lite">"I still believe that you have some level of shining hope within you as the Ultimate Emissary!"</p>
                 <p class="white">"What the hell are you still doing here? Prism must know about this....Crimson must face consequences for this disruption."</p>
             </div>
-            <p class="vs">[38: <span class="hide">Nagito Komaeda</span> vs The Prismatic Shadow]</p>
+            <p class="vs">[38: <span class="hide"><span class="note">Nagito Komaeda</span></span> vs The Prismatic Shadow]</p>
 
             <div class="nelson">
                 <p>Brush:</p><p>god these tourneys have really gone somewhere haven't they. started with "haha little dialogue bits, we get to see what characters might say to each other" now we've got THIS</p>
@@ -10684,7 +10645,7 @@
                 <p class="lite">"Oh my god oh my god oh my god oh my god oh my god oh my god oh my god oh my god oh my god oh my god oh my god oh my god this is the greatest day of my life oh my god oh my god oh my god oh my god oh my god oh my god"</p>
                 <p>"Is this what it feels like.....to bring people hope?"</p>
             </div>
-            <p class="vs">[75: Larry vs <span class="hide">Nagito Komaeda</span>]</p>
+            <p class="vs">[75: Larry vs <span class="hide"><span class="note">Nagito Komaeda</span></span>]</p>
 
             <p class="ryan">Round 1</p>
             <p class="ryan text">Rolled Rosa</p>
