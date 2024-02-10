@@ -21,9 +21,81 @@
                 60%  { transform: rotate(0deg); }
                 100% { transform: rotate(0deg); }
             }
+
+            @media only screen and (min-width: 800pt) and (orientation: landscape) { .prismchat { padding-left: 2.5em; padding-right: 1em; } }
+            @media only screen and (max-width: 800pt) and (min-width: 650pt) and (orientation: landscape) { .prismchat { padding-left: 2.5em; padding-right: 1em; } }
+            @media only screen and (max-width: 650pt) and (min-width: 500pt) and (orientation: landscape) { .prismchat { padding-left: 2.5em; padding-right: 1em; } }
+            @media only screen and (max-width: 500pt) and (min-width: 400pt) and (orientation: landscape) { .prismchat { padding-left: 2.5em; padding-right: 1em; } }
+            @media only screen and (max-width: 400pt) and (orientation: landscape) { .prismchat { padding-left: 1em; padding-right: 1em; } }
+            @media only screen and (orientation: portrait) { .prismchat { padding-left: 0.75em; padding-right: 0.75em; } }
+            .prismchat {
+                --text: var(--nelson-text);
+                background-color: var(--nelson-background);
+                border: 3px solid var(--nelson-border);
+                border-radius: 10px;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                margin-left: -7%;
+                margin-right: -7%;
+
+                display: grid;
+                grid-template-columns: 48pt calc(100% - 48pt);
+                margin-bottom: 1.5em;
+
+                overflow-wrap: break-word;
+            }
+
+            .prismchat > .white {
+                background-image: url('../rainbow.png');
+                background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+            }
+
+            body:has(#lightmode:checked) {
+                & .prismchat > .white { color: rgba(0, 0, 0, 0.3); }
+            }
+            body:not(:has(#lightmode:checked)) {
+                & .prismchat > .white { color: rgba(255, 255, 255, 0.6); }
+            }
         </style>
     </head>
     <body>
+        <div class="menu">
+            <label><span class="menu-label">Hide Menu</span> <input type="checkbox" id="menu-hide" name="menu-hide"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Light Theme</span> <input type="checkbox" id="lightmode" name="lightmode"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Reveal Spoiler Tags</span> <input type="checkbox" id="menu-spoilertags" name="menu-spoilertags"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Reveal Ryan Strikes</span> <input type="checkbox" id="menu-strikethroughs" name="menu-strikethroughs"></label><br>
+            <label class="menu-label-minor"><span class="menu-label">Bracket Spoilers</span> <input type="checkbox" id="menu-results" name="menu-results"></label><br>
+            <div style="height: 0.8em;"></div>
+            <a href="../" class="menu-label-minor prism">Home :)</a>
+            <hr style="margin-top: 1.5em; margin-bottom: 1em;">
+            <details id="toc">
+                <summary class="menu-label-minor" style="margin-bottom: 0.3em;"><strong>Contents:</strong></summary>
+                <a href="#" class="menu-label-minor">Opening</a><br>
+                <a href="#p1" class="menu-label-minor">Part 1</a><br>
+                <a href="#wr1" class="menu-label-minor">Winner's Round 1</a><br>
+                <a href="#p2" class="menu-label-minor">Part 2</a><br>
+                <a href="#p3" class="menu-label-minor">Part 3</a><br>
+                <a href="#lr1" class="menu-label-minor">Loser's Round 1</a><br>
+                <a href="#p4" class="menu-label-minor">Part 4</a><br>
+                <a href="#wr2" class="menu-label-minor">Winner's Round 2</a><br>
+                <a href="#p5" class="menu-label-minor">Part 5</a><br>
+                <a href="#lr2" class="menu-label-minor">Loser's Round 2</a><br>
+                <a href="#p6" class="menu-label-minor">Part 6</a><br>
+                <a href="#lr3" class="menu-label-minor">Loser's Round 3</a><br>
+                <a href="#p7" class="menu-label-minor">Part 7</a><br>
+                <a href="#wr3" class="menu-label-minor">Winner's Round 3</a><br>
+                <a href="#p8" class="menu-label-minor">Part 8</a><br>
+                <a href="#p9" class="menu-label-minor">Part 9</a><br>
+                <a href="#lr4" class="menu-label-minor">Loser's Round 4</a><br>
+                <a href="#wr4" class="menu-label-minor">Winner's Round 4</a><br>
+                <a href="#lr5" class="menu-label-minor">Loser's Round 5</a><br>
+                <a href="#lr6" class="menu-label-minor">Loser's Round 6</a><br>
+                <a href="#top8" class="menu-label-minor">Top 8</a><br>
+                <a href="#gf" class="menu-label-minor">Grand Finals</a>
+            </details>
+        </div>
         <a id="p0"></a>
         <div class="discord">
             <h1>CPUK NCCT3: Déjà Vu</h1>
@@ -40,22 +112,6 @@
             <p class="very">
                  Some additional context: Between NCCT2 and NCCT3, on April Fool's Day 2022, Prism joined the Discord with her personal account. (AKA, Ryan made a second account and roleplayed as her.) When the day ended, she did not leave.
             </p>
-            <p class="text"></p>
-
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#p0">Opening</a></li>
-                <li><a href="#p1">Part 1</a></li>
-                <li><a href="#p2">Part 2</a></li>
-                <li><a href="#p3">Part 3</a></li>
-                <li><a href="#p4">Part 4</a></li>
-                <li><a href="#p5">Part 5</a></li>
-                <li><a href="#p6">Part 6</a></li>
-                <li><a href="#p7">Part 7</a></li>
-<!--                <li><a href="#p8">Part 8</a></li>
-                <li><a href="#p9">Part 9</a></li>-->
-            </ul>
-            <p class="much"></p>
         </div>
 
         <div class="cutscene-start"></div>
@@ -156,7 +212,7 @@
 
 
 
-            <h2><a href="#p1" id="p1">Part 1</a></h2>
+            <h3><a href="#p1" id="p1">Part 1</a></h2>
             <p class="very"></p>
 
 
@@ -221,7 +277,7 @@
                         <div class="line two" style="margin-top: calc(1.5em + 12.5*(3.6em + 6px));"></div>
                 <a href="#r15"><div class="matchup"><p class="matchupborder">Wayward Compass</p><p>The Guy</p></div></a>
                     <div class="line one" style="margin-top: calc(1.5em + 14*(3.6em + 6px));"></div>
-                <a href="#r16"><div class="matchup"><p class="matchupborder">Bing</p><p><span class="void invoid">Nagito Komaeda</span></p></div></a>
+                <a href="#r16"><div class="matchup"><p class="matchupborder">Bing</p><p><span class="hide">Nagito Komaeda</span></p></div></a>
             </div>
                 <div class="five" style="margin-top: calc(2em + 7.5*(3.6em + 6px));"></div>
             <div class="bracketish">
@@ -274,8 +330,7 @@
             <div class="nelson"><p>Raven:</p><p>It is almost midnight so I'll probably fall asleep but I'm still excited!</p></div>
             <p class="ryan text">No worries, this first segment of the tournament will likely be pretty short</p>
 
-            <p class="ryan">I was writing a message to give you expectations for what to expect here, but I honestly have none</p>
-            <p class="note text">[Prism reacts: 😠 🙂]</p>
+            <p class="ryan">I was writing a message to give you expectations for what to expect here, but I honestly have none<br style="margin-bottom: 0.5em;"><span class="reaction">😠 <span class="white">(Prism)</span></span> <span class="reaction">🙂 <span class="white">(Prism)</span></span></p>
 
             <h3><a id="r1" href="#r1">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
@@ -767,12 +822,9 @@
             <p class="ryan text"><s>yeah its ryan lol</s></p>
 
             <div class="nelson">
-                <p>Dubs:</p><p>love your work prism. especially when you detonated crimbo</p>
-                <p></p><p class="note">[Prism reacts: 🙂]</p>
-                <p>Dubs:</p><p>that was pretty sweet</p>
-                <p></p><p class="note">[Prism reacts: 🙂]</p>
-                <p>Dubs:</p><p>shoddy work though</p>
-                <p></p><p class="note">[Prism reacts: 😠 🙂]</p>
+                <p>Dubs:</p><p class="lite">love your work prism. especially when you detonated crimbo<br style="margin-bottom: 0.5em;"><span class="reaction">🙂 <span class="white">(Prism)</span></span></p>
+                <p>Dubs:</p><p class="lite">that was pretty sweet<br style="margin-bottom: 0.5em;"><span class="reaction">🙂 <span class="white">(Prism)</span></span></p>
+                <p>Dubs:</p><p>shoddy work though<br style="margin-bottom: 0.5em;"><span class="reaction">😠 <span class="white">(Prism)</span></span> <span class="reaction">🙂 <span class="white">(Prism)</span></span></p>
             </div>
 
             <p class="ryan">Hey uh</p>
@@ -810,7 +862,7 @@
             <p class="ryan text">stfu</p>
             <div class="prismchat"><p class="white">Prism:</p><p class="white">No :)</p></div>
             <div class="nelson">
-                <p>Dubs:</p><p>there's a transcript?</p>
+                <p>Dubs:</p><p>there's a <a href="../2">transcript?</a></p>
                 <p>Dubs:</p><p>where can i find it?</p>
                 <p>Wonder:</p><p>in the pins for NCTT2</p>
             </div>
@@ -1361,7 +1413,7 @@
             </div>
             <div class="prismchat">
                 <p></p><p class="note">[Replying to "you have a crush on a jojo character"]</p>
-                <p class="white">Prism:</p><p class="white">"Your profile picture is literally <span class="spoiler">Nagito Komaeda</span> :)"</p>
+                <p class="white">Prism:</p><p class="white">"Your profile picture is literally <span class="hide"><span class="white">Nagito Komaeda</span></span> :)"</p>
             </div>
             <div class="nelson">
                 <p>Garf:</p><p>"Prism fuck off"</p>
@@ -1773,7 +1825,7 @@
                 <p>Brush:</p><p>"does it really matter if she's real or not, tho"</p>
                 <p>Moss:</p><p>"A full commitments what im thinking of"</p>
                 <p>Dubs:</p><p>"You got a lot of fan art. I think it kinda shaped what you look like? Not sure how that works, honestly."</p>
-                <p>Insider2000:</p><p>"This is the real Order the same way that this is the real <span class="spoiler">Nagito</span>. It isn't, but it is."</p>
+                <p>Insider2000:</p><p>"This is the real Order the same way that this is the real <span class="hide">Nagito</span>. It isn't, but it is."</p>
                 <p>Brush:</p><p>"none of this will be remembered"</p>
                 <p>Snek:</p><p>"She's never gonna give you up? Never gonna let you down?"</p>
                 <p>Prince:</p><p>"We've got Celadon (Cop Forme) and Crow-ller, so... what does that mean?"</p>
@@ -3092,7 +3144,7 @@
                 <p>Wonder:</p><p>"call that a meetcute /j"</p>
             </div>
 
-            <p class="ryan"><em>WORLD OF NO CONSEQUENCES BABY!!!!</em></p>
+            <p class="ryan text"><em>WORLD OF NO CONSEQUENCES BABY!!!!</em></p>
 
             <div class="nelson">
                 <p>Brush:</p><p>"H"</p>
@@ -3217,7 +3269,7 @@
                 <p class="lite">"So...do you think that you can act as the bastion of hope that will light the way to a brighter future? Then....show me!"</p>
                 <p>".....I've got a sword?"</p>
             </div>
-            <p class="vs">[16: Bing vs <span class="void invoid">Nagito Komaeda</span>]</p>
+            <p class="vs">[16: Bing vs <span class="hide">Nagito Komaeda</span>]</p>
 
             <div class="nelson"><p>Bubbly:</p><p>HES GOT A SWORD</p></div>
             <p class="ryan">you idiot</p>
@@ -3258,7 +3310,7 @@
 
             <p class="text">We have a report from the field!!</p>
             <div class="win quote"><p>"Hmm.....I remember the last time I met someone like you....completely normal.......I should probably keep an eye on you"</p></div>
-            <div class="announcement"><p>BING has been knocked into the loser's bracket by <span class="void invoid">NAGITO KOMAEDA</span></p></div>
+            <div class="announcement"><p>BING has been knocked into the loser's bracket by <span class="hide">NAGITO KOMAEDA</span></p></div>
             <p class="text"></p>
 
 
@@ -3441,7 +3493,7 @@
             <div class="nelson">
                 <p>Aubz:</p><p>“Awww :)”</p>
                 <p>Epicsuperbat:</p><p>“Ough”</p>
-                <p>Etharia:</p><p>“:blush:”</p>
+                <p>Etharia:</p><p>“😊”</p>
                 <p>Epicsuperbat:</p><p>“Gay /pos”</p>
                 <p>AV:</p><p>“Well, now you can again.”</p>
                 <p>chirp:</p><p>"do you recall cyberbullying prism. because she might. be a bit peeved. And shes your next opponent."</p>
@@ -3639,7 +3691,7 @@
                 <p>Aubz:</p><p>I think it’s a little ladybug</p>
                 <p>Raven:</p><p>I thought it was a cartoon airplane whoops</p>
             </div>
-            <p class="ryan text">It's a picture of <span class="void invoid">Buzz Buzz from Earthbound</span></p>
+            <p class="ryan text">It's a picture of <span class="hide"><span class="ryan">Buzz Buzz from Earthbound</span></span></p>
 
             <div class="nelson">
                 <p></p><p>[in reply to J0hn saying "I got two of em, but one of them hasn't met me yet, and that'd be super weird"]</p>
@@ -3864,7 +3916,7 @@
                 <p>Moss:</p><p>"If we simply bully her hard enough"</p>
                 <p>Moss:</p><p>"eventually she will go away"</p>
                 <p>AV:</p><p>“Prism i know youre seeing this how do you feel about the nostalgia critic”</p>
-                <p>Etharia:</p><p>“Get snaked prism :snake:”</p>
+                <p>Etharia:</p><p>“Get snaked prism 🐍”</p>
                 <p>Epicsuperbat:</p><p>“Iggy are you immune to paradox’s?”</p>
                 <p>Moss:</p><p>"Iggy who do you think is the roaring knight in deltarune"</p>
                 <p>Epicsuperbat:</p><p>“What is 2 + 2 - 1 + 50 - 3 + 19?”</p>
@@ -3903,7 +3955,7 @@
             </div>
             <p class="text">"Want me to send you guys to him so you can ask?"</p>
             <div class="nelson">
-                <p>Epicsuperbat:</p><p>“His boyfriend <span class="spoiler">Nagito</span>”</p>
+                <p>Epicsuperbat:</p><p>“His boyfriend <span class="hide">Nagito</span>”</p>
                 <p>mums:</p><p>"I absolutely want to be sent to sans"</p>
             </div>
 
@@ -4374,7 +4426,7 @@
                 <p>Mako:</p><p>"OH?"</p>
                 <p>J0rt:</p><p>"oh god what's happening"</p>
             </div>
-            <p>"Visual's up"</p>
+            <p class="text">"Visual's up"</p>
             <p class="note text">[video call starts]</p>
             <div class="nelson">
                 <p>Etharia:</p><p>“WAIT IS THIS WHAT I THINK IT IS”</p>
@@ -5207,7 +5259,7 @@
             <p class="text"></p>
 
 
-            <h3><a id="r31" href="#r31"></a></h3>
+            <h3><a id="r31" href="#r31">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
             <div class="quote">
                 <p class="lite">"So like, you're a real zombie, huh?"</p>
@@ -6142,7 +6194,7 @@
                 <p>Brush:</p><p>that's the real reason dr order's creations are immune</p>
                 <p>Raven:</p><p>ok but fr the terrible twos ARE like that</p>
             </div>
-            <p class="ryan text">I mean</p>
+            <p class="ryan">I mean</p>
             <p class="ryan text">He isn't the Ultimate fighter for no reason</p>
 
 
@@ -6669,7 +6721,7 @@
                         <div class="line two" style="margin-top: calc(1.5em + 4.5*(3.6em + 6px));"></div>
                 <a href="#r55"><div class="matchup"><p class="matchupborder">Hackerman J0hn</p><p><span class="white">Prism</span></p></div></a>
                     <div class="line one" style="margin-top: calc(1.5em + 6*(3.6em + 6px));"></div>
-                <a href="#r56"><div class="matchup"><p class="matchupborder">The Guy</p><p><span class="void invoid">Nagito Komaeda</span></p></div></a>
+                <a href="#r56"><div class="matchup"><p class="matchupborder">The Guy</p><p><span class="hide">Nagito Komaeda</span></p></div></a>
             </div>
                 <div class="five" style="margin-top: calc(2.5em + 3.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 15em + 21px); margin-left: calc(var(--width) / 4 + 7.5em - 10px);"></div>
             <div class="bracketish">
@@ -7431,17 +7483,17 @@
                 title="Danthony at 30% on his last stock, shielding as High Crowler air dashes back on stage at 50% on his last stock"
             />
             <div class="nelson">
-                <p>chat:</p><p>Wait is monkey watch playing?</p>
+                <p>Epicsuperbat:</p><p>Wait is monkey watch playing?</p>
             </div>
             <p class="ryan text">no its clu clu land</p>
             <div class="nelson">
-                <p>chat:</p><p>Wait how is Crowller in this?</p>
+                <p>Ghost:</p><p>Wait how is Crowller in this?</p>
             </div>
             <p class="ryan text">because nothing is real lol</p>
-            <p class="ryan text">Fun fact that I will probably never fully pull off</p>
-            <p class="ryan text">But</p>
+            <p class="ryan">Fun fact that I will probably never fully pull off</p>
+            <p class="ryan">But</p>
             <p class="ryan text">I originally planned on making Cha Cha slowly get larger in each Smashup to compare with UPS Founder</p>
-            <p class="ryan text">And then in one of them</p>
+            <p class="ryan">And then in one of them</p>
             <p class="ryan text">Cha Cha is there and you see UPS Founder horizontal with a knife in his back</p>
             <p class="ryan text">Also</p>
 
@@ -7738,8 +7790,8 @@
             <p class="scene">END NELSON EVENT</p>
 
             <p class="ryan text">ooc I plan to have a scene going into That Conversation. Just taking some time to prep for it myself first lol</p>
-            <p class="text">And also, just to get it out of the way, the plan here is NOT an Order Redemption Arc</p>
-            <p class="text">At least not an outright one</p>
+            <p class="ryan text">And also, just to get it out of the way, the plan here is NOT an Order Redemption Arc</p>
+            <p class="ryan text">At least not an outright one</p>
 
 
             <h3><a id="r54" href="#r54">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
@@ -7795,7 +7847,7 @@
                 <p class="lite">"You're so fascinating. You bring the players so much hope only to be deceived and bring them so much despair."</p>
                 <p>"I was the lead role of a fantasy movie trilogy and even I think you're being too much of a nerd right now"</p>
             </div>
-            <p class="vs">[56: The Guy vs <span class="void invoid">Nagito Komaeda</span>]</p>
+            <p class="vs">[56: The Guy vs <span class="hide">Nagito Komaeda</span>]</p>
 
             <img
                 class="nelsonimg"
@@ -8143,29 +8195,29 @@
             </div>
 
             <p class="ryan text">Yeah, the whole inches/miles thing has made the concept of Prism in this world........INCREDIBLY fucked</p>
-            <p class="ryan text">DR spoils: <span class="spoiler">Yeah if you've played v3 you had an idea what this was gonna say based on the last comment but......funny v3</span></p>
+            <p class="ryan text">DR spoils: <span class="hide"><span class="ryan">Yeah if you've played v3 you had an idea what this was gonna say based on the last comment but......funny v3</span></span></p>
             <p class="ryan text">But I thought it was not only interesting to leave such a background of how much people have been changed by Prism vs just how their lives are as open-ended was, it would be JUST as interesting to let someone like Order take advantage of that open-endedness</p>
             <p class="ryan">also last stock</p>
             <p class="ryan">0 apiece</p>
             <p class="ryan">49-33</p>
-            <p class="ryan">(guy-<span class="spoiler">nagito</span>)</p>
+            <p class="ryan">(guy-<span class="hide"><span class="ryan">nagito</span></span>)</p>
             <p class="ryan text">72-45</p>
 
             <p class="text">We have a report from the field</p>
-            <div class="win quote"><p>DR Spoiler on this one btw: <span class="spoiler">"I know what it's like to be trapped in a video game! Here's hoping you stay away from Tetris!"</span></p></div>
-            <div class="announcement"><p>THE GUY has been knocked into the loser's bracket by <span class="void invoid">NAGITO KOMAEDA</span></p></div>
+            <div class="win quote"><p>DR Spoiler on this one btw: <span class="winhide">"I know what it's like to be trapped in a video game! Here's hoping you stay away from Tetris!"</span></p></div>
+            <div class="announcement"><p>THE GUY has been knocked into the loser's bracket by <span class="hide">NAGITO KOMAEDA</span></p></div>
             <p class="text"></p>
 
             <p class="ryan lite">this is the best day of my life</p>
-            <div class="spoiler lite">
+            <div class="hide lite">
             <img
-                class="spoiler"
+                class="hide"
                 src="images/r56 best day.png"
                 alt="a screenshot of the bracket, showing prism vs the winner of the latest match is upcoming"
                 title="a screenshot of the bracket, showing prism vs the winner of the latest match is upcoming"
             />
             </div>
-            <p class="ryan text">[Ryan Chongoshow pinned a message to this channel.]</p>
+            <p class="note text">[Ryan Chongoshow pinned a message to this channel.]</p>
 
 
             <h3><a id="r57" href="#r57">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
@@ -8881,7 +8933,7 @@
                 <p>Wonder:</p><p>NCCT is the "ryan has a gun" series</p>
                 <p>Wonder:</p><p>and he will shoot you (with emotional bullets)</p>
             </div>
-            <p class="ryan text"><em>just wait until you understand what I meant :)</em></p>
+            <p class="prism text">just wait until you understand what I meant :)</p>
             <p class="ryan text">Just a bit of fun</p>
             <div class="nelson">
                 <p>J0rt:</p><p>......what she meant by what?</p>
@@ -10191,6 +10243,7 @@
             <p class="vs">[71: Winston Overwatch (and D.Va) vs Kanye West + Light Pit]</p>
 
             <img
+                class="text"
                 src="images/r71 setup.png"
                 alt="The character select screen, showing a team battle between a Mii Brawler (Kanye West) and a Dark Pit (Light Pit) on one side, and a Donkey Kong (Winston Overwatch) and a R.O.B. (D.Va) on the other."
                 title="The character select screen, showing a team battle between a Mii Brawler (Kanye West) and a Dark Pit (Light Pit) on one side, and a Donkey Kong (Winston Overwatch) and a R.O.B. (D.Va) on the other."
@@ -10199,6 +10252,7 @@
 
             <p class="ryan lite">EXCITING end to round 1 tho</p>
             <img
+                class="text"
                 src="images/r71 round 1.png"
                 alt="Kanye West is at 150% on one stock left, Light Pit is at 100% on one stock, Winston is at 5% on one stock, D.Va's out of the game."
                 title="Kanye West is at 150% on one stock left, Light Pit is at 100% on one stock, Winston is at 5% on one stock, D.Va's out of the game."
@@ -10753,7 +10807,7 @@
             </div>
             <p class="text">"She kinda lives in her lab"</p>
             <div class="nelson">
-                <p>Aubz:</p><p>“…<span class="void invoid">Nnnnagito?</span>”</p>
+                <p>Aubz:</p><p>“…<span class="hide">Nnnnagito?</span>”</p>
                 <p>Moss:</p><p>"Prism destroys all cars she sees"</p>
                 <p>Janet:</p><p>"is her lab a car"</p>
             </div>
@@ -10842,7 +10896,7 @@
             <div class="win quote"><p>"Thanks for bein' just some normal dweeb (affectionate). Really lets people like me stand out way more"</p></div>
             <div class="announcement">
                 <p class="lite">BING has been eliminated from the non-canon curiosity bracket</p>
-                <p>Eliminated by <span class="void invoid">NAGITO KOMAEDA</span> and LARRY (Jesus......)</p>
+                <p>Eliminated by <span class="hide">NAGITO KOMAEDA</span> and LARRY (Jesus......)</p>
             </div>
             <p class="text"></p>
 
@@ -10996,14 +11050,14 @@
 
             <div class="nelson">
                 <p>Greenshi:</p><p>J0hn can, will, and must kill nagito komaeda</p>
-                <p>Raven:</p><p><span class="spoiler">if for nothing else other than his favorite SDR2 character was probably Chiaki</span></p>
+                <p>Raven:</p><p><span class="hide">if for nothing else other than his favorite SDR2 character was probably Chiaki</span></p>
             </div>
-            <p class="ryan"><span class="spoiler">yeah I can make that one canon, although he also like Soda</span></p>
-            <p class="ryan text"><span class="spoiler">Both due to his talent and because he's a fucking Rat Man. Which J0hn is partial to</span></p>
+            <p class="ryan"><span class="hide">yeah I can make that one canon, although he also like Soda</span></p>
+            <p class="ryan text"><span class="hide">Both due to his talent and because he's a fucking Rat Man. Which J0hn is partial to</span></p>
             <div class="nelson">
-                <p>Krispy:</p><p><span class="spoiler">i feel like larry would be a fan of gundham</span></p>
+                <p>Krispy:</p><p><span class="hide">i feel like larry would be a fan of gundham</span></p>
             </div>
-            <p class="ryan text"><span class="spoiler">everyone is a fan of gundham</span></p>
+            <p class="ryan text"><span class="hide">everyone is a fan of gundham</span></p>
 
             <p class="text">We have a report from the field!!!</p>
             <div class="win quote"><p>"Ohhhhh you'll TOTALLY have to teach me how to properly program these things if my legs ever get blown off. Which, to be fair, not ENTIRELY unlikely!"</p></div>
@@ -11330,7 +11384,7 @@
                 <p>Janet:</p><p>"and dr order"</p>
                 <p>Aubz:</p><p>“Yeah her too”</p>
                 <p>Brush:</p><p>"and mozilla"</p>
-                <p>Janet:</p><p>"and <span class="spoiler">nagito</span>"</p>
+                <p>Janet:</p><p>"and <span class="hide">nagito</span>"</p>
                 <p>Raven:</p><p>"But Susan has Order under control for now"</p>
                 <p>Krispy:</p><p>"Look its complicated but you just gotta play along, yeah?"</p>
             </div>
@@ -11584,7 +11638,7 @@
             <div class="nelson">
                 <p>Brush:</p><div><p class="lite">also here's the last panel without the (:</p>
                     <img
-                        src="images/r76 something.png"
+                        src="images/r76 something2.png"
                         alt="Underneath the 'forced smile', Prism looks very intensely angry. Her mouth is technically still curved upwards, though, even if it is more of a grimace."
                         title="Underneath the 'forced smile', Prism looks very intensely angry. Her mouth is technically still curved upwards, though, even if it is more of a grimace."
                     />
@@ -11902,10 +11956,10 @@
             <p class="text"><em>"Everything that once was and ever will be......out there.......set into stone....."</em></p>
             <p class="text"><em>"And for the longest time, that was fate."</em></p>
             <p class="text"><em>"But......I suppose all of that changed when you came along........and you made a new timeline......."</em></p>
-            <p class="text"><em>"At that point, I had no idea what the timeline looked like......no idea of the future......no idea what was set in stone......or if ANYTHING was set in stone....... "</em></p>
+            <p class="text"><em>"At that point, I had no idea what the timeline looked like......no idea of the future......no idea what was set in stone......or if ANYTHING was set in stone......."</em></p>
             <p class="text"><em>"It took my idea of fate and threw it aside"</em></p>
-            <p class="text"><em>"Of course, now we have this Prism madness.......claiming that there IS fate. One that maybe she can see while I can't. Similar to how I could see all of time. "</em></p>
-            <p class="text"><em>"But I think that.....in the end....I don't really care what she says. Because being fortunate enough to run into you.......that defies whatever fate anyone imagined......... "</em></p>
+            <p class="text"><em>"Of course, now we have this Prism madness.......claiming that there IS fate. One that maybe she can see while I can't. Similar to how I could see all of time."</em></p>
+            <p class="text"><em>"But I think that.....in the end....I don't really care what she says. Because being fortunate enough to run into you.......that defies whatever fate anyone imagined........."</em></p>
             <p class="text"><em>"I think that people create their own fate. And some people.......well.....we do it together......"</em></p>
             <div class="nelson">
                 <p>Wonder:</p><p>"god you two are such dorks (affectionate) :nelsob: "</p>
@@ -12266,7 +12320,8 @@
             </div>
             <p class="ryan lite">&gt; Ryan Chongoshow pinned a message to this channel. See all pinned messages.</p>
             <img
-                src="r81 pinned.png"
+                class="text"
+                src="images/r81 pinned.png"
                 alt="The 'sex' message from Brush, in the 'pinned messages' sextion of discord."
                 title="The 'sex' message from Brush, in the 'pinned messages' sextion of discord."
             />
@@ -12429,8 +12484,8 @@
                 <p>Brush:</p><p>"from the little mermaid?"</p>
                 <p>Greenshi:</p><p>"Say hi to Eric for us"</p>
                 <p>Aubz:</p><p>“Had a lot of things happen to him”</p>
+                <p>a mouse:</p><p>"eric from the eric franchise"</p>
             </div>
-            <p class="text">a mouse: "eric from the eric franchise"</p>
             <p class="text">"Yeah, Eric! That's all I really remember about him....just his name"</p>
             <div class="nelson">
                 <p>Aubz:</p><p>“dog became sentient and studied to be a therapist? Happened to my buddy Eric once.”</p>
@@ -12501,7 +12556,7 @@
                 <p>"Yeah!!!! You're just like me!!!!!!! Wait a minute.......are you......noi....something?"</p>
             </div>
             <p class="vs">[83: Machiavelli vs Jerry]</p>
-            <p class="note text">[Context: Noinim is a character from the Goodass Showdown, portrayed by Yellow Kirby, based on a character from <a href="https://www.youtube.com/watch?v=bXhQXeXsdb8">a Snapcube video where Penny shows Ryan out-of-context freezeframes of 'The Good Place'</a>. Would you?]</p>
+            <p class="note text">[Context: Noinim is a character from the Goodass Showdown, portrayed by Yellow Kirby, based on a character from <a class="note" href="https://www.youtube.com/watch?v=bXhQXeXsdb8">a Snapcube video where Penny shows Ryan out-of-context freezeframes of 'The Good Place'</a>. Would you?]</p>
 
             <div class="nelson">
                 <p>Brendle:</p><p>Who this</p>
@@ -12587,7 +12642,7 @@
                 <p>Wonder:</p><p>"u-uh"</p>
                 <p>Moss:</p><p>"how does she know?"</p>
             </div>
-            <p class="text">"<span class="prism'>She doesn't quite remember but that's okay :)</span>"</p>
+            <p class="text">"<span class="prism">She doesn't quite remember but that's okay :)</span>"</p>
             <div class="nelson">
                 <p>Greenshi:</p><p>" 🚙 🔋"</p>
                 <p>Janet:</p><p>"are you able to talk without prism controlling your words rn?"</p>
@@ -12823,15 +12878,16 @@
                 <p>Moss:</p><p>We did it YAYYYYYY!</p>
                 <p>Aubz:</p><p>Learning The Alphabet With Nelson!</p>
                 <p>Garf:</p>
+                <div>
                 <img
-                    class="nelsonimg lite"
+                    class="nelsonimg"
                     src="images/nelson.png"
                     alt="the Nelson image"
                     title=":nelson:"
                 />
-                <p></p><p class="note">[reactions: :Nelson: :regional_indicator_[abcdefghijklmnopqrs]:]</p>
-                <p>Bubbly:</p><p>nelson is now literate</p>
-                <p></p><p class="note">[reactions: 👏 :regional_indicator_[tuvwxyz]: ‼️ ❗]</p>
+                <p class="lite" style="line-height: 2em;"><span class="reaction">:Nelson: 14</span> <span class="reaction">🇦 13</span> <span class="reaction">🅱️ 13</span> <span class="reaction">🇨 13</span> <span class="reaction">🇩 13</span> <span class="reaction">🇪 13</span> <span class="reaction">🇫 13</span> <span class="reaction">🇬 13</span> <span class="reaction">🇭 13</span> <span class="reaction">🇮 13</span> <span class="reaction">🇯 13</span> <span class="reaction">🇰 13</span> <span class="reaction">🇱 13</span> <span class="reaction">🇲 12</span> <span class="reaction">🇳 13</span> <span class="reaction">🇴 12</span> <span class="reaction">🇵 12</span> <span class="reaction">🇶 12</span> <span class="reaction">🇷 12</span> <span class="reaction">🇸 12</span></p>
+                </div>
+                <p>Bubbly:</p><p class="lite" style="line-height: 2em;">nelson is now literate<br><span class="reaction">👏 12</span> <span class="reaction">🇹 12</span> <span class="reaction">🇺 11</span> <span class="reaction">🇻 9</span> <span class="reaction">🇼 9</span> <span class="reaction">🇽 9</span> <span class="reaction">🇾 9</span> <span class="reaction">🇿 9</span> <span class="reaction">‼️ 7</span> <span class="reaction">❗ 7</span></p>
             </div>
 
             <p class="text">We have a report from the field</p>
@@ -13030,17 +13086,17 @@
 
             <h3><a id="r86" href="#r86">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"Weren't you.....there.....when I was first being imprisoned and kidnapped?"</p>
-			    <p>".....honestly? That whole Doctor Order thing was just really weird. I was just there for a good ol' time."</p>
-			</div>
-			<p class="vs">[86: Chartreuse vs Geico Gecko]</p>
+            <div class="quote">
+                <p class="lite">"Weren't you.....there.....when I was first being imprisoned and kidnapped?"</p>
+                <p>".....honestly? That whole Doctor Order thing was just really weird. I was just there for a good ol' time."</p>
+            </div>
+            <p class="vs">[86: Chartreuse vs Geico Gecko]</p>
 
-			<p class="ryan text">also if it seems like less nelson its because I'm working on Mad Rat Eternity in the BG</p>
-			<p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
-			<p class="ryan"><em><strong>ALSO PLEASE REMIND ME AFTER THIS TO GO TO MY MUSIC</strong></em></p>
-			<p class="ryan text"><em><strong>AND REMOVE ASHLEYS SONG</strong></em></p>
-			<div class="nelson">
+            <p class="ryan text">also if it seems like less nelson its because I'm working on Mad Rat Eternity in the BG</p>
+            <p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
+            <p class="ryan"><em><strong>ALSO PLEASE REMIND ME AFTER THIS TO GO TO MY MUSIC</strong></em></p>
+            <p class="ryan text"><em><strong>AND REMOVE ASHLEYS SONG</strong></em></p>
+            <div class="nelson">
                 <p>Janet:</p><p>could pin it? then next time someone looks at pins they'll go "oh btw ryan, do the thing!"</p>
             </div>
             <p class="ryan">I just gotta do it after this match</p>
@@ -13048,14 +13104,14 @@
             <p class="text">We have a report from the field!!!</p>
             <p class="ryan text">(And I am remembering)</p>
 
-			<div class="win quote"><p>"You should know the importance of 15 minutes.......incredibly you still don't know how it can affect your car insurance"</p></div>
-			<div class="announcement">
-			    <p class="lite">CHARTREUSE has been eliminated from the non-canon curiosity bracket</p>
-			    <p>Eliminated by JERRY and GEICO GECKO</p>
-			</div>
-			<p class="text"></p>
+            <div class="win quote"><p>"You should know the importance of 15 minutes.......incredibly you still don't know how it can affect your car insurance"</p></div>
+            <div class="announcement">
+                <p class="lite">CHARTREUSE has been eliminated from the non-canon curiosity bracket</p>
+                <p>Eliminated by JERRY and GEICO GECKO</p>
+            </div>
+            <p class="text"></p>
 
-			<div class="nelson">
+            <div class="nelson">
                 <p>Brush:</p><p>geico taking over as the True green character</p>
             </div>
             <p class="ryan text">geico is the god of tragedy now oops</p>
@@ -13077,7 +13133,7 @@
                         <div class="line two" style="margin-top: calc(1.5em + 0.5*(3.6em + 6px));"></div>
                 <a href="#r91"><div class="matchup"><p class="matchupborder">Twist</p><p>Painguin (Snaked)</p></div></a>
                     <div class="line one" style="margin-top: calc(1.5em + 2*(3.6em + 6px));"></div>
-                <a href="#r92"><div class="matchup"><p class="matchupborder"><span class="white">Prism</span></p><p><span class="spoiler">Nagito Komaeda</span></p></div></a>
+                <a href="#r92"><div class="matchup"><p class="matchupborder"><span class="white">Prism</span></p><p><span class="hide">Nagito Komaeda</span></p></div></a>
             </div>
                 <div class="five" style="margin-top: calc(2.5em + 1.5*(3.6em + 6px)); width: calc(var(--width) / 2 - 9em + 25px); margin-left: calc(var(--width) / 4 + 4.5em - 12px);"></div>
             <div class="bracketish">
@@ -13094,14 +13150,14 @@
 
             <h3><a id="r89" href="#r89">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"Ch.......Champ............"</p>
-			    <p class="lite">"Are you alright? Oh god another transforma- Wait.....who is champ?"</p>
-			    <p>">:)"</p>
-			</div>
-			<p class="vs">[89: Spriteman vs In-Cena-Roar]</p>
+            <div class="quote">
+                <p class="lite">"Ch.......Champ............"</p>
+                <p class="lite">"Are you alright? Oh god another transforma- Wait.....who is champ?"</p>
+                <p>">:)"</p>
+            </div>
+            <p class="vs">[89: Spriteman vs In-Cena-Roar]</p>
 
-			<p class="ryan">So just we're clear, we all know who "champ" is, right?</p>
+            <p class="ryan">So just we're clear, we all know who "champ" is, right?</p>
             <p class="ryan"><a href="https://youtu.be/wRRsXxE1KVY?t=73">https://youtu.be/wRRsXxE1KVY?t=73</a></p>
             <p class="ryan">THAT QUESTION WILL BE ANSWERED THIS SUNDAY NIGHT</p>
             <p class="ryan text">Honestly prank call jokes are kinda lame imo, and this one falls under that umbrella, but there's something beautiful about the delivery</p>
@@ -13111,23 +13167,23 @@
             <p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
 
             <p class="text">We have a report from the field!</p>
-			<div class="win quote"><p>"I gotta say, I'm not one for shameless marketing, but you got that slim jim guy beat at the very least"</p></div>
-			<div class="announcement"><p>SPRITEMAN has been knocked into the loser's bracket by IN-CENA-ROAR</p></div>
-			<p class="text"></p>
+            <div class="win quote"><p>"I gotta say, I'm not one for shameless marketing, but you got that slim jim guy beat at the very least"</p></div>
+            <div class="announcement"><p>SPRITEMAN has been knocked into the loser's bracket by IN-CENA-ROAR</p></div>
+            <p class="text"></p>
 
-			<p class="ryan">I'm about to shamelessly steal a joke from someone I cant remember EXACTLY who but just know</p>
-			<p class="note text">[it was Brush]</p>
+            <p class="ryan">I'm about to shamelessly steal a joke from someone I cant remember EXACTLY who but just know</p>
+            <p class="note text">[it was Brush]</p>
 
 
             <h3><a id="r91" href="#r91">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"So, like....you seem overall pretty normal for this bonkers as hell universe, but I gotta know......how the hell do ya date a corn cob?"</p>
-			    <p>"What can I say? Blazblue players make do"</p>
-			</div>
-			<p class="vs">[91: Danthony vs Barry]</p>
+            <div class="quote">
+                <p class="lite">"So, like....you seem overall pretty normal for this bonkers as hell universe, but I gotta know......how the hell do ya date a corn cob?"</p>
+                <p>"What can I say? Blazblue players make do"</p>
+            </div>
+            <p class="vs">[91: Danthony vs Barry]</p>
 
-			<p class="ryan">Also I just realized</p>
+            <p class="ryan">Also I just realized</p>
             <p class="ryan">Something concerning about the hc voice I have for Barry in my head</p>
             <p class="ryan">Not concerning but very very funny</p>
             <p class="ryan text">It sounds a lot like Columbo</p>
@@ -13147,21 +13203,21 @@
             <div class="nelson">
                 <p>Janet:</p>
                 <div>
-                	<p>here is how it's being archived:</p>
-                	<code>
-                		<p><code>chat: [DATA EXPUNGED]</code></p>
-                		<p><code>[DATA EXPUNGED]</code></p>
-                	</code>
+                    <p>here is how it's being archived:</p>
+                    <code>
+                        <p><code>chat: [DATA EXPUNGED]</code></p>
+                        <p><code>[DATA EXPUNGED]</code></p>
+                    </code>
                 </div>
                 <p>Insider2000:</p><p>Prism freaking put us all in time out.</p>
             </div>
 
             <p class="ryan text">Prism:</p>
             <img
-            	class="text"
-            	src="images/r91 whoops.png"
-            	alt="Whoops! Can't show that in a Christian manga!"
-            	title="WHOOPS! Can't show that in a Christian manga!"
+                class="text"
+                src="images/r91 whoops.png"
+                alt="Whoops! Can't show that in a Christian manga!"
+                title="WHOOPS! Can't show that in a Christian manga!"
             />
 
             <p class="ryan">Listen.....</p>
@@ -13172,27 +13228,27 @@
             <p class="ryan text">last stock</p>
 
             <p class="text">We have a report from the field!!</p>
-			<div class="win quote"><p>"Oh! N-not like that! It's not like......I mean.....listen, she has a great personality and here eyes are really bright and-"</p></div>
-			<div class="announcement"><p>BARRY has been knocked into the loser's bracket by DANTHONY</p></div>
-			<p class="text"></p>
+            <div class="win quote"><p>"Oh! N-not like that! It's not like......I mean.....listen, she has a great personality and here eyes are really bright and-"</p></div>
+            <div class="announcement"><p>BARRY has been knocked into the loser's bracket by DANTHONY</p></div>
+            <p class="text"></p>
 
 
-			<h3><a id="r92" href="#r92">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
+            <h3><a id="r92" href="#r92">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"Club Penguin? Please! I thought everyone knew Neopets was where it was at!"</p>
-			    <p>"Ha! Yeah, okay! Good luck gettin the community to flip that big ol' omelette like we did with the 'berg!"</p>
-			</div>
-			<p class="vs">[92: Twist vs Painguin (Snaked)]</p>
+            <div class="quote">
+                <p class="lite">"Club Penguin? Please! I thought everyone knew Neopets was where it was at!"</p>
+                <p>"Ha! Yeah, okay! Good luck gettin the community to flip that big ol' omelette like we did with the 'berg!"</p>
+            </div>
+            <p class="vs">[92: Twist vs Painguin (Snaked)]</p>
 
-			<img
-    			class="nelsonimg"
-    			src="images/nelson.png"
-    			alt="the Nelson image"
- 		   		title=":nelson:"
-			/>
+            <img
+                class="nelsonimg"
+                src="images/nelson.png"
+                alt="the Nelson image"
+                title=":nelson:"
+            />
 
-			<p class="text">"....hey guys!"</p>
+            <p class="text">"....hey guys!"</p>
             <div class="nelson">
                 <p>Insider2000:</p><p>"Yo?"</p>
                 <p>Buubly:</p><p>"oh? hello?"</p>
@@ -13274,11 +13330,11 @@
             </div>
 
             <p class="text">We have a report from the field!</p>
-			<div class="win quote"><p>"Get your weird scientology-adjacent webgame AWAY from the ART of the PENGUIN!"</p></div>
-			<div class="announcement"><p>TWIST has been knocked into the loser's bracket by PAIN-GUIN</p></div>
-			<p class="text"></p>
+            <div class="win quote"><p>"Get your weird scientology-adjacent webgame AWAY from the ART of the PENGUIN!"</p></div>
+            <div class="announcement"><p>TWIST has been knocked into the loser's bracket by PAIN-GUIN</p></div>
+            <p class="text"></p>
 
-			<div class="nelson">
+            <div class="nelson">
                 <p>Epicsuperbat:</p><p>“NOOOOO TWIST”</p>
                 <p>Greenshi:</p><p>"btw, did you learn anything new about her? what did she tell you?"</p>
                 <p>Brush:</p><p>"dogs hold within them the true nature of existence"</p>
@@ -13316,22 +13372,22 @@
 
             <h3><a id="r93" href="#r93">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"Oh! You shine brightly with all the different colors! I can see a mural of hope within your scatterplot of hues...but just as much despair"</p>
-			    <p class="white">"Quite frankly, I somehow fear you, resent you, adore you and pity you all at once :) I hope you stay erased this time :)"</p>
-			</div>
-			<p class="vs">[Prism vs <span class="spoiler">Nagito Komaeda</span>]</p>
+            <div class="quote">
+                <p class="lite">"Oh! You shine brightly with all the different colors! I can see a mural of hope within your scatterplot of hues...but just as much despair"</p>
+                <p class="white">"Quite frankly, I somehow fear you, resent you, adore you and pity you all at once :) I hope you stay erased this time :)"</p>
+            </div>
+            <p class="vs">[Prism vs <span class="hide">Nagito Komaeda</span>]</p>
 
-			<div class="nelson">
+            <div class="nelson">
                 <p>Wonder:</p><p>"i can't believe i'm saying this but"</p>
-                <p>Wonder:</p><p>"<span class="spoiler">NAGITO</span>. KILL."</p>
-                <p>Prince:</p><p>"<span class="spoiler">NAGITO</span>, KILL THIS CLOWN."</p>
-                <p>J0rt:</p><p>"COME ON <span class="spoiler">NAGITO</span> I'M COUNTING ON YOU"</p>
-                <p>Moss:</p><p>"for the first time I want <span class="spoiler">nagito</span> to win"</p>
-                <p>Garf:</p><p>“<span class="spoiler">Nagito</span> must die has become <span class="spoiler">Nagito</span> must kill”</p>
-                <p>Raven:</p><p>"KICK HER ASS <span class="spoiler">NAGITO</span> YOU'RE AMAZING SWEETIE"</p>
-                <p>Epicsuperbat:</p><p>“<span class="spoiler">NAGITO</span> KILL”</p>
-                <p>Greenshi:</p><p>"<span class="spoiler">nagito</span>, i promise to make you my favourite if you destroy this woman"</p>
+                <p>Wonder:</p><p>"<span class="hide">NAGITO</span>. KILL."</p>
+                <p>Prince:</p><p>"<span class="hide">NAGITO</span>, KILL THIS CLOWN."</p>
+                <p>J0rt:</p><p>"COME ON <span class="hide">NAGITO</span> I'M COUNTING ON YOU"</p>
+                <p>Moss:</p><p>"for the first time I want <span class="hide">nagito</span> to win"</p>
+                <p>Garf:</p><p>“<span class="hide">Nagito</span> must die has become <span class="hide">Nagito</span> must kill”</p>
+                <p>Raven:</p><p>"KICK HER ASS <span class="hide">NAGITO</span> YOU'RE AMAZING SWEETIE"</p>
+                <p>Epicsuperbat:</p><p>“<span class="hide">NAGITO</span> KILL”</p>
+                <p>Greenshi:</p><p>"<span class="hide">nagito</span>, i promise to make you my favourite if you destroy this woman"</p>
                 <p>Epicsuperbat:</p><p>“Prism Must Die”</p>
                 <p>Garf:</p><p>“Prism Mist Die”</p>
                 <p>Wonder:</p><p>"sorry i killed your friends"</p>
@@ -13339,16 +13395,16 @@
             <p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
             <div class="nelson">
                 <p>Epicsuperbat:</p><p>“\o/“</p>
-                <p>Raven:</p><p>"<span class="spoiler">NAGITO</span> I BELIEVE IN YOU I THINK YOU'RE ACTUALLY A REALLY COOL CHARACTER"</p>
-                <p>Epicsuperbat:</p><p>“PLEASE <span class="spoiler">NAGITO</span>”</p>
+                <p>Raven:</p><p>"<span class="hide">NAGITO</span> I BELIEVE IN YOU I THINK YOU'RE ACTUALLY A REALLY COOL CHARACTER"</p>
+                <p>Epicsuperbat:</p><p>“PLEASE <span class="hide">NAGITO</span>”</p>
             </div>
 
             <p class="text">We have a report from the field</p>
-			<div class="win quote"><p>"I know a girl named Tsumugi I think you might really enjoy speaking with!"</p></div>
-			<div class="announcement"><p><span class="white">PRISM</span> has been knocked into the loser's bracket by <span class="spoiler">NAGITO KOMAEDA</span></p></div>
-			<p class="text"></p>
+            <div class="win quote"><p>"I know a girl named Tsumugi I think you might really enjoy speaking with!"</p></div>
+            <div class="announcement"><p><span class="white">PRISM</span> has been knocked into the loser's bracket by <span class="hide">NAGITO KOMAEDA</span></p></div>
+            <p class="text"></p>
 
-			<div class="nelson">
+            <div class="nelson">
                 <p>Janet:</p><p>"haha prism's up against dani next (ps dani may need support against prism)"</p>
                 <p>Insider2000:</p><p>"Please! 🙂 I'm still in this tourney! And I can still~ Why do I hear final boss music?"</p>
                 <p>Janet:</p><p>"(prism's been Mean To Her)"</p>
@@ -13365,13 +13421,13 @@
 
             <h3><a id="r94" href="#r94">THE NEXT ROUND IS ABOUT TO BEGIN!!!!!</a></h3>
 
-			<div class="quote">
-			    <p class="lite">"Hmmm......your name...it sounds familiar....."</p>
-			    <p>"Oh, you met Asgore, huh?"</p>
-			</div>
-			<p class="vs">[94: Pinball Wizard vs Sans Undertale]</p>
+            <div class="quote">
+                <p class="lite">"Hmmm......your name...it sounds familiar....."</p>
+                <p>"Oh, you met Asgore, huh?"</p>
+            </div>
+            <p class="vs">[94: Pinball Wizard vs Sans Undertale]</p>
 
-			<p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
+            <p class="ryan text"><em><strong>ROUND THREE</strong></em></p>
 
 <!---->
 
@@ -13513,24 +13569,6 @@
 
             <p class="very"></p>
             <p class="scene">END OF PART 9</p>
-
-
-
-
-
-
-
-
-
-
-
-            <div style="height: 3em;"></div>
-            <p class="note scene">END OF ARCHIVE<br>[continue on the standard archive, this one isn't finished yet!]</p>
-
-
-            <div style="height: 30em;"></div>
-            <a href="https://challonge.com/DreamKerfuffle3">https://challonge.com/DreamKerfuffle3</a>
-            <div style="height: 10em;"></div>
         </div>
     </body>
 </html>

@@ -284,7 +284,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 36pt;
         padding-right: 30pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -298,7 +298,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 24pt;
         padding-right: 18pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -312,7 +312,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 21pt;
         padding-right: 15pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -326,7 +326,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 2.5em;
         padding-right: 1em;
     }
@@ -340,7 +340,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 1em;
         padding-right: 1em;
     }
@@ -354,7 +354,7 @@ body:not(:has(#lightmode:checked)) {
         padding-left: 18pt;
         padding-right: 12pt;
     }
-    .nelson, .chat, .prismchat {
+    .nelson, .chat {
         padding-left: 0.75em;
         padding-right: 0.75em;
     }
@@ -386,7 +386,7 @@ div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
 #toc>summary { font-size: 12pt; }
 
 body:has(#menu-spoilertags:checked) {
-    & .hide, & .void, & .winvoid {
+    & .hide, & .void, & .winvoid, & .winhide {
         --prism: white;
         --text: var(--light);
         --ryan: var(--ryan-blue);
@@ -398,7 +398,7 @@ body:has(#menu-spoilertags:checked) {
     .win { background-color: var(--unvoid); }
 }
 body:not(:has(#menu-spoilertags:checked)) {
-    & .hide:not(:hover):not(:active), & .void:not(:hover):not(:active), & .win:not(:hover):not(:active)>p>.winvoid {
+    & .hide:not(:hover):not(:active), & .void:not(:hover):not(:active), & .win:not(:hover):not(:active)>p>.winvoid, & .win:not(:hover):not(:active)>p>.winhide {
         --prism: var(--void);
         --text: var(--void);
         --ryan: var(--void);
@@ -408,7 +408,7 @@ body:not(:has(#menu-spoilertags:checked)) {
         background-color: var(--void);
         color: var(--void) !important;
     }
-    & .hide:hover, & .void:hover, & .hide:active, & .void:active, & .win:active>p>.winvoid {
+    & .hide:hover, & .void:hover, & .hide:active, & .void:active, & .win:active>p>.winvoid, & .win:hover>p>.winvoid, & .win:active>p>.winhide, & .win:hover>p>.winhide {
         --prism: white;
         --text: var(--light);
         --ryan: var(--ryan-blue);
@@ -418,9 +418,9 @@ body:not(:has(#menu-spoilertags:checked)) {
         color: var(--text);
     }
     .win { background-color: var(--void); }
-    .win:active, .win:hover {
-        background-color: var(--unvoid);
-    }
+    .win:active, .win:hover { background-color: var(--unvoid); }
+    img.hide { filter: opacity(0%); }
+    img.hide:active, img.hide:hover { filter: inherit; }
 }
 .void {
     font-style: italic;
@@ -444,6 +444,24 @@ body:not(:has(#menu-spoilertags:checked)) {
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 5px;
+}
+.spoiler {
+    color: var(--void);
+    background-color: var(--void);
+    white-space: pre-wrap;
+    border-radius: 3px;
+}
+.spoiler:active, .spoiler:hover {
+    background-color: var(--unvoid);
+    color: var(--light);
+}
+.win .spoiler {
+    color: black;
+    background-color: black;
+}
+.win .spoiler:active, .win .spoiler:hover {
+    color: inherit;
+    background-color: inherit;
 }
 
 body:has(#menu-strikethroughs:checked) { & .ryan>s { text-decoration: none; } }
@@ -673,30 +691,6 @@ h3 {
     -moz-background-clip: text;
 }
 
-.spoiler {
-    color: var(--void);
-    background-color: var(--void);
-    white-space: pre-wrap;
-    border-radius: 3px;
-}
-.spoiler:active, .spoiler:hover {
-    background-color: var(--unvoid);
-    color: var(--light);
-}
-.win .spoiler {
-    color: black;
-    background-color: black;
-}
-.win .spoiler:active, .win .spoiler:hover {
-    color: inherit;
-    background-color: inherit;
-}
-img.spoiler {
-    filter: opacity(0%);
-}
-img.spoiler:active, img.spoiler:hover {
-    filter: inherit;
-}
 .announcement .white, .bracket .white {
 /*     background-color: purple; */
     background-image: url('./rainbow.png');
@@ -790,7 +784,7 @@ img.spoiler:active, img.spoiler:hover {
     max-width: 73px;
     margin-bottom: 1em;
 }
-.nelson, .chat, .prismchat {
+.nelson, .chat {
     --text: var(--nelson-text);
     background-color: var(--nelson-background);
     border: 3px solid var(--nelson-border);
@@ -811,19 +805,8 @@ img.spoiler:active, img.spoiler:hover {
 .chat {
     grid-template-columns: 36pt calc(100% - 36pt);
 }
-.prismchat {
-    grid-template-columns: 48pt calc(100% - 48pt);
-}
 .nelson > h1 {
     margin: 0px;
-}
-.prismchat > .white {
-    color: rgba(255, 255, 255, 0.6);
-/*     background-color: purple; */
-    background-image: url('./rainbow.png');
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
 }
 
 .parts {
@@ -1043,4 +1026,5 @@ img.emoji { width:1.5em; }
     background: var(--nelson-background);
     border: 2px solid var(--nelson-border);
     border-radius: 3px;
+    white-space:nowrap;
 }
