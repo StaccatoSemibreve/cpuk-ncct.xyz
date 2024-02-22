@@ -382,7 +382,7 @@ div.menu:has(#menu-hide:checked)>br { display: none; }
 div.menu:has(#menu-hide:checked)>hr { display: none; }
 div.menu:has(#menu-hide:checked)>details { display: none; }
 div.menu:has(#menu-hide:checked) { background: transparent; border: none; }
-#toc { justify-content: right; text-align: right; font-size: 10pt; }
+#toc { justify-content: right; text-align: right; font-size: 10pt; max-height: calc(90vh - 15em); overflow-y: auto; }
 #toc>summary { font-size: 12pt; }
 
 body:has(#menu-spoilertags:checked) {
@@ -548,30 +548,6 @@ body {
 .hide>* { background: none !important; }
 .ryan { --text: var(--ryan); }
 .mint { --text: var(--mint); }
-
-
-
-
-
-
-
-.chat { background-color: magenta !important; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
