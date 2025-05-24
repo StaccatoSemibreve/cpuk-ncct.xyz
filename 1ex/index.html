@@ -39,9 +39,6 @@
             margin-top: 160px;
             margin-bottom: 160px;
         }
-        h1, h2 {
-            line-height: 1.2em;
-        }
         h2.aka {
             margin-top: auto;
             margin-bottom: auto;
@@ -792,7 +789,7 @@
         }
         .image-popover img {
             box-sizing: border-box;
-            max-height: 75vh;
+            max-height: 82vh;
             max-width: var(--width);
             height: auto;
             width: auto;
@@ -805,7 +802,7 @@
             color: var(--colour-announcement-text);
             border: 3px solid black;
             border-radius: 3px;
-            max-height: 20vh;
+            max-height: 8vh;
             padding: 5px;
             margin: 0;
         }
@@ -910,327 +907,82 @@
             :root {
                 --width: 960px;
                 --padding: 150px;
-
-                --nelson-author-width: 135px;
-                --nelson-author-subwidth: 125px;
-    
-                --speech-image-width: calc(var(--textwidth) * 0.5);
-                --nelson-image-width: calc(var(--textwidth) * 0.5);
-
-                --position-themes-top: 40px;
-                --position-themes-left: 158px;
-                --position-music-top: 72px;
-                --position-music-left: 158px;
-            }
-            .navbar {
-                grid-template:
-                "home  nav table  settings  hide"     minmax(30px, auto)
-                / 160px 160px 160px 160px 160px;
-                grid-template-rows: 30px;
-                padding-left: 80px;
-                padding-right: 80px;
-            }
-            #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px 240px 240px 240px;
             }
         }
-        @media only screen and (min-width: 840px) and (max-width: 959px) {
-            :root {
-                --width: 840px;
-                --padding: 150px;
-
-                --nelson-author-width: 135px;
-                --nelson-author-subwidth: 125px;
-    
-                --speech-image-width: calc(var(--textwidth) * 0.5);
-                --nelson-image-width: calc(var(--textwidth) * 0.5);
-
-                --position-themes-top: 40px;
-                --position-themes-left: 158px;
-                --position-music-top: 72px;
-                --position-music-left: 158px;
-            }
-            .navbar {
-                grid-template:
-                "home  nav table  settings  hide"     minmax(30px, auto)
-                / 160px 160px 160px 160px 160px;
-                grid-template-rows: 30px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-            #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px 240px 240px 240px;
-            }
-        }
-        @media only screen and (min-width: 720px) and (max-width: 839px) {
+        @media only screen and (min-width: 720px) and (max-width: 960px) {
             :root {
                 --width: 720px;
                 --padding: 50px;
-
-                --nelson-author-width: 135px;
-                --nelson-author-subwidth: 125px;
-    
-                --speech-image-width: 90%;
-                --nelson-image-width: 50%;
-
-                --position-themes-top: 68px;
-                --position-themes-left: -162px;
-                --position-music-top: 100px;
-                --position-music-left: -162px;
-            }
-            .navbar {
-                grid-template:
-                "home   nav hide"    minmax(30px, auto)
-                "blank1 table settings" minmax(30px, auto)
-                / 160px 160px 160px;
-                grid-template-rows: 28px 30px;
-                padding-left: 120px;
-                padding-right: 120px;
-            }
-            #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px 240px;
-                padding-left: 120px;
-                padding-right: 120px;
             }
         }
-        @media only screen and (min-width: 600px) and (max-width: 719px) {
-            :root {
-                --width: 600px;
-                --padding: 20px;
-
-                --nelson-author-width: 135px;
-                --nelson-author-subwidth: 125px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 70%;
-
-                --position-themes-top: 68px;
-                --position-themes-left: -162px;
-                --position-music-top: 100px;
-                --position-music-left: -162px;
-            }
-            .navbar {
-                grid-template:
-                "home   nav hide"    minmax(30px, auto)
-                "blank1 table settings" minmax(30px, auto)
-                / 160px 160px 160px;
-                grid-template-rows: 28px 30px;
-                padding-left: 60px;
-                padding-right: 60px;
-            }
-            #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px 240px;
-                padding-left: 60px;
-                padding-right: 60px;
-            }
-        }
-        @media only screen and (min-width: 480px) and (max-width: 599px) {
+        @media only screen and (min-width: 480px) and (max-width: 720px) {
             :root {
                 --width: 480px;
                 --padding: 20px;
-
-                --nelson-author-width: 135px;
-                --nelson-author-subwidth: 125px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 70%;
-
-                --position-themes-top: 68px;
-                --position-themes-left: -162px;
-                --position-music-top: 100px;
-                --position-music-left: -162px;
-            }
-            .navbar {
-                grid-template:
-                "home   nav hide"    minmax(30px, auto)
-                "blank1 table settings" minmax(30px, auto)
-                / 160px 160px 160px;
-                grid-template-rows: 28px 30px;
-            }
-            #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px 240px;
             }
         }
-        @media only screen and (min-width: 420px) and (max-width: 479px) {
+        @media only screen and (min-width: 240px) and (max-width: 480px) {
             :root {
-                --width: 100vw;
-                --padding: 20px;
-
-                --nelson-author-width: 100px;
-                --nelson-author-subwidth: 90px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 100%;
-
-                --position-themes-top: 96px;
-                --position-themes-left: 158px;
-                --position-music-top: 128px;
-                --position-music-left: 158px;
-            }
-            .navbar {
-                grid-template:
-                "home hide"    minmax(30px, auto)
-                "nav table" minmax(30px, auto)
-                "settings blank1" minmax(30px, auto)
-                / 160px;
-                grid-template-rows: 28px 28px 28px 28px 30px;
-                padding-left: calc((100vw - 420px) / 2 + 49px);
-                padding-right: calc((100vw - 420px) / 2 + 49px);
-            }
-            #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px;
-                padding-left: calc((100vw - 420px) / 2 + 90px);
-                padding-right: calc((100vw - 420px) / 2 + 90px);
+                --width: 240px;
+                --padding: 10px;
             }
         }
-        @media only screen and (min-width: 360px) and (max-width: 419px) {
-            :root {
-                --width: 100vw;
-                --padding: 20px;
-
-                --nelson-author-width: 100px;
-                --nelson-author-subwidth: 90px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 100%;
-
-                --position-themes-top: 96px;
-                --position-themes-left: 158px;
-                --position-music-top: 128px;
-                --position-music-left: 158px;
-            }
-            .navbar {
-                grid-template:
-                "home hide"    minmax(30px, auto)
-                "nav table" minmax(30px, auto)
-                "settings blank1" minmax(30px, auto)
-                / 160px;
-                grid-template-rows: 28px 28px 28px 28px 30px;
-                padding-left: 19px;
-                padding-right: 19px;
-                padding-left: calc((100vw - 360px) / 2 + 19px);
-                padding-right: calc((100vw - 360px) / 2 + 19px);
-            }
-            #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px;
-                padding-left: calc((100vw - 360px) / 2 + 60px);
-                padding-right: calc((100vw - 360px) / 2 + 60px);
-            }
-        }
-        @media only screen and (min-width: 320px) and (max-width: 359px) {
-            :root {
-                --width: 100vw;
-                --padding: 20px;
-
-                --nelson-author-width: 100px;
-                --nelson-author-subwidth: 90px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 100%;
-
-                --position-themes-top: 152px;
-                --position-themes-left: 78px;
-                --position-music-top: 184px;
-                --position-music-left: 78px;
-            }
-            .navbar {
-                grid-template:
-                "hide"    minmax(30px, auto)
-                "home" minmax(30px, auto)
-                "nav" minmax(30px, auto)
-                "table" minmax(30px, auto)
-                "settings" minmax(30px, auto)
-                / 160px;
-                grid-template-rows: 28px 28px 28px 28px 30px;
-                padding-left: calc((100vw - 320px) / 2 + 80px);
-                padding-right: calc((100vw - 320px) / 2 + 80px);
-            }
-            #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px;
-                padding-left: calc((100vw - 320px) / 2 + 40px);
-                padding-right: calc((100vw - 320px) / 2 + 40px);
-            }
-        }
-        @media only screen and (min-width: 240px) and (max-width: 319px) {
+        @media only screen and (max-width: 240px) {
             :root {
                 --width: 100vw;
                 --padding: 10px;
-
-                --nelson-author-width: 100px;
-                --nelson-author-subwidth: 90px;
-    
-                --speech-image-width: 95%;
-                --nelson-image-width: 100%;
-
-                --position-themes-top: 152px;
-                --position-themes-left: 38px;
-                --position-music-top: 184px;
-                --position-music-left: 38px;
-            }
-            .navbar {
-                grid-template:
-                "hide"    minmax(30px, auto)
-                "home" minmax(30px, auto)
-                "nav" minmax(30px, auto)
-                "table" minmax(30px, auto)
-                "settings" minmax(30px, auto)
-                / 160px;
-                grid-template-rows: 28px 28px 28px 28px 30px;
-                padding-left: calc((100vw - 240px) / 2 + 40px);
-                padding-right: calc((100vw - 240px) / 2 + 40px);
-            }
-            #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket {
-                grid-template-columns: 240px;
-                padding-left: calc((100vw - 240px) / 2);
-                padding-right: calc((100vw - 240px) / 2);
             }
         }
-        @media only screen and (max-width: 239px) {
-            :root {
-                --width: 100vw;
-                --padding: 10px;
-
-                --nelson-author-width: 40%;
-                --nelson-author-subwidth: 35%;
-    
-                --speech-image-width: 100%;
-                --nelson-image-width: 50%;
-
-                --position-themes-top: 184px;
-                --position-themes-left: -2px;
-                --position-music-top: 216px;
-                --position-music-left: -2px;
-            }
-            .navbar {
-                grid-template:
-                "hide"    minmax(30px, auto)
-                "home" minmax(30px, auto)
-                "nav" minmax(30px, auto)
-                "table" minmax(30px, auto)
-                "settings" minmax(30px, auto)
-                / 160px;
-                grid-template-rows: 28px 28px 28px 28px 30px;
-                padding-left: var(--padding);
-                padding-right: var(--padding);
-            }
-            #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
-            .bracket-div {
-                display: none;
-            }
-        }
-
-
         
-            .announcement {
+            @media only screen and (min-width: 960px) {
+        :root {
+            --nelson-author-width: 135px;
+            --nelson-author-subwidth: 125px;
+
+            --speech-image-width: calc(var(--textwidth) * 0.5);
+            --speech-image-height: 80vh;
+            --nelson-image-width: calc(var(--textwidth) * 0.5);
+            --nelson-image-height: 300px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        :root {
+            --nelson-author-width: 135px;
+            --nelson-author-subwidth: 125px;
+
+            --speech-image-width: 90%;
+            --nelson-image-width: 50%;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        :root {
+            --nelson-author-width: 135px;
+            --nelson-author-subwidth: 125px;
+
+            --speech-image-width: 95%;
+            --nelson-image-width: 70%;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        :root {
+            --nelson-author-width: 100px;
+            --nelson-author-subwidth: 90px;
+
+            --speech-image-width: 95%;
+            --nelson-image-width: 100%;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        :root {
+            --nelson-author-width: 40%;
+            --nelson-author-subwidth: 35%;
+
+            --speech-image-width: 100%;
+            --nelson-image-width: 50%;
+        }
+    }
+    
+    .announcement {
         display: block;
         padding-left: 48px;
         padding-right: 40px;
@@ -1245,8 +997,8 @@
 
         margin-left: calc(var(--padding) / -6);
         margin-right: calc(var(--padding) / -6);
-        padding-left: calc(var(--padding) / 6 + 5px);
-        padding-right: calc(var(--padding) / 6 + 5px);
+        padding-left: calc(var(--padding) / 6);
+        padding-right: calc(var(--padding) / 6);
     }
     .announcement.broken, .speech-bubble.broken {
         overflow: hidden;
@@ -1326,8 +1078,8 @@
         border-radius: .4em;
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: calc(var(--padding) / 2.5 + 10px);
-        padding-right: calc(var(--padding) / 2.5 + 10px);
+        padding-left: calc(var(--padding) / 3);
+        padding-right: calc(var(--padding) / 3);
         margin-top: 24px;
         margin-bottom: 72px;
         margin-left: calc(var(--padding) / -3);
@@ -1797,6 +1549,68 @@
 </head>
 <header>
     <style>
+    @media only screen and (min-width: 960px) {
+        .navbar {
+            grid-template:
+            "home  nav table  settings  hide"     minmax(30px, auto)
+            / 160px 160px 160px 160px 160px;
+            grid-template-rows: 30px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .navbar {
+            grid-template:
+            "home   nav blank1 hide"    minmax(30px, auto)
+            "blank2  blank3 table settings"    minmax(30px, auto)
+            / 160px 160px 160px 160px;
+            grid-template-rows: 28px 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .navbar {
+            grid-template:
+            "home   nav hide"    minmax(30px, auto)
+            "blank1 table settings" minmax(30px, auto)
+            / 160px 160px 160px;
+            grid-template-rows: 28px 30px;
+        }
+        #nav-blank-2, #nav-blank-3 { display: none; }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .navbar {
+            grid-template:
+            "hide"    minmax(30px, auto)
+            "home" minmax(30px, auto)
+            "nav" minmax(30px, auto)
+            "table" minmax(30px, auto)
+            "settings" minmax(30px, auto)
+            / 160px;
+            grid-template-rows: 28px 28px 28px 28px 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
+    }
+    @media only screen and (max-width: 240px) {
+        .navbar {
+            grid-template:
+            "hide"    minmax(30px, auto)
+            "home" minmax(30px, auto)
+            "nav" minmax(30px, auto)
+            "table" minmax(30px, auto)
+            "settings" minmax(30px, auto)
+            / 160px;
+            grid-template-rows: 28px 28px 28px 28px 30px;
+            padding-left: var(--padding);
+            padding-right: var(--padding);
+        }
+        #nav-blank-1, #nav-blank-2, #nav-blank-3 { display: none; }
+    }
     .navbar {
         box-sizing: border-box;
         z-index: 10;
@@ -1856,8 +1670,8 @@
         padding: 0px;
     }
     #themes {
-        top: var(--position-themes-top);
-        margin-left: var(--position-themes-left);
+        top: 40px;
+        margin-left: 158px;
     }
     .settings {
         display: flex;
@@ -1902,9 +1716,9 @@
     }
 
     #music {
-        top: var(--position-music-top);
-        margin-left: var(--position-music-left);
-        max-height: 60vh;
+        top: 72px;
+        margin-left: -162px;
+        max-height: 70vh;
         overflow-x: hidden;
     }
     #music>.settings>.navbutton {
@@ -2212,8 +2026,8 @@
 <div class="ryan speech-bubble">
 <p>btw outside of canon I’m Doing Experiments To Pass Time™</p>
 <p>AU Bracket For Grand Because Why The Hell Not</p>
-<p></p><div popover="" class="image-popover" id="image-popover-0" role="img" aria-describedby="image-popover-0-id"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/1/src/assets/images/pages/1/2022-03-06 bracket.png.png" loading="lazy" decoding="async" width="936" height="1744"> <p id="image-popover-0-id" class="imagePopoverAlt">A 64 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-0-id" popovertarget="image-popover-0"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-06 bracket.png.webp 936w"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-06 bracket.png.png" width="936" height="1744"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-0" role="img" aria-describedby="image-popover-0-id"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=png&via=transform" loading="lazy" decoding="async" width="936" height="1744"> <p id="image-popover-0-id" class="imagePopoverAlt">A 64 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-0-id" popovertarget="image-popover-0"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=webp&via=transform 936w"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=png&via=transform" width="936" height="1744"></picture></button><p></p>
 <p>Double Elim in full. None of the sub bracket bts</p>
 <p>because why not I guess</p>
 </div>
@@ -5586,6 +5400,33 @@
 <h2 id="Winner's-Round-1:-Top-64"><a href="#winners-round-1">Winner’s Round 1: Top 64</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -5975,8 +5816,8 @@
 <p><span title="2022-03-06 21:28:31">Brush:</span></p>
 <div>
 <p>zeroing in on what matters</p>
-<p></p><div popover="" class="image-popover" id="image-popover-1" role="img" aria-describedby="image-popover-1-id"><img alt="Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr." src="/1/src/assets/images/pages/1/2022-03-06 what_matters.png.png" loading="lazy" decoding="async" width="208" height="77"> <p id="image-popover-1-id" class="imagePopoverAlt">Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-1-id" popovertarget="image-popover-1"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-06 what_matters.png.webp 208w"><img alt="Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-06 what_matters.png.png" width="208" height="77"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-1" role="img" aria-describedby="image-popover-1-id"><img alt="Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20what_matters.png&width=208&format=png&via=transform" loading="lazy" decoding="async" width="208" height="77"> <p id="image-popover-1-id" class="imagePopoverAlt">Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-1-id" popovertarget="image-popover-1"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20what_matters.png&width=208&format=webp&via=transform 208w"><img alt="Two cropped matchups: Subzero Amalgam vs Alabaster Uppercut, and My Grunk vs Pink DK Sr." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20what_matters.png&width=208&format=png&via=transform" width="208" height="77"></picture></button><p></p>
 </div>
 <p><span title="2022-03-06 21:28:54">Brush:</span></p>
 <p>also junie is there to Kill</p>
@@ -6114,8 +5955,8 @@ hoedown 2-0’d dr order. lol</p>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
 <p>???????????????????</p>
-<p></p><div popover="" class="image-popover" id="image-popover-2" role="img" aria-describedby="image-popover-2-id"><img alt="A Smash Bros victory screen showing Fly Bi beat Plum K Rool." src="/1/src/assets/images/pages/1/2022-03-08 fear.png.png" loading="lazy" decoding="async" width="909" height="505"> <p id="image-popover-2-id" class="imagePopoverAlt">A Smash Bros victory screen showing Fly Bi beat Plum K Rool.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-2-id" popovertarget="image-popover-2"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 fear.png.webp 909w"><img alt="A Smash Bros victory screen showing Fly Bi beat Plum K Rool." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 fear.png.png" width="909" height="505"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-2" role="img" aria-describedby="image-popover-2-id"><img alt="A Smash Bros victory screen showing Fly Bi beat Plum K Rool." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20fear.png&width=909&format=png&via=transform" loading="lazy" decoding="async" width="909" height="505"> <p id="image-popover-2-id" class="imagePopoverAlt">A Smash Bros victory screen showing Fly Bi beat Plum K Rool.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-2-id" popovertarget="image-popover-2"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20fear.png&width=909&format=webp&via=transform 909w"><img alt="A Smash Bros victory screen showing Fly Bi beat Plum K Rool." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20fear.png&width=909&format=png&via=transform" width="909" height="505"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -6214,8 +6055,8 @@ Then I tested a match with <span class="spoiler"><input type="checkbox" class="s
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
 <p>for context here is the opening bracket</p>
-<p></p><div popover="" class="image-popover" id="image-popover-3" role="img" aria-describedby="image-popover-3-id"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/1/src/assets/images/pages/1/2022-03-06 bracket.png.png" loading="lazy" decoding="async" width="936" height="1744"> <p id="image-popover-3-id" class="imagePopoverAlt">A 64 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-3-id" popovertarget="image-popover-3"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-06 bracket.png.webp 936w"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-06 bracket.png.png" width="936" height="1744"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-3" role="img" aria-describedby="image-popover-3-id"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=png&via=transform" loading="lazy" decoding="async" width="936" height="1744"> <p id="image-popover-3-id" class="imagePopoverAlt">A 64 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-3-id" popovertarget="image-popover-3"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=webp&via=transform 936w"><img alt="A 64 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-06%20bracket.png&width=936&format=png&via=transform" width="936" height="1744"></picture></button><p></p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-08 02:39:05">Lemon:</span></p>
@@ -6248,8 +6089,8 @@ Then I tested a match with <span class="spoiler"><input type="checkbox" class="s
 <p>my grunk more like my beloved</p>
 <p><span title="2022-03-08 02:42:00">Brush:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-4" role="img" aria-describedby="image-popover-4-id"><img alt="Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text our grunk." src="/1/src/assets/images/pages/1/2022-03-08 our_grunk.png.png" loading="lazy" decoding="async" width="800" height="450"> <p id="image-popover-4-id" class="imagePopoverAlt">Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text “our grunk”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-4-id" popovertarget="image-popover-4"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 our_grunk.png.webp 800w"><img alt="Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text our grunk." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 our_grunk.png.png" width="800" height="450"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-4" role="img" aria-describedby="image-popover-4-id"><img alt="Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text our grunk." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20our_grunk.png&width=800&format=png&via=transform" loading="lazy" decoding="async" width="800" height="450"> <p id="image-popover-4-id" class="imagePopoverAlt">Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text “our grunk”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-4-id" popovertarget="image-popover-4"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20our_grunk.png&width=800&format=webp&via=transform 800w"><img alt="Bugs Bunny with a transparent Soviet Union flag edited over the whole image, with the text our grunk." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20our_grunk.png&width=800&format=png&via=transform" width="800" height="450"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 02:42:30">Wybie:</span></p>
 <p>grunk pit has become canon in my brain i am attached</p>
@@ -6373,8 +6214,8 @@ Then I tested a match with <span class="spoiler"><input type="checkbox" class="s
 <p><span title="2022-03-08 03:06:22">Insider2000:</span></p>
 <div>
 <p>Larry mimicking Bayonetta has all the vibes of Kerminetta.</p>
-<p></p><div popover="" class="image-popover" id="image-popover-5" role="img" aria-describedby="image-popover-5-id"><img alt="" src="/1/src/assets/images/pages/1/2022-03-08 Kerminetta.jpg.jpeg" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-5-id" class="imagePopoverAlt"></p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-5-id" popovertarget="image-popover-5"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 Kerminetta.jpg.webp 1280w"><img alt="" loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 Kerminetta.jpg.jpeg" width="1280" height="720"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-5" role="img" aria-describedby="image-popover-5-id"><img alt="" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20Kerminetta.jpg&width=1280&format=jpeg&via=transform" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-5-id" class="imagePopoverAlt"></p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-5-id" popovertarget="image-popover-5"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20Kerminetta.jpg&width=1280&format=webp&via=transform 1280w"><img alt="" loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20Kerminetta.jpg&width=1280&format=jpeg&via=transform" width="1280" height="720"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 03:07:55">Raven:</span></p>
 <p>He wanted to feel pretty!</p>
@@ -6411,8 +6252,8 @@ The first comprehensive update I will give you all are the complete list of the 
 <p><span title="2022-03-08 03:27:08">Prince:</span></p>
 <div>
 <p>like this one</p>
-<p></p><div popover="" class="image-popover" id="image-popover-6" role="img" aria-describedby="image-popover-6-id"><img alt="Golden Spiral's Smash render edited to be standing on a gloomy cartoon dock." src="/1/src/assets/images/pages/1/2022-03-08 dock.png.png" loading="lazy" decoding="async" width="1235" height="712"> <p id="image-popover-6-id" class="imagePopoverAlt">Golden Spiral’s Smash render edited to be standing on a gloomy cartoon dock.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-6-id" popovertarget="image-popover-6"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 dock.png.webp 1235w"><img alt="Golden Spiral's Smash render edited to be standing on a gloomy cartoon dock." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 dock.png.png" width="1235" height="712"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-6" role="img" aria-describedby="image-popover-6-id"><img alt="Golden Spiral's Smash render edited to be standing on a gloomy cartoon dock." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock.png&width=1235&format=png&via=transform" loading="lazy" decoding="async" width="1235" height="712"> <p id="image-popover-6-id" class="imagePopoverAlt">Golden Spiral’s Smash render edited to be standing on a gloomy cartoon dock.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-6-id" popovertarget="image-popover-6"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock.png&width=1235&format=webp&via=transform 1235w"><img alt="Golden Spiral's Smash render edited to be standing on a gloomy cartoon dock." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock.png&width=1235&format=png&via=transform" width="1235" height="712"></picture></button><p></p>
 </div>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
@@ -6426,6 +6267,33 @@ The first comprehensive update I will give you all are the complete list of the 
 <h2 id="Loser's-Round-1:-Top-64"><a href="#losers-round-1">Loser’s Round 1: Top 64</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -6687,8 +6555,8 @@ Eliminated by Joe Drift and Venus</p>
 <p>oh boy</p>
 <p><span title="2022-03-08 03:36:35">Prince:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-7" role="img" aria-describedby="image-popover-7-id"><img alt="Mac &amp; Cheese's Smash render edited to be standing on a gloomy cartoon dock." src="/1/src/assets/images/pages/1/2022-03-08 dock2.png.png" loading="lazy" decoding="async" width="1377" height="739"> <p id="image-popover-7-id" class="imagePopoverAlt">Mac &amp; Cheese’s Smash render edited to be standing on a gloomy cartoon dock.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-7-id" popovertarget="image-popover-7"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 dock2.png.webp 1377w"><img alt="Mac &amp; Cheese's Smash render edited to be standing on a gloomy cartoon dock." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 dock2.png.png" width="1377" height="739"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-7" role="img" aria-describedby="image-popover-7-id"><img alt="Mac &amp; Cheese's Smash render edited to be standing on a gloomy cartoon dock." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock2.png&width=1377&format=png&via=transform" loading="lazy" decoding="async" width="1377" height="739"> <p id="image-popover-7-id" class="imagePopoverAlt">Mac &amp; Cheese’s Smash render edited to be standing on a gloomy cartoon dock.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-7-id" popovertarget="image-popover-7"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock2.png&width=1377&format=webp&via=transform 1377w"><img alt="Mac &amp; Cheese's Smash render edited to be standing on a gloomy cartoon dock." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20dock2.png&width=1377&format=png&via=transform" width="1377" height="739"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 03:36:55">Bubbly:</span></p>
 <p>this is so sad</p>
@@ -6705,8 +6573,8 @@ Eliminated by Joe Drift and Venus</p>
 <p><span title="2022-03-08 03:39:05">ang:</span></p>
 <div>
 <p>images that aged poorly /j</p>
-<p></p><div popover="" class="image-popover" id="image-popover-8" role="img" aria-describedby="image-popover-8-id"><img alt="A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text IF MAC CAN CAN DO IT SO CAN YOU." src="/1/src/assets/images/pages/1/2022-03-08 motivator.png.png" loading="lazy" decoding="async" width="750" height="600"> <p id="image-popover-8-id" class="imagePopoverAlt">A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text “IF MAC CAN CAN DO IT SO CAN YOU”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-8-id" popovertarget="image-popover-8"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 motivator.png.webp 750w"><img alt="A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text IF MAC CAN CAN DO IT SO CAN YOU." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 motivator.png.png" width="750" height="600"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-8" role="img" aria-describedby="image-popover-8-id"><img alt="A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text IF MAC CAN CAN DO IT SO CAN YOU." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20motivator.png&width=750&format=png&via=transform" loading="lazy" decoding="async" width="750" height="600"> <p id="image-popover-8-id" class="imagePopoverAlt">A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text “IF MAC CAN CAN DO IT SO CAN YOU”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-8-id" popovertarget="image-popover-8"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20motivator.png&width=750&format=webp&via=transform 750w"><img alt="A motivational poster depicting a winscreen with Mac &amp; Cheese beating Dani, in the style of a demotivator, with the text IF MAC CAN CAN DO IT SO CAN YOU." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20motivator.png&width=750&format=png&via=transform" width="750" height="600"></picture></button><p></p>
 </div>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
@@ -6822,7 +6690,7 @@ Eliminated by Peppermint and Cha Cha Slide</p>
 <p><span title="2022-03-08 04:00:42">Wonder:</span></p>
 <p>WHO ELIMINATED JO</p>
 <p><span title="2022-03-08 04:00:47">Brush:</span></p>
-<p>j. johannsen <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p>j. johannsen <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
@@ -7117,8 +6985,8 @@ Eliminated by DAN and GOLDEN SPIRAL</p>
 <div class="ryan speech-bubble">
 <p>also spoilers for the next match but its gonna be a thing<br>
 the former will be wearing his new shirt</p>
-<p></p><div popover="" class="image-popover" id="image-popover-9" role="img" aria-describedby="image-popover-9-id"><img alt="A bracket screenshot showing Bing vs Alabaster Uppercut." src="/1/src/assets/images/pages/1/2022-03-08 bing vs al.png.png" loading="lazy" decoding="async" width="221" height="59"> <p id="image-popover-9-id" class="imagePopoverAlt">A bracket screenshot showing Bing vs Alabaster Uppercut.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-9-id" popovertarget="image-popover-9"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 bing vs al.png.webp 221w"><img alt="A bracket screenshot showing Bing vs Alabaster Uppercut." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 bing vs al.png.png" width="221" height="59"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-9" role="img" aria-describedby="image-popover-9-id"><img alt="A bracket screenshot showing Bing vs Alabaster Uppercut." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20bing%20vs%20al.png&width=221&format=png&via=transform" loading="lazy" decoding="async" width="221" height="59"> <p id="image-popover-9-id" class="imagePopoverAlt">A bracket screenshot showing Bing vs Alabaster Uppercut.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-9-id" popovertarget="image-popover-9"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20bing%20vs%20al.png&width=221&format=webp&via=transform 221w"><img alt="A bracket screenshot showing Bing vs Alabaster Uppercut." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20bing%20vs%20al.png&width=221&format=png&via=transform" width="221" height="59"></picture></button><p></p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-08 04:26:45">Bubbly:</span></p>
@@ -7229,8 +7097,8 @@ Eliminated by HOEDOWN and DUCK DUCK GO</p>
 <p>LETS GOOOOOOOO</p>
 <p><span title="2022-03-08 04:44:33">Insider2000:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-10" role="img" aria-describedby="image-popover-10-id"><img alt="A distorted JPEG showing someone with red hair with a purple tube that says Good." src="/1/src/assets/images/pages/1/2022-03-08 good.jpg.jpeg" loading="lazy" decoding="async" width="277" height="476"> <p id="image-popover-10-id" class="imagePopoverAlt">A distorted JPEG showing someone with red hair with a purple tube that says “Good”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-10-id" popovertarget="image-popover-10"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 good.jpg.webp 277w"><img alt="A distorted JPEG showing someone with red hair with a purple tube that says Good." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 good.jpg.jpeg" width="277" height="476"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-10" role="img" aria-describedby="image-popover-10-id"><img alt="A distorted JPEG showing someone with red hair with a purple tube that says Good." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20good.jpg&width=277&format=jpeg&via=transform" loading="lazy" decoding="async" width="277" height="476"> <p id="image-popover-10-id" class="imagePopoverAlt">A distorted JPEG showing someone with red hair with a purple tube that says “Good”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-10-id" popovertarget="image-popover-10"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20good.jpg&width=277&format=webp&via=transform 277w"><img alt="A distorted JPEG showing someone with red hair with a purple tube that says Good." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20good.jpg&width=277&format=jpeg&via=transform" width="277" height="476"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 04:44:52">J0rt:</span></p>
 <p>LET’S GO</p>
@@ -7670,8 +7538,8 @@ Eliminated by LARRY and IGGY KOOPA</p>
 <div class="nelson">
 <p><span title="2022-03-08 06:02:43">Wonder:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-11" role="img" aria-describedby="image-popover-11-id"><img alt="Flashing red all-caps text in a seven segment display like old clocks, saying TILT." src="/1/src/assets/images/pages/1/2022-03-08 tilt.gif.gif" loading="lazy" decoding="async" width="640" height="388"> <p id="image-popover-11-id" class="imagePopoverAlt">Flashing red all-caps text in a seven segment display like old clocks, saying “TILT”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-11-id" popovertarget="image-popover-11"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 tilt.gif.webp 640w"><img alt="Flashing red all-caps text in a seven segment display like old clocks, saying TILT." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 tilt.gif.gif" width="640" height="388"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-11" role="img" aria-describedby="image-popover-11-id"><img alt="Flashing red all-caps text in a seven segment display like old clocks, saying TILT." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20tilt.gif&width=640&format=gif&via=transform" loading="lazy" decoding="async" width="640" height="388"> <p id="image-popover-11-id" class="imagePopoverAlt">Flashing red all-caps text in a seven segment display like old clocks, saying “TILT”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-11-id" popovertarget="image-popover-11"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20tilt.gif&width=640&format=webp&via=transform 640w"><img alt="Flashing red all-caps text in a seven segment display like old clocks, saying TILT." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20tilt.gif&width=640&format=gif&via=transform" width="640" height="388"></picture></button><p></p>
 </div>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
@@ -7760,7 +7628,7 @@ Eliminated by LARRY and IGGY KOOPA</p>
 <p><span title="2022-03-08 06:13:26">Aubz:</span></p>
 <p>oh my god</p>
 <p><span title="2022-03-08 06:14:31">ang:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/MystaScared2.png.webp 128w"><img alt=":MystaScared2" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/MystaScared2.png.png" class="emoji" title=":MystaScared2:" width="128" height="128"></picture> Fear?</p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FMystaScared2.png&width=128&format=webp&via=transform 128w"><img alt=":MystaScared2" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FMystaScared2.png&width=128&format=png&via=transform" title=":MystaScared2:" width="128" height="128"></picture> Fear?</p>
 </div>
 </div>
 <p>Okay so</p>
@@ -7782,7 +7650,7 @@ Eliminated by LARRY and IGGY KOOPA</p>
 <div class="chatter">
 <div class="nelson">
 <p><span title="2022-03-08 06:16:59">Brush:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 <p><span title="2022-03-08 06:17:04">Wonder:</span></p>
 <p>WH</p>
 <p><span title="2022-03-08 06:17:06">Bubbly:</span></p>
@@ -7790,7 +7658,7 @@ Eliminated by LARRY and IGGY KOOPA</p>
 <p><span title="2022-03-08 06:17:11">Insider2000:</span></p>
 <p>WHA~</p>
 <p><span title="2022-03-08 06:17:11">Prince:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 <p><span title="2022-03-08 06:17:16">Brush:</span></p>
 <p>RUDE</p>
 <p><span title="2022-03-08 06:17:17">Bubbly:</span></p>
@@ -7893,6 +7761,33 @@ Square Dance</p>
 <h2 id="Winner's-Round-2:-Top-48"><a href="#winners-round-2">Winner’s Round 2: Top 48</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -8232,8 +8127,8 @@ Square Dance</p>
 <div>
 <p>“I’m already half Xenahort!”<br>
 Blonde Sora:</p>
-<p></p><div popover="" class="image-popover" id="image-popover-12" role="img" aria-describedby="image-popover-12-id"><img alt="A woman lying in bed." src="/1/src/assets/images/pages/1/2022-03-08 sleep.gif.gif" loading="lazy" decoding="async" width="364" height="202"> <p id="image-popover-12-id" class="imagePopoverAlt">A woman lying in bed.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-12-id" popovertarget="image-popover-12"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 sleep.gif.webp 364w"><img alt="A woman lying in bed." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 sleep.gif.gif" width="364" height="202"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-12" role="img" aria-describedby="image-popover-12-id"><img alt="A woman lying in bed." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20sleep.gif&width=364&format=gif&via=transform" loading="lazy" decoding="async" width="364" height="202"> <p id="image-popover-12-id" class="imagePopoverAlt">A woman lying in bed.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-12-id" popovertarget="image-popover-12"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20sleep.gif&width=364&format=webp&via=transform 364w"><img alt="A woman lying in bed." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20sleep.gif&width=364&format=gif&via=transform" width="364" height="202"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 06:46:54">Wonder:</span></p>
 <p>oh damn, i’m missing out <em>a lot</em></p>
@@ -8522,8 +8417,8 @@ Blonde Sora:</p>
 <p><span title="2022-03-08 07:37:13">a mouse:</span></p>
 <div>
 <p>we’re all gathered around one of these mfs</p>
-<p></p><div popover="" class="image-popover" id="image-popover-13" role="img" aria-describedby="image-popover-13-id"><img alt="An old timey wood-cased radio." src="/1/src/assets/images/pages/1/2022-03-08 radio.jpg.jpeg" loading="lazy" decoding="async" width="640" height="640"> <p id="image-popover-13-id" class="imagePopoverAlt">An old timey wood-cased radio.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-13-id" popovertarget="image-popover-13"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 radio.jpg.webp 640w"><img alt="An old timey wood-cased radio." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 radio.jpg.jpeg" width="640" height="640"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-13" role="img" aria-describedby="image-popover-13-id"><img alt="An old timey wood-cased radio." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20radio.jpg&width=640&format=jpeg&via=transform" loading="lazy" decoding="async" width="640" height="640"> <p id="image-popover-13-id" class="imagePopoverAlt">An old timey wood-cased radio.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-13-id" popovertarget="image-popover-13"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20radio.jpg&width=640&format=webp&via=transform 640w"><img alt="An old timey wood-cased radio." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20radio.jpg&width=640&format=jpeg&via=transform" width="640" height="640"></picture></button><p></p>
 </div>
 <p><span title="2022-03-08 07:37:20">Brush:</span></p>
 <p>Yeah</p>
@@ -8556,7 +8451,7 @@ Blonde Sora:</p>
 <p><span title="2022-03-08 07:42:14">Bubbly:</span></p>
 <p>OOHHH</p>
 <p><span title="2022-03-08 07:42:16">Brush:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 <p><span title="2022-03-08 07:42:20">Bubbly:</span></p>
 <p>WAHH</p>
 <p><span title="2022-03-08 07:42:20">Insider2000:</span></p>
@@ -8564,7 +8459,7 @@ Blonde Sora:</p>
 <p><span title="2022-03-08 07:42:21">Wonder:</span></p>
 <p>OUGHHHHHHHHH</p>
 <p><span title="2022-03-08 07:42:27">Insider2000:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 <p><span title="2022-03-08 07:42:40">Wonder:</span></p>
 <p>KILL SUBZERO</p>
 <p><span title="2022-03-08 07:42:40">Brush:</span></p>
@@ -8789,8 +8684,8 @@ go full on KOF</p>
 <div class="ryan speech-bubble">
 <p>before I go</p>
 <p>here is the losers bracket that will be encountered soon because half of these matchups hurt &lt;3</p>
-<p></p><div popover="" class="image-popover" id="image-popover-14" role="img" aria-describedby="image-popover-14-id"><img alt="A 20 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/1/src/assets/images/pages/1/2022-03-08 losers.png.png" loading="lazy" decoding="async" width="230" height="560"> <p id="image-popover-14-id" class="imagePopoverAlt">A 20 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-14-id" popovertarget="image-popover-14"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-08 losers.png.webp 230w"><img alt="A 20 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-08 losers.png.png" width="230" height="560"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-14" role="img" aria-describedby="image-popover-14-id"><img alt="A 20 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20losers.png&width=230&format=png&via=transform" loading="lazy" decoding="async" width="230" height="560"> <p id="image-popover-14-id" class="imagePopoverAlt">A 20 character Challonge bracket, to be replicated in the “Bracket” section so no need to list 32 matchups here.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-14-id" popovertarget="image-popover-14"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20losers.png&width=230&format=webp&via=transform 230w"><img alt="A 20 character Challonge bracket, to be replicated in the Bracket section so no need to list 32 matchups here." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-08%20losers.png&width=230&format=png&via=transform" width="230" height="560"></picture></button><p></p>
 </div>
 <hr>
 <p><span id="part-3"> </span></p>
@@ -9001,12 +8896,12 @@ I know Ryan just said that but it took me so much effort to type Salty’s name 
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
 <p>Context: This is a tournament I’m running on my end. Before we continue I’ll post the bracket thus far</p>
-<p></p><div popover="" class="image-popover" id="image-popover-15" role="img" aria-describedby="image-popover-15-id"><img alt="The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports." src="/1/src/assets/images/pages/1/2022-03-09 bracket 1.png.png" loading="lazy" decoding="async" width="1001" height="696"> <p id="image-popover-15-id" class="imagePopoverAlt">The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-15-id" popovertarget="image-popover-15"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 bracket 1.png.webp 1001w"><img alt="The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 bracket 1.png.png" width="1001" height="696"></picture></button><p></p>
-<p></p><div popover="" class="image-popover" id="image-popover-16" role="img" aria-describedby="image-popover-16-id"><img alt="The second bracket fragment." src="/1/src/assets/images/pages/1/2022-03-09 bracket 2.png.png" loading="lazy" decoding="async" width="998" height="694"> <p id="image-popover-16-id" class="imagePopoverAlt">The second bracket fragment.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-16-id" popovertarget="image-popover-16"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 bracket 2.png.webp 998w"><img alt="The second bracket fragment." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 bracket 2.png.png" width="998" height="694"></picture></button><p></p>
-<p></p><div popover="" class="image-popover" id="image-popover-17" role="img" aria-describedby="image-popover-17-id"><img alt="The third bracket fragment." src="/1/src/assets/images/pages/1/2022-03-09 bracket 3.png.png" loading="lazy" decoding="async" width="1008" height="750"> <p id="image-popover-17-id" class="imagePopoverAlt">The third bracket fragment.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-17-id" popovertarget="image-popover-17"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 bracket 3.png.webp 1008w"><img alt="The third bracket fragment." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 bracket 3.png.png" width="1008" height="750"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-15" role="img" aria-describedby="image-popover-15-id"><img alt="The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%201.png&width=1001&format=png&via=transform" loading="lazy" decoding="async" width="1001" height="696"> <p id="image-popover-15-id" class="imagePopoverAlt">The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-15-id" popovertarget="image-popover-15"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%201.png&width=1001&format=webp&via=transform 1001w"><img alt="The first of three fragments showing the bracket thus far, including all reported wins and losses. These are too detailed to describe here, but all relevant information is on the page via brackets and match reports." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%201.png&width=1001&format=png&via=transform" width="1001" height="696"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-16" role="img" aria-describedby="image-popover-16-id"><img alt="The second bracket fragment." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%202.png&width=998&format=png&via=transform" loading="lazy" decoding="async" width="998" height="694"> <p id="image-popover-16-id" class="imagePopoverAlt">The second bracket fragment.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-16-id" popovertarget="image-popover-16"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%202.png&width=998&format=webp&via=transform 998w"><img alt="The second bracket fragment." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%202.png&width=998&format=png&via=transform" width="998" height="694"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-17" role="img" aria-describedby="image-popover-17-id"><img alt="The third bracket fragment." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%203.png&width=1008&format=png&via=transform" loading="lazy" decoding="async" width="1008" height="750"> <p id="image-popover-17-id" class="imagePopoverAlt">The third bracket fragment.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-17-id" popovertarget="image-popover-17"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%203.png&width=1008&format=webp&via=transform 1008w"><img alt="The third bracket fragment." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20bracket%203.png&width=1008&format=png&via=transform" width="1008" height="750"></picture></button><p></p>
 <div class="chatter">
 <p>Larry update: Larry is going normal Dedede</p>
 </div>
@@ -9019,10 +8914,10 @@ I know Ryan just said that but it took me so much effort to type Salty’s name 
 <p>oh wow i didnt realize both val <em>and</em> quad were sent to losers</p>
 <p><span title="2022-03-09 00:03:53">Wonder:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-18" role="img" aria-describedby="image-popover-18-id"><img alt="A bracket screenshot showing Peppermint vs Plum K Rool." src="/1/src/assets/images/pages/1/2022-03-09 pep v rool.png.png" loading="lazy" decoding="async" width="283" height="91"> <p id="image-popover-18-id" class="imagePopoverAlt">A bracket screenshot showing Peppermint vs Plum K Rool.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-18-id" popovertarget="image-popover-18"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 pep v rool.png.webp 283w"><img alt="A bracket screenshot showing Peppermint vs Plum K Rool." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 pep v rool.png.png" width="283" height="91"></picture></button><p></p>
-<p></p><div popover="" class="image-popover" id="image-popover-19" role="img" aria-describedby="image-popover-19-id"><img alt="Mario relaxing on a plush chair." src="/1/src/assets/images/pages/1/2022-03-09 mario.png.png" loading="lazy" decoding="async" width="500" height="500"> <p id="image-popover-19-id" class="imagePopoverAlt">Mario relaxing on a plush chair.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-19-id" popovertarget="image-popover-19"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 mario.png.webp 500w"><img alt="Mario relaxing on a plush chair." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 mario.png.png" width="500" height="500"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-18" role="img" aria-describedby="image-popover-18-id"><img alt="A bracket screenshot showing Peppermint vs Plum K Rool." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20pep%20v%20rool.png&width=283&format=png&via=transform" loading="lazy" decoding="async" width="283" height="91"> <p id="image-popover-18-id" class="imagePopoverAlt">A bracket screenshot showing Peppermint vs Plum K Rool.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-18-id" popovertarget="image-popover-18"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20pep%20v%20rool.png&width=283&format=webp&via=transform 283w"><img alt="A bracket screenshot showing Peppermint vs Plum K Rool." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20pep%20v%20rool.png&width=283&format=png&via=transform" width="283" height="91"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-19" role="img" aria-describedby="image-popover-19-id"><img alt="Mario relaxing on a plush chair." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20mario.png&width=500&format=png&via=transform" loading="lazy" decoding="async" width="500" height="500"> <p id="image-popover-19-id" class="imagePopoverAlt">Mario relaxing on a plush chair.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-19-id" popovertarget="image-popover-19"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20mario.png&width=500&format=webp&via=transform 500w"><img alt="Mario relaxing on a plush chair." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20mario.png&width=500&format=png&via=transform" width="500" height="500"></picture></button><p></p>
 </div>
 <p><span title="2022-03-09 00:03:56">J0rt:</span></p>
 <p>thank you so much for the larry updates</p>
@@ -9098,8 +8993,8 @@ I know Ryan just said that but it took me so much effort to type Salty’s name 
 <div class="nelson">
 <p><span title="2022-03-09 00:10:43">a mouse:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-20" role="img" aria-describedby="image-popover-20-id"><img alt="A clip from The Road to El Dorado where two guys say Both? Both is good." src="/1/src/assets/images/pages/1/2022-03-09 both is good.gif.gif" loading="lazy" decoding="async" width="398" height="223"> <p id="image-popover-20-id" class="imagePopoverAlt">A clip from The Road to El Dorado where two guys say “Both? Both is good.”</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-20-id" popovertarget="image-popover-20"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 both is good.gif.webp 398w"><img alt="A clip from The Road to El Dorado where two guys say Both? Both is good." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 both is good.gif.gif" width="398" height="223"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-20" role="img" aria-describedby="image-popover-20-id"><img alt="A clip from The Road to El Dorado where two guys say Both? Both is good." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20both%20is%20good.gif&width=398&format=gif&via=transform" loading="lazy" decoding="async" width="398" height="223"> <p id="image-popover-20-id" class="imagePopoverAlt">A clip from The Road to El Dorado where two guys say “Both? Both is good.”</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-20-id" popovertarget="image-popover-20"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20both%20is%20good.gif&width=398&format=webp&via=transform 398w"><img alt="A clip from The Road to El Dorado where two guys say Both? Both is good." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20both%20is%20good.gif&width=398&format=gif&via=transform" width="398" height="223"></picture></button><p></p>
 </div>
 <p><span title="2022-03-09 00:10:43">Brush:</span></p>
 <p>bringing someone back from the dead</p>
@@ -9219,6 +9114,33 @@ I know Ryan just said that but it took me so much effort to type Salty’s name 
 <h2 id="Loser's-Round-2:-Top-48"><a href="#losers-round-2">Loser’s Round 2: Top 48</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -9463,8 +9385,8 @@ I know Ryan just said that but it took me so much effort to type Salty’s name 
 <div>
 <p>Jimbo: “Ugh, I can’t believe Spotify is down! How can I listen to 100 Gecs now?!?”<br>
 Dadondorf and Sans:</p>
-<p></p><div popover="" class="image-popover" id="image-popover-21" role="img" aria-describedby="image-popover-21-id"><img alt="Sans Undertale playing the trombone." src="/1/src/assets/images/pages/1/2022-03-09 sans trumpet.jpg.jpeg" loading="lazy" decoding="async" width="300" height="168"> <p id="image-popover-21-id" class="imagePopoverAlt">Sans Undertale playing the trombone.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-21-id" popovertarget="image-popover-21"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 sans trumpet.jpg.webp 300w"><img alt="Sans Undertale playing the trombone." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 sans trumpet.jpg.jpeg" width="300" height="168"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-21" role="img" aria-describedby="image-popover-21-id"><img alt="Sans Undertale playing the trombone." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20sans%20trumpet.jpg&width=300&format=jpeg&via=transform" loading="lazy" decoding="async" width="300" height="168"> <p id="image-popover-21-id" class="imagePopoverAlt">Sans Undertale playing the trombone.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-21-id" popovertarget="image-popover-21"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20sans%20trumpet.jpg&width=300&format=webp&via=transform 300w"><img alt="Sans Undertale playing the trombone." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20sans%20trumpet.jpg&width=300&format=jpeg&via=transform" width="300" height="168"></picture></button><p></p>
 </div>
 <p><span title="2022-03-09 00:23:42">Insider2000:</span></p>
 <p>“SHUT UP, DAD!”</p>
@@ -9569,8 +9491,8 @@ KILL</p>
 <p>!</p>
 <p><span title="2022-03-09 00:52:06">Insider2000:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-22" role="img" aria-describedby="image-popover-22-id"><img alt="Will Smith's face cropped from the Fresh Prince of Bel Air." src="/1/src/assets/images/pages/1/2022-03-09 fesh.png.png" loading="lazy" decoding="async" width="75" height="72"> <p id="image-popover-22-id" class="imagePopoverAlt">Will Smith’s face cropped from the Fresh Prince of Bel Air.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-22-id" popovertarget="image-popover-22"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 fesh.png.webp 75w"><img alt="Will Smith's face cropped from the Fresh Prince of Bel Air." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 fesh.png.png" width="75" height="72"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-22" role="img" aria-describedby="image-popover-22-id"><img alt="Will Smith's face cropped from the Fresh Prince of Bel Air." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20fesh.png&width=75&format=png&via=transform" loading="lazy" decoding="async" width="75" height="72"> <p id="image-popover-22-id" class="imagePopoverAlt">Will Smith’s face cropped from the Fresh Prince of Bel Air.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-22-id" popovertarget="image-popover-22"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20fesh.png&width=75&format=webp&via=transform 75w"><img alt="Will Smith's face cropped from the Fresh Prince of Bel Air." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20fesh.png&width=75&format=png&via=transform" width="75" height="72"></picture></button><p></p>
 </div>
 </div>
 </div>
@@ -9663,8 +9585,8 @@ Eliminated by HACKERMAN J0HN and PLUM K ROOL</p>
 <p>KILL!</p>
 <p><span title="2022-03-09 01:05:01">Bubbly:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-23" role="img" aria-describedby="image-popover-23-id"><img alt="A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says white woman down!" src="/1/src/assets/images/pages/1/2022-03-09 white woman down.png.png" loading="lazy" decoding="async" width="490" height="490"> <p id="image-popover-23-id" class="imagePopoverAlt">A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says “white woman down!”</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-23-id" popovertarget="image-popover-23"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 white woman down.png.webp 490w"><img alt="A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says white woman down!" loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 white woman down.png.png" width="490" height="490"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-23" role="img" aria-describedby="image-popover-23-id"><img alt="A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says white woman down!" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20white%20woman%20down.png&width=490&format=png&via=transform" loading="lazy" decoding="async" width="490" height="490"> <p id="image-popover-23-id" class="imagePopoverAlt">A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says “white woman down!”</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-23-id" popovertarget="image-popover-23"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20white%20woman%20down.png&width=490&format=webp&via=transform 490w"><img alt="A celebratory image with a grinning star, thumbs up, balloons, and a party popper - big full capital text says white woman down!" loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20white%20woman%20down.png&width=490&format=png&via=transform" width="490" height="490"></picture></button><p></p>
 </div>
 <p><span title="2022-03-09 01:05:03">Insider2000:</span></p>
 <p>It had to be done.</p>
@@ -9683,8 +9605,8 @@ Prool remembering how crimson posessed him suddenly and unwillingly at the end o
 <p>HELL YEAH</p>
 <p><span title="2022-03-09 01:05:48">Wonder:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-24" role="img" aria-describedby="image-popover-24-id"><img alt="Cartoon legs sticking out of the ground." src="/1/src/assets/images/pages/1/2022-03-09 legs.png.png" loading="lazy" decoding="async" width="808" height="976"> <p id="image-popover-24-id" class="imagePopoverAlt">Cartoon legs sticking out of the ground.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-24-id" popovertarget="image-popover-24"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-09 legs.png.webp 808w"><img alt="Cartoon legs sticking out of the ground." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-09 legs.png.png" width="808" height="976"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-24" role="img" aria-describedby="image-popover-24-id"><img alt="Cartoon legs sticking out of the ground." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20legs.png&width=808&format=png&via=transform" loading="lazy" decoding="async" width="808" height="976"> <p id="image-popover-24-id" class="imagePopoverAlt">Cartoon legs sticking out of the ground.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-24-id" popovertarget="image-popover-24"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20legs.png&width=808&format=webp&via=transform 808w"><img alt="Cartoon legs sticking out of the ground." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-09%20legs.png&width=808&format=png&via=transform" width="808" height="976"></picture></button><p></p>
 </div>
 </div>
 <div class="ryan speech-bubble">
@@ -9858,8 +9780,8 @@ Eliminated by CORN ON THE COB and BING</p>
 <p><span title="2022-03-10 01:28:29">Wonder:</span></p>
 <div>
 <p>took a sip of some of this</p>
-<p></p><div popover="" class="image-popover" id="image-popover-25" role="img" aria-describedby="image-popover-25-id"><img alt="Bugs Bunny holding a water bottle labelled Michael's Secret Stuff." src="/1/src/assets/images/pages/1/2022-03-10 bugs.png.png" loading="lazy" decoding="async" width="620" height="349"> <p id="image-popover-25-id" class="imagePopoverAlt">Bugs Bunny holding a water bottle labelled “Michael’s Secret Stuff”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-25-id" popovertarget="image-popover-25"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 bugs.png.webp 620w"><img alt="Bugs Bunny holding a water bottle labelled Michael's Secret Stuff." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 bugs.png.png" width="620" height="349"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-25" role="img" aria-describedby="image-popover-25-id"><img alt="Bugs Bunny holding a water bottle labelled Michael's Secret Stuff." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bugs.png&width=620&format=png&via=transform" loading="lazy" decoding="async" width="620" height="349"> <p id="image-popover-25-id" class="imagePopoverAlt">Bugs Bunny holding a water bottle labelled “Michael’s Secret Stuff”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-25-id" popovertarget="image-popover-25"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bugs.png&width=620&format=webp&via=transform 620w"><img alt="Bugs Bunny holding a water bottle labelled Michael's Secret Stuff." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bugs.png&width=620&format=png&via=transform" width="620" height="349"></picture></button><p></p>
 </div>
 <p><span title="2022-03-10 01:28:35">Bubbly:</span></p>
 <p>power of getting out of an itchy shirt</p>
@@ -9895,8 +9817,8 @@ Eliminated by CORN ON THE COB and BING</p>
 <p>I’d say Bings ginger ale opinions should be</p>
 <p><span title="2022-03-10 01:39:05">Junior:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-26" role="img" aria-describedby="image-popover-26-id"><img alt="A Spongebob character holding a drink can labelled with the Bing logo." src="/1/src/assets/images/pages/1/2022-03-10 bing.png.png" loading="lazy" decoding="async" width="500" height="496"> <p id="image-popover-26-id" class="imagePopoverAlt">A Spongebob character holding a drink can labelled with the Bing logo.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-26-id" popovertarget="image-popover-26"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 bing.png.webp 500w"><img alt="A Spongebob character holding a drink can labelled with the Bing logo." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 bing.png.png" width="500" height="496"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-26" role="img" aria-describedby="image-popover-26-id"><img alt="A Spongebob character holding a drink can labelled with the Bing logo." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing.png&width=500&format=png&via=transform" loading="lazy" decoding="async" width="500" height="496"> <p id="image-popover-26-id" class="imagePopoverAlt">A Spongebob character holding a drink can labelled with the Bing logo.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-26-id" popovertarget="image-popover-26"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing.png&width=500&format=webp&via=transform 500w"><img alt="A Spongebob character holding a drink can labelled with the Bing logo." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing.png&width=500&format=png&via=transform" width="500" height="496"></picture></button><p></p>
 </div>
 <p><span title="2022-03-10 01:39:12">Wonder:</span></p>
 <p>god.</p>
@@ -9907,8 +9829,8 @@ Eliminated by CORN ON THE COB and BING</p>
 <p><span title="2022-03-10 01:44:15">Junior:</span></p>
 <div>
 <p>bing soda,,</p>
-<p></p><div popover="" class="image-popover" id="image-popover-27" role="img" aria-describedby="image-popover-27-id"><img alt="Three cans of Bing." src="/1/src/assets/images/pages/1/2022-03-10 bing 3.png.png" loading="lazy" decoding="async" width="320" height="240"> <p id="image-popover-27-id" class="imagePopoverAlt">Three cans of Bing.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-27-id" popovertarget="image-popover-27"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 bing 3.png.webp 320w"><img alt="Three cans of Bing." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 bing 3.png.png" width="320" height="240"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-27" role="img" aria-describedby="image-popover-27-id"><img alt="Three cans of Bing." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing%203.png&width=320&format=png&via=transform" loading="lazy" decoding="async" width="320" height="240"> <p id="image-popover-27-id" class="imagePopoverAlt">Three cans of Bing.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-27-id" popovertarget="image-popover-27"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing%203.png&width=320&format=webp&via=transform 320w"><img alt="Three cans of Bing." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20bing%203.png&width=320&format=png&via=transform" width="320" height="240"></picture></button><p></p>
 </div>
 <p><span title="2022-03-10 01:45:22">Prince:</span></p>
 <p>bingvrage</p>
@@ -9954,7 +9876,7 @@ Eliminated by NACLMORE and TWIST</p>
 <p><span title="2022-03-10 01:47:12">Brush:</span></p>
 <p>twist stays winning</p>
 <p><span title="2022-03-10 01:47:16">Insider2000:</span></p>
-<p>Tears for Quad, but <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p>Tears for Quad, but <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 01:47:24">Bubbly:</span></p>
 <p>twist is nice</p>
 <p><span title="2022-03-10 01:47:36">Garf:</span></p>
@@ -9962,7 +9884,7 @@ Eliminated by NACLMORE and TWIST</p>
 <br>
 we must also pour one out for the Captains</p>
 <p><span title="2022-03-10 01:47:37">Aubz:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 01:48:01">Raven:</span></p>
 <p>This Pirate beats himbos!!</p>
 <p><span title="2022-03-10 01:48:17">Brush:</span></p>
@@ -9970,11 +9892,11 @@ we must also pour one out for the Captains</p>
 <p><span title="2022-03-10 01:48:31">Insider2000:</span></p>
 <p>I was gonna make a Himiko from DRV3 with that magic quote, but then I learned it was Twist. Twist deserves better than V3 references.</p>
 <p><span title="2022-03-10 01:49:10">J0rt:</span></p>
-<p>15 for quad but let’s go Twist!!! <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p>15 for quad but let’s go Twist!!! <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 01:49:35">Garf:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 02:00:51">Brendle:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 </div>
 </div>
 <p>We have a report from the field</p>
@@ -10038,7 +9960,7 @@ Eliminated by SUBZERO AMALGAM and MACHIAVELLI <sub>(edited)</sub></p>
 <p><span title="2022-03-10 02:34:32">Aubz:</span></p>
 <p>😔</p>
 <p><span title="2022-03-10 02:34:41">J0rt:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/chongo15.png.webp 112w"><img alt=":chongo15" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/chongo15.png.png" class="emoji" title=":chongo15:" width="112" height="112"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fchongo15.png&width=112&format=webp&via=transform 112w"><img alt=":chongo15" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fchongo15.png&width=112&format=png&via=transform" title=":chongo15:" width="112" height="112"></picture></p>
 <p><span title="2022-03-10 02:35:14">Wonder:</span></p>
 <p>wait</p>
 <p><span title="2022-03-10 02:35:27">Wonder:</span></p>
@@ -10068,7 +9990,7 @@ Eliminated by SUBZERO AMALGAM and MACHIAVELLI <sub>(edited)</sub></p>
 <p>We have a report from the field</p>
 <p class="speech-bubble-label">[Sans]</p>
 <div class="report speech-bubble">
-<p><img alt="Sans Undertale saying i guess i never miss, huh? in an Undertale text box" src="/1/src/assets/images/pages/1/sans.png.png" norotate="true" loading="lazy" decoding="async" width="578" height="152"></p>
+<p><img alt="Sans Undertale saying i guess i never miss, huh? in an Undertale text box" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2Fsans.png&width=578&format=png&via=transform" norotate="true" loading="lazy" decoding="async" width="578" height="152"></p>
 </div>
 <div class="announcement">
 <p>VENUS has been eliminated from the non-canon curiosity bracket<br>
@@ -10191,9 +10113,9 @@ Eliminated by HAMBURGER HELPER and GOLDEN SPIRAL</p>
 <p><span title="2022-03-10 03:45:42">Raven:</span></p>
 <p>TAAKO TIER</p>
 <p><span title="2022-03-10 03:45:48">Junior:</span></p>
-<p>even in obscurity spiral reps for clutch 😌 <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/clutch.png.webp 128w"><img alt=":clutch" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/clutch.png.png" class="emoji" title=":clutch:" width="128" height="128"></picture></p>
+<p>even in obscurity spiral reps for clutch 😌 <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fclutch.png&width=128&format=webp&via=transform 128w"><img alt=":clutch" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fclutch.png&width=128&format=png&via=transform" title=":clutch:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 03:45:58">Brush:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/clutch.png.webp 128w"><img alt=":clutch" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/clutch.png.png" class="emoji" title=":clutch:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fclutch.png&width=128&format=webp&via=transform 128w"><img alt=":clutch" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fclutch.png&width=128&format=png&via=transform" title=":clutch:" width="128" height="128"></picture></p>
 <p><span title="2022-03-10 03:47:23">Insider2000:</span></p>
 <p>Golden Spiral with another elimination!</p>
 <p><span title="2022-03-10 03:49:14">J0rt:</span></p>
@@ -10361,8 +10283,8 @@ Eliminated by DANTOINETTE and DISCORD JACK</p>
 <p>“Babe, come over!”<br>
 “I can’t! I’m hunting demons!”<br>
 “Joe Drift is here!”</p>
-<p></p><div popover="" class="image-popover" id="image-popover-28" role="img" aria-describedby="image-popover-28-id"><img alt="Dante from Devil May Cry on a motorbike with sparks flying off it." src="/1/src/assets/images/pages/1/2022-03-10 dante.jpg.jpeg" loading="lazy" decoding="async" width="1200" height="600"> <p id="image-popover-28-id" class="imagePopoverAlt">Dante from Devil May Cry on a motorbike with sparks flying off it.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-28-id" popovertarget="image-popover-28"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 dante.jpg.webp 1200w"><img alt="Dante from Devil May Cry on a motorbike with sparks flying off it." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 dante.jpg.jpeg" width="1200" height="600"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-28" role="img" aria-describedby="image-popover-28-id"><img alt="Dante from Devil May Cry on a motorbike with sparks flying off it." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20dante.jpg&width=1200&format=jpeg&via=transform" loading="lazy" decoding="async" width="1200" height="600"> <p id="image-popover-28-id" class="imagePopoverAlt">Dante from Devil May Cry on a motorbike with sparks flying off it.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-28-id" popovertarget="image-popover-28"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20dante.jpg&width=1200&format=webp&via=transform 1200w"><img alt="Dante from Devil May Cry on a motorbike with sparks flying off it." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20dante.jpg&width=1200&format=jpeg&via=transform" width="1200" height="600"></picture></button><p></p>
 </div>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
@@ -10633,6 +10555,33 @@ Eliminated by THE GRUNK and HEARTBREAK</p>
 <h2 id="Winner's-Round-3:-Top-32"><a href="#winners-round-3">Winner’s Round 3: Top 32</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -10895,12 +10844,12 @@ Completely Unedited Sephiroth</p>
 <p>this one specifically</p>
 <p></p><div popover="" class="image-popover" id="image-popover-29" role="img" aria-describedby="image-popover-29-id"><img alt="A 2019 tweet from brent @murrman5:
 [me telling my story how I survived a plane crash and lived on a deserted island for a year] it was crazy
-[friend who once got a text from me where I accidentally called the grinch the grink] was the grink there?" src="/1/src/assets/images/pages/1/2022-03-10 grink.png.png" loading="lazy" decoding="async" width="640" height="422"> <p id="image-popover-29-id" class="imagePopoverAlt">A 2019 tweet from brent @murrman5:<br>
+[friend who once got a text from me where I accidentally called the grinch the grink] was the grink there?" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20grink.png&width=640&format=png&via=transform" loading="lazy" decoding="async" width="640" height="422"> <p id="image-popover-29-id" class="imagePopoverAlt">A 2019 tweet from brent @murrman5:<br>
 [me telling my story how I survived a plane crash and lived on a deserted island for a year] it was crazy<br>
 [friend who once got a text from me where I accidentally called the grinch the grink] was the grink there?</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-29-id" popovertarget="image-popover-29"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 grink.png.webp 640w"><img alt="A 2019 tweet from brent @murrman5:
+</div><button class="rotate" role="img" aria-describedby="image-popover-29-id" popovertarget="image-popover-29"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20grink.png&width=640&format=webp&via=transform 640w"><img alt="A 2019 tweet from brent @murrman5:
 [me telling my story how I survived a plane crash and lived on a deserted island for a year] it was crazy
-[friend who once got a text from me where I accidentally called the grinch the grink] was the grink there?" loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 grink.png.png" width="640" height="422"></picture></button><p></p>
+[friend who once got a text from me where I accidentally called the grinch the grink] was the grink there?" loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20grink.png&width=640&format=png&via=transform" width="640" height="422"></picture></button><p></p>
 <p>Also for this next set I’m cheering for one candidate so I can put a certain quote in for the victory</p>
 </div>
 <div class="nelson">
@@ -11003,8 +10952,8 @@ Completely Unedited Sephiroth</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-30" role="img" aria-describedby="image-popover-30-id"><img alt="A bracket screenshot showing Subzero Amalgam vs Dantoinette." src="/1/src/assets/images/pages/1/2022-03-10 subzero vs dani.png.png" loading="lazy" decoding="async" width="199" height="103"> <p id="image-popover-30-id" class="imagePopoverAlt">A bracket screenshot showing Subzero Amalgam vs Dantoinette.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-30-id" popovertarget="image-popover-30"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-10 subzero vs dani.png.webp 199w"><img alt="A bracket screenshot showing Subzero Amalgam vs Dantoinette." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-10 subzero vs dani.png.png" width="199" height="103"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-30" role="img" aria-describedby="image-popover-30-id"><img alt="A bracket screenshot showing Subzero Amalgam vs Dantoinette." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20subzero%20vs%20dani.png&width=199&format=png&via=transform" loading="lazy" decoding="async" width="199" height="103"> <p id="image-popover-30-id" class="imagePopoverAlt">A bracket screenshot showing Subzero Amalgam vs Dantoinette.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-30-id" popovertarget="image-popover-30"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20subzero%20vs%20dani.png&width=199&format=webp&via=transform 199w"><img alt="A bracket screenshot showing Subzero Amalgam vs Dantoinette." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-10%20subzero%20vs%20dani.png&width=199&format=png&via=transform" width="199" height="103"></picture></button><p></p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-10 06:08:12">Bubbly:</span></p>
@@ -11241,7 +11190,7 @@ Completely Unedited Sephiroth</p>
 <div class="chatter">
 <div class="nelson">
 <p><span title="2022-03-11 01:30:27">Insider2000:</span></p>
-<p>15 Larry <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p>15 Larry <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
@@ -11252,7 +11201,7 @@ Completely Unedited Sephiroth</p>
 <p><span title="2022-03-11 01:30:52">Wonder:</span></p>
 <p>WOOOOOO</p>
 <p><span title="2022-03-11 01:31:16">Greenshi:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 </div>
 </div>
 <p><span id="losers-round-3"> </span></p>
@@ -11261,6 +11210,33 @@ Completely Unedited Sephiroth</p>
 <h2 id="Loser's-Round-3:-Top-32"><a href="#losers-round-3">Loser’s Round 3: Top 32</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -11475,7 +11451,7 @@ Eliminated by HACKERMAN J0HN and CAPTAIN VALENTINE</p>
 <p><span title="2022-03-11 02:07:00">Brush:</span></p>
 <p>STOP forcing the man tittys to fight each other. they’re social animals that in the wild will naturally form large &amp; peaceful social groups (or “mondays”)</p>
 <p><span title="2022-03-11 02:08:21">Insider2000:</span></p>
-<p>How long must we pit man tiddy against man tiddy? <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/ValBlush.png.webp 128w"><img alt=":ValBlush:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/ValBlush.png.png" class="emoji" title=":ValBlush:" width="128" height="128"></picture></p>
+<p>How long must we pit man tiddy against man tiddy? <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FValBlush.png&width=128&format=webp&via=transform 128w"><img alt=":ValBlush:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FValBlush.png&width=128&format=png&via=transform" title=":ValBlush:" width="128" height="128"></picture></p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
@@ -11541,7 +11517,7 @@ Eliminated by MONDAY MARK and CHARTREUSE</p>
 <p><span title="2022-03-11 02:24:22">Brush:</span></p>
 <p>👏</p>
 <p><span title="2022-03-11 02:24:30">Insider2000:</span></p>
-<p>TOJ is out. <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p>TOJ is out. <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 </div>
 </div>
 <div class="announcement">
@@ -11799,7 +11775,7 @@ Eliminated by JUNIPER UPPERCUT and TRAINER OF JUSTICE</p>
 <p><span title="2022-03-11 03:02:02">Brush:</span></p>
 <p>YEAHHHHHHHHHHHH</p>
 <p><span title="2022-03-11 03:02:05">J0rt:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture> ?</p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture> ?</p>
 </div>
 </div>
 <div class="announcement">
@@ -11841,7 +11817,7 @@ Eliminated by FLY BI and TWIST</p>
 <p><span title="2022-03-11 03:02:39">Wonder:</span></p>
 <p>HOLY SHIT</p>
 <p><span title="2022-03-11 03:02:40">Greenshi:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-11 03:02:41">chirp:</span></p>
 <p>LETS FUCKING <em>GOOOOOOOOOOO</em></p>
 <p><span title="2022-03-11 03:02:45">Bubbly:</span></p>
@@ -11854,7 +11830,7 @@ Eliminated by FLY BI and TWIST</p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-11 03:02:46">J0rt:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture> <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-11 03:02:47">Brush:</span></p>
 <p>defeated by the power of purple</p>
 </div>
@@ -11890,7 +11866,7 @@ Eliminated by FLY BI and TWIST</p>
 <p><span title="2022-03-11 03:16:01">Brush:</span></p>
 <p>still gonna be quotes</p>
 <p><span title="2022-03-11 03:16:52">Mako:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/chongoWatch.png.webp 112w"><img alt=":chongoWatch" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/chongoWatch.png.png" class="emoji" title=":chongoWatch:" width="112" height="112"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FchongoWatch.png&width=112&format=webp&via=transform 112w"><img alt=":chongoWatch" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FchongoWatch.png&width=112&format=png&via=transform" title=":chongoWatch:" width="112" height="112"></picture></p>
 <p><span title="2022-03-11 03:17:12">Wybie:</span></p>
 <p>good to know ty</p>
 </div>
@@ -11928,6 +11904,33 @@ Eliminated by MY GRUNK and DANTHONY</p>
 <h2 id="Winner's-Round-4:-Top-16"><a href="#winners-round-4">Winner’s Round 4: Top 16</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -12128,6 +12131,33 @@ Eliminated by MY GRUNK and DANTHONY</p>
 <h2 id="Loser's-Round-4:-Top-24"><a href="#losers-round-4">Loser’s Round 4: Top 24</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -12318,8 +12348,8 @@ Eliminated by TWIST and JUNIPER UPPERCUT</p>
 <p><span title="2022-03-11 04:33:12">Mako:</span></p>
 <div>
 <p>:)</p>
-<p></p><div popover="" class="image-popover" id="image-popover-31" role="img" aria-describedby="image-popover-31-id"><img alt="Captain Valentine's Smash Bros render absolutely covered in gold stars." src="/1/src/assets/images/pages/1/2022-03-11 val.png.png" loading="lazy" decoding="async" width="1500" height="1500"> <p id="image-popover-31-id" class="imagePopoverAlt">Captain Valentine’s Smash Bros render absolutely covered in gold stars.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-31-id" popovertarget="image-popover-31"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-11 val.png.webp 1500w"><img alt="Captain Valentine's Smash Bros render absolutely covered in gold stars." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-11 val.png.png" width="1500" height="1500"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-31" role="img" aria-describedby="image-popover-31-id"><img alt="Captain Valentine's Smash Bros render absolutely covered in gold stars." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20val.png&width=1500&format=png&via=transform" loading="lazy" decoding="async" width="1500" height="1500"> <p id="image-popover-31-id" class="imagePopoverAlt">Captain Valentine’s Smash Bros render absolutely covered in gold stars.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-31-id" popovertarget="image-popover-31"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20val.png&width=1500&format=webp&via=transform 1500w"><img alt="Captain Valentine's Smash Bros render absolutely covered in gold stars." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20val.png&width=1500&format=png&via=transform" width="1500" height="1500"></picture></button><p></p>
 </div>
 <p><span title="2022-03-11 04:33:23">Brush:</span></p>
 <p>skjdhgk</p>
@@ -12428,7 +12458,7 @@ Eliminated by VAMPIRE CATGIRL TIFA and HAMBURGER HELPER</p>
 <div class="chatter">
 <div class="nelson">
 <p><span title="2022-03-11 05:53:36">Insider2000:</span></p>
-<p>She’s still our pirate mage queen no matter what!<picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/twist.png.webp 128w"><img alt=":twist:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/twist.png.png" class="emoji" title=":twist:" width="128" height="128"></picture></p>
+<p>She’s still our pirate mage queen no matter what!<picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=webp&via=transform 128w"><img alt=":twist:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Ftwist.png&width=128&format=png&via=transform" title=":twist:" width="128" height="128"></picture></p>
 <p><span title="2022-03-11 05:53:42">Bubbly:</span></p>
 <p>Daww</p>
 <p><span title="2022-03-11 05:53:48">Garf:</span></p>
@@ -12473,8 +12503,8 @@ Eliminated by ICEE and DANTHONY</p>
 <p><span title="2022-03-11 06:16:35">Garf:</span></p>
 <div>
 <p>menacing</p>
-<p></p><div popover="" class="image-popover" id="image-popover-32" role="img" aria-describedby="image-popover-32-id"><img alt="A zoom-in on Juniper Uppercut's eyes." src="/1/src/assets/images/pages/1/2022-03-11 menacing.png.png" loading="lazy" decoding="async" width="316" height="124"> <p id="image-popover-32-id" class="imagePopoverAlt">A zoom-in on Juniper Uppercut’s eyes.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-32-id" popovertarget="image-popover-32"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-11 menacing.png.webp 316w"><img alt="A zoom-in on Juniper Uppercut's eyes." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-11 menacing.png.png" width="316" height="124"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-32" role="img" aria-describedby="image-popover-32-id"><img alt="A zoom-in on Juniper Uppercut's eyes." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20menacing.png&width=316&format=png&via=transform" loading="lazy" decoding="async" width="316" height="124"> <p id="image-popover-32-id" class="imagePopoverAlt">A zoom-in on Juniper Uppercut’s eyes.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-32-id" popovertarget="image-popover-32"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20menacing.png&width=316&format=webp&via=transform 316w"><img alt="A zoom-in on Juniper Uppercut's eyes." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-11%20menacing.png&width=316&format=png&via=transform" width="316" height="124"></picture></button><p></p>
 </div>
 </div>
 </div>
@@ -12486,8 +12516,8 @@ Eliminated by ICEE and DANTHONY</p>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
 <p>we’re nearing the end…</p>
-<p></p><div popover="" class="image-popover" id="image-popover-33" role="img" aria-describedby="image-popover-33-id"><img alt="A bracket screenshot, showing that only 16 characters and about as many matches remain." src="/1/src/assets/images/pages/1/2022-03-13 the end.png.png" loading="lazy" decoding="async" width="1248" height="579"> <p id="image-popover-33-id" class="imagePopoverAlt">A bracket screenshot, showing that only 16 characters and about as many matches remain.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-33-id" popovertarget="image-popover-33"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 the end.png.webp 1248w"><img alt="A bracket screenshot, showing that only 16 characters and about as many matches remain." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 the end.png.png" width="1248" height="579"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-33" role="img" aria-describedby="image-popover-33-id"><img alt="A bracket screenshot, showing that only 16 characters and about as many matches remain." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20the%20end.png&width=1248&format=png&via=transform" loading="lazy" decoding="async" width="1248" height="579"> <p id="image-popover-33-id" class="imagePopoverAlt">A bracket screenshot, showing that only 16 characters and about as many matches remain.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-33-id" popovertarget="image-popover-33"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20the%20end.png&width=1248&format=webp&via=transform 1248w"><img alt="A bracket screenshot, showing that only 16 characters and about as many matches remain." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20the%20end.png&width=1248&format=png&via=transform" width="1248" height="579"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -12521,6 +12551,33 @@ Eliminated by ICEE and DANTHONY</p>
 <h2 id="Loser's-Round-5:-Top-16"><a href="#losers-round-5">Loser’s Round 5: Top 16</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -12808,6 +12865,33 @@ Eliminated by SANS UNDERTALE and HAMBURGER HELPER</p>
 <h2 id="Loser's-Round-6:-Top-12"><a href="#losers-round-6">Loser’s Round 6: Top 12</a></h2>
 </div>
 <style>
+    @media only screen and (min-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 720px) and (max-width: 960px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+            padding-left: 120px;
+            padding-right: 120px;
+        }
+    }
+    @media only screen and (min-width: 480px) and (max-width: 720px) {
+        .bracket {
+            grid-template-columns: 240px 240px;
+        }
+    }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+        .bracket {
+            grid-template-columns: 240px;
+        }
+    }
+    @media only screen and (max-width: 240px) {
+        .bracket-div {
+            display: none;
+        }
+    }
     .bracket {
         width: var(--width);
         box-sizing: border-box;
@@ -13072,8 +13156,8 @@ Eliminated by NACLMORE and VAMPIRE CATGIRL TIFA</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-34" role="img" aria-describedby="image-popover-34-id"><img alt="A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says Mrs. Puff: Don't ask questions you aren't prepared to handle the answers to." src="/1/src/assets/images/pages/1/2022-03-13 questions.png.png" loading="lazy" decoding="async" width="320" height="180"> <p id="image-popover-34-id" class="imagePopoverAlt">A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says “Mrs. Puff: Don’t ask questions you aren’t prepared to handle the answers to.”</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-34-id" popovertarget="image-popover-34"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 questions.png.webp 320w"><img alt="A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says Mrs. Puff: Don't ask questions you aren't prepared to handle the answers to." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 questions.png.png" width="320" height="180"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-34" role="img" aria-describedby="image-popover-34-id"><img alt="A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says Mrs. Puff: Don't ask questions you aren't prepared to handle the answers to." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20questions.png&width=320&format=png&via=transform" loading="lazy" decoding="async" width="320" height="180"> <p id="image-popover-34-id" class="imagePopoverAlt">A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says “Mrs. Puff: Don’t ask questions you aren’t prepared to handle the answers to.”</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-34-id" popovertarget="image-popover-34"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20questions.png&width=320&format=webp&via=transform 320w"><img alt="A Spongebob game screenshot of presumably Mrs Puff, with a textbox that says Mrs. Puff: Don't ask questions you aren't prepared to handle the answers to." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20questions.png&width=320&format=png&via=transform" width="320" height="180"></picture></button><p></p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-13 01:41:33">Wonder:</span></p>
@@ -13083,8 +13167,8 @@ Eliminated by NACLMORE and VAMPIRE CATGIRL TIFA</p>
 <p><span title="2022-03-13 01:45:21">Insider2000:</span></p>
 <div>
 <p>Vampire Catgirl Tifa paying for the one time she fed Catboy Cloud lasagna.</p>
-<p></p><div popover="" class="image-popover" id="image-popover-35" role="img" aria-describedby="image-popover-35-id"><img alt="Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they're on collapses. Cloud is staring forward with a fixed horrified expression." src="/1/src/assets/images/pages/1/2022-03-13 lasagna consequences.gif.gif" loading="lazy" decoding="async" width="480" height="270"> <p id="image-popover-35-id" class="imagePopoverAlt">Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they’re on collapses. Cloud is staring forward with a fixed horrified expression.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-35-id" popovertarget="image-popover-35"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 lasagna consequences.gif.webp 480w"><img alt="Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they're on collapses. Cloud is staring forward with a fixed horrified expression." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 lasagna consequences.gif.gif" width="480" height="270"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-35" role="img" aria-describedby="image-popover-35-id"><img alt="Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they're on collapses. Cloud is staring forward with a fixed horrified expression." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20lasagna%20consequences.gif&width=480&format=gif&via=transform" loading="lazy" decoding="async" width="480" height="270"> <p id="image-popover-35-id" class="imagePopoverAlt">Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they’re on collapses. Cloud is staring forward with a fixed horrified expression.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-35-id" popovertarget="image-popover-35"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20lasagna%20consequences.gif&width=480&format=webp&via=transform 480w"><img alt="Cloud and Tifa in Final Fantasy 7, in some sort of vehicle. Tifa is looking terrified as the bridge they're on collapses. Cloud is staring forward with a fixed horrified expression." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20lasagna%20consequences.gif&width=480&format=gif&via=transform" width="480" height="270"></picture></button><p></p>
 </div>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
@@ -13199,12 +13283,12 @@ LOSERS SIDE<br>
 <p>inb4 dani loses grand finals and something like this happens</p>
 <p></p><div popover="" class="image-popover" id="image-popover-36" role="img" aria-describedby="image-popover-36-id"><img alt="A picture of a crab behind a bucket, captioned:
 congratulations! You found Albert, the Unfindable Crab! Now Time will collapse.
-After three seconds, the GIF pixellates and then turns into a Discord image-not-found error." src="/1/src/assets/images/pages/1/2022-03-13 crab.gif.gif" loading="lazy" decoding="async" width="500" height="514"> <p id="image-popover-36-id" class="imagePopoverAlt">A picture of a crab behind a bucket, captioned:<br>
+After three seconds, the GIF pixellates and then turns into a Discord image-not-found error." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20crab.gif&width=500&format=gif&via=transform" loading="lazy" decoding="async" width="500" height="514"> <p id="image-popover-36-id" class="imagePopoverAlt">A picture of a crab behind a bucket, captioned:<br>
 “congratulations! You found Albert, the Unfindable Crab! Now Time will collapse.”<br>
 After three seconds, the GIF pixellates and then turns into a Discord image-not-found error.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-36-id" popovertarget="image-popover-36"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 crab.gif.webp 500w"><img alt="A picture of a crab behind a bucket, captioned:
+</div><button class="rotate" role="img" aria-describedby="image-popover-36-id" popovertarget="image-popover-36"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20crab.gif&width=500&format=webp&via=transform 500w"><img alt="A picture of a crab behind a bucket, captioned:
 congratulations! You found Albert, the Unfindable Crab! Now Time will collapse.
-After three seconds, the GIF pixellates and then turns into a Discord image-not-found error." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 crab.gif.gif" width="500" height="514"></picture></button><p></p>
+After three seconds, the GIF pixellates and then turns into a Discord image-not-found error." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20crab.gif&width=500&format=gif&via=transform" width="500" height="514"></picture></button><p></p>
 </div>
 <p><span title="2022-03-13 02:18:30">Insider2000:</span></p>
 <p>NOOO! Albert, come back!</p>
@@ -13240,9 +13324,9 @@ Eliminated by MONDAY MARK and DADANDORF</p>
 <p><span title="2022-03-13 02:23:02">Bubbly:</span></p>
 <p>AGONY</p>
 <p><span title="2022-03-13 02:23:13">Insider2000:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 <p><span title="2022-03-13 02:23:26">Prince:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 <p><span title="2022-03-13 02:23:29">Brush:</span></p>
 <p>there goes my prediction frame one 😔</p>
 <p><span title="2022-03-13 02:23:35">a mouse:</span></p>
@@ -13477,8 +13561,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 <div class="ryan speech-bubble">
 <p>I took a screenshot early on</p>
 <p>just to prove</p>
-<p></p><div popover="" class="image-popover" id="image-popover-37" role="img" aria-describedby="image-popover-37-id"><img alt="Therapuppy has barely taken any damage, while Dani is at 67% on her second stock." src="/1/src/assets/images/pages/1/2022-03-13 3 stock.png.png" loading="lazy" decoding="async" width="671" height="156"> <p id="image-popover-37-id" class="imagePopoverAlt">Therapuppy has barely taken any damage, while Dani is at 67% on her second stock.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-37-id" popovertarget="image-popover-37"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 3 stock.png.webp 671w"><img alt="Therapuppy has barely taken any damage, while Dani is at 67% on her second stock." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 3 stock.png.png" width="671" height="156"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-37" role="img" aria-describedby="image-popover-37-id"><img alt="Therapuppy has barely taken any damage, while Dani is at 67% on her second stock." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%203%20stock.png&width=671&format=png&via=transform" loading="lazy" decoding="async" width="671" height="156"> <p id="image-popover-37-id" class="imagePopoverAlt">Therapuppy has barely taken any damage, while Dani is at 67% on her second stock.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-37-id" popovertarget="image-popover-37"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%203%20stock.png&width=671&format=webp&via=transform 671w"><img alt="Therapuppy has barely taken any damage, while Dani is at 67% on her second stock." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%203%20stock.png&width=671&format=png&via=transform" width="671" height="156"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13520,8 +13604,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-38" role="img" aria-describedby="image-popover-38-id"><img alt="Both Therapuppy and Dani are at low damage on their last stock for this final game." src="/1/src/assets/images/pages/1/2022-03-13 last stock.png.png" loading="lazy" decoding="async" width="688" height="163"> <p id="image-popover-38-id" class="imagePopoverAlt">Both Therapuppy and Dani are at low damage on their last stock for this final game.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-38-id" popovertarget="image-popover-38"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 last stock.png.webp 688w"><img alt="Both Therapuppy and Dani are at low damage on their last stock for this final game." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 last stock.png.png" width="688" height="163"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-38" role="img" aria-describedby="image-popover-38-id"><img alt="Both Therapuppy and Dani are at low damage on their last stock for this final game." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock.png&width=688&format=png&via=transform" loading="lazy" decoding="async" width="688" height="163"> <p id="image-popover-38-id" class="imagePopoverAlt">Both Therapuppy and Dani are at low damage on their last stock for this final game.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-38-id" popovertarget="image-popover-38"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock.png&width=688&format=webp&via=transform 688w"><img alt="Both Therapuppy and Dani are at low damage on their last stock for this final game." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock.png&width=688&format=png&via=transform" width="688" height="163"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13544,8 +13628,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
 <p>THIS ONES BETTER</p>
-<p></p><div popover="" class="image-popover" id="image-popover-39" role="img" aria-describedby="image-popover-39-id"><img alt="Therapuppy and Dani are both at about 28% damage on their last stock for this final game." src="/1/src/assets/images/pages/1/2022-03-13 last stock 2.png.png" loading="lazy" decoding="async" width="654" height="139"> <p id="image-popover-39-id" class="imagePopoverAlt">Therapuppy and Dani are both at about 28% damage on their last stock for this final game.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-39-id" popovertarget="image-popover-39"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 last stock 2.png.webp 654w"><img alt="Therapuppy and Dani are both at about 28% damage on their last stock for this final game." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 last stock 2.png.png" width="654" height="139"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-39" role="img" aria-describedby="image-popover-39-id"><img alt="Therapuppy and Dani are both at about 28% damage on their last stock for this final game." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%202.png&width=654&format=png&via=transform" loading="lazy" decoding="async" width="654" height="139"> <p id="image-popover-39-id" class="imagePopoverAlt">Therapuppy and Dani are both at about 28% damage on their last stock for this final game.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-39-id" popovertarget="image-popover-39"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%202.png&width=654&format=webp&via=transform 654w"><img alt="Therapuppy and Dani are both at about 28% damage on their last stock for this final game." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%202.png&width=654&format=png&via=transform" width="654" height="139"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13571,8 +13655,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-40" role="img" aria-describedby="image-popover-40-id"><img alt="Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game." src="/1/src/assets/images/pages/1/2022-03-13 last stock 3.png.png" loading="lazy" decoding="async" width="653" height="159"> <p id="image-popover-40-id" class="imagePopoverAlt">Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-40-id" popovertarget="image-popover-40"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 last stock 3.png.webp 653w"><img alt="Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 last stock 3.png.png" width="653" height="159"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-40" role="img" aria-describedby="image-popover-40-id"><img alt="Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%203.png&width=653&format=png&via=transform" loading="lazy" decoding="async" width="653" height="159"> <p id="image-popover-40-id" class="imagePopoverAlt">Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-40-id" popovertarget="image-popover-40"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%203.png&width=653&format=webp&via=transform 653w"><img alt="Therapuppy is at 40% damage, while Dani is at 75% damage, on their last stock in this final game." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%203.png&width=653&format=png&via=transform" width="653" height="159"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13592,8 +13676,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-41" role="img" aria-describedby="image-popover-41-id"><img alt="Therapuppy and Dani are both at about 75% damage on their last stock for this final game." src="/1/src/assets/images/pages/1/2022-03-13 last stock 4.png.png" loading="lazy" decoding="async" width="700" height="152"> <p id="image-popover-41-id" class="imagePopoverAlt">Therapuppy and Dani are both at about 75% damage on their last stock for this final game.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-41-id" popovertarget="image-popover-41"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 last stock 4.png.webp 700w"><img alt="Therapuppy and Dani are both at about 75% damage on their last stock for this final game." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 last stock 4.png.png" width="700" height="152"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-41" role="img" aria-describedby="image-popover-41-id"><img alt="Therapuppy and Dani are both at about 75% damage on their last stock for this final game." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%204.png&width=700&format=png&via=transform" loading="lazy" decoding="async" width="700" height="152"> <p id="image-popover-41-id" class="imagePopoverAlt">Therapuppy and Dani are both at about 75% damage on their last stock for this final game.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-41-id" popovertarget="image-popover-41"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%204.png&width=700&format=webp&via=transform 700w"><img alt="Therapuppy and Dani are both at about 75% damage on their last stock for this final game." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20last%20stock%204.png&width=700&format=png&via=transform" width="700" height="152"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13609,8 +13693,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 </div>
 <p class="speech-bubble-label">[Ryan]</p>
 <div class="ryan speech-bubble">
-<p></p><div popover="" class="image-popover" id="image-popover-42" role="img" aria-describedby="image-popover-42-id"><img alt="Dani's win screen vs Therapuppy." src="/1/src/assets/images/pages/1/2022-03-13 win.png.png" loading="lazy" decoding="async" width="1014" height="571"> <p id="image-popover-42-id" class="imagePopoverAlt">Dani’s win screen vs Therapuppy.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-42-id" popovertarget="image-popover-42"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 win.png.webp 1014w"><img alt="Dani's win screen vs Therapuppy." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 win.png.png" width="1014" height="571"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-42" role="img" aria-describedby="image-popover-42-id"><img alt="Dani's win screen vs Therapuppy." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20win.png&width=1014&format=png&via=transform" loading="lazy" decoding="async" width="1014" height="571"> <p id="image-popover-42-id" class="imagePopoverAlt">Dani’s win screen vs Therapuppy.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-42-id" popovertarget="image-popover-42"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20win.png&width=1014&format=webp&via=transform 1014w"><img alt="Dani's win screen vs Therapuppy." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20win.png&width=1014&format=png&via=transform" width="1014" height="571"></picture></button><p></p>
 </div>
 <div class="chatter">
 <div class="nelson">
@@ -13621,7 +13705,7 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 <p><span title="2022-03-13 03:12:54">Wonder:</span></p>
 <p>AUGHHHHHHHHHHHHHHHHHHH</p>
 <p><span title="2022-03-13 03:12:55">Insider2000:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 </div>
 </div>
 <p>A report from the field</p>
@@ -13701,8 +13785,8 @@ Eliminated by DANTOINETTE and VAMPIRE CATGIRL TIFA</p>
 <div class="ryan speech-bubble">
 <p>Everybody: Goes through trauma and emotional bs<br>
 Nacl:</p>
-<p></p><div popover="" class="image-popover" id="image-popover-43" role="img" aria-describedby="image-popover-43-id"><img alt="An edit of a comic panel. Batman says This is where I watched my parents die, Michelangelo. Michelangelo the ninja turtle has been edited in, and says dude, I could be gaming." src="/1/src/assets/images/pages/1/2022-03-13 gaming.png.png" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-43-id" class="imagePopoverAlt">An edit of a comic panel. Batman says “This is where I watched my parents die, Michelangelo.” Michelangelo the ninja turtle has been edited in, and says “dude, I could be gaming”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-43-id" popovertarget="image-popover-43"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-13 gaming.png.webp 1280w"><img alt="An edit of a comic panel. Batman says This is where I watched my parents die, Michelangelo. Michelangelo the ninja turtle has been edited in, and says dude, I could be gaming." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-13 gaming.png.png" width="1280" height="720"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-43" role="img" aria-describedby="image-popover-43-id"><img alt="An edit of a comic panel. Batman says This is where I watched my parents die, Michelangelo. Michelangelo the ninja turtle has been edited in, and says dude, I could be gaming." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20gaming.png&width=1280&format=png&via=transform" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-43-id" class="imagePopoverAlt">An edit of a comic panel. Batman says “This is where I watched my parents die, Michelangelo.” Michelangelo the ninja turtle has been edited in, and says “dude, I could be gaming”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-43-id" popovertarget="image-popover-43"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20gaming.png&width=1280&format=webp&via=transform 1280w"><img alt="An edit of a comic panel. Batman says This is where I watched my parents die, Michelangelo. Michelangelo the ninja turtle has been edited in, and says dude, I could be gaming." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-13%20gaming.png&width=1280&format=png&via=transform" width="1280" height="720"></picture></button><p></p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-13 03:16:25">Garf:</span></p>
@@ -13758,7 +13842,7 @@ NaClmore: “Dude, I could be gaming!”</p>
 <div class="chatter">
 <div class="nelson">
 <p><span title="2022-03-14 23:55:42">Insider2000:</span></p>
-<p>“I can get a fucking uhhhhhhh…” 15 ICEE <picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/PERSONA.png.webp 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/PERSONA.png.png" class="emoji" title=":PERSONA:" width="128" height="128"></picture></p>
+<p>“I can get a fucking uhhhhhhh…” 15 ICEE <picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=webp&via=transform 128w"><img alt=":PERSONA:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FPERSONA.png&width=128&format=png&via=transform" title=":PERSONA:" width="128" height="128"></picture></p>
 <p><span title="2022-03-14 23:55:47">Wonder:</span></p>
 <p><em>wow</em></p>
 <p><span title="2022-03-14 23:55:48">Bubbly:</span></p>
@@ -13807,7 +13891,7 @@ NaClmore: “Dude, I could be gaming!”</p>
 </div>
 <div class="nelson">
 <p><span title="2022-03-15 00:05:14">Raven:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/ryanULTRAPOG.png.webp 111w"><img alt=":ryanULTRAPOG:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/ryanULTRAPOG.png.png" class="emoji" title=":ryanULTRAPOG:" width="111" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FryanULTRAPOG.png&width=111&format=webp&via=transform 111w"><img alt=":ryanULTRAPOG:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FryanULTRAPOG.png&width=111&format=png&via=transform" title=":ryanULTRAPOG:" width="111" height="128"></picture></p>
 <p><span title="2022-03-15 00:05:15">Bubbly:</span></p>
 <p>OH BOY</p>
 <p><span title="2022-03-15 00:05:57">Wonder:</span></p>
@@ -13877,8 +13961,8 @@ NaClmore: “Dude, I could be gaming!”</p>
 <p>🤞</p>
 <p><span title="2022-03-15 00:17:59">Insider2000:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-44" role="img" aria-describedby="image-popover-44-id"><img alt="Two women sit facing each other. One says I got the results of the test back - I definitely have breast cancer. The other says Don't worry about it." src="/1/src/assets/images/pages/1/2022-03-15 results.gif.gif" loading="lazy" decoding="async" width="498" height="250"> <p id="image-popover-44-id" class="imagePopoverAlt">Two women sit facing each other. One says “I got the results of the test back - I definitely have breast cancer.” The other says “Don’t worry about it”.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-44-id" popovertarget="image-popover-44"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-15 results.gif.webp 498w"><img alt="Two women sit facing each other. One says I got the results of the test back - I definitely have breast cancer. The other says Don't worry about it." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-15 results.gif.gif" width="498" height="250"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-44" role="img" aria-describedby="image-popover-44-id"><img alt="Two women sit facing each other. One says I got the results of the test back - I definitely have breast cancer. The other says Don't worry about it." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20results.gif&width=498&format=gif&via=transform" loading="lazy" decoding="async" width="498" height="250"> <p id="image-popover-44-id" class="imagePopoverAlt">Two women sit facing each other. One says “I got the results of the test back - I definitely have breast cancer.” The other says “Don’t worry about it”.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-44-id" popovertarget="image-popover-44"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20results.gif&width=498&format=webp&via=transform 498w"><img alt="Two women sit facing each other. One says I got the results of the test back - I definitely have breast cancer. The other says Don't worry about it." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20results.gif&width=498&format=gif&via=transform" width="498" height="250"></picture></button><p></p>
 </div>
 <p><span title="2022-03-15 00:18:03">Janet:</span></p>
 <p>ah, marriage therapy</p>
@@ -13901,7 +13985,7 @@ Eliminated by DANTOINETTE and DADANDORF</p>
 <p><span title="2022-03-15 00:18:15">Insider2000:</span></p>
 <p>NOOOOOOO!</p>
 <p><span title="2022-03-15 00:18:28">Prince:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/nelsob.png.webp 128w"><img alt=":nelsob" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/nelsob.png.png" class="emoji" title=":nelsob:" width="128" height="93"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=webp&via=transform 128w"><img alt=":nelsob" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2Fnelsob.png&width=128&format=png&via=transform" title=":nelsob:" width="128" height="93"></picture></p>
 <p><span title="2022-03-15 00:18:47">Bubbly:</span></p>
 <p>A LOSS FOR THERAPY EVERYWHERE</p>
 </div>
@@ -14132,8 +14216,8 @@ Eliminated by THERAPUPPY and ICEE</p>
 <p><span title="2022-03-15 00:41:36">Insider2000:</span></p>
 <div>
 <p>Dani realizing she has the potential opportunity to rematch ICEE mid NaClmore match like…</p>
-<p></p><div popover="" class="image-popover" id="image-popover-45" role="img" aria-describedby="image-popover-45-id"><img alt="A three-panel image captioned daffy duck sees terry bogard while playing space jam. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd." src="/1/src/assets/images/pages/1/2022-03-15 daffy x terry.jpeg.jpeg" loading="lazy" decoding="async" width="838" height="450"> <p id="image-popover-45-id" class="imagePopoverAlt">A three-panel image captioned ‘daffy duck sees terry bogard while playing space jam’. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-45-id" popovertarget="image-popover-45"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-15 daffy x terry.jpeg.webp 838w"><img alt="A three-panel image captioned daffy duck sees terry bogard while playing space jam. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-15 daffy x terry.jpeg.jpeg" width="838" height="450"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-45" role="img" aria-describedby="image-popover-45-id"><img alt="A three-panel image captioned daffy duck sees terry bogard while playing space jam. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20daffy%20x%20terry.jpeg&width=838&format=jpeg&via=transform" loading="lazy" decoding="async" width="838" height="450"> <p id="image-popover-45-id" class="imagePopoverAlt">A three-panel image captioned ‘daffy duck sees terry bogard while playing space jam’. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-45-id" popovertarget="image-popover-45"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20daffy%20x%20terry.jpeg&width=838&format=webp&via=transform 838w"><img alt="A three-panel image captioned daffy duck sees terry bogard while playing space jam. Panel 1: Daffy Duck is bouncing a basketball. Panel 2: Daffy Duck viewed from the front, his eyes narrowed on a single point. Panel 3: Terry Bogard is in the crowd." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20daffy%20x%20terry.jpeg&width=838&format=jpeg&via=transform" width="838" height="450"></picture></button><p></p>
 </div>
 <p><span title="2022-03-15 00:42:29">Garf:</span></p>
 <p>not gonna lie, that’s definitely me when I see terry bogard while playing space jam</p>
@@ -14160,14 +14244,14 @@ Eliminated by THERAPUPPY and ICEE</p>
 <p><span title="2022-03-15 00:58:49">Insider2000:</span></p>
 <div>
 <p>Us after 90% of these matches:</p>
-<p></p><div popover="" class="image-popover" id="image-popover-46" role="img" aria-describedby="image-popover-46-id"><img alt="The Stop, stop, he's already dead! image from The Simpsons. It is not subtitled, as it's being used to convey an intensely emotional crowd instead of its usual meaning." src="/1/src/assets/images/pages/1/2022-03-15 i have a mouth but i cannot scream.jpeg.jpeg" loading="lazy" decoding="async" width="500" height="368"> <p id="image-popover-46-id" class="imagePopoverAlt">The “Stop, stop, he’s already dead!” image from The Simpsons. It is not subtitled, as it’s being used to convey an intensely emotional crowd instead of its usual meaning.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-46-id" popovertarget="image-popover-46"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-15 i have a mouth but i cannot scream.jpeg.webp 500w"><img alt="The Stop, stop, he's already dead! image from The Simpsons. It is not subtitled, as it's being used to convey an intensely emotional crowd instead of its usual meaning." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-15 i have a mouth but i cannot scream.jpeg.jpeg" width="500" height="368"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-46" role="img" aria-describedby="image-popover-46-id"><img alt="The Stop, stop, he's already dead! image from The Simpsons. It is not subtitled, as it's being used to convey an intensely emotional crowd instead of its usual meaning." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20i%20have%20a%20mouth%20but%20i%20cannot%20scream.jpeg&width=500&format=jpeg&via=transform" loading="lazy" decoding="async" width="500" height="368"> <p id="image-popover-46-id" class="imagePopoverAlt">The “Stop, stop, he’s already dead!” image from The Simpsons. It is not subtitled, as it’s being used to convey an intensely emotional crowd instead of its usual meaning.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-46-id" popovertarget="image-popover-46"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20i%20have%20a%20mouth%20but%20i%20cannot%20scream.jpeg&width=500&format=webp&via=transform 500w"><img alt="The Stop, stop, he's already dead! image from The Simpsons. It is not subtitled, as it's being used to convey an intensely emotional crowd instead of its usual meaning." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20i%20have%20a%20mouth%20but%20i%20cannot%20scream.jpeg&width=500&format=jpeg&via=transform" width="500" height="368"></picture></button><p></p>
 </div>
 <p><span title="2022-03-15 00:59:00">Insider2000:</span></p>
 <div>
 <p>Us after Dani vs Naclmore:</p>
-<p></p><div popover="" class="image-popover" id="image-popover-47" role="img" aria-describedby="image-popover-47-id"><img alt="The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions." src="/1/src/assets/images/pages/1/2022-03-15 nichijou.jpeg.jpeg" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-47-id" class="imagePopoverAlt">The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions.</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-47-id" popovertarget="image-popover-47"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-15 nichijou.jpeg.webp 1280w"><img alt="The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions." loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-15 nichijou.jpeg.jpeg" width="1280" height="720"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-47" role="img" aria-describedby="image-popover-47-id"><img alt="The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions." src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20nichijou.jpeg&width=1280&format=jpeg&via=transform" loading="lazy" decoding="async" width="1280" height="720"> <p id="image-popover-47-id" class="imagePopoverAlt">The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions.</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-47-id" popovertarget="image-popover-47"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20nichijou.jpeg&width=1280&format=webp&via=transform 1280w"><img alt="The brown-haird and blue-haired Nichijou characters, staring off to the side with blank expressions." loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20nichijou.jpeg&width=1280&format=jpeg&via=transform" width="1280" height="720"></picture></button><p></p>
 </div>
 <p><span title="2022-03-15 01:01:32">Brendle:</span></p>
 <p>Toxic gamer fight, the one that’s good at everything except losing wins</p>
@@ -14456,7 +14540,7 @@ Dani: “No! That’s impossible!”</p>
 <p><span title="2022-03-15 01:46:53">Brush:</span></p>
 <p>YEAHHHHHHHH</p>
 <p><span title="2022-03-15 01:46:53">Prince:</span></p>
-<p><picture><source type="image/webp" srcset="/1/src/assets/images/standard/emoji/ryanULTRAPOG.png.webp 111w"><img alt=":ryanULTRAPOG:" loading="lazy" decoding="async" src="/1/src/assets/images/standard/emoji/ryanULTRAPOG.png.png" class="emoji" title=":ryanULTRAPOG:" width="111" height="128"></picture></p>
+<p><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FryanULTRAPOG.png&width=111&format=webp&via=transform 111w"><img alt=":ryanULTRAPOG:" loading="lazy" decoding="async" class="emoji" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fstandard%2Femoji%2FryanULTRAPOG.png&width=111&format=png&via=transform" title=":ryanULTRAPOG:" width="111" height="128"></picture></p>
 <p><span title="2022-03-15 01:46:54">Raven:</span></p>
 <p>HOLY SHIT</p>
 <p><span title="2022-03-15 01:46:56">Aubz:</span></p>
@@ -14594,8 +14678,8 @@ i really didnt expect dad to get so far.
 <p>has he won a tourney ?</p>
 <p><span title="2022-03-15 02:05:06">Wonder:</span></p>
 <div>
-<p></p><div popover="" class="image-popover" id="image-popover-48" role="img" aria-describedby="image-popover-48-id"><img alt="A Tumblr post by barack in around the christmas tree: please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he's too powerful" src="/1/src/assets/images/pages/1/2022-03-15 grandpa.png.png" loading="lazy" decoding="async" width="1024" height="607"> <p id="image-popover-48-id" class="imagePopoverAlt">A Tumblr post by barack in around the christmas tree: “please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he’s too powerful”</p>
-</div><button class="rotate" role="img" aria-describedby="image-popover-48-id" popovertarget="image-popover-48"><picture><source type="image/webp" srcset="/1/src/assets/images/pages/1/2022-03-15 grandpa.png.webp 1024w"><img alt="A Tumblr post by barack in around the christmas tree: please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he's too powerful" loading="lazy" decoding="async" src="/1/src/assets/images/pages/1/2022-03-15 grandpa.png.png" width="1024" height="607"></picture></button><p></p>
+<p></p><div popover="" class="image-popover" id="image-popover-48" role="img" aria-describedby="image-popover-48-id"><img alt="A Tumblr post by barack in around the christmas tree: please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he's too powerful" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20grandpa.png&width=1024&format=png&via=transform" loading="lazy" decoding="async" width="1024" height="607"> <p id="image-popover-48-id" class="imagePopoverAlt">A Tumblr post by barack in around the christmas tree: “please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he’s too powerful”</p>
+</div><button class="rotate" role="img" aria-describedby="image-popover-48-id" popovertarget="image-popover-48"><picture><source type="image/webp" srcset="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20grandpa.png&width=1024&format=webp&via=transform 1024w"><img alt="A Tumblr post by barack in around the christmas tree: please. stop praying for my grandpa!!!! you are making him too strong. he broke out of the hospital and the cops cant get him. he's too powerful" loading="lazy" decoding="async" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2F2022-03-15%20grandpa.png&width=1024&format=png&via=transform" width="1024" height="607"></picture></button><p></p>
 </div>
 <p><span title="2022-03-15 02:05:06">Brush:</span></p>
 <p>not that i recall!</p>
@@ -14696,7 +14780,7 @@ i really didnt expect dad to get so far.
 <style>
     .lightmode img.prismbow, body:has(#setting-light-mode:checked) img.prismbow { filter: brightness(0.6) saturate(2); }
 </style>
-<p><img alt="Rainbow text: Well I guess maybe you shouldn't assume things, ya silly dinguses :)" src="/1/src/assets/images/pages/1/prism-assume.png.png" class="prismbow" norotate="true" loading="lazy" decoding="async" width="1738" height="182"></p>
+<p><img alt="Rainbow text: Well I guess maybe you shouldn't assume things, ya silly dinguses :)" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2Fprism-assume.png&width=1738&format=png&via=transform" class="prismbow" norotate="true" loading="lazy" decoding="async" width="1738" height="182"></p>
 <p><br>
 </p>
 <p><br>
@@ -14726,7 +14810,7 @@ i really didnt expect dad to get so far.
 </p>
 <p><br>
 </p>
-<p><img alt="Rainbow text: We have a report from the field :)" src="/1/src/assets/images/pages/1/prism-report.png.png" class="prismbow" norotate="true" loading="lazy" decoding="async" width="1418" height="76"></p>
+<p><img alt="Rainbow text: We have a report from the field :)" src="/.11ty/image/?src=src%2Fassets%2Fimages%2Fpages%2F1%2Fprism-report.png&width=1418&format=png&via=transform" class="prismbow" norotate="true" loading="lazy" decoding="async" width="1418" height="76"></p>
 <p><br>
 </p>
 <p><br>
