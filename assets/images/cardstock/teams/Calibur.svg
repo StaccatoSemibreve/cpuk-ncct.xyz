@@ -1,0 +1,5 @@
+<svg version="1.1" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 50,58 l -9,-8 0,-10 5,-8 8,0 5,8 0,10 -9,8" fill="oklch(from crimson 0.95 0.05 h)" stroke="none" />
+    <path d="M 50,58 l -9,-8 0,-10 5,-8 0,-20 -6,4 -4,14 -5,7 0,16 7,7 l -6,6 -8,-3 -4,-12 4,-14 -9,0 -5,16 6,18 24,12 10,7 l 10,-7 24,-12 6,-18 -5,-16 -9,0 4,14 -4,12 -8,3 -6,-6 l 7,-7 0,-16 -5,-7 -4,-14 -6,-4 0,20 5,8 0,10 -9,8 z" fill="oklch(from crimson 0.3 0.4 h)" stroke="none" />
+    <path d="M 50,51 l -3,-3 0,-6 3,-3 3,3 0,6 z" fill="oklch(from crimson 0.6 0.4 h)" stroke="none" />
+</svg>
