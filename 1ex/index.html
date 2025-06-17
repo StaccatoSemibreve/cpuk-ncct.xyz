@@ -71,8 +71,9 @@
             --palette-discord: oklch(1 0.005 285);
             --palette-script: oklch(0.15 0.1 290);
             --palette-purple: oklch(0.35 0.15 305);
-            --palette-chongo: oklch(0.65 0.2 240);
-            --palette-note: oklch(0.65 0.2 40);
+            /* --palette-chongo: oklch(0.65 0.2 240); */
+            --palette-chongo: oklch(0.55 0.22 30);
+            --palette-note: oklch(0.65 0.2 75);
             --palette-jenny: oklch(0.65 0.2 140);
             --palette-jokebot: #941231;
             --palette-crimson: oklch(0.65 0.2 20);
@@ -85,7 +86,7 @@
         .darkmode, :root:not(:has(#setting-light-mode:checked)) {
             --colour-pocket-text: white;
             --colour-prism: white;
-            --colour-chongo: oklch(from var(--palette-chongo) 0.85 c h);
+            --colour-chongo: oklch(from var(--palette-chongo) 0.7 calc(c + 0.05) h);
             --colour-note: oklch(from var(--palette-note) 0.85 c h);
 
             --theme-cutscene-body: oklch(from var(--palette-script) 0.16 0.05 h);
@@ -114,10 +115,10 @@
             --theme-crimson-nav-border: oklch(from var(--palette-crimson) 0.16 0.05 h);
             --theme-crimson-nav-background: oklch(from var(--palette-crimson) 0.5 0.12 h);
             --theme-crimson-nav-text: oklch(from var(--palette-crimson) 0.85 0.01 h);
-            --theme-crimson-body: oklch(from var(--palette-crimson) 0.16 0.05 h);
-            --theme-crimson-background: oklch(from var(--palette-crimson) 0.32 0.04 h);
+            --theme-crimson-body: oklch(from var(--palette-crimson) 0.16 0.1 h);
+            --theme-crimson-background: oklch(from var(--palette-crimson) 0.32 0.08 h);
             --theme-crimson-text: oklch(from var(--palette-crimson) 0.85 0.01 h);
-            --theme-crimson-announcement-background: oklch(from var(--palette-crimson) 0.25 0.05 h);
+            --theme-crimson-announcement-background: oklch(from var(--palette-crimson) 0.25 0.06 h);
             --theme-crimson-announcement-border: oklch(from var(--palette-crimson) 0.1 0.05 h);
             --theme-crimson-nelson-author: oklch(from var(--palette-crimson) 0.2 0.05 h);
             --theme-crimson-spoiler-hidden: oklch(from var(--palette-crimson) 0.1 0.03 h);
@@ -174,6 +175,19 @@
             --theme-prismatic-nelson-author: oklch(from var(--palette-prismatic) 0.2 0.05 h);
             --theme-prismatic-spoiler-hidden: oklch(from var(--palette-prismatic) 0.1 0.03 h);
             --theme-prismatic-spoiler-unhidden: oklch(from var(--palette-prismatic) 0.2 0.03 h);
+
+            --theme-chongo-nav-border: oklch(from var(--palette-chongo) 0.16 0.05 h);
+            --theme-chongo-nav-background: oklch(from var(--palette-chongo) 0.5 0.12 h);
+            --theme-chongo-nav-text: oklch(from var(--palette-chongo) 0.85 0.01 h);
+            --theme-chongo-body: oklch(from var(--palette-chongo) 0.1 0.22 h);
+            --theme-chongo-background: oklch(from var(--palette-chongo) 0.32 0.1 h);
+            --theme-chongo-text: oklch(from var(--palette-chongo) 0.85 0.01 h);
+            --theme-chongo-announcement-background: oklch(from var(--palette-chongo) 0.25 0.08 h);
+            --theme-chongo-announcement-border: oklch(from var(--palette-chongo) 0.1 0.1 h);
+            --theme-chongo-nelson-author: oklch(from var(--palette-chongo) 0.2 0.1 h);
+            --theme-chongo-spoiler-hidden: oklch(from var(--palette-chongo) 0.1 0.03 h);
+            --theme-chongo-spoiler-unhidden: oklch(from var(--palette-chongo) 0.2 0.03 h);
+            --theme-chongo-fall: oklch(from var(--palette-chongo) 0.32 0.1 h);
         }
         .lightmode, :root:has(#setting-light-mode:checked) {
             --colour-pocket-text: white;
@@ -269,6 +283,19 @@
             --theme-prismatic-nelson-author: oklch(from var(--palette-prismatic) 0.89 0.03 h);
             --theme-prismatic-spoiler-hidden: oklch(from var(--palette-prismatic) 0.1 0.04 h);
             --theme-prismatic-spoiler-unhidden: oklch(from var(--palette-prismatic) 0.6 0.04 h);
+
+            --theme-chongo-nav-border: oklch(from var(--palette-chongo) 0.16 0.05 h);
+            --theme-chongo-nav-background: oklch(from var(--palette-chongo) 0.5 0.12 h);
+            --theme-chongo-nav-text: oklch(from var(--palette-chongo) 0.85 0.01 h);
+            --theme-chongo-body: oklch(from var(--palette-chongo) 0.4 0.16 h);
+            --theme-chongo-background: oklch(from var(--palette-chongo) 0.9 0.01 h);
+            --theme-chongo-text: oklch(from var(--palette-chongo) 0.1 0.15 h);
+            --theme-chongo-announcement-background: oklch(from var(--palette-chongo) 0.95 0.03 h);
+            --theme-chongo-announcement-border: oklch(from var(--palette-chongo) 0.8 0.03 h);
+            --theme-chongo-nelson-author: oklch(from var(--palette-chongo) 0.89 0.03 h);
+            --theme-chongo-spoiler-hidden: oklch(from var(--palette-chongo) 0.35 0.04 h);
+            --theme-chongo-spoiler-unhidden: oklch(from var(--palette-chongo) 0.6 0.04 h);
+            --theme-chongo-fall: oklch(from var(--palette-chongo) 0.32 0.04 h);
         }
 
         .cutscene {
@@ -425,6 +452,28 @@
             --colour-spoiler-hidden: var(--theme-prismatic-spoiler-hidden);
             --colour-spoiler-unhidden: var(--theme-prismatic-spoiler-unhidden);
         }
+        .theme-chongo, :root:has(#theme-chongo:checked) {
+            --colour-base: var(--palette-chongo);
+
+            --colour-body: var(--theme-chongo-body);
+            --colour-main-background: var(--theme-chongo-background);
+            --colour-main-text: var(--theme-chongo-text);
+
+            --colour-nav-border: var(--theme-chongo-nav-border);
+            --colour-nav-background: var(--theme-chongo-nav-background);
+            --colour-nav-text: var(--theme-chongo-nav-text);
+
+            --colour-announcement-background: var(--theme-chongo-announcement-background);
+            --colour-announcement-border: var(--theme-chongo-announcement-border);
+            --colour-announcement-text: var(--colour-main-text);
+            --colour-report-background: var(--theme-chongo-nelson-author);
+            --colour-report-text: var(--colour-main-text);
+
+            --colour-nelson-author: var(--theme-chongo-nelson-author);
+
+            --colour-spoiler-hidden: var(--theme-chongo-spoiler-hidden);
+            --colour-spoiler-unhidden: var(--theme-chongo-spoiler-unhidden);
+        }
 
         .theme-gold.darkmode, :root:has(#theme-gold:checked):not(:has(#setting-light-mode:checked)) {
             --colour-base: gold;
@@ -524,7 +573,7 @@
             --colour-prism: oklch(from var(--colour-base) 0.15 1 h);
         }
 
-        :root:not(:has(#theme-discord:checked), :has(#theme-crimson:checked), :has(#theme-chartreuse:checked), :has(#theme-cobalt:checked), :has(#theme-royal:checked), :has(#theme-prismatic:checked), :has(#theme-card:checked), :has(#theme-gold:checked), :has(#theme-breakfast:checked)), .theme-card.darkmode, :root:has(#theme-card:checked):not(:has(#setting-light-mode:checked)) {
+        :root:not(:has(#theme-discord:checked), :has(#theme-crimson:checked), :has(#theme-chartreuse:checked), :has(#theme-cobalt:checked), :has(#theme-royal:checked), :has(#theme-prismatic:checked), :has(#theme-card:checked), :has(#theme-gold:checked), :has(#theme-breakfast:checked), :has(#theme-chongo:checked)), .theme-card.darkmode, :root:has(#theme-card:checked):not(:has(#setting-light-mode:checked)) {
             --colour-base: var(--palette-purple);
 
             --colour-body: oklch(from var(--colour-base) 0.21 0.04 h);
@@ -679,7 +728,7 @@
             height: 100px;
         }
         .facade-fade-in, .facade-fade-out {
-            position: relative;
+            position: absolute;
             margin-left: calc(0px - var(--gutter) - var(--padding));
         }
         .facade-fade-in + .fade-in, .facade-fade-out + .fade-out {
@@ -693,29 +742,24 @@
             width: var(--pagewidth);
         }
 
-        div.fade-in {
-            background:
-                linear-gradient(to bottom in oklab, var(--colour-main-background), oklch(from var(--colour-main-background) l c h / 0.98) 10%, oklch(from var(--fade-colour) l c h / 0.98) 90%, var(--fade-colour)),
-                url('../assets/images/standard/noise.svg'),
-                linear-gradient(to bottom in oklab, var(--colour-main-background), var(--fade-colour));
+        div.fade-in, div.fade-out, div.facade-fade-in, div.facade-fade-out { position: relative; }
+        div.fade-in { background:  var(--colour-main-background); }
+        div.fade-out { background: var(--colour-main-background); }
+        div.facade-fade-in { background: var(--colour-body); }
+        div.facade-fade-out { background: var(--colour-body); }
+        div.fade-in::after, div.fade-out::after, div.facade-fade-in::after, div.facade-fade-out::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
         }
-        div.fade-out {
-            background: 
-                linear-gradient(to top in oklab, var(--colour-main-background), oklch(from var(--colour-main-background) l c h / 0.95) 10%, oklch(from var(--fade-colour) l c h / 0.95) 90%, var(--fade-colour)),
-                url('../assets/images/standard/noise.svg'),
-                linear-gradient(to top in oklab, var(--colour-main-background), var(--fade-colour));
+        div.fade-in::after, div.facade-fade-in::after {
+            background: var(--fade-colour);
+            mask: url(/assets/images/standard/dither-reverse.png);
         }
-        div.facade-fade-in {
-            background:
-                linear-gradient(to bottom in oklab, var(--colour-body), oklch(from var(--colour-body) l c h / 0.95) 10%, oklch(from var(--fade-colour) l c h / 0.95) 90%, var(--fade-colour)),
-                url('../assets/images/standard/noise.svg'),
-                linear-gradient(to bottom in oklab, var(--colour-body), var(--fade-colour));
-        }
-        div.facade-fade-out {
-            background: 
-                linear-gradient(to top in oklab, var(--colour-body), oklch(from var(--colour-body) l c h / 0.98) 10%, oklch(from var(--fade-colour) l c h / 0.98) 90%, var(--fade-colour)),
-                url('../assets/images/standard/noise.svg'),
-                linear-gradient(to top in oklab, var(--colour-body), var(--fade-colour));
+        div.fade-out::after, div.facade-fade-out::after {
+            background: var(--fade-colour);
+            mask: url(/assets/images/standard/dither.png);
         }
         div.fade-in:has(.theme-cutscene), div.fade-out:has(.theme-cutscene) {
             --fade-colour: var(--theme-cutscene-background);
@@ -1418,7 +1462,7 @@
         margin-bottom: 0;
     }
     .speech-bubble-label:has(+ .chongo) {
-        color: var(--palette-chongo);
+        color: var(--colour-chongo);
     }
     .speech-bubble-label:has(+ .note) {
         color: var(--colour-note);
@@ -6955,11 +6999,11 @@
         
         <text x="6" y="32" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c"></text>
         
-        <text x="6" y="48" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c"></text>
+        <text x="6" y="48" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c">Summoned by Iggy.</text>
         
-        <text x="6" y="64" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c">Summoned by Iggy.</text>
+        <text x="6" y="64" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c">Hunted by Shantae.</text>
         
-        <text x="6" y="80" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c">Hunted by Shantae.</text>
+        <text x="6" y="80" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c"></text>
         
         <text x="6" y="96" width="221" height="152" style="font-family: 'Fira Sans', sans-serif; font-size: 15px; font-weight: bold; white-space: pre; line-height: 97%;" fill="#4e137c"></text>
         
