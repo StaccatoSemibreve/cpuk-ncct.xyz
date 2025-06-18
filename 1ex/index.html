@@ -638,7 +638,11 @@
             
             --colour-prism: oklch(from #4e137c 0.15 1 h);
         } */
-                html, body, .facade {
+                :root {
+            --fade-height: 136px;
+        }
+        
+        html, body, .facade {
             max-width: 100vw;
             overflow-x: hidden;
         }
@@ -725,14 +729,14 @@
         }
 
         div.fade-in, div.fade-out, div.facade-fade-in, div.facade-fade-out {
-            height: 100px;
+            height: var(--fade-height);
         }
         .facade-fade-in, .facade-fade-out {
             position: absolute;
             margin-left: calc(0px - var(--gutter) - var(--padding));
         }
         .facade-fade-in + .fade-in, .facade-fade-out + .fade-out {
-            margin-top: -100px;
+            margin-top: calc(0px - var(--fade-height));
         }
         .fade-in, .fade-out {
             position: relative;
@@ -742,43 +746,82 @@
             width: var(--pagewidth);
         }
 
+        /* div.fade-in>p, div.fade-out>p, div.facade-fade-in>p, div.facade-fade-out>p { display: none; } */
         div.fade-in, div.fade-out, div.facade-fade-in, div.facade-fade-out { position: relative; }
-        div.fade-in { background:  var(--colour-main-background); }
-        div.fade-out { background: var(--colour-main-background); }
-        div.facade-fade-in { background: var(--colour-body); }
-        div.facade-fade-out { background: var(--colour-body); }
-        div.fade-in::after, div.fade-out::after, div.facade-fade-in::after, div.facade-fade-out::after {
+        div.fade-in, div.fade-out { --zero-fade-colour: var(--colour-main-background); }
+        div.facade-fade-in, div.facade-fade-out { --zero-fade-colour: var(--colour-body); }
+        div.fade-in, div.fade-out, div.facade-fade-in, div.facade-fade-out {
+            --quarter-fade-colour: color-mix(in oklch shorter hue, var(--zero-fade-colour) 75%, var(--fade-colour));
+            --half-fade-colour: color-mix(in oklch shorter hue, var(--zero-fade-colour), var(--fade-colour));
+            --three-quarter-fade-colour: color-mix(in oklch shorter hue, var(--zero-fade-colour) 25%, var(--fade-colour));
+        }
+        div.fade-in, div.facade-fade-in {
+            background: linear-gradient(
+                var(--quarter-fade-colour) 0% 25%,
+                var(--half-fade-colour) 25% 50%,
+                var(--three-quarter-fade-colour) 50% 75%,
+                var(--fade-colour) 75% 100%);
+        }
+        div.fade-out, div.facade-fade-out {
+            background: linear-gradient(
+                var(--three-quarter-fade-colour) 0% 25%,
+                var(--half-fade-colour) 25% 50%,
+                var(--quarter-fade-colour) 50% 75%,
+                var(--zero-fade-colour) 75% 100%);
+        }
+        div.fade-in::after, div.fade-out::after, div.facade-fade-in::after, div.facade-fade-out::after, div.fade-in::before, div.fade-out::before, div.facade-fade-in::before, div.facade-fade-out::before, div.fade-in>p::before, div.fade-out>p::before, div.facade-fade-in>p::before, div.facade-fade-out>p::before, div.fade-in>p::after, div.fade-out>p::after, div.facade-fade-in>p::after, div.facade-fade-out>p::after {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 25%;
             content: "";
         }
-        div.fade-in::after, div.facade-fade-in::after {
-            background: var(--fade-colour);
-            mask: url(/assets/images/standard/dither-reverse.png);
+        
+        div.fade-in::before, div.facade-fade-in::before {
+            background: var(--zero-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
         }
-        div.fade-out::after, div.facade-fade-out::after {
+        div.fade-in::after, div.facade-fade-in::after {
+            margin-top: calc(var(--fade-height) / 4);
+            background: var(--quarter-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
+        }
+        div.fade-in>p::before, div.facade-fade-in>p::before {
+            margin-top: calc(var(--fade-height) / 2);
+            background: var(--half-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
+        }
+        div.fade-in>p::after, div.facade-fade-in>p::after {
+            margin-top: calc(var(--fade-height) * 3 / 4);
+            background: var(--three-quarter-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
+        }
+        
+        div.fade-out::before, div.facade-fade-out::before {
             background: var(--fade-colour);
             mask: url(/assets/images/standard/dither.png);
         }
-        div.fade-in:has(.theme-cutscene), div.fade-out:has(.theme-cutscene) {
-            --fade-colour: var(--theme-cutscene-background);
+        div.fade-out::after, div.facade-fade-out::after {
+            margin-top: calc(var(--fade-height) / 4);
+            background: var(--three-quarter-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
         }
-        div.facade-fade-in:has(.theme-cutscene), div.facade-fade-out:has(.theme-cutscene) {
-            --fade-colour: var(--theme-cutscene-body);
+        div.fade-out>p::before, div.facade-fade-out>p::before {
+            margin-top: calc(var(--fade-height) / 2);
+            background: var(--half-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
         }
-        div.fade-in:has(.theme-cobalt), div.fade-out:has(.theme-cobalt) {
-            --fade-colour: var(--theme-cobalt-background);
+        div.fade-out>p::after, div.facade-fade-out>p::after {
+            margin-top: calc(var(--fade-height) * 3 / 4);
+            background: var(--quarter-fade-colour);
+            mask: url(/assets/images/standard/dither.png);
         }
-        div.facade-fade-in:has(.theme-cobalt), div.facade-fade-out:has(.theme-cobalt) {
-            --fade-colour: var(--theme-cobalt-body);
-        }
-        div.fade-in:has(.theme-pocket), div.fade-out:has(.theme-pocket) {
-            --fade-colour: var(--colour-body);
-        }
-        div.facade-cover {
-            background-color: var(--colour-main-background);
-        }
+
+        div.fade-in:has(.theme-cutscene), div.fade-out:has(.theme-cutscene) { --fade-colour: var(--theme-cutscene-background); }
+        div.facade-fade-in:has(.theme-cutscene), div.facade-fade-out:has(.theme-cutscene) { --fade-colour: var(--theme-cutscene-body); }
+        div.fade-in:has(.theme-cobalt), div.fade-out:has(.theme-cobalt) { --fade-colour: var(--theme-cobalt-background); }
+        div.facade-fade-in:has(.theme-cobalt), div.facade-fade-out:has(.theme-cobalt) { --fade-colour: var(--theme-cobalt-body); }
+        div.fade-in:has(.theme-pocket), div.fade-out:has(.theme-pocket) { --fade-colour: var(--colour-body); }
+        div.facade-cover { background-color: var(--colour-main-background); }
 
 
 
