@@ -17,8 +17,8 @@
     --null: #202225;
     --script: #0a0027;
 
-    --ryan-blue: #00aff4;
-    --ryan-l-blue: #1155cc;
+    --jenny-blue: oklch(0.9 0.3 30);
+    --jenny-l-blue: oklch(0.4 0.22 30);
 
     --purple: #aa8ed6;
 
@@ -84,7 +84,7 @@ body:has(#lightmode:checked) {
     --void: var(--null);
     --unvoid: var(--light-null);
 
-    --ryan: var(--ryan-l-blue);
+    --jenny: var(--jenny-l-blue);
     --note: var(--disc-light-4);
     --prism: black;
     --prismer: black;
@@ -143,7 +143,7 @@ body:not(:has(#lightmode:checked)) {
     --text: var(--light);
     --code: var(--dark-discord);
 
-    --ryan: var(--ryan-blue);
+    --jenny: var(--jenny-blue);
     --note: var(--shade);
 
     --light-prism: var(--light);
@@ -219,7 +219,7 @@ body:not(:has(#lightmode:checked)) {
     --note: var(--shade);
 
     --prism: white;
-    --ryan: #00aff4;
+    --jenny: #00aff4;
 
     --void: black;
     --unvoid: #181818;
@@ -240,7 +240,7 @@ body:not(:has(#lightmode:checked)) {
     --text: var(--script);
     --code: var(--shade);
 
-    --ryan: #1155cc;
+    --jenny: #1155cc;
     --note: var(--shadow);
 
     --light-prism: rgba(255,255,255,0.66);
@@ -389,7 +389,7 @@ body:has(#menu-spoilertags:checked) {
     & .hide, & .void, & .winvoid, & .winhide {
         --prism: white;
         --text: var(--light);
-        --ryan: var(--ryan-blue);
+        --jenny: var(--jenny-blue);
         --note: var(--shade);
 
         background-color: var(--unvoid);
@@ -401,7 +401,7 @@ body:not(:has(#menu-spoilertags:checked)) {
     & .hide:not(:hover):not(:active), & .void:not(:hover):not(:active), & .win:not(:hover):not(:active)>p>.winvoid, & .win:not(:hover):not(:active)>p>.winhide {
         --prism: var(--void);
         --text: var(--void);
-        --ryan: var(--void);
+        --jenny: var(--void);
         --mint: var(--void);
         --note: var(--void);
 
@@ -411,7 +411,7 @@ body:not(:has(#menu-spoilertags:checked)) {
     & .hide:hover, & .void:hover, & .hide:active, & .void:active, & .win:active>p>.winvoid, & .win:hover>p>.winvoid, & .win:active>p>.winhide, & .win:hover>p>.winhide {
         --prism: white;
         --text: var(--light);
-        --ryan: var(--ryan-blue);
+        --jenny: var(--jenny-blue);
         --note: var(--shade);
 
         background-color: var(--unvoid);
@@ -464,7 +464,7 @@ body:not(:has(#menu-spoilertags:checked)) {
     background-color: inherit;
 }
 
-body:has(#menu-strikethroughs:checked) { & .ryan>s { text-decoration: none; } }
+body:has(#menu-strikethroughs:checked) { & .jenny>s { text-decoration: none; } }
 body:not(:has(#menu-results:checked)) { & .resultspoiler { display: none; } }
 body:has(#menu-results:checked) { & .resultspoiler { display: inline; } }
 
@@ -546,7 +546,7 @@ body {
 
 .hide { padding-top: 1pt; border-radius: 3px; }
 .hide>* { background: none !important; }
-.ryan { --text: var(--ryan); }
+.jenny { --text: var(--jenny); }
 .mint { --text: var(--mint); }
 
 
@@ -697,8 +697,8 @@ h3 {
     font-size: 15pt;
     color: var(--danismest);
 }
-.ryan {
-    color: var(--ryan);
+.jenny {
+    color: var(--jenny);
     list-style-type: "-";
 }
 .justice {
