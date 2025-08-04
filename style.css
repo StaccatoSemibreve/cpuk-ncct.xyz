@@ -219,7 +219,7 @@ body:not(:has(#lightmode:checked)) {
     --note: var(--shade);
 
     --prism: white;
-    --jenny: #00aff4;
+    --jenny: var(--jenny-blue);
 
     --void: black;
     --unvoid: #181818;
@@ -240,7 +240,7 @@ body:not(:has(#lightmode:checked)) {
     --text: var(--script);
     --code: var(--shade);
 
-    --jenny: #1155cc;
+    --jenny: var(--jenny-l-blue);
     --note: var(--shadow);
 
     --light-prism: rgba(255,255,255,0.66);
